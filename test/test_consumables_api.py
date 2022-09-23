@@ -11,8 +11,8 @@
 
 import unittest
 
-import dofusdude-py
-from dofusdude-py.api.consumables_api import ConsumablesApi  # noqa: E501
+import dofusdude
+from dofusdude.api.consumables_api import ConsumablesApi  # noqa: E501
 
 
 class TestConsumablesApi(unittest.TestCase):

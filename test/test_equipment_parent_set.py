@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.equipment_parent_set import EquipmentParentSet
+import dofusdude
+from dofusdude.model.equipment_parent_set import EquipmentParentSet
 
 
 class TestEquipmentParentSet(unittest.TestCase):

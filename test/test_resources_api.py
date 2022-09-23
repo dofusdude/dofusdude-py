@@ -11,8 +11,8 @@
 
 import unittest
 
-import dofusdude-py
-from dofusdude-py.api.resources_api import ResourcesApi  # noqa: E501
+import dofusdude
+from dofusdude.api.resources_api import ResourcesApi  # noqa: E501
 
 
 class TestResourcesApi(unittest.TestCase):

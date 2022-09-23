@@ -3,13 +3,13 @@ The last API for everything Dofus 🤯
 
 ### JS Quickstart
 ```js
-var dofusdude = require(\"dofusdude-js\");
+var dofusdude = require("dofusdude-js");
 
 new dofusdude.AllItemsApi().getItemsAllSearch(
-  \"en\",
-  \"dofus2\",
-  \"nidas\",
-  { filterTypeName: \"hat\" },
+  "en",
+  "dofus2",
+  "nidas",
+  { filterTypeName: "hat" },
   (err, data, response) => {
     console.log(data[0]);
   }
@@ -116,13 +116,13 @@ Python >=3.6
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/dofusdude/dofusdude-py.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/dofusdude/dofusdude-py.git`)
 
 Then import the package:
 ```python
-import dofusdude-py
+import dofusdude
 ```
 
 ### Setuptools
@@ -136,7 +136,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import dofusdude-py
+import dofusdude
 ```
 
 ## Getting Started
@@ -146,20 +146,20 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-import dofusdude-py
+import dofusdude
 from pprint import pprint
-from dofusdude-py.api import all_items_api
-from dofusdude-py.model.items_list_entry_typed import ItemsListEntryTyped
+from dofusdude.api import all_items_api
+from dofusdude.model.items_list_entry_typed import ItemsListEntryTyped
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient(configuration) as api_client:
+with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = all_items_api.AllItemsApi(api_client)
     language = "en" # str | a valid language code
@@ -173,7 +173,7 @@ with dofusdude-py.ApiClient(configuration) as api_client:
         # Search All Items
         api_response = api_instance.get_items_all_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling AllItemsApi->get_items_all_search: %s\n" % e)
 ```
 
@@ -252,21 +252,21 @@ stelzo@steado.de
 
 
 ## Notes for Large OpenAPI documents
-If the OpenAPI document is large, imports in dofusdude-py.apis and dofusdude-py.models may fail with a
+If the OpenAPI document is large, imports in dofusdude.apis and dofusdude.models may fail with a
 RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
 
 Solution 1:
 Use specific imports for apis and models like:
-- `from dofusdude-py.api.default_api import DefaultApi`
-- `from dofusdude-py.model.pet import Pet`
+- `from dofusdude.api.default_api import DefaultApi`
+- `from dofusdude.model.pet import Pet`
 
 Solution 2:
 Before importing the package, adjust the maximum recursion limit as shown below:
 ```
 import sys
 sys.setrecursionlimit(1500)
-import dofusdude-py
-from dofusdude-py.apis import *
-from dofusdude-py.models import *
+import dofusdude
+from dofusdude.apis import *
+from dofusdude.models import *
 ```
 

@@ -11,8 +11,8 @@
 
 import unittest
 
-import dofusdude-py
-from dofusdude-py.api.all_items_api import AllItemsApi  # noqa: E501
+import dofusdude
+from dofusdude.api.all_items_api import AllItemsApi  # noqa: E501
 
 
 class TestAllItemsApi(unittest.TestCase):

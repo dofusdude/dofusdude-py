@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.weapon_range import WeaponRange
+import dofusdude
+from dofusdude.model.weapon_range import WeaponRange
 
 
 class TestWeaponRange(unittest.TestCase):

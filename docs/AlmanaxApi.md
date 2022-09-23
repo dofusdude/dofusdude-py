@@ -1,4 +1,4 @@
-# dofusdude-py.AlmanaxApi
+# dofusdude.AlmanaxApi
 
 All URIs are relative to *https://api.dofusdu.de*
 
@@ -20,19 +20,19 @@ Get a single date. There are not more details in the returned object than the no
 
 ```python
 import time
-import dofusdude-py
-from dofusdude-py.api import almanax_api
-from dofusdude-py.model.almanax_entry import AlmanaxEntry
+import dofusdude
+from dofusdude.api import almanax_api
+from dofusdude.model.almanax_entry import AlmanaxEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient() as api_client:
+with dofusdude.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = almanax_api.AlmanaxApi(api_client)
     language = "en" # str | code
@@ -43,7 +43,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Single Almanax Date
         api_response = api_instance.get_almanax_date(language, date)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling AlmanaxApi->get_almanax_date: %s\n" % e)
 ```
 
@@ -89,19 +89,19 @@ Get a range of dates, defaults to today + 6 following days but can specified by 
 
 ```python
 import time
-import dofusdude-py
-from dofusdude-py.api import almanax_api
-from dofusdude-py.model.almanax_entry import AlmanaxEntry
+import dofusdude
+from dofusdude.api import almanax_api
+from dofusdude.model.almanax_entry import AlmanaxEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient() as api_client:
+with dofusdude.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = almanax_api.AlmanaxApi(api_client)
     language = "en" # str | code
@@ -116,7 +116,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Almanax Range
         api_response = api_instance.get_almanax_range(language)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling AlmanaxApi->get_almanax_range: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -125,7 +125,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Almanax Range
         api_response = api_instance.get_almanax_range(language, filter_bonus_type=filter_bonus_type, range_from=range_from, range_to=range_to, range_size=range_size, timezone=timezone)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling AlmanaxApi->get_almanax_range: %s\n" % e)
 ```
 

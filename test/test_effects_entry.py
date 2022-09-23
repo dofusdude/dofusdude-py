@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.effects_entry_type import EffectsEntryType
+import dofusdude
+from dofusdude.model.effects_entry_type import EffectsEntryType
 globals()['EffectsEntryType'] = EffectsEntryType
-from dofusdude-py.model.effects_entry import EffectsEntry
+from dofusdude.model.effects_entry import EffectsEntry
 
 
 class TestEffectsEntry(unittest.TestCase):

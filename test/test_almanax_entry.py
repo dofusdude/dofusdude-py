@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.almanax_entry_bonus import AlmanaxEntryBonus
-from dofusdude-py.model.almanax_entry_tribute import AlmanaxEntryTribute
+import dofusdude
+from dofusdude.model.almanax_entry_bonus import AlmanaxEntryBonus
+from dofusdude.model.almanax_entry_tribute import AlmanaxEntryTribute
 globals()['AlmanaxEntryBonus'] = AlmanaxEntryBonus
 globals()['AlmanaxEntryTribute'] = AlmanaxEntryTribute
-from dofusdude-py.model.almanax_entry import AlmanaxEntry
+from dofusdude.model.almanax_entry import AlmanaxEntry
 
 
 class TestAlmanaxEntry(unittest.TestCase):

@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.links_paged import LinksPaged
+import dofusdude
+from dofusdude.model.links_paged import LinksPaged
 
 
 class TestLinksPaged(unittest.TestCase):

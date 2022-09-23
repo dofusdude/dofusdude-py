@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.image_urls import ImageUrls
+import dofusdude
+from dofusdude.model.image_urls import ImageUrls
 
 
 class TestImageUrls(unittest.TestCase):

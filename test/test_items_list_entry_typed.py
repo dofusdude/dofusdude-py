@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.image_urls import ImageUrls
-from dofusdude-py.model.items_list_entry_typed_type import ItemsListEntryTypedType
+import dofusdude
+from dofusdude.model.image_urls import ImageUrls
+from dofusdude.model.items_list_entry_typed_type import ItemsListEntryTypedType
 globals()['ImageUrls'] = ImageUrls
 globals()['ItemsListEntryTypedType'] = ItemsListEntryTypedType
-from dofusdude-py.model.items_list_entry_typed import ItemsListEntryTyped
+from dofusdude.model.items_list_entry_typed import ItemsListEntryTyped
 
 
 class TestItemsListEntryTyped(unittest.TestCase):

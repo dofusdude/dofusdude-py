@@ -1,4 +1,4 @@
-# dofusdude-py.AllItemsApi
+# dofusdude.AllItemsApi
 
 All URIs are relative to *https://api.dofusdu.de*
 
@@ -19,19 +19,19 @@ Search in all names and descriptions of Dofus items (including all subtypes) wit
 
 ```python
 import time
-import dofusdude-py
-from dofusdude-py.api import all_items_api
-from dofusdude-py.model.items_list_entry_typed import ItemsListEntryTyped
+import dofusdude
+from dofusdude.api import all_items_api
+from dofusdude.model.items_list_entry_typed import ItemsListEntryTyped
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient() as api_client:
+with dofusdude.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = all_items_api.AllItemsApi(api_client)
     language = "en" # str | a valid language code
@@ -46,7 +46,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Search All Items
         api_response = api_instance.get_items_all_search(language, game, query)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling AllItemsApi->get_items_all_search: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -55,7 +55,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Search All Items
         api_response = api_instance.get_items_all_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling AllItemsApi->get_items_all_search: %s\n" % e)
 ```
 

@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.recipe_entry import RecipeEntry
+import dofusdude
+from dofusdude.model.recipe_entry import RecipeEntry
 
 
 class TestRecipeEntry(unittest.TestCase):

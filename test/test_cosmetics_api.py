@@ -11,8 +11,8 @@
 
 import unittest
 
-import dofusdude-py
-from dofusdude-py.api.cosmetics_api import CosmeticsApi  # noqa: E501
+import dofusdude
+from dofusdude.api.cosmetics_api import CosmeticsApi  # noqa: E501
 
 
 class TestCosmeticsApi(unittest.TestCase):

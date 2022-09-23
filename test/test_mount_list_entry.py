@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.image_urls import ImageUrls
+import dofusdude
+from dofusdude.model.image_urls import ImageUrls
 globals()['ImageUrls'] = ImageUrls
-from dofusdude-py.model.mount_list_entry import MountListEntry
+from dofusdude.model.mount_list_entry import MountListEntry
 
 
 class TestMountListEntry(unittest.TestCase):

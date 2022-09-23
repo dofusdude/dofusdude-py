@@ -11,8 +11,8 @@
 
 import unittest
 
-import dofusdude-py
-from dofusdude-py.api.meta_api import MetaApi  # noqa: E501
+import dofusdude
+from dofusdude.api.meta_api import MetaApi  # noqa: E501
 
 
 class TestMetaApi(unittest.TestCase):

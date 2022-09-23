@@ -8,7 +8,7 @@ stages:
   script:
    - pip install -r requirements.txt
    - pip install -r test-requirements.txt
-   - pytest --cov=dofusdude-py
+   - pytest --cov=dofusdude
 
 test-3.6:
   extends: .tests

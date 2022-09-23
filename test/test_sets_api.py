@@ -11,8 +11,8 @@
 
 import unittest
 
-import dofusdude-py
-from dofusdude-py.api.sets_api import SetsApi  # noqa: E501
+import dofusdude
+from dofusdude.api.sets_api import SetsApi  # noqa: E501
 
 
 class TestSetsApi(unittest.TestCase):

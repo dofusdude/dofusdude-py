@@ -11,8 +11,8 @@
 
 import unittest
 
-import dofusdude-py
-from dofusdude-py.api.mounts_api import MountsApi  # noqa: E501
+import dofusdude
+from dofusdude.api.mounts_api import MountsApi  # noqa: E501
 
 
 class TestMountsApi(unittest.TestCase):

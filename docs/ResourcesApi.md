@@ -1,4 +1,4 @@
-# dofusdude-py.ResourcesApi
+# dofusdude.ResourcesApi
 
 All URIs are relative to *https://api.dofusdu.de*
 
@@ -21,19 +21,19 @@ Search in all names and descriptions of resource items with a query.
 
 ```python
 import time
-import dofusdude-py
-from dofusdude-py.api import resources_api
-from dofusdude-py.model.item_list_entry import ItemListEntry
+import dofusdude
+from dofusdude.api import resources_api
+from dofusdude.model.item_list_entry import ItemListEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient() as api_client:
+with dofusdude.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = resources_api.ResourcesApi(api_client)
     language = "en" # str | a valid language code
@@ -48,7 +48,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Search Resources
         api_response = api_instance.get_items_resource_search(language, game, query)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling ResourcesApi->get_items_resource_search: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -57,7 +57,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Search Resources
         api_response = api_instance.get_items_resource_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling ResourcesApi->get_items_resource_search: %s\n" % e)
 ```
 
@@ -109,19 +109,19 @@ Retrieve a list of resource items.
 
 ```python
 import time
-import dofusdude-py
-from dofusdude-py.api import resources_api
-from dofusdude-py.model.items_list_paged import ItemsListPaged
+import dofusdude
+from dofusdude.api import resources_api
+from dofusdude.model.items_list_paged import ItemsListPaged
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient() as api_client:
+with dofusdude.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = resources_api.ResourcesApi(api_client)
     language = "en" # str | a valid language code
@@ -139,7 +139,7 @@ with dofusdude-py.ApiClient() as api_client:
         # List Resources
         api_response = api_instance.get_items_resources_list(language, game)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling ResourcesApi->get_items_resources_list: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -148,7 +148,7 @@ with dofusdude-py.ApiClient() as api_client:
         # List Resources
         api_response = api_instance.get_items_resources_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, page_size=page_size, page_number=page_number, fields_item=fields_item)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling ResourcesApi->get_items_resources_list: %s\n" % e)
 ```
 
@@ -203,19 +203,19 @@ Retrieve a specific resource item with id.
 
 ```python
 import time
-import dofusdude-py
-from dofusdude-py.api import resources_api
-from dofusdude-py.model.resource import Resource
+import dofusdude
+from dofusdude.api import resources_api
+from dofusdude.model.resource import Resource
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient() as api_client:
+with dofusdude.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = resources_api.ResourcesApi(api_client)
     language = "en" # str | a valid language code
@@ -227,7 +227,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Single Resources
         api_response = api_instance.get_items_resources_single(language, ankama_id, game)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling ResourcesApi->get_items_resources_single: %s\n" % e)
 ```
 

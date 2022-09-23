@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.get_meta_almanax_bonuses200_response_inner import GetMetaAlmanaxBonuses200ResponseInner
+import dofusdude
+from dofusdude.model.get_meta_almanax_bonuses200_response_inner import GetMetaAlmanaxBonuses200ResponseInner
 globals()['GetMetaAlmanaxBonuses200ResponseInner'] = GetMetaAlmanaxBonuses200ResponseInner
-from dofusdude-py.model.almanax_entry_bonus import AlmanaxEntryBonus
+from dofusdude.model.almanax_entry_bonus import AlmanaxEntryBonus
 
 
 class TestAlmanaxEntryBonus(unittest.TestCase):

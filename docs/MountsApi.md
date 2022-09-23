@@ -1,4 +1,4 @@
-# dofusdude-py.MountsApi
+# dofusdude.MountsApi
 
 All URIs are relative to *https://api.dofusdu.de*
 
@@ -21,19 +21,19 @@ Retrieve a list of mounts.
 
 ```python
 import time
-import dofusdude-py
-from dofusdude-py.api import mounts_api
-from dofusdude-py.model.mounts_list_paged import MountsListPaged
+import dofusdude
+from dofusdude.api import mounts_api
+from dofusdude.model.mounts_list_paged import MountsListPaged
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient() as api_client:
+with dofusdude.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = mounts_api.MountsApi(api_client)
     language = "en" # str | a valid language code
@@ -47,7 +47,7 @@ with dofusdude-py.ApiClient() as api_client:
         # List Mounts
         api_response = api_instance.get_mounts_list(language, game)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling MountsApi->get_mounts_list: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -56,7 +56,7 @@ with dofusdude-py.ApiClient() as api_client:
         # List Mounts
         api_response = api_instance.get_mounts_list(language, game, filter_family_name=filter_family_name, page_size=page_size, page_number=page_number)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling MountsApi->get_mounts_list: %s\n" % e)
 ```
 
@@ -107,19 +107,19 @@ Search in all names and descriptions of mounts with a query.
 
 ```python
 import time
-import dofusdude-py
-from dofusdude-py.api import mounts_api
-from dofusdude-py.model.mount_list_entry import MountListEntry
+import dofusdude
+from dofusdude.api import mounts_api
+from dofusdude.model.mount_list_entry import MountListEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient() as api_client:
+with dofusdude.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = mounts_api.MountsApi(api_client)
     language = "en" # str | a valid language code
@@ -132,7 +132,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Search Mounts
         api_response = api_instance.get_mounts_search(language, game, query)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling MountsApi->get_mounts_search: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -141,7 +141,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Search Mounts
         api_response = api_instance.get_mounts_search(language, game, query, filter_family_name=filter_family_name)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling MountsApi->get_mounts_search: %s\n" % e)
 ```
 
@@ -191,19 +191,19 @@ Retrieve a specific mount with id.
 
 ```python
 import time
-import dofusdude-py
-from dofusdude-py.api import mounts_api
-from dofusdude-py.model.mount import Mount
+import dofusdude
+from dofusdude.api import mounts_api
+from dofusdude.model.mount import Mount
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient() as api_client:
+with dofusdude.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = mounts_api.MountsApi(api_client)
     language = "en" # str | a valid language code
@@ -215,7 +215,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Single Mounts
         api_response = api_instance.get_mounts_single(language, ankama_id, game)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling MountsApi->get_mounts_single: %s\n" % e)
 ```
 

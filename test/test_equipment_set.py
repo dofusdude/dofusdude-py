@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.effects_entry import EffectsEntry
+import dofusdude
+from dofusdude.model.effects_entry import EffectsEntry
 globals()['EffectsEntry'] = EffectsEntry
-from dofusdude-py.model.equipment_set import EquipmentSet
+from dofusdude.model.equipment_set import EquipmentSet
 
 
 class TestEquipmentSet(unittest.TestCase):

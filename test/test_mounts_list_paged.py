@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.links_paged import LinksPaged
-from dofusdude-py.model.mount_list_entry import MountListEntry
+import dofusdude
+from dofusdude.model.links_paged import LinksPaged
+from dofusdude.model.mount_list_entry import MountListEntry
 globals()['LinksPaged'] = LinksPaged
 globals()['MountListEntry'] = MountListEntry
-from dofusdude-py.model.mounts_list_paged import MountsListPaged
+from dofusdude.model.mounts_list_paged import MountsListPaged
 
 
 class TestMountsListPaged(unittest.TestCase):

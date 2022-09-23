@@ -1,4 +1,4 @@
-# dofusdude-py.SetsApi
+# dofusdude.SetsApi
 
 All URIs are relative to *https://api.dofusdu.de*
 
@@ -21,19 +21,19 @@ Retrieve a list of sets.
 
 ```python
 import time
-import dofusdude-py
-from dofusdude-py.api import sets_api
-from dofusdude-py.model.sets_list_paged import SetsListPaged
+import dofusdude
+from dofusdude.api import sets_api
+from dofusdude.model.sets_list_paged import SetsListPaged
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient() as api_client:
+with dofusdude.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = sets_api.SetsApi(api_client)
     language = "en" # str | a valid language code
@@ -49,7 +49,7 @@ with dofusdude-py.ApiClient() as api_client:
         # List Sets
         api_response = api_instance.get_sets_list(language, game)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling SetsApi->get_sets_list: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -58,7 +58,7 @@ with dofusdude-py.ApiClient() as api_client:
         # List Sets
         api_response = api_instance.get_sets_list(language, game, sort_level=sort_level, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, page_size=page_size, page_number=page_number)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling SetsApi->get_sets_list: %s\n" % e)
 ```
 
@@ -111,19 +111,19 @@ Search in all names and descriptions of sets with a query.
 
 ```python
 import time
-import dofusdude-py
-from dofusdude-py.api import sets_api
-from dofusdude-py.model.set_list_entry import SetListEntry
+import dofusdude
+from dofusdude.api import sets_api
+from dofusdude.model.set_list_entry import SetListEntry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient() as api_client:
+with dofusdude.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = sets_api.SetsApi(api_client)
     language = "en" # str | a valid language code
@@ -137,7 +137,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Search Sets
         api_response = api_instance.get_sets_search(language, game, query)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling SetsApi->get_sets_search: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -146,7 +146,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Search Sets
         api_response = api_instance.get_sets_search(language, game, query, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling SetsApi->get_sets_search: %s\n" % e)
 ```
 
@@ -197,19 +197,19 @@ Retrieve a specific set with id.
 
 ```python
 import time
-import dofusdude-py
-from dofusdude-py.api import sets_api
-from dofusdude-py.model.equipment_set import EquipmentSet
+import dofusdude
+from dofusdude.api import sets_api
+from dofusdude.model.equipment_set import EquipmentSet
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
-configuration = dofusdude-py.Configuration(
+configuration = dofusdude.Configuration(
     host = "https://api.dofusdu.de"
 )
 
 
 # Enter a context with an instance of the API client
-with dofusdude-py.ApiClient() as api_client:
+with dofusdude.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = sets_api.SetsApi(api_client)
     language = "en" # str | a valid language code
@@ -221,7 +221,7 @@ with dofusdude-py.ApiClient() as api_client:
         # Single Sets
         api_response = api_instance.get_sets_single(language, ankama_id, game)
         pprint(api_response)
-    except dofusdude-py.ApiException as e:
+    except dofusdude.ApiException as e:
         print("Exception when calling SetsApi->get_sets_single: %s\n" % e)
 ```
 

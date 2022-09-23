@@ -12,20 +12,20 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.condition_entry import ConditionEntry
-from dofusdude-py.model.effects_entry import EffectsEntry
-from dofusdude-py.model.equipment_parent_set import EquipmentParentSet
-from dofusdude-py.model.image_urls import ImageUrls
-from dofusdude-py.model.items_list_entry_typed_type import ItemsListEntryTypedType
-from dofusdude-py.model.recipe_entry import RecipeEntry
+import dofusdude
+from dofusdude.model.condition_entry import ConditionEntry
+from dofusdude.model.effects_entry import EffectsEntry
+from dofusdude.model.equipment_parent_set import EquipmentParentSet
+from dofusdude.model.image_urls import ImageUrls
+from dofusdude.model.items_list_entry_typed_type import ItemsListEntryTypedType
+from dofusdude.model.recipe_entry import RecipeEntry
 globals()['ConditionEntry'] = ConditionEntry
 globals()['EffectsEntry'] = EffectsEntry
 globals()['EquipmentParentSet'] = EquipmentParentSet
 globals()['ImageUrls'] = ImageUrls
 globals()['ItemsListEntryTypedType'] = ItemsListEntryTypedType
 globals()['RecipeEntry'] = RecipeEntry
-from dofusdude-py.model.equipment import Equipment
+from dofusdude.model.equipment import Equipment
 
 
 class TestEquipment(unittest.TestCase):

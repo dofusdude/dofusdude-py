@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.image_urls import ImageUrls
+import dofusdude
+from dofusdude.model.image_urls import ImageUrls
 globals()['ImageUrls'] = ImageUrls
-from dofusdude-py.model.almanax_entry_tribute_item import AlmanaxEntryTributeItem
+from dofusdude.model.almanax_entry_tribute_item import AlmanaxEntryTributeItem
 
 
 class TestAlmanaxEntryTributeItem(unittest.TestCase):

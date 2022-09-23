@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.get_meta_almanax_bonuses200_response_inner import GetMetaAlmanaxBonuses200ResponseInner
+import dofusdude
+from dofusdude.model.get_meta_almanax_bonuses200_response_inner import GetMetaAlmanaxBonuses200ResponseInner
 
 
 class TestGetMetaAlmanaxBonuses200ResponseInner(unittest.TestCase):

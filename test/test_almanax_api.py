@@ -11,8 +11,8 @@
 
 import unittest
 
-import dofusdude-py
-from dofusdude-py.api.almanax_api import AlmanaxApi  # noqa: E501
+import dofusdude
+from dofusdude.api.almanax_api import AlmanaxApi  # noqa: E501
 
 
 class TestAlmanaxApi(unittest.TestCase):

@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.set_list_entry import SetListEntry
+import dofusdude
+from dofusdude.model.set_list_entry import SetListEntry
 
 
 class TestSetListEntry(unittest.TestCase):

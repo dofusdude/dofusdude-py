@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.item_list_entry import ItemListEntry
-from dofusdude-py.model.links_paged import LinksPaged
+import dofusdude
+from dofusdude.model.item_list_entry import ItemListEntry
+from dofusdude.model.links_paged import LinksPaged
 globals()['ItemListEntry'] = ItemListEntry
 globals()['LinksPaged'] = LinksPaged
-from dofusdude-py.model.items_list_paged import ItemsListPaged
+from dofusdude.model.items_list_paged import ItemsListPaged
 
 
 class TestItemsListPaged(unittest.TestCase):

@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.effects_entry import EffectsEntry
-from dofusdude-py.model.image_urls import ImageUrls
+import dofusdude
+from dofusdude.model.effects_entry import EffectsEntry
+from dofusdude.model.image_urls import ImageUrls
 globals()['EffectsEntry'] = EffectsEntry
 globals()['ImageUrls'] = ImageUrls
-from dofusdude-py.model.mount import Mount
+from dofusdude.model.mount import Mount
 
 
 class TestMount(unittest.TestCase):

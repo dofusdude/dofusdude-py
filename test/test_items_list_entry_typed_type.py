@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import dofusdude-py
-from dofusdude-py.model.items_list_entry_typed_type import ItemsListEntryTypedType
+import dofusdude
+from dofusdude.model.items_list_entry_typed_type import ItemsListEntryTypedType
 
 
 class TestItemsListEntryTypedType(unittest.TestCase):
