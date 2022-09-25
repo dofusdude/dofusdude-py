@@ -1,46 +1,28 @@
+# coding: utf-8
+
 """
     Dofusdude
 
-    The last API for everything Dofus 🤯  ### JS Quickstart ```js var dofusdude = require(\"dofusdude-js\");  new dofusdude.AllItemsApi().getItemsAllSearch(   \"en\",   \"dofus2\",   \"nidas\",   { filterTypeName: \"hat\" },   (err, data, response) => {     console.log(data[0]);   } ); ```  ### Client SDKs - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue at the Docs Repo.  ## Main Features - 🥷 **seamless auto-update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **blazingly fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **search by relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅  - Monsters ❌ - Classes ❌ - Spells ❌ - Professions ❌   ### Maybes? I don't know what for 🤷 - Sidekicks ❌ - Haven Bags ❌ - Map ❌   ## Future I want this project to be useful and not just add plain categories no one needs. More and more features will be added to enhance the quality based on the needs of you, the developers.  Examples: _I need to know where I can drop the all the items I need to craft set X!_  _Please get a detailed always up-to-date spell description so I can calculate the damage for my set builder site!_  Nearly everything can be done. But I want to make sure somebody also wants it.  If you have anything or you are just interested in the project, join the [Discord](https://discord.gg/3EtHskZD8h).  ### Versioning Updating an API is a hard problem. This is why we'll keep it simple:  Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted. Ever.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  We can prevent this specific use case with a nice community but even then, it would be hidden behind a feature flag.  ## Get started! 🥳 Scroll down and try it for yourself!  If you are ready to use them in your project, think about [generating a client 🧙](https://github.com/OpenAPITools/openapi-generator) or use one of our pre generated SDKs linked at the top.  Awesome Projects using this API:  - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina - [luwnarya.fr](https://luwnarya.fr)    # noqa: E501
+    # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don't write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina - [luwnarya.fr](https://luwnarya.fr)  I highly recommend using the SDKs for quick results. I use them myself for microservices for the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude).    # noqa: E501
 
-    The version of the OpenAPI document: 0.5.5
+    The version of the OpenAPI document: 0.5.6
     Contact: stelzo@steado.de
     Generated by: https://openapi-generator.tech
 """
 
-
-import io
-import json
 import logging
-import re
 import ssl
 from urllib.parse import urlencode
-from urllib.parse import urlparse
-from urllib.request import proxy_bypass_environment
-import urllib3
-import ipaddress
+import typing
 
-from dofusdude.exceptions import ApiException, UnauthorizedException, ForbiddenException, NotFoundException, ServiceException, ApiValueError
+import certifi
+import urllib3
+from urllib3._collections import HTTPHeaderDict
+
+from dofusdude.exceptions import ApiException, ApiValueError
 
 
 logger = logging.getLogger(__name__)
-
-
-class RESTResponse(io.IOBase):
-
-    def __init__(self, resp):
-        self.urllib3_response = resp
-        self.status = resp.status
-        self.reason = resp.reason
-        self.data = resp.data
-
-    def getheaders(self):
-        """Returns a dictionary of the response headers."""
-        return self.urllib3_response.getheaders()
-
-    def getheader(self, name, default=None):
-        """Returns a given response header."""
-        return self.urllib3_response.getheader(name, default)
 
 
 class RESTClientObject(object):
@@ -57,6 +39,13 @@ class RESTClientObject(object):
             cert_reqs = ssl.CERT_REQUIRED
         else:
             cert_reqs = ssl.CERT_NONE
+
+        # ca_certs
+        if configuration.ssl_ca_cert:
+            ca_certs = configuration.ssl_ca_cert
+        else:
+            # if not set certificate file, use Mozilla's root certificates.
+            ca_certs = certifi.where()
 
         addition_pool_args = {}
         if configuration.assert_hostname is not None:
@@ -75,13 +64,12 @@ class RESTClientObject(object):
                 maxsize = 4
 
         # https pool manager
-        if configuration.proxy and not should_bypass_proxies(
-                configuration.host, no_proxy=configuration.no_proxy or ''):
+        if configuration.proxy:
             self.pool_manager = urllib3.ProxyManager(
                 num_pools=pools_size,
                 maxsize=maxsize,
                 cert_reqs=cert_reqs,
-                ca_certs=configuration.ssl_ca_cert,
+                ca_certs=ca_certs,
                 cert_file=configuration.cert_file,
                 key_file=configuration.key_file,
                 proxy_url=configuration.proxy,
@@ -93,79 +81,75 @@ class RESTClientObject(object):
                 num_pools=pools_size,
                 maxsize=maxsize,
                 cert_reqs=cert_reqs,
-                ca_certs=configuration.ssl_ca_cert,
+                ca_certs=ca_certs,
                 cert_file=configuration.cert_file,
                 key_file=configuration.key_file,
                 **addition_pool_args
             )
 
-    def request(self, method, url, query_params=None, headers=None,
-                body=None, post_params=None, _preload_content=True,
-                _request_timeout=None):
+    def request(
+        self,
+        method: str,
+        url: str,
+        headers: typing.Optional[HTTPHeaderDict] = None,
+        fields: typing.Optional[typing.Tuple[typing.Tuple[str, typing.Any], ...]] = None,
+        body: typing.Optional[typing.Union[str, bytes]] = None,
+        stream: bool = False,
+        timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
+    ) -> urllib3.HTTPResponse:
         """Perform requests.
 
         :param method: http request method
         :param url: http request url
-        :param query_params: query parameters in the url
         :param headers: http request headers
-        :param body: request json body, for `application/json`
-        :param post_params: request post parameters,
-                            `application/x-www-form-urlencoded`
-                            and `multipart/form-data`
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
+        :param body: request body, for other types
+        :param fields: request parameters for
+                                `application/x-www-form-urlencoded`
+                                or `multipart/form-data`
+        :param stream: if True, the urllib3.HTTPResponse object will
+                                be returned without reading/decoding response
+                                data. Default is False.
+        :param timeout: timeout setting for this request. If one
+                                number provided, it will be total request
+                                timeout. It can also be a pair (tuple) of
+                                (connection, read) timeouts.
         """
         method = method.upper()
         assert method in ['GET', 'HEAD', 'DELETE', 'POST', 'PUT',
                           'PATCH', 'OPTIONS']
 
-        if post_params and body:
+        if fields and body:
             raise ApiValueError(
-                "body parameter cannot be used with post_params parameter."
+                "body parameter cannot be used with fields parameter."
             )
 
-        post_params = post_params or {}
+        fields = fields or {}
         headers = headers or {}
 
-        timeout = None
-        if _request_timeout:
-            if isinstance(_request_timeout, (int, float)):  # noqa: E501,F821
-                timeout = urllib3.Timeout(total=_request_timeout)
-            elif (isinstance(_request_timeout, tuple) and
-                  len(_request_timeout) == 2):
-                timeout = urllib3.Timeout(
-                    connect=_request_timeout[0], read=_request_timeout[1])
+        if timeout:
+            if isinstance(timeout, (int, float)):  # noqa: E501,F821
+                timeout = urllib3.Timeout(total=timeout)
+            elif (isinstance(timeout, tuple) and
+                  len(timeout) == 2):
+                timeout = urllib3.Timeout(connect=timeout[0], read=timeout[1])
 
         try:
             # For `POST`, `PUT`, `PATCH`, `OPTIONS`, `DELETE`
             if method in ['POST', 'PUT', 'PATCH', 'OPTIONS', 'DELETE']:
-                # Only set a default Content-Type for POST, PUT, PATCH and OPTIONS requests
-                if (method != 'DELETE') and ('Content-Type' not in headers):
-                    headers['Content-Type'] = 'application/json'
-                if query_params:
-                    url += '?' + urlencode(query_params)
-                if ('Content-Type' not in headers) or (re.search('json',
-                                                                 headers['Content-Type'], re.IGNORECASE)):
-                    request_body = None
-                    if body is not None:
-                        request_body = json.dumps(body)
+                if 'Content-Type' not in headers and body is None:
                     r = self.pool_manager.request(
-                        method, url,
-                        body=request_body,
-                        preload_content=_preload_content,
+                        method,
+                        url,
+                        preload_content=not stream,
                         timeout=timeout,
-                        headers=headers)
+                        headers=headers
+                    )
                 elif headers['Content-Type'] == 'application/x-www-form-urlencoded':  # noqa: E501
                     r = self.pool_manager.request(
                         method, url,
-                        fields=post_params,
+                        fields=fields,
                         encode_multipart=False,
-                        preload_content=_preload_content,
+                        preload_content=not stream,
                         timeout=timeout,
                         headers=headers)
                 elif headers['Content-Type'] == 'multipart/form-data':
@@ -175,9 +159,9 @@ class RESTClientObject(object):
                     del headers['Content-Type']
                     r = self.pool_manager.request(
                         method, url,
-                        fields=post_params,
+                        fields=fields,
                         encode_multipart=True,
-                        preload_content=_preload_content,
+                        preload_content=not stream,
                         timeout=timeout,
                         headers=headers)
                 # Pass a `string` parameter directly in the body to support
@@ -188,7 +172,7 @@ class RESTClientObject(object):
                     r = self.pool_manager.request(
                         method, url,
                         body=request_body,
-                        preload_content=_preload_content,
+                        preload_content=not stream,
                         timeout=timeout,
                         headers=headers)
                 else:
@@ -200,154 +184,71 @@ class RESTClientObject(object):
             # For `GET`, `HEAD`
             else:
                 r = self.pool_manager.request(method, url,
-                                              fields=query_params,
-                                              preload_content=_preload_content,
+                                              preload_content=not stream,
                                               timeout=timeout,
                                               headers=headers)
         except urllib3.exceptions.SSLError as e:
             msg = "{0}\n{1}".format(type(e).__name__, str(e))
             raise ApiException(status=0, reason=msg)
 
-        if _preload_content:
-            r = RESTResponse(r)
-
+        if not stream:
             # log response body
             logger.debug("response body: %s", r.data)
 
-        if not 200 <= r.status <= 299:
-            if r.status == 401:
-                raise UnauthorizedException(http_resp=r)
-
-            if r.status == 403:
-                raise ForbiddenException(http_resp=r)
-
-            if r.status == 404:
-                raise NotFoundException(http_resp=r)
-
-            if 500 <= r.status <= 599:
-                raise ServiceException(http_resp=r)
-
-            raise ApiException(http_resp=r)
-
         return r
 
-    def GET(self, url, headers=None, query_params=None, _preload_content=True,
-            _request_timeout=None):
+    def GET(self, url, headers=None, stream=False,
+            timeout=None, fields=None) -> urllib3.HTTPResponse:
         return self.request("GET", url,
                             headers=headers,
-                            _preload_content=_preload_content,
-                            _request_timeout=_request_timeout,
-                            query_params=query_params)
+                            stream=stream,
+                            timeout=timeout,
+                            fields=fields)
 
-    def HEAD(self, url, headers=None, query_params=None, _preload_content=True,
-             _request_timeout=None):
+    def HEAD(self, url, headers=None, stream=False,
+             timeout=None, fields=None) -> urllib3.HTTPResponse:
         return self.request("HEAD", url,
                             headers=headers,
-                            _preload_content=_preload_content,
-                            _request_timeout=_request_timeout,
-                            query_params=query_params)
+                            stream=stream,
+                            timeout=timeout,
+                            fields=fields)
 
-    def OPTIONS(self, url, headers=None, query_params=None, post_params=None,
-                body=None, _preload_content=True, _request_timeout=None):
+    def OPTIONS(self, url, headers=None,
+                body=None, stream=False, timeout=None, fields=None) -> urllib3.HTTPResponse:
         return self.request("OPTIONS", url,
                             headers=headers,
-                            query_params=query_params,
-                            post_params=post_params,
-                            _preload_content=_preload_content,
-                            _request_timeout=_request_timeout,
-                            body=body)
+                            stream=stream,
+                            timeout=timeout,
+                            body=body, fields=fields)
 
-    def DELETE(self, url, headers=None, query_params=None, body=None,
-               _preload_content=True, _request_timeout=None):
+    def DELETE(self, url, headers=None, body=None,
+               stream=False, timeout=None, fields=None) -> urllib3.HTTPResponse:
         return self.request("DELETE", url,
                             headers=headers,
-                            query_params=query_params,
-                            _preload_content=_preload_content,
-                            _request_timeout=_request_timeout,
-                            body=body)
+                            stream=stream,
+                            timeout=timeout,
+                            body=body, fields=fields)
 
-    def POST(self, url, headers=None, query_params=None, post_params=None,
-             body=None, _preload_content=True, _request_timeout=None):
+    def POST(self, url, headers=None,
+             body=None, stream=False, timeout=None, fields=None) -> urllib3.HTTPResponse:
         return self.request("POST", url,
                             headers=headers,
-                            query_params=query_params,
-                            post_params=post_params,
-                            _preload_content=_preload_content,
-                            _request_timeout=_request_timeout,
-                            body=body)
+                            stream=stream,
+                            timeout=timeout,
+                            body=body, fields=fields)
 
-    def PUT(self, url, headers=None, query_params=None, post_params=None,
-            body=None, _preload_content=True, _request_timeout=None):
+    def PUT(self, url, headers=None,
+            body=None, stream=False, timeout=None, fields=None) -> urllib3.HTTPResponse:
         return self.request("PUT", url,
                             headers=headers,
-                            query_params=query_params,
-                            post_params=post_params,
-                            _preload_content=_preload_content,
-                            _request_timeout=_request_timeout,
-                            body=body)
+                            stream=stream,
+                            timeout=timeout,
+                            body=body, fields=fields)
 
-    def PATCH(self, url, headers=None, query_params=None, post_params=None,
-              body=None, _preload_content=True, _request_timeout=None):
+    def PATCH(self, url, headers=None,
+              body=None, stream=False, timeout=None, fields=None) -> urllib3.HTTPResponse:
         return self.request("PATCH", url,
                             headers=headers,
-                            query_params=query_params,
-                            post_params=post_params,
-                            _preload_content=_preload_content,
-                            _request_timeout=_request_timeout,
-                            body=body)
-
-# end of class RESTClientObject
-
-
-def is_ipv4(target):
-    """ Test if IPv4 address or not
-    """
-    try:
-        chk = ipaddress.IPv4Address(target)
-        return True
-    except ipaddress.AddressValueError:
-        return False
-
-
-def in_ipv4net(target, net):
-    """ Test if target belongs to given IPv4 network
-    """
-    try:
-        nw = ipaddress.IPv4Network(net)
-        ip = ipaddress.IPv4Address(target)
-        if ip in nw:
-            return True
-        return False
-    except ipaddress.AddressValueError:
-        return False
-    except ipaddress.NetmaskValueError:
-        return False
-
-
-def should_bypass_proxies(url, no_proxy=None):
-    """ Yet another requests.should_bypass_proxies
-    Test if proxies should not be used for a particular url.
-    """
-
-    parsed = urlparse(url)
-
-    # special cases
-    if parsed.hostname in [None, '']:
-        return True
-
-    # special cases
-    if no_proxy in [None, '']:
-        return False
-    if no_proxy == '*':
-        return True
-
-    no_proxy = no_proxy.lower().replace(' ', '');
-    entries = (
-        host for host in no_proxy.split(',') if host
-    )
-
-    if is_ipv4(parsed.hostname):
-        for item in entries:
-            if in_ipv4net(parsed.hostname, item):
-                return True
-    return proxy_bypass_environment(parsed.hostname, {'no': no_proxy})
+                            stream=stream,
+                            timeout=timeout,
+                            body=body, fields=fields)

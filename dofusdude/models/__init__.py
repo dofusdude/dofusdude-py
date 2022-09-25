@@ -1,3 +1,5 @@
+# coding: utf-8
+
 # flake8: noqa
 
 # import all models into this package
@@ -10,21 +12,14 @@
 # sys.setrecursionlimit(n)
 
 from dofusdude.model.almanax_entry import AlmanaxEntry
-from dofusdude.model.almanax_entry_bonus import AlmanaxEntryBonus
-from dofusdude.model.almanax_entry_tribute import AlmanaxEntryTribute
-from dofusdude.model.almanax_entry_tribute_item import AlmanaxEntryTributeItem
 from dofusdude.model.condition_entry import ConditionEntry
 from dofusdude.model.cosmetic import Cosmetic
 from dofusdude.model.effects_entry import EffectsEntry
-from dofusdude.model.effects_entry_type import EffectsEntryType
 from dofusdude.model.equipment import Equipment
-from dofusdude.model.equipment_parent_set import EquipmentParentSet
 from dofusdude.model.equipment_set import EquipmentSet
-from dofusdude.model.get_meta_almanax_bonuses200_response_inner import GetMetaAlmanaxBonuses200ResponseInner
 from dofusdude.model.image_urls import ImageUrls
 from dofusdude.model.item_list_entry import ItemListEntry
 from dofusdude.model.items_list_entry_typed import ItemsListEntryTyped
-from dofusdude.model.items_list_entry_typed_type import ItemsListEntryTypedType
 from dofusdude.model.items_list_paged import ItemsListPaged
 from dofusdude.model.links_paged import LinksPaged
 from dofusdude.model.mount import Mount
@@ -35,4 +30,3 @@ from dofusdude.model.resource import Resource
 from dofusdude.model.set_list_entry import SetListEntry
 from dofusdude.model.sets_list_paged import SetsListPaged
 from dofusdude.model.weapon import Weapon
-from dofusdude.model.weapon_range import WeaponRange

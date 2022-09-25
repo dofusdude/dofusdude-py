@@ -1,43 +1,32 @@
 # dofusdude
-The last API for everything Dofus 🤯
+# A project for you - the developer.
+The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!
 
-### JS Quickstart
-```js
-var dofusdude = require("dofusdude-js");
-
-new dofusdude.AllItemsApi().getItemsAllSearch(
-  "en",
-  "dofus2",
-  "nidas",
-  { filterTypeName: "hat" },
-  (err, data, response) => {
-    console.log(data[0]);
-  }
-);
-```
-
-### Client SDKs
+## Client SDKs
+Don't write types or functions yourself - I already (kinda) did! 😉
 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save
 - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save
 - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo
 - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude
 
-Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue at the Docs Repo.
+Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.
 
-## Main Features
-- 🥷 **seamless auto-update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.
+Your favorite language is missing? Please let me know!
 
-- ⚡ **blazingly fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.
+# Main Features
+- 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.
+
+- ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.
 
 - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.
 
-- 🗣️ **multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.
+- 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.
 
-- 🧠 **search by relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.
+- 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.
 
-- 🕵️ **complete** actual data from the game including items invisible to the encyclopedia like quest items.
+- 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.
 
-- 🖼️ **HD images** rendering vector graphics into PNGs up to 800x800 px in the background.
+- 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.
 
 
 ## Current state
@@ -52,64 +41,140 @@ Everything, including this site, is generated out of the [Docs Repo](https://git
 - Harnesses ✅
 - Quest Items ✅
 - Almanax ✅
-
 - Monsters ❌
-- Classes ❌
 - Spells ❌
-- Professions ❌
 
+... and much more on the Roadmap on my Discord. 
 
-### Maybes? I don't know what for 🤷
-- Sidekicks ❌
-- Haven Bags ❌
-- Map ❌
-
-
-## Future
-I want this project to be useful and not just add plain categories no one needs. More and more features will be added to enhance the quality based on the needs of you, the developers.
-
-Examples:
-_I need to know where I can drop the all the items I need to craft set X!_
-
-_Please get a detailed always up-to-date spell description so I can calculate the damage for my set builder site!_
-
-Nearly everything can be done. But I want to make sure somebody also wants it.
-
-If you have anything or you are just interested in the project, join the [Discord](https://discord.gg/3EtHskZD8h).
-
-### Versioning
-Updating an API is a hard problem. This is why we'll keep it simple:
-
-Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted. Ever.
+## Deploy now. Use forever.
+Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.
 
 There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.
 
-We can prevent this specific use case with a nice community but even then, it would be hidden behind a feature flag.
+## Only the beginning... 🤯
+I want this project to be useful and not just add plain GET-categories no one needs.
 
-## Get started! 🥳
+There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.
+
+# Get started! 🥳
 Scroll down and try it for yourself!
 
-If you are ready to use them in your project, think about [generating a client 🧙](https://github.com/OpenAPITools/openapi-generator) or use one of our pre generated SDKs linked at the top.
-
-Awesome Projects using this API:
-
+Or see how these other awesome projects use it:
 - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro
 - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina
 - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina
 - [luwnarya.fr](https://luwnarya.fr)
 
+I highly recommend using the SDKs for quick results. I use them myself for microservices for the API.
+
+## Thank you!
+I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.
+
+The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude).
+
 
 
 This Python package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: 0.5.5
-- Package version: 0.5.5
+- API version: 0.5.6
+- Package version: 0.5.6
 - Build package: org.openapitools.codegen.languages.PythonClientCodegen
 For more information, please visit [https://discord.gg/3EtHskZD8h](https://discord.gg/3EtHskZD8h)
 
 ## Requirements.
 
-Python >=3.6
+Python &gt;&#x3D;3.7
+
+## Migration from other generators like python and python-legacy
+
+### Changes
+1. This generator uses spec case for all (object) property names and parameter names.
+    - So if the spec has a property name like camelCase, it will use camelCase rather than camel_case
+    - So you will need to update how you input and read properties to use spec case
+2. Endpoint parameters are stored in dictionaries to prevent collisions (explanation below)
+    - So you will need to update how you pass data in to endpoints
+3. Endpoint responses now include the original response, the deserialized response body, and (todo)the deserialized headers
+    - So you will need to update your code to use response.body to access deserialized data
+4. All validated data is instantiated in an instance that subclasses all validated Schema classes and Decimal/str/list/tuple/frozendict/NoneClass/BoolClass/bytes/io.FileIO
+    - This means that you can use isinstance to check if a payload validated against a schema class
+    - This means that no data will be of type None/True/False
+        - ingested None will subclass NoneClass
+        - ingested True will subclass BoolClass
+        - ingested False will subclass BoolClass
+        - So if you need to check is True/False/None, instead use instance.is_true_oapg()/.is_false_oapg()/.is_none_oapg()
+5. All validated class instances are immutable except for ones based on io.File
+    - This is because if properties were changed after validation, that validation would no longer apply
+    - So no changing values or property values after a class has been instantiated
+6. String + Number types with formats
+    - String type data is stored as a string and if you need to access types based on its format like date,
+    date-time, uuid, number etc then you will need to use accessor functions on the instance
+    - type string + format: See .as_date_oapg, .as_datetime_oapg, .as_decimal_oapg, .as_uuid_oapg
+    - type number + format: See .as_float_oapg, .as_int_oapg
+    - this was done because openapi/json-schema defines constraints. string data may be type string with no format
+    keyword in one schema, and include a format constraint in another schema
+    - So if you need to access a string format based type, use as_date_oapg/as_datetime_oapg/as_decimal_oapg/as_uuid_oapg
+    - So if you need to access a number format based type, use as_int_oapg/as_float_oapg
+7. Property access on AnyType(type unset) or object(dict) schemas
+    - Only required keys with valid python names are properties like .someProp and have type hints
+    - All optional keys may not exist, so properties are not defined for them
+    - One can access optional values with dict_instance['optionalProp'] and KeyError will be raised if it does not exist
+    - Use get_item_oapg if you need a way to always get a value whether or not the key exists
+        - If the key does not exist, schemas.unset is returned from calling dict_instance.get_item_oapg('optionalProp')
+        - All required and optional keys have type hints for this method, and @typing.overload is used
+        - A type hint is also generated for additionalProperties accessed using this method
+    - So you will need to update you code to use some_instance['optionalProp'] to access optional property
+    and additionalProperty values
+8. The location of the api classes has changed
+    - Api classes are located in your_package.apis.tags.some_api
+    - This change was made to eliminate redundant code generation
+    - Legacy generators generated the same endpoint twice if it had > 1 tag on it
+    - This generator defines an endpoint in one class, then inherits that class to generate
+      apis by tags and by paths
+    - This change reduces code and allows quicker run time if you use the path apis
+        - path apis are at your_package.apis.paths.some_path
+    - Those apis will only load their needed models, which is less to load than all of the resources needed in a tag api
+    - So you will need to update your import paths to the api classes
+
+### Why are Oapg and _oapg used in class and method names?
+Classes can have arbitrarily named properties set on them
+Endpoints can have arbitrary operationId method names set
+For those reasons, I use the prefix Oapg and _oapg to greatly reduce the likelihood of collisions
+on protected + public classes/methods.
+oapg stands for OpenApi Python Generator.
+
+### Object property spec case
+This was done because when payloads are ingested, they can be validated against N number of schemas.
+If the input signature used a different property name then that has mutated the payload.
+So SchemaA and SchemaB must both see the camelCase spec named variable.
+Also it is possible to send in two properties, named camelCase and camel_case in the same payload.
+That use case should be support so spec case is used.
+
+### Parameter spec case
+Parameters can be included in different locations including:
+- query
+- path
+- header
+- cookie
+
+Any of those parameters could use the same parameter names, so if every parameter
+was included as an endpoint parameter in a function signature, they would collide.
+For that reason, each of those inputs have been separated out into separate typed dictionaries:
+- query_params
+- path_params
+- header_params
+- cookie_params
+
+So when updating your code, you will need to pass endpoint parameters in using those
+dictionaries.
+
+### Endpoint responses
+Endpoint responses have been enriched to now include more information.
+Any response reom an endpoint will now include the following properties:
+response: urllib3.HTTPResponse
+body: typing.Union[Unset, Schema]
+headers: typing.Union[Unset, TODO]
+Note: response header deserialization has not yet been added
+
 
 ## Installation & Usage
 ### pip install
@@ -149,7 +214,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import time
 import dofusdude
 from pprint import pprint
-from dofusdude.api import all_items_api
+from dofusdude.apis import all_items_api
 from dofusdude.model.items_list_entry_typed import ItemsListEntryTyped
 # Defining the host is optional and defaults to https://api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
@@ -158,21 +223,20 @@ configuration = dofusdude.Configuration(
 )
 
 
-
 # Enter a context with an instance of the API client
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = all_items_api.AllItemsApi(api_client)
     language = "en" # str | a valid language code
-    game = "dofus2" # str | 
-    query = "hat" # str | case sensitive search query
-    filter_type_name = "filter[type_name]_example" # str | only results with the translated type name across all item_subtypes (optional)
-    filter_min_level = 1 # int | only results which level is equal or above this value (optional)
-    filter_max_level = 1 # int | only results which level is equal or below this value (optional)
+game = "dofus2" # str | 
+query = "atcham" # str | case sensitive search query
+filter_type_name = "Bottes" # str | only results with the translated type name across all item_subtypes (optional)
+filter_min_level = 190 # int | only results which level is equal or above this value (optional)
+filter_max_level = 200 # int | only results which level is equal or below this value (optional)
 
     try:
         # Search All Items
-        api_response = api_instance.get_items_all_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level)
+        api_response = api_instance.get_items_all_search(languagegamequeryfilter_type_name=filter_type_namefilter_min_level=filter_min_levelfilter_max_level=filter_max_level)
         pprint(api_response)
     except dofusdude.ApiException as e:
         print("Exception when calling AllItemsApi->get_items_all_search: %s\n" % e)
@@ -184,64 +248,54 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AllItemsApi* | [**get_items_all_search**](docs/AllItemsApi.md#get_items_all_search) | **GET** /{game}/{language}/items/search | Search All Items
-*AlmanaxApi* | [**get_almanax_date**](docs/AlmanaxApi.md#get_almanax_date) | **GET** /dofus2/{language}/almanax/{date} | Single Almanax Date
-*AlmanaxApi* | [**get_almanax_range**](docs/AlmanaxApi.md#get_almanax_range) | **GET** /dofus2/{language}/almanax | Almanax Range
-*ConsumablesApi* | [**get_items_consumables_list**](docs/ConsumablesApi.md#get_items_consumables_list) | **GET** /{game}/{language}/items/consumables | List Consumables
-*ConsumablesApi* | [**get_items_consumables_search**](docs/ConsumablesApi.md#get_items_consumables_search) | **GET** /{game}/{language}/items/consumables/search | Search Consumables
-*ConsumablesApi* | [**get_items_consumables_single**](docs/ConsumablesApi.md#get_items_consumables_single) | **GET** /{game}/{language}/items/consumables/{ankama_id} | Single Consumables
-*CosmeticsApi* | [**get_cosmetics_list**](docs/CosmeticsApi.md#get_cosmetics_list) | **GET** /{game}/{language}/items/cosmetics | List Cosmetics
-*CosmeticsApi* | [**get_cosmetics_search**](docs/CosmeticsApi.md#get_cosmetics_search) | **GET** /{game}/{language}/items/cosmetics/search | Search Cosmetics
-*CosmeticsApi* | [**get_cosmetics_single**](docs/CosmeticsApi.md#get_cosmetics_single) | **GET** /{game}/{language}/items/cosmetics/{ankama_id} | Single Cosmetics
-*EquipmentApi* | [**get_items_equipment_list**](docs/EquipmentApi.md#get_items_equipment_list) | **GET** /{game}/{language}/items/equipment | List Equipment
-*EquipmentApi* | [**get_items_equipment_search**](docs/EquipmentApi.md#get_items_equipment_search) | **GET** /{game}/{language}/items/equipment/search | Search Equipment
-*EquipmentApi* | [**get_items_equipment_single**](docs/EquipmentApi.md#get_items_equipment_single) | **GET** /{game}/{language}/items/equipment/{ankama_id} | Single Equipment
-*MetaApi* | [**get_meta_almanax_bonuses**](docs/MetaApi.md#get_meta_almanax_bonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses
-*MetaApi* | [**get_meta_elements**](docs/MetaApi.md#get_meta_elements) | **GET** /dofus2/meta/elements | Effects and Condition Elements
-*MountsApi* | [**get_mounts_list**](docs/MountsApi.md#get_mounts_list) | **GET** /{game}/{language}/mounts | List Mounts
-*MountsApi* | [**get_mounts_search**](docs/MountsApi.md#get_mounts_search) | **GET** /{game}/{language}/mounts/search | Search Mounts
-*MountsApi* | [**get_mounts_single**](docs/MountsApi.md#get_mounts_single) | **GET** /{game}/{language}/mounts/{ankama_id} | Single Mounts
-*QuestItemsApi* | [**get_item_quest_single**](docs/QuestItemsApi.md#get_item_quest_single) | **GET** /{game}/{language}/items/quest/{ankama_id} | Single Quest Items
-*QuestItemsApi* | [**get_items_quest_list**](docs/QuestItemsApi.md#get_items_quest_list) | **GET** /{game}/{language}/items/quest | List Quest Items
-*QuestItemsApi* | [**get_items_quest_search**](docs/QuestItemsApi.md#get_items_quest_search) | **GET** /{game}/{language}/items/quest/search | Search Quest Items
-*ResourcesApi* | [**get_items_resource_search**](docs/ResourcesApi.md#get_items_resource_search) | **GET** /{game}/{language}/items/resources/search | Search Resources
-*ResourcesApi* | [**get_items_resources_list**](docs/ResourcesApi.md#get_items_resources_list) | **GET** /{game}/{language}/items/resources | List Resources
-*ResourcesApi* | [**get_items_resources_single**](docs/ResourcesApi.md#get_items_resources_single) | **GET** /{game}/{language}/items/resources/{ankama_id} | Single Resources
-*SetsApi* | [**get_sets_list**](docs/SetsApi.md#get_sets_list) | **GET** /{game}/{language}/sets | List Sets
-*SetsApi* | [**get_sets_search**](docs/SetsApi.md#get_sets_search) | **GET** /{game}/{language}/sets/search | Search Sets
-*SetsApi* | [**get_sets_single**](docs/SetsApi.md#get_sets_single) | **GET** /{game}/{language}/sets/{ankama_id} | Single Sets
-
+*AllItemsApi* | [**get_items_all_search**](docs/apis/tags/AllItemsApi.md#get_items_all_search) | **get** /{game}/{language}/items/search | Search All Items
+*AlmanaxApi* | [**get_almanax_date**](docs/apis/tags/AlmanaxApi.md#get_almanax_date) | **get** /dofus2/{language}/almanax/{date} | Single Almanax Date
+*AlmanaxApi* | [**get_almanax_range**](docs/apis/tags/AlmanaxApi.md#get_almanax_range) | **get** /dofus2/{language}/almanax | Almanax Range
+*ConsumablesApi* | [**get_items_consumables_list**](docs/apis/tags/ConsumablesApi.md#get_items_consumables_list) | **get** /{game}/{language}/items/consumables | List Consumables
+*ConsumablesApi* | [**get_items_consumables_search**](docs/apis/tags/ConsumablesApi.md#get_items_consumables_search) | **get** /{game}/{language}/items/consumables/search | Search Consumables
+*ConsumablesApi* | [**get_items_consumables_single**](docs/apis/tags/ConsumablesApi.md#get_items_consumables_single) | **get** /{game}/{language}/items/consumables/{ankama_id} | Single Consumables
+*CosmeticsApi* | [**get_cosmetics_list**](docs/apis/tags/CosmeticsApi.md#get_cosmetics_list) | **get** /{game}/{language}/items/cosmetics | List Cosmetics
+*CosmeticsApi* | [**get_cosmetics_search**](docs/apis/tags/CosmeticsApi.md#get_cosmetics_search) | **get** /{game}/{language}/items/cosmetics/search | Search Cosmetics
+*CosmeticsApi* | [**get_cosmetics_single**](docs/apis/tags/CosmeticsApi.md#get_cosmetics_single) | **get** /{game}/{language}/items/cosmetics/{ankama_id} | Single Cosmetics
+*EquipmentApi* | [**get_items_equipment_list**](docs/apis/tags/EquipmentApi.md#get_items_equipment_list) | **get** /{game}/{language}/items/equipment | List Equipment
+*EquipmentApi* | [**get_items_equipment_search**](docs/apis/tags/EquipmentApi.md#get_items_equipment_search) | **get** /{game}/{language}/items/equipment/search | Search Equipment
+*EquipmentApi* | [**get_items_equipment_single**](docs/apis/tags/EquipmentApi.md#get_items_equipment_single) | **get** /{game}/{language}/items/equipment/{ankama_id} | Single Equipment
+*MetaApi* | [**get_meta_almanax_bonuses**](docs/apis/tags/MetaApi.md#get_meta_almanax_bonuses) | **get** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses
+*MetaApi* | [**get_meta_elements**](docs/apis/tags/MetaApi.md#get_meta_elements) | **get** /dofus2/meta/elements | Effects and Condition Elements
+*MountsApi* | [**get_mounts_list**](docs/apis/tags/MountsApi.md#get_mounts_list) | **get** /{game}/{language}/mounts | List Mounts
+*MountsApi* | [**get_mounts_search**](docs/apis/tags/MountsApi.md#get_mounts_search) | **get** /{game}/{language}/mounts/search | Search Mounts
+*MountsApi* | [**get_mounts_single**](docs/apis/tags/MountsApi.md#get_mounts_single) | **get** /{game}/{language}/mounts/{ankama_id} | Single Mounts
+*QuestItemsApi* | [**get_item_quest_single**](docs/apis/tags/QuestItemsApi.md#get_item_quest_single) | **get** /{game}/{language}/items/quest/{ankama_id} | Single Quest Items
+*QuestItemsApi* | [**get_items_quest_list**](docs/apis/tags/QuestItemsApi.md#get_items_quest_list) | **get** /{game}/{language}/items/quest | List Quest Items
+*QuestItemsApi* | [**get_items_quest_search**](docs/apis/tags/QuestItemsApi.md#get_items_quest_search) | **get** /{game}/{language}/items/quest/search | Search Quest Items
+*ResourcesApi* | [**get_items_resource_search**](docs/apis/tags/ResourcesApi.md#get_items_resource_search) | **get** /{game}/{language}/items/resources/search | Search Resources
+*ResourcesApi* | [**get_items_resources_list**](docs/apis/tags/ResourcesApi.md#get_items_resources_list) | **get** /{game}/{language}/items/resources | List Resources
+*ResourcesApi* | [**get_items_resources_single**](docs/apis/tags/ResourcesApi.md#get_items_resources_single) | **get** /{game}/{language}/items/resources/{ankama_id} | Single Resources
+*SetsApi* | [**get_sets_list**](docs/apis/tags/SetsApi.md#get_sets_list) | **get** /{game}/{language}/sets | List Sets
+*SetsApi* | [**get_sets_search**](docs/apis/tags/SetsApi.md#get_sets_search) | **get** /{game}/{language}/sets/search | Search Sets
+*SetsApi* | [**get_sets_single**](docs/apis/tags/SetsApi.md#get_sets_single) | **get** /{game}/{language}/sets/{ankama_id} | Single Sets
 
 ## Documentation For Models
 
- - [AlmanaxEntry](docs/AlmanaxEntry.md)
- - [AlmanaxEntryBonus](docs/AlmanaxEntryBonus.md)
- - [AlmanaxEntryTribute](docs/AlmanaxEntryTribute.md)
- - [AlmanaxEntryTributeItem](docs/AlmanaxEntryTributeItem.md)
- - [ConditionEntry](docs/ConditionEntry.md)
- - [Cosmetic](docs/Cosmetic.md)
- - [EffectsEntry](docs/EffectsEntry.md)
- - [EffectsEntryType](docs/EffectsEntryType.md)
- - [Equipment](docs/Equipment.md)
- - [EquipmentParentSet](docs/EquipmentParentSet.md)
- - [EquipmentSet](docs/EquipmentSet.md)
- - [GetMetaAlmanaxBonuses200ResponseInner](docs/GetMetaAlmanaxBonuses200ResponseInner.md)
- - [ImageUrls](docs/ImageUrls.md)
- - [ItemListEntry](docs/ItemListEntry.md)
- - [ItemsListEntryTyped](docs/ItemsListEntryTyped.md)
- - [ItemsListEntryTypedType](docs/ItemsListEntryTypedType.md)
- - [ItemsListPaged](docs/ItemsListPaged.md)
- - [LinksPaged](docs/LinksPaged.md)
- - [Mount](docs/Mount.md)
- - [MountListEntry](docs/MountListEntry.md)
- - [MountsListPaged](docs/MountsListPaged.md)
- - [RecipeEntry](docs/RecipeEntry.md)
- - [Resource](docs/Resource.md)
- - [SetListEntry](docs/SetListEntry.md)
- - [SetsListPaged](docs/SetsListPaged.md)
- - [Weapon](docs/Weapon.md)
- - [WeaponRange](docs/WeaponRange.md)
-
+ - [AlmanaxEntry](docs/models/AlmanaxEntry.md)
+ - [ConditionEntry](docs/models/ConditionEntry.md)
+ - [Cosmetic](docs/models/Cosmetic.md)
+ - [EffectsEntry](docs/models/EffectsEntry.md)
+ - [Equipment](docs/models/Equipment.md)
+ - [EquipmentSet](docs/models/EquipmentSet.md)
+ - [ImageUrls](docs/models/ImageUrls.md)
+ - [ItemListEntry](docs/models/ItemListEntry.md)
+ - [ItemsListEntryTyped](docs/models/ItemsListEntryTyped.md)
+ - [ItemsListPaged](docs/models/ItemsListPaged.md)
+ - [LinksPaged](docs/models/LinksPaged.md)
+ - [Mount](docs/models/Mount.md)
+ - [MountListEntry](docs/models/MountListEntry.md)
+ - [MountsListPaged](docs/models/MountsListPaged.md)
+ - [RecipeEntry](docs/models/RecipeEntry.md)
+ - [Resource](docs/models/Resource.md)
+ - [SetListEntry](docs/models/SetListEntry.md)
+ - [SetsListPaged](docs/models/SetsListPaged.md)
+ - [Weapon](docs/models/Weapon.md)
 
 ## Documentation For Authorization
 
@@ -250,7 +304,15 @@ Class | Method | HTTP request | Description
 ## Author
 
 stelzo@steado.de
-
+stelzo@steado.de
+stelzo@steado.de
+stelzo@steado.de
+stelzo@steado.de
+stelzo@steado.de
+stelzo@steado.de
+stelzo@steado.de
+stelzo@steado.de
+stelzo@steado.de
 
 ## Notes for Large OpenAPI documents
 If the OpenAPI document is large, imports in dofusdude.apis and dofusdude.models may fail with a
@@ -258,10 +320,10 @@ RecursionError indicating the maximum recursion limit has been exceeded. In that
 
 Solution 1:
 Use specific imports for apis and models like:
-- `from dofusdude.api.default_api import DefaultApi`
+- `from dofusdude.apis.default_api import DefaultApi`
 - `from dofusdude.model.pet import Pet`
 
-Solution 2:
+Solution 1:
 Before importing the package, adjust the maximum recursion limit as shown below:
 ```
 import sys
@@ -270,4 +332,3 @@ import dofusdude
 from dofusdude.apis import *
 from dofusdude.models import *
 ```
-
