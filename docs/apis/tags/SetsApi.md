@@ -5,9 +5,201 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**get_all_sets_list**](#get_all_sets_list) | **get** /{game}/{language}/sets/all | List All Sets
 [**get_sets_list**](#get_sets_list) | **get** /{game}/{language}/sets | List Sets
 [**get_sets_search**](#get_sets_search) | **get** /{game}/{language}/sets/search | Search Sets
 [**get_sets_single**](#get_sets_single) | **get** /{game}/{language}/sets/{ankama_id} | Single Sets
+
+# **get_all_sets_list**
+<a name="get_all_sets_list"></a>
+> SetsListPaged get_all_sets_list(languagegame)
+
+List All Sets
+
+Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
+
+### Example
+
+```python
+import dofusdude
+from dofusdude.apis.tags import sets_api
+from dofusdude.model.sets_list_paged import SetsListPaged
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.dofusdu.de
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dofusdude.Configuration(
+    host = "https://api.dofusdu.de"
+)
+
+# Enter a context with an instance of the API client
+with dofusdude.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sets_api.SetsApi(api_client)
+
+    # example passing only required values which don't have defaults set
+    path_params = {
+        'language': "en",
+        'game': "dofus2",
+    }
+    query_params = {
+    }
+    header_params = {
+    }
+    try:
+        # List All Sets
+        api_response = api_instance.get_all_sets_list(
+            path_params=path_params,
+            query_params=query_params,
+            header_params=header_params,
+        )
+        pprint(api_response)
+    except dofusdude.ApiException as e:
+        print("Exception when calling SetsApi->get_all_sets_list: %s\n" % e)
+
+    # example passing only optional values
+    path_params = {
+        'language': "en",
+        'game': "dofus2",
+    }
+    query_params = {
+        'sort[level]': "asc",
+        'filter[min_highest_equipment_level]': 190,
+        'filter[max_highest_equipment_level]': 200,
+    }
+    header_params = {
+        'Accept-Encoding': "gzip",
+    }
+    try:
+        # List All Sets
+        api_response = api_instance.get_all_sets_list(
+            path_params=path_params,
+            query_params=query_params,
+            header_params=header_params,
+        )
+        pprint(api_response)
+    except dofusdude.ApiException as e:
+        print("Exception when calling SetsApi->get_all_sets_list: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+header_params | RequestHeaderParams | |
+path_params | RequestPathParams | |
+accept_content_types | typing.Tuple[str] | default is ('application/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+sort[level] | SortLevelSchema | | optional
+filter[min_highest_equipment_level] | FilterMinHighestEquipmentLevelSchema | | optional
+filter[max_highest_equipment_level] | FilterMaxHighestEquipmentLevelSchema | | optional
+
+
+# SortLevelSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | must be one of ["asc", "desc", ] 
+
+# FilterMinHighestEquipmentLevelSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
+
+# FilterMaxHighestEquipmentLevelSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
+
+### header_params
+#### RequestHeaderParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+Accept-Encoding | AcceptEncodingSchema | | optional
+
+# AcceptEncodingSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | must be one of ["gzip", ] 
+
+### path_params
+#### RequestPathParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+language | LanguageSchema | | 
+game | GameSchema | | 
+
+# LanguageSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | must be one of ["en", "fr", "de", "it", "es", "pt", ] 
+
+# GameSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | must be one of ["dofus2", "dofus2beta", ] 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#get_all_sets_list.ApiResponseFor200) | Set Found
+400 | [ApiResponseFor400](#get_all_sets_list.ApiResponseFor400) | Bad Request 
+404 | [ApiResponseFor404](#get_all_sets_list.ApiResponseFor404) | Not Found
+
+#### get_all_sets_list.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyApplicationJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**SetsListPaged**](../../models/SetsListPaged.md) |  | 
+
+
+#### get_all_sets_list.ApiResponseFor400
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | Unset | body was not defined |
+headers | Unset | headers were not defined |
+
+#### get_all_sets_list.ApiResponseFor404
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | Unset | body was not defined |
+headers | Unset | headers were not defined |
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **get_sets_list**
 <a name="get_sets_list"></a>
@@ -63,6 +255,7 @@ with dofusdude.ApiClient(configuration) as api_client:
         'filter[max_highest_equipment_level]': 200,
         'page[size]': 20,
         'page[number]': 1,
+        'fields[set]': ["equipment_ids"],
     }
     try:
         # List Sets
@@ -95,6 +288,7 @@ filter[min_highest_equipment_level] | FilterMinHighestEquipmentLevelSchema | | o
 filter[max_highest_equipment_level] | FilterMaxHighestEquipmentLevelSchema | | optional
 page[size] | PageSizeSchema | | optional
 page[number] | PageNumberSchema | | optional
+fields[set] | FieldsSetSchema | | optional
 
 
 # SortLevelSchema
@@ -131,6 +325,18 @@ decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
+
+# FieldsSetSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+items | str,  | str,  |  | must be one of ["effects", "equipment_ids", ] 
 
 ### path_params
 #### RequestPathParams

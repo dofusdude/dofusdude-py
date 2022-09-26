@@ -23,6 +23,13 @@ from dofusdude.apis.paths.game_language_items_resources import GameLanguageItems
 from dofusdude.apis.paths.game_language_items_consumables import GameLanguageItemsConsumables
 from dofusdude.apis.paths.game_language_items_quest import GameLanguageItemsQuest
 from dofusdude.apis.paths.game_language_items_cosmetics import GameLanguageItemsCosmetics
+from dofusdude.apis.paths.game_language_mounts_all import GameLanguageMountsAll
+from dofusdude.apis.paths.game_language_sets_all import GameLanguageSetsAll
+from dofusdude.apis.paths.game_language_items_cosmetics_all import GameLanguageItemsCosmeticsAll
+from dofusdude.apis.paths.game_language_items_quest_all import GameLanguageItemsQuestAll
+from dofusdude.apis.paths.game_language_items_consumables_all import GameLanguageItemsConsumablesAll
+from dofusdude.apis.paths.game_language_items_resources_all import GameLanguageItemsResourcesAll
+from dofusdude.apis.paths.game_language_items_equipment_all import GameLanguageItemsEquipmentAll
 from dofusdude.apis.paths.dofus2_language_almanax import Dofus2LanguageAlmanax
 from dofusdude.apis.paths.dofus2_language_almanax_date import Dofus2LanguageAlmanaxDate
 from dofusdude.apis.paths.dofus2_meta_elements import Dofus2MetaElements
@@ -53,6 +60,13 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.GAME_LANGUAGE_ITEMS_CONSUMABLES: GameLanguageItemsConsumables,
         PathValues.GAME_LANGUAGE_ITEMS_QUEST: GameLanguageItemsQuest,
         PathValues.GAME_LANGUAGE_ITEMS_COSMETICS: GameLanguageItemsCosmetics,
+        PathValues.GAME_LANGUAGE_MOUNTS_ALL: GameLanguageMountsAll,
+        PathValues.GAME_LANGUAGE_SETS_ALL: GameLanguageSetsAll,
+        PathValues.GAME_LANGUAGE_ITEMS_COSMETICS_ALL: GameLanguageItemsCosmeticsAll,
+        PathValues.GAME_LANGUAGE_ITEMS_QUEST_ALL: GameLanguageItemsQuestAll,
+        PathValues.GAME_LANGUAGE_ITEMS_CONSUMABLES_ALL: GameLanguageItemsConsumablesAll,
+        PathValues.GAME_LANGUAGE_ITEMS_RESOURCES_ALL: GameLanguageItemsResourcesAll,
+        PathValues.GAME_LANGUAGE_ITEMS_EQUIPMENT_ALL: GameLanguageItemsEquipmentAll,
         PathValues.DOFUS2_LANGUAGE_ALMANAX: Dofus2LanguageAlmanax,
         PathValues.DOFUS2_LANGUAGE_ALMANAX_DATE: Dofus2LanguageAlmanaxDate,
         PathValues.DOFUS2_META_ELEMENTS: Dofus2MetaElements,
@@ -84,6 +98,13 @@ path_to_api = PathToApi(
         PathValues.GAME_LANGUAGE_ITEMS_CONSUMABLES: GameLanguageItemsConsumables,
         PathValues.GAME_LANGUAGE_ITEMS_QUEST: GameLanguageItemsQuest,
         PathValues.GAME_LANGUAGE_ITEMS_COSMETICS: GameLanguageItemsCosmetics,
+        PathValues.GAME_LANGUAGE_MOUNTS_ALL: GameLanguageMountsAll,
+        PathValues.GAME_LANGUAGE_SETS_ALL: GameLanguageSetsAll,
+        PathValues.GAME_LANGUAGE_ITEMS_COSMETICS_ALL: GameLanguageItemsCosmeticsAll,
+        PathValues.GAME_LANGUAGE_ITEMS_QUEST_ALL: GameLanguageItemsQuestAll,
+        PathValues.GAME_LANGUAGE_ITEMS_CONSUMABLES_ALL: GameLanguageItemsConsumablesAll,
+        PathValues.GAME_LANGUAGE_ITEMS_RESOURCES_ALL: GameLanguageItemsResourcesAll,
+        PathValues.GAME_LANGUAGE_ITEMS_EQUIPMENT_ALL: GameLanguageItemsEquipmentAll,
         PathValues.DOFUS2_LANGUAGE_ALMANAX: Dofus2LanguageAlmanax,
         PathValues.DOFUS2_LANGUAGE_ALMANAX_DATE: Dofus2LanguageAlmanaxDate,
         PathValues.DOFUS2_META_ELEMENTS: Dofus2MetaElements,

@@ -66,6 +66,42 @@ class PageNumberSchema(
     schemas.Int32Schema
 ):
     pass
+
+
+class FieldsSetSchema(
+    schemas.ListSchema
+):
+
+
+    class MetaOapg:
+        
+        
+        class items(
+            schemas.EnumBase,
+            schemas.StrSchema
+        ):
+            
+            @schemas.classproperty
+            def EFFECTS(cls):
+                return cls("effects")
+            
+            @schemas.classproperty
+            def EQUIPMENT_IDS(cls):
+                return cls("equipment_ids")
+
+    def __new__(
+        cls,
+        arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+    ) -> 'FieldsSetSchema':
+        return super().__new__(
+            cls,
+            arg,
+            _configuration=_configuration,
+        )
+
+    def __getitem__(self, i: int) -> MetaOapg.items:
+        return super().__getitem__(i)
 # path params
 
 
@@ -162,6 +198,7 @@ class BaseApi(api_client.Api):
             request_query_filter_max_highest_equipment_level,
             request_query_page_size,
             request_query_page_number,
+            request_query_fields_set,
         ):
             parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:

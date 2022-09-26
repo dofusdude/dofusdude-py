@@ -92,7 +92,60 @@ class PageNumberSchema(
 
     class MetaOapg:
         inclusive_minimum = 0
-FieldsItemSchema = schemas.StrSchema
+
+
+class FieldsItemSchema(
+    schemas.ListSchema
+):
+
+
+    class MetaOapg:
+        unique_items = True
+        
+        
+        class items(
+            schemas.EnumBase,
+            schemas.StrSchema
+        ):
+        
+        
+            class MetaOapg:
+                enum_value_to_name = {
+                    "recipe": "RECIPE",
+                    "description": "DESCRIPTION",
+                    "conditions": "CONDITIONS",
+                    "effects": "EFFECTS",
+                }
+            
+            @schemas.classproperty
+            def RECIPE(cls):
+                return cls("recipe")
+            
+            @schemas.classproperty
+            def DESCRIPTION(cls):
+                return cls("description")
+            
+            @schemas.classproperty
+            def CONDITIONS(cls):
+                return cls("conditions")
+            
+            @schemas.classproperty
+            def EFFECTS(cls):
+                return cls("effects")
+
+    def __new__(
+        cls,
+        arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+    ) -> 'FieldsItemSchema':
+        return super().__new__(
+            cls,
+            arg,
+            _configuration=_configuration,
+        )
+
+    def __getitem__(self, i: int) -> MetaOapg.items:
+        return super().__getitem__(i)
 RequestRequiredQueryParams = typing_extensions.TypedDict(
     'RequestRequiredQueryParams',
     {
@@ -107,7 +160,7 @@ RequestOptionalQueryParams = typing_extensions.TypedDict(
         'filter[max_level]': typing.Union[FilterMaxLevelSchema, decimal.Decimal, int, ],
         'page[size]': typing.Union[PageSizeSchema, decimal.Decimal, int, ],
         'page[number]': typing.Union[PageNumberSchema, decimal.Decimal, int, ],
-        'fields[item]': typing.Union[FieldsItemSchema, str, ],
+        'fields[item]': typing.Union[FieldsItemSchema, list, tuple, ],
     },
     total=False
 )
@@ -157,7 +210,6 @@ request_query_fields_item = api_client.QueryParameter(
     name="fields[item]",
     style=api_client.ParameterStyle.FORM,
     schema=FieldsItemSchema,
-    explode=True,
 )
 # path params
 

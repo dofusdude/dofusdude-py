@@ -67,7 +67,50 @@ class PageNumberSchema(
     schemas.IntSchema
 ):
     pass
-FieldsItemSchema = schemas.StrSchema
+
+
+class FieldsItemSchema(
+    schemas.ListSchema
+):
+
+
+    class MetaOapg:
+        
+        
+        class items(
+            schemas.EnumBase,
+            schemas.StrSchema
+        ):
+            
+            @schemas.classproperty
+            def RECIPE(cls):
+                return cls("recipe")
+            
+            @schemas.classproperty
+            def DESCRIPTION(cls):
+                return cls("description")
+            
+            @schemas.classproperty
+            def CONDITIONS(cls):
+                return cls("conditions")
+            
+            @schemas.classproperty
+            def EFFECTS(cls):
+                return cls("effects")
+
+    def __new__(
+        cls,
+        arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+    ) -> 'FieldsItemSchema':
+        return super().__new__(
+            cls,
+            arg,
+            _configuration=_configuration,
+        )
+
+    def __getitem__(self, i: int) -> MetaOapg.items:
+        return super().__getitem__(i)
 # path params
 
 

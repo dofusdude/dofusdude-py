@@ -49,6 +49,45 @@ class PageNumberSchema(
 
     class MetaOapg:
         inclusive_minimum = 0
+
+
+class FieldsMountSchema(
+    schemas.ListSchema
+):
+
+
+    class MetaOapg:
+        unique_items = True
+        
+        
+        class items(
+            schemas.EnumBase,
+            schemas.StrSchema
+        ):
+        
+        
+            class MetaOapg:
+                enum_value_to_name = {
+                    "effects": "EFFECTS",
+                }
+            
+            @schemas.classproperty
+            def EFFECTS(cls):
+                return cls("effects")
+
+    def __new__(
+        cls,
+        arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+    ) -> 'FieldsMountSchema':
+        return super().__new__(
+            cls,
+            arg,
+            _configuration=_configuration,
+        )
+
+    def __getitem__(self, i: int) -> MetaOapg.items:
+        return super().__getitem__(i)
 RequestRequiredQueryParams = typing_extensions.TypedDict(
     'RequestRequiredQueryParams',
     {
@@ -60,6 +99,7 @@ RequestOptionalQueryParams = typing_extensions.TypedDict(
         'filter[family_name]': typing.Union[FilterFamilyNameSchema, str, ],
         'page[size]': typing.Union[PageSizeSchema, decimal.Decimal, int, ],
         'page[number]': typing.Union[PageNumberSchema, decimal.Decimal, int, ],
+        'fields[mount]': typing.Union[FieldsMountSchema, list, tuple, ],
     },
     total=False
 )
@@ -86,6 +126,11 @@ request_query_page_number = api_client.QueryParameter(
     style=api_client.ParameterStyle.FORM,
     schema=PageNumberSchema,
     explode=True,
+)
+request_query_fields_mount = api_client.QueryParameter(
+    name="fields[mount]",
+    style=api_client.ParameterStyle.FORM,
+    schema=FieldsMountSchema,
 )
 # path params
 
@@ -279,6 +324,7 @@ class BaseApi(api_client.Api):
             request_query_filter_family_name,
             request_query_page_size,
             request_query_page_number,
+            request_query_fields_mount,
         ):
             parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:

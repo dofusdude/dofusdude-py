@@ -62,7 +62,86 @@ class PageNumberSchema(
     schemas.IntSchema
 ):
     pass
-FieldsItemSchema = schemas.StrSchema
+
+
+class FieldsItemSchema(
+    schemas.ListSchema
+):
+
+
+    class MetaOapg:
+        
+        
+        class items(
+            schemas.EnumBase,
+            schemas.StrSchema
+        ):
+            
+            @schemas.classproperty
+            def RECIPE(cls):
+                return cls("recipe")
+            
+            @schemas.classproperty
+            def DESCRIPTION(cls):
+                return cls("description")
+            
+            @schemas.classproperty
+            def CONDITIONS(cls):
+                return cls("conditions")
+            
+            @schemas.classproperty
+            def EFFECTS(cls):
+                return cls("effects")
+            
+            @schemas.classproperty
+            def IS_WEAPON(cls):
+                return cls("is_weapon")
+            
+            @schemas.classproperty
+            def PODS(cls):
+                return cls("pods")
+            
+            @schemas.classproperty
+            def PARENT_SET(cls):
+                return cls("parent_set")
+            
+            @schemas.classproperty
+            def CRITICAL_HIT_PROBABILITY(cls):
+                return cls("critical_hit_probability")
+            
+            @schemas.classproperty
+            def CRITICAL_HIT_BONUS(cls):
+                return cls("critical_hit_bonus")
+            
+            @schemas.classproperty
+            def IS_TWO_HANDED(cls):
+                return cls("is_two_handed")
+            
+            @schemas.classproperty
+            def MAX_CAST_PER_TURN(cls):
+                return cls("max_cast_per_turn")
+            
+            @schemas.classproperty
+            def AP_COST(cls):
+                return cls("ap_cost")
+            
+            @schemas.classproperty
+            def RANGE(cls):
+                return cls("range")
+
+    def __new__(
+        cls,
+        arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+    ) -> 'FieldsItemSchema':
+        return super().__new__(
+            cls,
+            arg,
+            _configuration=_configuration,
+        )
+
+    def __getitem__(self, i: int) -> MetaOapg.items:
+        return super().__getitem__(i)
 # path params
 
 
