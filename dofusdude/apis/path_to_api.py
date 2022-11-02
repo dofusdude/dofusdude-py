@@ -34,6 +34,15 @@ from dofusdude.apis.paths.dofus2_language_almanax import Dofus2LanguageAlmanax
 from dofusdude.apis.paths.dofus2_language_almanax_date import Dofus2LanguageAlmanaxDate
 from dofusdude.apis.paths.dofus2_meta_elements import Dofus2MetaElements
 from dofusdude.apis.paths.dofus2_meta_language_almanax_bonuses import Dofus2MetaLanguageAlmanaxBonuses
+from dofusdude.apis.paths.meta_webhooks_twitter import MetaWebhooksTwitter
+from dofusdude.apis.paths.meta_webhooks_rss import MetaWebhooksRss
+from dofusdude.apis.paths.meta_webhooks_almanax import MetaWebhooksAlmanax
+from dofusdude.apis.paths.webhooks_rss_id import WebhooksRssId
+from dofusdude.apis.paths.webhooks_twitter_id import WebhooksTwitterId
+from dofusdude.apis.paths.webhooks_almanax_id import WebhooksAlmanaxId
+from dofusdude.apis.paths.webhooks_rss import WebhooksRss
+from dofusdude.apis.paths.webhooks_twitter import WebhooksTwitter
+from dofusdude.apis.paths.webhooks_almanax import WebhooksAlmanax
 
 PathToApi = typing_extensions.TypedDict(
     'PathToApi',
@@ -71,6 +80,15 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DOFUS2_LANGUAGE_ALMANAX_DATE: Dofus2LanguageAlmanaxDate,
         PathValues.DOFUS2_META_ELEMENTS: Dofus2MetaElements,
         PathValues.DOFUS2_META_LANGUAGE_ALMANAX_BONUSES: Dofus2MetaLanguageAlmanaxBonuses,
+        PathValues.META_WEBHOOKS_TWITTER: MetaWebhooksTwitter,
+        PathValues.META_WEBHOOKS_RSS: MetaWebhooksRss,
+        PathValues.META_WEBHOOKS_ALMANAX: MetaWebhooksAlmanax,
+        PathValues.WEBHOOKS_RSS_ID: WebhooksRssId,
+        PathValues.WEBHOOKS_TWITTER_ID: WebhooksTwitterId,
+        PathValues.WEBHOOKS_ALMANAX_ID: WebhooksAlmanaxId,
+        PathValues.WEBHOOKS_RSS: WebhooksRss,
+        PathValues.WEBHOOKS_TWITTER: WebhooksTwitter,
+        PathValues.WEBHOOKS_ALMANAX: WebhooksAlmanax,
     }
 )
 
@@ -109,5 +127,14 @@ path_to_api = PathToApi(
         PathValues.DOFUS2_LANGUAGE_ALMANAX_DATE: Dofus2LanguageAlmanaxDate,
         PathValues.DOFUS2_META_ELEMENTS: Dofus2MetaElements,
         PathValues.DOFUS2_META_LANGUAGE_ALMANAX_BONUSES: Dofus2MetaLanguageAlmanaxBonuses,
+        PathValues.META_WEBHOOKS_TWITTER: MetaWebhooksTwitter,
+        PathValues.META_WEBHOOKS_RSS: MetaWebhooksRss,
+        PathValues.META_WEBHOOKS_ALMANAX: MetaWebhooksAlmanax,
+        PathValues.WEBHOOKS_RSS_ID: WebhooksRssId,
+        PathValues.WEBHOOKS_TWITTER_ID: WebhooksTwitterId,
+        PathValues.WEBHOOKS_ALMANAX_ID: WebhooksAlmanaxId,
+        PathValues.WEBHOOKS_RSS: WebhooksRss,
+        PathValues.WEBHOOKS_TWITTER: WebhooksTwitter,
+        PathValues.WEBHOOKS_ALMANAX: WebhooksAlmanax,
     }
 )

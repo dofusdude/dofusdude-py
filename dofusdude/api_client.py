@@ -2,9 +2,9 @@
 """
     Dofusdude
 
-    # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don't write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina - [luwnarya.fr](https://luwnarya.fr)  I highly recommend using the SDKs for quick results. I use them myself for microservices for the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude).    # noqa: E501
+    # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don't write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related Twitter, RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina - [luwnarya.fr](https://luwnarya.fr)  I highly recommend using the SDKs for quick results. I use them myself for microservices for the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude).    # noqa: E501
 
-    The version of the OpenAPI document: 0.6.0
+    The version of the OpenAPI document: 0.7.0
     Contact: stelzo@steado.de
     Generated by: https://openapi-generator.tech
 """
@@ -54,6 +54,8 @@ class RequestField(RequestFieldBase):
 
 
 class JSONEncoder(json.JSONEncoder):
+    compact_separators = (',', ':')
+
     def default(self, obj):
         if isinstance(obj, str):
             return str(obj)
@@ -296,7 +298,7 @@ class StyleFormSerializer(ParameterSerializerBase):
         prefix_separator_iterator: typing.Optional[PrefixSeparatorIterator] = None
     ) -> str:
         if prefix_separator_iterator is None:
-            prefix_separator_iterator = PrefixSeparatorIterator('?', '&')
+            prefix_separator_iterator = PrefixSeparatorIterator('', '&')
         return self._ref6570_expansion(
             variable_name=name,
             in_data=in_data,
@@ -325,8 +327,25 @@ class StyleSimpleSerializer(ParameterSerializerBase):
         )
 
 
+class JSONDetector:
+    """
+    Works for:
+    application/json
+    application/json; charset=UTF-8
+    application/json-patch+json
+    application/geo+json
+    """
+    __json_content_type_pattern = re.compile("application/[^+]*[+]?(json);?.*")
+
+    @classmethod
+    def _content_type_is_json(cls, content_type: str) -> bool:
+        if cls.__json_content_type_pattern.match(content_type):
+            return True
+        return False
+
+
 @dataclass
-class ParameterBase:
+class ParameterBase(JSONDetector):
     name: str
     in_type: ParameterInType
     required: bool
@@ -353,7 +372,6 @@ class ParameterBase:
     }
     __disallowed_header_names = {'Accept', 'Content-Type', 'Authorization'}
     _json_encoder = JSONEncoder()
-    _json_content_type = 'application/json'
 
     @classmethod
     def __verify_style_to_in_type(cls, style: typing.Optional[ParameterStyle], in_type: ParameterInType):
@@ -400,8 +418,11 @@ class ParameterBase:
 
     def _serialize_json(
         self,
-        in_data: typing.Union[None, int, float, str, bool, dict, list]
+        in_data: typing.Union[None, int, float, str, bool, dict, list],
+        eliminate_whitespace: bool = False
     ) -> str:
+        if eliminate_whitespace:
+            return json.dumps(in_data, separators=self._json_encoder.compact_separators)
         return json.dumps(in_data)
 
 
@@ -496,7 +517,7 @@ class PathParameter(ParameterBase, StyleSimpleSerializer):
         for content_type, schema in self.content.items():
             cast_in_data = schema(in_data)
             cast_in_data = self._json_encoder.default(cast_in_data)
-            if content_type == self._json_content_type:
+            if self._content_type_is_json(content_type):
                 value = self._serialize_json(cast_in_data)
                 return self._to_dict(self.name, value)
             raise NotImplementedError('Serialization of {} has not yet been implemented'.format(content_type))
@@ -514,7 +535,7 @@ class QueryParameter(ParameterBase, StyleFormSerializer):
         schema: typing.Optional[typing.Type[Schema]] = None,
         content: typing.Optional[typing.Dict[str, typing.Type[Schema]]] = None
     ):
-        used_style = ParameterStyle.FORM if style is None and content is None and schema else style
+        used_style = ParameterStyle.FORM if style is None else style
         used_explode = self._get_default_explode(used_style) if explode is None else explode
 
         super().__init__(
@@ -577,8 +598,6 @@ class QueryParameter(ParameterBase, StyleFormSerializer):
         return self._to_dict(self.name, value)
 
     def get_prefix_separator_iterator(self) -> typing.Optional[PrefixSeparatorIterator]:
-        if not self.schema:
-            return None
         if self.style is ParameterStyle.FORM:
             return PrefixSeparatorIterator('?', '&')
         elif self.style is ParameterStyle.SPACE_DELIMITED:
@@ -617,12 +636,17 @@ class QueryParameter(ParameterBase, StyleFormSerializer):
                 elif self.style is ParameterStyle.PIPE_DELIMITED:
                     return self.__serialize_pipe_delimited(cast_in_data, prefix_separator_iterator)
         # self.content will be length one
+        if prefix_separator_iterator is None:
+            prefix_separator_iterator = self.get_prefix_separator_iterator()
         for content_type, schema in self.content.items():
             cast_in_data = schema(in_data)
             cast_in_data = self._json_encoder.default(cast_in_data)
-            if content_type == self._json_content_type:
-                value = self._serialize_json(cast_in_data)
-                return self._to_dict(self.name, value)
+            if self._content_type_is_json(content_type):
+                value = self._serialize_json(cast_in_data, eliminate_whitespace=True)
+                return self._to_dict(
+                    self.name,
+                    next(prefix_separator_iterator) + self.name + '=' + quote(value)
+                )
             raise NotImplementedError('Serialization of {} has not yet been implemented'.format(content_type))
 
 
@@ -681,7 +705,7 @@ class CookieParameter(ParameterBase, StyleFormSerializer):
         for content_type, schema in self.content.items():
             cast_in_data = schema(in_data)
             cast_in_data = self._json_encoder.default(cast_in_data)
-            if content_type == self._json_content_type:
+            if self._content_type_is_json(content_type):
                 value = self._serialize_json(cast_in_data)
                 return self._to_dict(self.name, value)
             raise NotImplementedError('Serialization of {} has not yet been implemented'.format(content_type))
@@ -738,7 +762,7 @@ class HeaderParameter(ParameterBase, StyleSimpleSerializer):
         for content_type, schema in self.content.items():
             cast_in_data = schema(in_data)
             cast_in_data = self._json_encoder.default(cast_in_data)
-            if content_type == self._json_content_type:
+            if self._content_type_is_json(content_type):
                 value = self._serialize_json(cast_in_data)
                 return self.__to_headers(((self.name, value),))
             raise NotImplementedError('Serialization of {} has not yet been implemented'.format(content_type))
@@ -799,23 +823,6 @@ class ApiResponseWithoutDeserialization(ApiResponse):
     response: urllib3.HTTPResponse
     body: typing.Union[Unset, typing.Type[Schema]] = unset
     headers: typing.Union[Unset, typing.List[HeaderParameter]] = unset
-
-
-class JSONDetector:
-    """
-    Works for:
-    application/json
-    application/json; charset=UTF-8
-    application/json-patch+json
-    application/geo+json
-    """
-    __json_content_type_pattern = re.compile("application/[^+]*[+]?(json);?.*")
-
-    @classmethod
-    def _content_type_is_json(cls, content_type: str) -> bool:
-        if cls.__json_content_type_pattern.match(content_type):
-            return True
-        return False
 
 
 class OpenApiResponse(JSONDetector):
@@ -992,12 +999,12 @@ class ApiClient:
         self.pool_threads = pool_threads
 
         self.rest_client = rest.RESTClientObject(configuration)
-        self.default_headers = {}
+        self.default_headers = HTTPHeaderDict()
         if header_name is not None:
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'OpenAPI-Generator/0.6.0/python'
+        self.user_agent = 'OpenAPI-Generator/0.7.0/python'
 
     def __enter__(self):
         return self
@@ -1049,14 +1056,17 @@ class ApiClient:
     ) -> urllib3.HTTPResponse:
 
         # header parameters
-        headers = headers or {}
-        headers.update(self.default_headers)
+        used_headers = HTTPHeaderDict(self.default_headers)
         if self.cookie:
             headers['Cookie'] = self.cookie
 
         # auth setting
-        self.update_params_for_auth(headers,
+        self.update_params_for_auth(used_headers,
                                     auth_settings, resource_path, method, body)
+
+        # must happen after cookie setting and auth setting in case user is overriding those
+        if headers:
+            used_headers.update(headers)
 
         # request url
         if host is None:
@@ -1069,7 +1079,7 @@ class ApiClient:
         response = self.request(
             method,
             url,
-            headers=headers,
+            headers=used_headers,
             fields=fields,
             body=body,
             stream=stream,
@@ -1453,7 +1463,7 @@ class RequestBody(StyleFormSerializer, JSONDetector):
             raise ValueError(
                 f'Unable to serialize {in_data} to application/x-www-form-urlencoded because it is not a dict of data')
         cast_in_data = self.__json_encoder.default(in_data)
-        value = self._serialize_form(cast_in_data, name='', explode=True, percent_encode=False)
+        value = self._serialize_form(cast_in_data, name='', explode=True, percent_encode=True)
         return dict(body=value)
 
     def serialize(

@@ -11,6 +11,7 @@ from dofusdude.apis.tags.mounts_api import MountsApi
 from dofusdude.apis.tags.quest_items_api import QuestItemsApi
 from dofusdude.apis.tags.resources_api import ResourcesApi
 from dofusdude.apis.tags.sets_api import SetsApi
+from dofusdude.apis.tags.webhooks_api import WebhooksApi
 
 TagToApi = typing_extensions.TypedDict(
     'TagToApi',
@@ -25,6 +26,7 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.QUEST_ITEMS: QuestItemsApi,
         TagValues.RESOURCES: ResourcesApi,
         TagValues.SETS: SetsApi,
+        TagValues.WEBHOOKS: WebhooksApi,
     }
 )
 
@@ -40,5 +42,6 @@ tag_to_api = TagToApi(
         TagValues.QUEST_ITEMS: QuestItemsApi,
         TagValues.RESOURCES: ResourcesApi,
         TagValues.SETS: SetsApi,
+        TagValues.WEBHOOKS: WebhooksApi,
     }
 )

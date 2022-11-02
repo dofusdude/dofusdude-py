@@ -16,3 +16,4 @@ class TagValues(str, enum.Enum):
     QUEST_ITEMS = "quest items"
     RESOURCES = "resources"
     SETS = "sets"
+    WEBHOOKS = "webhooks"
