@@ -93,7 +93,7 @@ class ConditionEntry(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, ],
                     name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
                     id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
                     is_meta: typing.Union[MetaOapg.properties.is_meta, bool, schemas.Unset] = schemas.unset,
@@ -102,7 +102,7 @@ class ConditionEntry(
                 ) -> 'element':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         name=name,
                         id=id,
                         is_meta=is_meta,
@@ -150,7 +150,7 @@ class ConditionEntry(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         operator: typing.Union[MetaOapg.properties.operator, str, schemas.Unset] = schemas.unset,
         int_value: typing.Union[MetaOapg.properties.int_value, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         element: typing.Union[MetaOapg.properties.element, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
@@ -159,7 +159,7 @@ class ConditionEntry(
     ) -> 'ConditionEntry':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             operator=operator,
             int_value=int_value,
             element=element,

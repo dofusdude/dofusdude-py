@@ -63,12 +63,12 @@ class Mount(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'effects':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -126,7 +126,7 @@ class Mount(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         ankama_id: typing.Union[MetaOapg.properties.ankama_id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
         family_name: typing.Union[MetaOapg.properties.family_name, str, schemas.Unset] = schemas.unset,
@@ -137,7 +137,7 @@ class Mount(
     ) -> 'Mount':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             ankama_id=ankama_id,
             name=name,
             family_name=family_name,

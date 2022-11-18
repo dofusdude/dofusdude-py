@@ -142,7 +142,7 @@ class SchemaFor200ResponseBodyApplicationJson(
         
             def __new__(
                 cls,
-                *args: typing.Union[dict, frozendict.frozendict, ],
+                *_args: typing.Union[dict, frozendict.frozendict, ],
                 id: typing.Union[MetaOapg.properties.id, str, schemas.Unset] = schemas.unset,
                 name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
                 _configuration: typing.Optional[schemas.Configuration] = None,
@@ -150,7 +150,7 @@ class SchemaFor200ResponseBodyApplicationJson(
             ) -> 'items':
                 return super().__new__(
                     cls,
-                    *args,
+                    *_args,
                     id=id,
                     name=name,
                     _configuration=_configuration,
@@ -159,12 +159,12 @@ class SchemaFor200ResponseBodyApplicationJson(
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]], typing.List[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]]],
+        _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]], typing.List[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]]],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyApplicationJson':
         return super().__new__(
             cls,
-            arg,
+            _arg,
             _configuration=_configuration,
         )
 

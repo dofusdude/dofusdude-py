@@ -51,12 +51,12 @@ class EquipmentSet(
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, decimal.Decimal, int, ]], typing.List[typing.Union[MetaOapg.items, decimal.Decimal, int, ]]],
+                    _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, decimal.Decimal, int, ]], typing.List[typing.Union[MetaOapg.items, decimal.Decimal, int, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'equipment_ids':
                     return super().__new__(
                         cls,
-                        arg,
+                        _arg,
                         _configuration=_configuration,
                     )
             
@@ -88,12 +88,12 @@ class EquipmentSet(
                     
                         def __new__(
                             cls,
-                            arg: typing.Union[typing.Tuple['EffectsEntry'], typing.List['EffectsEntry']],
+                            _arg: typing.Union[typing.Tuple['EffectsEntry'], typing.List['EffectsEntry']],
                             _configuration: typing.Optional[schemas.Configuration] = None,
                         ) -> 'items':
                             return super().__new__(
                                 cls,
-                                arg,
+                                _arg,
                                 _configuration=_configuration,
                             )
                     
@@ -103,12 +103,12 @@ class EquipmentSet(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'effects':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             level = schemas.IntSchema
@@ -167,7 +167,7 @@ class EquipmentSet(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         ankama_id: typing.Union[MetaOapg.properties.ankama_id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
         equipment_ids: typing.Union[MetaOapg.properties.equipment_ids, list, tuple, schemas.Unset] = schemas.unset,
@@ -178,7 +178,7 @@ class EquipmentSet(
     ) -> 'EquipmentSet':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             ankama_id=ankama_id,
             name=name,
             equipment_ids=equipment_ids,

@@ -49,12 +49,12 @@ class LinksPaged(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'first':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -69,12 +69,12 @@ class LinksPaged(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'prev':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -89,12 +89,12 @@ class LinksPaged(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'next':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -109,12 +109,12 @@ class LinksPaged(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'last':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -165,7 +165,7 @@ class LinksPaged(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         first: typing.Union[MetaOapg.properties.first, None, str, schemas.Unset] = schemas.unset,
         prev: typing.Union[MetaOapg.properties.prev, None, str, schemas.Unset] = schemas.unset,
         next: typing.Union[MetaOapg.properties.next, None, str, schemas.Unset] = schemas.unset,
@@ -175,7 +175,7 @@ class LinksPaged(
     ) -> 'LinksPaged':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             first=first,
             prev=prev,
             next=next,

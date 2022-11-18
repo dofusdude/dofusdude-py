@@ -77,14 +77,14 @@ class ItemsListEntryTyped(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, ],
                     name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
                     _configuration: typing.Optional[schemas.Configuration] = None,
                     **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
                 ) -> 'type':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         name=name,
                         _configuration=_configuration,
                         **kwargs,
@@ -157,7 +157,7 @@ class ItemsListEntryTyped(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         ankama_id: typing.Union[MetaOapg.properties.ankama_id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
         type: typing.Union[MetaOapg.properties.type, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
@@ -169,7 +169,7 @@ class ItemsListEntryTyped(
     ) -> 'ItemsListEntryTyped':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             ankama_id=ankama_id,
             name=name,
             type=type,

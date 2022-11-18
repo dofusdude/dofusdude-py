@@ -81,7 +81,7 @@ class RecipeEntry(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         item_ankama_id: typing.Union[MetaOapg.properties.item_ankama_id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         item_subtype: typing.Union[MetaOapg.properties.item_subtype, str, schemas.Unset] = schemas.unset,
         quantity: typing.Union[MetaOapg.properties.quantity, decimal.Decimal, int, schemas.Unset] = schemas.unset,
@@ -90,7 +90,7 @@ class RecipeEntry(
     ) -> 'RecipeEntry':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             item_ankama_id=item_ankama_id,
             item_subtype=item_subtype,
             quantity=quantity,

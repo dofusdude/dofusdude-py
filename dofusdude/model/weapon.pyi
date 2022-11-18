@@ -78,14 +78,14 @@ class Weapon(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, ],
                     name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
                     _configuration: typing.Optional[schemas.Configuration] = None,
                     **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
                 ) -> 'type':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         name=name,
                         _configuration=_configuration,
                         **kwargs,
@@ -116,12 +116,12 @@ class Weapon(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'effects':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -143,12 +143,12 @@ class Weapon(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'conditions':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             critical_hit_probability = schemas.IntSchema
@@ -202,7 +202,7 @@ class Weapon(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, ],
                     min: typing.Union[MetaOapg.properties.min, decimal.Decimal, int, schemas.Unset] = schemas.unset,
                     max: typing.Union[MetaOapg.properties.max, decimal.Decimal, int, schemas.Unset] = schemas.unset,
                     _configuration: typing.Optional[schemas.Configuration] = None,
@@ -210,7 +210,7 @@ class Weapon(
                 ) -> 'range':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         min=min,
                         max=max,
                         _configuration=_configuration,
@@ -235,12 +235,12 @@ class Weapon(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'recipe':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -293,7 +293,7 @@ class Weapon(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, None, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, None, ],
                     id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
                     name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
                     _configuration: typing.Optional[schemas.Configuration] = None,
@@ -301,7 +301,7 @@ class Weapon(
                 ) -> 'parent_set':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         id=id,
                         name=name,
                         _configuration=_configuration,
@@ -453,7 +453,7 @@ class Weapon(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         ankama_id: typing.Union[MetaOapg.properties.ankama_id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
         description: typing.Union[MetaOapg.properties.description, str, schemas.Unset] = schemas.unset,
@@ -477,7 +477,7 @@ class Weapon(
     ) -> 'Weapon':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             ankama_id=ankama_id,
             name=name,
             description=description,

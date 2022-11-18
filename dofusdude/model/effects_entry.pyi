@@ -93,7 +93,7 @@ class EffectsEntry(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, ],
                     name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
                     id: typing.Union[MetaOapg.properties.id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
                     is_meta: typing.Union[MetaOapg.properties.is_meta, bool, schemas.Unset] = schemas.unset,
@@ -102,7 +102,7 @@ class EffectsEntry(
                 ) -> 'type':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         name=name,
                         id=id,
                         is_meta=is_meta,
@@ -174,7 +174,7 @@ class EffectsEntry(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         int_minimum: typing.Union[MetaOapg.properties.int_minimum, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         int_maximum: typing.Union[MetaOapg.properties.int_maximum, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         type: typing.Union[MetaOapg.properties.type, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
@@ -186,7 +186,7 @@ class EffectsEntry(
     ) -> 'EffectsEntry':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             int_minimum=int_minimum,
             int_maximum=int_maximum,
             type=type,

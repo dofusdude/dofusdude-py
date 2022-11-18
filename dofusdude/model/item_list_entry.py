@@ -77,14 +77,14 @@ class ItemListEntry(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, ],
                     name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
                     _configuration: typing.Optional[schemas.Configuration] = None,
                     **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
                 ) -> 'type':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         name=name,
                         _configuration=_configuration,
                         **kwargs,
@@ -113,12 +113,12 @@ class ItemListEntry(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'recipe':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -183,7 +183,7 @@ class ItemListEntry(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         ankama_id: typing.Union[MetaOapg.properties.ankama_id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
         type: typing.Union[MetaOapg.properties.type, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
@@ -195,7 +195,7 @@ class ItemListEntry(
     ) -> 'ItemListEntry':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             ankama_id=ankama_id,
             name=name,
             type=type,

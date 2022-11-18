@@ -94,7 +94,7 @@ class AlmanaxEntry(
                         
                             def __new__(
                                 cls,
-                                *args: typing.Union[dict, frozendict.frozendict, ],
+                                *_args: typing.Union[dict, frozendict.frozendict, ],
                                 id: typing.Union[MetaOapg.properties.id, str, schemas.Unset] = schemas.unset,
                                 name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
                                 _configuration: typing.Optional[schemas.Configuration] = None,
@@ -102,7 +102,7 @@ class AlmanaxEntry(
                             ) -> 'type':
                                 return super().__new__(
                                     cls,
-                                    *args,
+                                    *_args,
                                     id=id,
                                     name=name,
                                     _configuration=_configuration,
@@ -142,7 +142,7 @@ class AlmanaxEntry(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, ],
                     description: typing.Union[MetaOapg.properties.description, str, schemas.Unset] = schemas.unset,
                     type: typing.Union[MetaOapg.properties.type, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
                     _configuration: typing.Optional[schemas.Configuration] = None,
@@ -150,7 +150,7 @@ class AlmanaxEntry(
                 ) -> 'bonus':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         description=description,
                         type=type,
                         _configuration=_configuration,
@@ -232,7 +232,7 @@ class AlmanaxEntry(
                         
                             def __new__(
                                 cls,
-                                *args: typing.Union[dict, frozendict.frozendict, ],
+                                *_args: typing.Union[dict, frozendict.frozendict, ],
                                 ankama_id: typing.Union[MetaOapg.properties.ankama_id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
                                 image_urls: typing.Union['ImageUrls', schemas.Unset] = schemas.unset,
                                 name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
@@ -242,7 +242,7 @@ class AlmanaxEntry(
                             ) -> 'item':
                                 return super().__new__(
                                     cls,
-                                    *args,
+                                    *_args,
                                     ankama_id=ankama_id,
                                     image_urls=image_urls,
                                     name=name,
@@ -285,7 +285,7 @@ class AlmanaxEntry(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, ],
                     item: typing.Union[MetaOapg.properties.item, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
                     quantity: typing.Union[MetaOapg.properties.quantity, decimal.Decimal, int, schemas.Unset] = schemas.unset,
                     _configuration: typing.Optional[schemas.Configuration] = None,
@@ -293,7 +293,7 @@ class AlmanaxEntry(
                 ) -> 'tribute':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         item=item,
                         quantity=quantity,
                         _configuration=_configuration,
@@ -340,7 +340,7 @@ class AlmanaxEntry(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         bonus: typing.Union[MetaOapg.properties.bonus, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
         date: typing.Union[MetaOapg.properties.date, str, schemas.Unset] = schemas.unset,
         tribute: typing.Union[MetaOapg.properties.tribute, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
@@ -349,7 +349,7 @@ class AlmanaxEntry(
     ) -> 'AlmanaxEntry':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             bonus=bonus,
             date=date,
             tribute=tribute,

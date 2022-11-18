@@ -53,12 +53,12 @@ class PutAlmanaxWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'bonus_whitelist':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -77,12 +77,12 @@ class PutAlmanaxWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'bonus_blacklist':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -101,12 +101,12 @@ class PutAlmanaxWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'subscriptions':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -134,12 +134,12 @@ class PutAlmanaxWebhook(
                         
                             def __new__(
                                 cls,
-                                *args: typing.Union[None, str, ],
+                                *_args: typing.Union[None, str, ],
                                 _configuration: typing.Optional[schemas.Configuration] = None,
                             ) -> 'timezone':
                                 return super().__new__(
                                     cls,
-                                    *args,
+                                    *_args,
                                     _configuration=_configuration,
                                 )
                         
@@ -157,12 +157,12 @@ class PutAlmanaxWebhook(
                         
                             def __new__(
                                 cls,
-                                *args: typing.Union[None, decimal.Decimal, int, ],
+                                *_args: typing.Union[None, decimal.Decimal, int, ],
                                 _configuration: typing.Optional[schemas.Configuration] = None,
                             ) -> 'midnight_offset':
                                 return super().__new__(
                                     cls,
-                                    *args,
+                                    *_args,
                                     _configuration=_configuration,
                                 )
                         __annotations__ = {
@@ -200,7 +200,7 @@ class PutAlmanaxWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, None, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, None, ],
                     timezone: typing.Union[MetaOapg.properties.timezone, None, str, schemas.Unset] = schemas.unset,
                     midnight_offset: typing.Union[MetaOapg.properties.midnight_offset, None, decimal.Decimal, int, schemas.Unset] = schemas.unset,
                     _configuration: typing.Optional[schemas.Configuration] = None,
@@ -208,7 +208,7 @@ class PutAlmanaxWebhook(
                 ) -> 'daily_settings':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         timezone=timezone,
                         midnight_offset=midnight_offset,
                         _configuration=_configuration,
@@ -226,12 +226,12 @@ class PutAlmanaxWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, bool, ],
+                    *_args: typing.Union[None, bool, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'iso_date':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -277,12 +277,12 @@ class PutAlmanaxWebhook(
                                         
                                             def __new__(
                                                 cls,
-                                                *args: typing.Union[None, decimal.Decimal, int, ],
+                                                *_args: typing.Union[None, decimal.Decimal, int, ],
                                                 _configuration: typing.Optional[schemas.Configuration] = None,
                                             ) -> 'ping_days_before':
                                                 return super().__new__(
                                                     cls,
-                                                    *args,
+                                                    *_args,
                                                     _configuration=_configuration,
                                                 )
                                         __annotations__ = {
@@ -326,7 +326,7 @@ class PutAlmanaxWebhook(
                             
                                 def __new__(
                                     cls,
-                                    *args: typing.Union[dict, frozendict.frozendict, ],
+                                    *_args: typing.Union[dict, frozendict.frozendict, ],
                                     discord_id: typing.Union[MetaOapg.properties.discord_id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
                                     is_role: typing.Union[MetaOapg.properties.is_role, bool, schemas.Unset] = schemas.unset,
                                     ping_days_before: typing.Union[MetaOapg.properties.ping_days_before, None, decimal.Decimal, int, schemas.Unset] = schemas.unset,
@@ -335,7 +335,7 @@ class PutAlmanaxWebhook(
                                 ) -> 'items':
                                     return super().__new__(
                                         cls,
-                                        *args,
+                                        *_args,
                                         discord_id=discord_id,
                                         is_role=is_role,
                                         ping_days_before=ping_days_before,
@@ -345,12 +345,12 @@ class PutAlmanaxWebhook(
                     
                         def __new__(
                             cls,
-                            arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]], typing.List[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]]],
+                            _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]], typing.List[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]]],
                             _configuration: typing.Optional[schemas.Configuration] = None,
                         ) -> 'additional_properties':
                             return super().__new__(
                                 cls,
-                                arg,
+                                _arg,
                                 _configuration=_configuration,
                             )
                     
@@ -366,13 +366,13 @@ class PutAlmanaxWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, ],
+                    *_args: typing.Union[dict, frozendict.frozendict, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                     **kwargs: typing.Union[MetaOapg.additional_properties, list, tuple, ],
                 ) -> 'mentions':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                         **kwargs,
                     )
@@ -427,12 +427,12 @@ class PutAlmanaxWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'intervals':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -488,12 +488,12 @@ class PutAlmanaxWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'weekly_weekday':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -572,7 +572,7 @@ class PutAlmanaxWebhook(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         bonus_whitelist: typing.Union[MetaOapg.properties.bonus_whitelist, list, tuple, None, schemas.Unset] = schemas.unset,
         bonus_blacklist: typing.Union[MetaOapg.properties.bonus_blacklist, list, tuple, None, schemas.Unset] = schemas.unset,
         subscriptions: typing.Union[MetaOapg.properties.subscriptions, list, tuple, None, schemas.Unset] = schemas.unset,
@@ -586,7 +586,7 @@ class PutAlmanaxWebhook(
     ) -> 'PutAlmanaxWebhook':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             bonus_whitelist=bonus_whitelist,
             bonus_blacklist=bonus_blacklist,
             subscriptions=subscriptions,

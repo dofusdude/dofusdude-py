@@ -52,12 +52,12 @@ class ImageUrls(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'sd':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -72,12 +72,12 @@ class ImageUrls(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'hq':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -92,12 +92,12 @@ class ImageUrls(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, ],
+                    *_args: typing.Union[None, str, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'hd':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -148,7 +148,7 @@ class ImageUrls(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         icon: typing.Union[MetaOapg.properties.icon, str, schemas.Unset] = schemas.unset,
         sd: typing.Union[MetaOapg.properties.sd, None, str, schemas.Unset] = schemas.unset,
         hq: typing.Union[MetaOapg.properties.hq, None, str, schemas.Unset] = schemas.unset,
@@ -158,7 +158,7 @@ class ImageUrls(
     ) -> 'ImageUrls':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             icon=icon,
             sd=sd,
             hq=hq,

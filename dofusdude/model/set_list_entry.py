@@ -89,7 +89,7 @@ class SetListEntry(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         ankama_id: typing.Union[MetaOapg.properties.ankama_id, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
         items: typing.Union[MetaOapg.properties.items, decimal.Decimal, int, schemas.Unset] = schemas.unset,
@@ -99,7 +99,7 @@ class SetListEntry(
     ) -> 'SetListEntry':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             ankama_id=ankama_id,
             name=name,
             items=items,

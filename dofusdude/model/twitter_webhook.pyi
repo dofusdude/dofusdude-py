@@ -54,12 +54,12 @@ class TwitterWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'whitelist':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -78,12 +78,12 @@ class TwitterWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'blacklist':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -98,12 +98,12 @@ class TwitterWebhook(
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
+                    _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'subscriptions':
                     return super().__new__(
                         cls,
-                        arg,
+                        _arg,
                         _configuration=_configuration,
                     )
             
@@ -143,12 +143,12 @@ class TwitterWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, str, datetime, ],
+                    *_args: typing.Union[None, str, datetime, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'last_fired_at':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             updated_at = schemas.DateTimeSchema
@@ -235,7 +235,7 @@ class TwitterWebhook(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         id: typing.Union[MetaOapg.properties.id, str, uuid.UUID, schemas.Unset] = schemas.unset,
         whitelist: typing.Union[MetaOapg.properties.whitelist, list, tuple, None, schemas.Unset] = schemas.unset,
         blacklist: typing.Union[MetaOapg.properties.blacklist, list, tuple, None, schemas.Unset] = schemas.unset,
@@ -250,7 +250,7 @@ class TwitterWebhook(
     ) -> 'TwitterWebhook':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             id=id,
             whitelist=whitelist,
             blacklist=blacklist,

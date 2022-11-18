@@ -56,12 +56,12 @@ class MountsListPaged(
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple['MountListEntry'], typing.List['MountListEntry']],
+                    _arg: typing.Union[typing.Tuple['MountListEntry'], typing.List['MountListEntry']],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'items':
                     return super().__new__(
                         cls,
-                        arg,
+                        _arg,
                         _configuration=_configuration,
                     )
             
@@ -101,7 +101,7 @@ class MountsListPaged(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         _links: typing.Union['LinksPaged', schemas.Unset] = schemas.unset,
         items: typing.Union[MetaOapg.properties.items, list, tuple, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -109,7 +109,7 @@ class MountsListPaged(
     ) -> 'MountsListPaged':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             _links=_links,
             items=items,
             _configuration=_configuration,

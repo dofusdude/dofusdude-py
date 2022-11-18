@@ -53,12 +53,12 @@ class PutTwitterWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'whitelist':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -77,12 +77,12 @@ class PutTwitterWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'blacklist':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -102,12 +102,12 @@ class PutTwitterWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'subscriptions':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -129,12 +129,12 @@ class PutTwitterWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, decimal.Decimal, int, ],
+                    *_args: typing.Union[None, decimal.Decimal, int, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'preview_length':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -185,7 +185,7 @@ class PutTwitterWebhook(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         whitelist: typing.Union[MetaOapg.properties.whitelist, list, tuple, None, schemas.Unset] = schemas.unset,
         blacklist: typing.Union[MetaOapg.properties.blacklist, list, tuple, None, schemas.Unset] = schemas.unset,
         subscriptions: typing.Union[MetaOapg.properties.subscriptions, list, tuple, None, schemas.Unset] = schemas.unset,
@@ -195,7 +195,7 @@ class PutTwitterWebhook(
     ) -> 'PutTwitterWebhook':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             whitelist=whitelist,
             blacklist=blacklist,
             subscriptions=subscriptions,

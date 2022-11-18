@@ -56,12 +56,12 @@ class CreateRSSWebhook(
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
+                    _arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'subscriptions':
                     return super().__new__(
                         cls,
-                        arg,
+                        _arg,
                         _configuration=_configuration,
                     )
             
@@ -100,12 +100,12 @@ class CreateRSSWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'whitelist':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -124,12 +124,12 @@ class CreateRSSWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[list, tuple, None, ],
+                    *_args: typing.Union[list, tuple, None, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'blacklist':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             
@@ -151,12 +151,12 @@ class CreateRSSWebhook(
             
                 def __new__(
                     cls,
-                    *args: typing.Union[None, decimal.Decimal, int, ],
+                    *_args: typing.Union[None, decimal.Decimal, int, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'preview_length':
                     return super().__new__(
                         cls,
-                        *args,
+                        *_args,
                         _configuration=_configuration,
                     )
             __annotations__ = {
@@ -225,7 +225,7 @@ class CreateRSSWebhook(
 
     def __new__(
         cls,
-        *args: typing.Union[dict, frozendict.frozendict, ],
+        *_args: typing.Union[dict, frozendict.frozendict, ],
         subscriptions: typing.Union[MetaOapg.properties.subscriptions, list, tuple, ],
         format: typing.Union[MetaOapg.properties.format, str, ],
         callback: typing.Union[MetaOapg.properties.callback, str, ],
@@ -237,7 +237,7 @@ class CreateRSSWebhook(
     ) -> 'CreateRSSWebhook':
         return super().__new__(
             cls,
-            *args,
+            *_args,
             subscriptions=subscriptions,
             format=format,
             callback=callback,
