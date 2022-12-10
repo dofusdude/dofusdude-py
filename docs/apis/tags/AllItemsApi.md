@@ -35,7 +35,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     path_params = {
-        'language': "en",
+        'language': "fr",
         'game': "dofus2",
     }
     query_params = {
@@ -53,7 +53,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
     # example passing only optional values
     path_params = {
-        'language': "en",
+        'language': "fr",
         'game': "dofus2",
     }
     query_params = {
@@ -61,6 +61,7 @@ with dofusdude.ApiClient(configuration) as api_client:
         'filter[type_name]': "Bottes",
         'filter[min_level]': 190,
         'filter[max_level]': 200,
+        'limit': 8,
     }
     try:
         # Search All Items
@@ -92,6 +93,7 @@ query | QuerySchema | |
 filter[type_name] | FilterTypeNameSchema | | optional
 filter[min_level] | FilterMinLevelSchema | | optional
 filter[max_level] | FilterMaxLevelSchema | | optional
+limit | LimitSchema | | optional
 
 
 # QuerySchema
@@ -121,6 +123,13 @@ decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
+
+# LimitSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | if omitted the server will use the default value of 8
 
 ### path_params
 #### RequestPathParams

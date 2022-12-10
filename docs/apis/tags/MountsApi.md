@@ -418,6 +418,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     query_params = {
         'query': "Dorée",
         'filter[family_name]': "Dragodinde",
+        'limit': 8,
     }
     try:
         # Search Mounts
@@ -447,6 +448,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query | QuerySchema | | 
 filter[family_name] | FilterFamilyNameSchema | | optional
+limit | LimitSchema | | optional
 
 
 # QuerySchema
@@ -462,6 +464,13 @@ str,  | str,  |  |
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 str,  | str,  |  | 
+
+# LimitSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | if omitted the server will use the default value of 8
 
 ### path_params
 #### RequestPathParams

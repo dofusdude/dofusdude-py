@@ -474,6 +474,7 @@ with dofusdude.ApiClient(configuration) as api_client:
         'filter[type_name]': "Costume",
         'filter[min_level]': 1,
         'filter[max_level]': 2,
+        'limit': 8,
     }
     try:
         # Search Cosmetics
@@ -505,6 +506,7 @@ query | QuerySchema | |
 filter[type_name] | FilterTypeNameSchema | | optional
 filter[min_level] | FilterMinLevelSchema | | optional
 filter[max_level] | FilterMaxLevelSchema | | optional
+limit | LimitSchema | | optional
 
 
 # QuerySchema
@@ -534,6 +536,13 @@ decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
+
+# LimitSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | if omitted the server will use the default value of 8
 
 ### path_params
 #### RequestPathParams

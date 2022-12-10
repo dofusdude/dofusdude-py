@@ -455,6 +455,7 @@ with dofusdude.ApiClient(configuration) as api_client:
         'query': "Des",
         'filter[min_highest_equipment_level]': 195,
         'filter[max_highest_equipment_level]': 200,
+        'limit': 8,
     }
     try:
         # Search Sets
@@ -485,6 +486,7 @@ Name | Type | Description  | Notes
 query | QuerySchema | | 
 filter[min_highest_equipment_level] | FilterMinHighestEquipmentLevelSchema | | optional
 filter[max_highest_equipment_level] | FilterMaxHighestEquipmentLevelSchema | | optional
+limit | LimitSchema | | optional
 
 
 # QuerySchema
@@ -507,6 +509,13 @@ decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 32 bit integer
+
+# LimitSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | if omitted the server will use the default value of 8
 
 ### path_params
 #### RequestPathParams

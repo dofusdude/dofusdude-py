@@ -30,6 +30,12 @@ from dofusdude.model.mount_list_entry import MountListEntry
 # Query params
 QuerySchema = schemas.StrSchema
 FilterFamilyNameSchema = schemas.StrSchema
+
+
+class LimitSchema(
+    schemas.IntSchema
+):
+    pass
 RequestRequiredQueryParams = typing_extensions.TypedDict(
     'RequestRequiredQueryParams',
     {
@@ -40,6 +46,7 @@ RequestOptionalQueryParams = typing_extensions.TypedDict(
     'RequestOptionalQueryParams',
     {
         'filter[family_name]': typing.Union[FilterFamilyNameSchema, str, ],
+        'limit': typing.Union[LimitSchema, decimal.Decimal, int, ],
     },
     total=False
 )
@@ -60,6 +67,12 @@ request_query_filter_family_name = api_client.QueryParameter(
     name="filter[family_name]",
     style=api_client.ParameterStyle.FORM,
     schema=FilterFamilyNameSchema,
+    explode=True,
+)
+request_query_limit = api_client.QueryParameter(
+    name="limit",
+    style=api_client.ParameterStyle.FORM,
+    schema=LimitSchema,
     explode=True,
 )
 # Path params
@@ -287,6 +300,7 @@ class BaseApi(api_client.Api):
         for parameter in (
             request_query_query,
             request_query_filter_family_name,
+            request_query_limit,
         ):
             parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:
@@ -321,7 +335,11 @@ class BaseApi(api_client.Api):
                 api_response = api_client.ApiResponseWithoutDeserialization(response=response)
 
         if not 200 <= response.status <= 299:
-            raise exceptions.ApiException(api_response=api_response)
+            raise exceptions.ApiException(
+                status=response.status,
+                reason=response.reason,
+                api_response=api_response
+            )
 
         return api_response
 

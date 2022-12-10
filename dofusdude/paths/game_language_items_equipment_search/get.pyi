@@ -42,6 +42,12 @@ class FilterMaxLevelSchema(
     schemas.Int32Schema
 ):
     pass
+
+
+class LimitSchema(
+    schemas.IntSchema
+):
+    pass
 RequestRequiredQueryParams = typing_extensions.TypedDict(
     'RequestRequiredQueryParams',
     {
@@ -54,6 +60,7 @@ RequestOptionalQueryParams = typing_extensions.TypedDict(
         'filter[type_name]': typing.Union[FilterTypeNameSchema, str, ],
         'filter[min_level]': typing.Union[FilterMinLevelSchema, decimal.Decimal, int, ],
         'filter[max_level]': typing.Union[FilterMaxLevelSchema, decimal.Decimal, int, ],
+        'limit': typing.Union[LimitSchema, decimal.Decimal, int, ],
     },
     total=False
 )
@@ -86,6 +93,12 @@ request_query_filter_max_level = api_client.QueryParameter(
     name="filter[max_level]",
     style=api_client.ParameterStyle.FORM,
     schema=FilterMaxLevelSchema,
+    explode=True,
+)
+request_query_limit = api_client.QueryParameter(
+    name="limit",
+    style=api_client.ParameterStyle.FORM,
+    schema=LimitSchema,
     explode=True,
 )
 # Path params
@@ -315,6 +328,7 @@ class BaseApi(api_client.Api):
             request_query_filter_type_name,
             request_query_filter_min_level,
             request_query_filter_max_level,
+            request_query_limit,
         ):
             parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:
@@ -349,7 +363,11 @@ class BaseApi(api_client.Api):
                 api_response = api_client.ApiResponseWithoutDeserialization(response=response)
 
         if not 200 <= response.status <= 299:
-            raise exceptions.ApiException(api_response=api_response)
+            raise exceptions.ApiException(
+                status=response.status,
+                reason=response.reason,
+                api_response=api_response
+            )
 
         return api_response
 
