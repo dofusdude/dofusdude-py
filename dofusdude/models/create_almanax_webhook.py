@@ -157,7 +157,7 @@ class CreateAlmanaxWebhook(BaseModel):
                         else None
                 )
                 for _k, _v in obj.get("mentions").items()
-            )
+            ),
             "intervals": obj.get("intervals"),
             "weekly_weekday": obj.get("weekly_weekday")
         })
