@@ -49,6 +49,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -119,6 +120,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling AlmanaxApi->get_almanax_range: %s\n" % e)
 ```
+
 
 
 ### Parameters

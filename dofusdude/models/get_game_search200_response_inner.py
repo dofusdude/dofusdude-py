@@ -19,23 +19,17 @@ import re  # noqa: F401
 import json
 
 
-from typing import List, Optional
-from pydantic import BaseModel, StrictInt, StrictStr, conlist
-from dofusdude.models.image_urls import ImageUrls
-from dofusdude.models.items_list_entry_typed_type import ItemsListEntryTypedType
-from dofusdude.models.recipe_entry import RecipeEntry
+from typing import Optional
+from pydantic import BaseModel, Field, StrictInt, StrictStr
 
-class ItemListEntry(BaseModel):
+class GetGameSearch200ResponseInner(BaseModel):
     """
-    ItemListEntry
+    GetGameSearch200ResponseInner
     """
-    ankama_id: Optional[StrictInt] = None
-    name: Optional[StrictStr] = None
-    type: Optional[ItemsListEntryTypedType] = None
-    level: Optional[StrictInt] = None
-    image_urls: Optional[ImageUrls] = None
-    recipe: Optional[conlist(RecipeEntry)] = None
-    __properties = ["ankama_id", "name", "type", "level", "image_urls", "recipe"]
+    name: Optional[StrictStr] = Field(None, description="Name of the hit. The query could still have matched with the description only.")
+    ankama_id: Optional[StrictInt] = Field(None, description="Ankama ID for retrieving more details in the type specific endpoint.")
+    type: Optional[StrictStr] = Field(None, description="Type classification")
+    __properties = ["name", "ankama_id", "type"]
 
     class Config:
         """Pydantic configuration"""
@@ -51,8 +45,8 @@ class ItemListEntry(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> ItemListEntry:
-        """Create an instance of ItemListEntry from a JSON string"""
+    def from_json(cls, json_str: str) -> GetGameSearch200ResponseInner:
+        """Create an instance of GetGameSearch200ResponseInner from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -61,42 +55,21 @@ class ItemListEntry(BaseModel):
                           exclude={
                           },
                           exclude_none=True)
-        # override the default output from pydantic by calling `to_dict()` of type
-        if self.type:
-            _dict['type'] = self.type.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of image_urls
-        if self.image_urls:
-            _dict['image_urls'] = self.image_urls.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of each item in recipe (list)
-        _items = []
-        if self.recipe:
-            for _item in self.recipe:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['recipe'] = _items
-        # set to None if recipe (nullable) is None
-        # and __fields_set__ contains the field
-        if self.recipe is None and "recipe" in self.__fields_set__:
-            _dict['recipe'] = None
-
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> ItemListEntry:
-        """Create an instance of ItemListEntry from a dict"""
+    def from_dict(cls, obj: dict) -> GetGameSearch200ResponseInner:
+        """Create an instance of GetGameSearch200ResponseInner from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return ItemListEntry.parse_obj(obj)
+            return GetGameSearch200ResponseInner.parse_obj(obj)
 
-        _obj = ItemListEntry.parse_obj({
-            "ankama_id": obj.get("ankama_id"),
+        _obj = GetGameSearch200ResponseInner.parse_obj({
             "name": obj.get("name"),
-            "type": ItemsListEntryTypedType.from_dict(obj.get("type")) if obj.get("type") is not None else None,
-            "level": obj.get("level"),
-            "image_urls": ImageUrls.from_dict(obj.get("image_urls")) if obj.get("image_urls") is not None else None,
-            "recipe": [RecipeEntry.from_dict(_item) for _item in obj.get("recipe")] if obj.get("recipe") is not None else None
+            "ankama_id": obj.get("ankama_id"),
+            "type": obj.get("type")
         })
         return _obj
 

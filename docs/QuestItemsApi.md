@@ -56,6 +56,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -130,6 +131,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling QuestItemsApi->get_item_quest_single: %s\n" % e)
 ```
+
 
 
 ### Parameters
@@ -208,6 +210,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling QuestItemsApi->get_items_quest_list: %s\n" % e)
 ```
+
 
 
 ### Parameters
@@ -290,6 +293,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling QuestItemsApi->get_items_quest_search: %s\n" % e)
 ```
+
 
 
 ### Parameters

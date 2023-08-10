@@ -58,6 +58,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -121,6 +122,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -182,6 +184,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling WebhooksApi->delete_webhooks_twitter_id: %s\n" % e)
 ```
+
 
 
 ### Parameters
@@ -249,6 +252,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 This endpoint does not need any parameter.
 
@@ -309,6 +313,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling WebhooksApi->get_meta_webhooks_rss: %s\n" % e)
 ```
+
 
 
 ### Parameters
@@ -373,6 +378,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 This endpoint does not need any parameter.
 
@@ -434,6 +440,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling WebhooksApi->get_webhooks_almanax_id: %s\n" % e)
 ```
+
 
 
 ### Parameters
@@ -502,6 +509,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -568,6 +576,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -630,6 +639,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling WebhooksApi->post_webhooks_almanax: %s\n" % e)
 ```
+
 
 
 ### Parameters
@@ -696,6 +706,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -758,6 +769,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling WebhooksApi->post_webhooks_twitter: %s\n" % e)
 ```
+
 
 
 ### Parameters
@@ -826,6 +838,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling WebhooksApi->put_webhooks_almanax_id: %s\n" % e)
 ```
+
 
 
 ### Parameters
@@ -897,6 +910,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -964,6 +978,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling WebhooksApi->put_webhooks_twitter_id: %s\n" % e)
 ```
+
 
 
 ### Parameters

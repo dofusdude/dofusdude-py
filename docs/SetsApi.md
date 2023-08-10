@@ -55,6 +55,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -133,6 +134,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling SetsApi->get_sets_list: %s\n" % e)
 ```
+
 
 
 ### Parameters
@@ -215,6 +217,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -288,6 +291,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling SetsApi->get_sets_single: %s\n" % e)
 ```
+
 
 
 ### Parameters

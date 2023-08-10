@@ -4,7 +4,6 @@
 .openapi-generator-ignore
 .travis.yml
 README.md
-docs/AllItemsApi.md
 docs/AlmanaxApi.md
 docs/AlmanaxEntry.md
 docs/AlmanaxEntryBonus.md
@@ -29,6 +28,8 @@ docs/Equipment.md
 docs/EquipmentApi.md
 docs/EquipmentParentSet.md
 docs/EquipmentSet.md
+docs/GameApi.md
+docs/GetGameSearch200ResponseInner.md
 docs/GetMetaAlmanaxBonuses200ResponseInner.md
 docs/GetMetaWebhooksTwitter200Response.md
 docs/ImageUrls.md
@@ -59,11 +60,11 @@ docs/WeaponRange.md
 docs/WebhooksApi.md
 dofusdude/__init__.py
 dofusdude/api/__init__.py
-dofusdude/api/all_items_api.py
 dofusdude/api/almanax_api.py
 dofusdude/api/consumables_api.py
 dofusdude/api/cosmetics_api.py
 dofusdude/api/equipment_api.py
+dofusdude/api/game_api.py
 dofusdude/api/meta_api.py
 dofusdude/api/mounts_api.py
 dofusdude/api/quest_items_api.py
@@ -95,6 +96,7 @@ dofusdude/models/effects_entry_type.py
 dofusdude/models/equipment.py
 dofusdude/models/equipment_parent_set.py
 dofusdude/models/equipment_set.py
+dofusdude/models/get_game_search200_response_inner.py
 dofusdude/models/get_meta_almanax_bonuses200_response_inner.py
 dofusdude/models/get_meta_webhooks_twitter200_response.py
 dofusdude/models/image_urls.py
@@ -126,7 +128,6 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_all_items_api.py
 test/test_almanax_api.py
 test/test_almanax_entry.py
 test/test_almanax_entry_bonus.py
@@ -151,6 +152,8 @@ test/test_equipment.py
 test/test_equipment_api.py
 test/test_equipment_parent_set.py
 test/test_equipment_set.py
+test/test_game_api.py
+test/test_get_game_search200_response_inner.py
 test/test_get_meta_almanax_bonuses200_response_inner.py
 test/test_get_meta_webhooks_twitter200_response.py
 test/test_image_urls.py

@@ -56,6 +56,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -136,6 +137,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling CosmeticsApi->get_cosmetics_list: %s\n" % e)
 ```
+
 
 
 ### Parameters
@@ -220,6 +222,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -294,6 +297,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling CosmeticsApi->get_cosmetics_single: %s\n" % e)
 ```
+
 
 
 ### Parameters

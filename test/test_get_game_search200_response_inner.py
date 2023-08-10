@@ -13,91 +13,45 @@
 """  # noqa: E501
 
 
-from __future__ import annotations
-import pprint
-import re  # noqa: F401
-import json
+import unittest
+import datetime
 
+import dofusdude
+from dofusdude.models.get_game_search200_response_inner import GetGameSearch200ResponseInner  # noqa: E501
+from dofusdude.rest import ApiException
 
-from typing import List, Optional
-from pydantic import BaseModel, StrictInt, StrictStr, conlist
-from dofusdude.models.image_urls import ImageUrls
-from dofusdude.models.items_list_entry_typed_type import ItemsListEntryTypedType
-from dofusdude.models.recipe_entry import RecipeEntry
+class TestGetGameSearch200ResponseInner(unittest.TestCase):
+    """GetGameSearch200ResponseInner unit test stubs"""
 
-class ItemListEntry(BaseModel):
-    """
-    ItemListEntry
-    """
-    ankama_id: Optional[StrictInt] = None
-    name: Optional[StrictStr] = None
-    type: Optional[ItemsListEntryTypedType] = None
-    level: Optional[StrictInt] = None
-    image_urls: Optional[ImageUrls] = None
-    recipe: Optional[conlist(RecipeEntry)] = None
-    __properties = ["ankama_id", "name", "type", "level", "image_urls", "recipe"]
+    def setUp(self):
+        pass
 
-    class Config:
-        """Pydantic configuration"""
-        allow_population_by_field_name = True
-        validate_assignment = True
+    def tearDown(self):
+        pass
 
-    def to_str(self) -> str:
-        """Returns the string representation of the model using alias"""
-        return pprint.pformat(self.dict(by_alias=True))
+    def make_instance(self, include_optional):
+        """Test GetGameSearch200ResponseInner
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # uncomment below to create an instance of `GetGameSearch200ResponseInner`
+        """
+        model = dofusdude.models.get_game_search200_response_inner.GetGameSearch200ResponseInner()  # noqa: E501
+        if include_optional :
+            return GetGameSearch200ResponseInner(
+                name = '', 
+                ankama_id = 56, 
+                type = ''
+            )
+        else :
+            return GetGameSearch200ResponseInner(
+        )
+        """
 
-    def to_json(self) -> str:
-        """Returns the JSON representation of the model using alias"""
-        return json.dumps(self.to_dict())
+    def testGetGameSearch200ResponseInner(self):
+        """Test GetGameSearch200ResponseInner"""
+        # inst_req_only = self.make_instance(include_optional=False)
+        # inst_req_and_optional = self.make_instance(include_optional=True)
 
-    @classmethod
-    def from_json(cls, json_str: str) -> ItemListEntry:
-        """Create an instance of ItemListEntry from a JSON string"""
-        return cls.from_dict(json.loads(json_str))
-
-    def to_dict(self):
-        """Returns the dictionary representation of the model using alias"""
-        _dict = self.dict(by_alias=True,
-                          exclude={
-                          },
-                          exclude_none=True)
-        # override the default output from pydantic by calling `to_dict()` of type
-        if self.type:
-            _dict['type'] = self.type.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of image_urls
-        if self.image_urls:
-            _dict['image_urls'] = self.image_urls.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of each item in recipe (list)
-        _items = []
-        if self.recipe:
-            for _item in self.recipe:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['recipe'] = _items
-        # set to None if recipe (nullable) is None
-        # and __fields_set__ contains the field
-        if self.recipe is None and "recipe" in self.__fields_set__:
-            _dict['recipe'] = None
-
-        return _dict
-
-    @classmethod
-    def from_dict(cls, obj: dict) -> ItemListEntry:
-        """Create an instance of ItemListEntry from a dict"""
-        if obj is None:
-            return None
-
-        if not isinstance(obj, dict):
-            return ItemListEntry.parse_obj(obj)
-
-        _obj = ItemListEntry.parse_obj({
-            "ankama_id": obj.get("ankama_id"),
-            "name": obj.get("name"),
-            "type": ItemsListEntryTypedType.from_dict(obj.get("type")) if obj.get("type") is not None else None,
-            "level": obj.get("level"),
-            "image_urls": ImageUrls.from_dict(obj.get("image_urls")) if obj.get("image_urls") is not None else None,
-            "recipe": [RecipeEntry.from_dict(_item) for _item in obj.get("recipe")] if obj.get("recipe") is not None else None
-        })
-        return _obj
-
-
+if __name__ == '__main__':
+    unittest.main()
