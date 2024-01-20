@@ -1,790 +1,1457 @@
 # coding: utf-8
 
 """
-    Dofusdude
+    dofusdude
 
-    # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don't write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude - [PHP](https://github.com/dofusdude/dofusdude-php)  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related Twitter, RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina - [DofuStuffSimulator](https://dofusstuffsimulator.netlify.app/)  I highly recommend using the SDKs for quick results. I use them myself for parts of the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude). 
+    # A project for you - the developer. The all-in-one toolbelt for your next Ankama related project.  ## Client SDKs - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude - [PHP](https://github.com/dofusdude/dofusdude-php)  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering game assets to high-res images with up to 800x800 px.  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply donate to that cause, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude).
 
-    The version of the OpenAPI document: 0.8.0
+    The version of the OpenAPI document: 0.8.1
     Contact: stelzo@steado.de
     Generated by OpenAPI Generator (https://openapi-generator.tech)
 
     Do not edit the class manually.
 """  # noqa: E501
 
-
-import re  # noqa: F401
-import io
 import warnings
-
-from pydantic import validate_arguments, ValidationError
+from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
+from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from pydantic import Field, StrictInt, StrictStr, conint, conlist, constr, validator
-
+from pydantic import Field, StrictInt, StrictStr, field_validator
 from typing import List, Optional
-
+from typing_extensions import Annotated
 from dofusdude.models.item_list_entry import ItemListEntry
 from dofusdude.models.items_list_paged import ItemsListPaged
 from dofusdude.models.resource import Resource
 
-from dofusdude.api_client import ApiClient
+from dofusdude.api_client import ApiClient, RequestSerialized
 from dofusdude.api_response import ApiResponse
-from dofusdude.exceptions import (  # noqa: F401
-    ApiTypeError,
-    ApiValueError
-)
+from dofusdude.rest import RESTResponseType
 
 
-class QuestItemsApi(object):
+class QuestItemsApi:
     """NOTE: This class is auto generated by OpenAPI Generator
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
     """
 
-    def __init__(self, api_client=None):
+    def __init__(self, api_client=None) -> None:
         if api_client is None:
             api_client = ApiClient.get_default()
         self.api_client = api_client
 
-    @validate_arguments
-    def get_all_items_quest_list(self, language : Annotated[constr(strict=True, max_length=2, min_length=2), Field(..., description="a valid language code")], game : StrictStr, sort_level : Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None, filter_type_name : Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None, filter_min_level : Annotated[Optional[conint(strict=True, le=200, ge=0)], Field(description="only results which level is equal or above this value")] = None, filter_max_level : Annotated[Optional[conint(strict=True, le=200, ge=0)], Field(description="only results which level is equal or below this value")] = None, accept_encoding : Annotated[Optional[StrictStr], Field(description="optional compression for saving bandwidth")] = None, **kwargs) -> ItemsListPaged:  # noqa: E501
-        """List All Quest Items  # noqa: E501
 
-        Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.get_all_items_quest_list(language, game, sort_level, filter_type_name, filter_min_level, filter_max_level, accept_encoding, async_req=True)
-        >>> result = thread.get()
-
-        :param language: a valid language code (required)
-        :type language: str
-        :param game: (required)
-        :type game: str
-        :param sort_level: sort the resulting list by level, default unsorted
-        :type sort_level: str
-        :param filter_type_name: only results with the translated type name
-        :type filter_type_name: str
-        :param filter_min_level: only results which level is equal or above this value
-        :type filter_min_level: int
-        :param filter_max_level: only results which level is equal or below this value
-        :type filter_max_level: int
-        :param accept_encoding: optional compression for saving bandwidth
-        :type accept_encoding: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: ItemsListPaged
-        """
-        kwargs['_return_http_data_only'] = True
-        if '_preload_content' in kwargs:
-            raise ValueError("Error! Please call the get_all_items_quest_list_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data")
-        return self.get_all_items_quest_list_with_http_info(language, game, sort_level, filter_type_name, filter_min_level, filter_max_level, accept_encoding, **kwargs)  # noqa: E501
-
-    @validate_arguments
-    def get_all_items_quest_list_with_http_info(self, language : Annotated[constr(strict=True, max_length=2, min_length=2), Field(..., description="a valid language code")], game : StrictStr, sort_level : Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None, filter_type_name : Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None, filter_min_level : Annotated[Optional[conint(strict=True, le=200, ge=0)], Field(description="only results which level is equal or above this value")] = None, filter_max_level : Annotated[Optional[conint(strict=True, le=200, ge=0)], Field(description="only results which level is equal or below this value")] = None, accept_encoding : Annotated[Optional[StrictStr], Field(description="optional compression for saving bandwidth")] = None, **kwargs) -> ApiResponse:  # noqa: E501
-        """List All Quest Items  # noqa: E501
-
-        Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.get_all_items_quest_list_with_http_info(language, game, sort_level, filter_type_name, filter_min_level, filter_max_level, accept_encoding, async_req=True)
-        >>> result = thread.get()
-
-        :param language: a valid language code (required)
-        :type language: str
-        :param game: (required)
-        :type game: str
-        :param sort_level: sort the resulting list by level, default unsorted
-        :type sort_level: str
-        :param filter_type_name: only results with the translated type name
-        :type filter_type_name: str
-        :param filter_min_level: only results which level is equal or above this value
-        :type filter_min_level: int
-        :param filter_max_level: only results which level is equal or below this value
-        :type filter_max_level: int
-        :param accept_encoding: optional compression for saving bandwidth
-        :type accept_encoding: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
-        :param _preload_content: if False, the ApiResponse.data will
-                                 be set to none and raw_data will store the 
-                                 HTTP response body without reading/decoding.
-                                 Default is True.
-        :type _preload_content: bool, optional
-        :param _return_http_data_only: response data instead of ApiResponse
-                                       object with status code, headers, etc
-        :type _return_http_data_only: bool, optional
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :type _content_type: string, optional: force content-type for the request
-        :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: tuple(ItemsListPaged, status_code(int), headers(HTTPHeaderDict))
-        """
-
-        _params = locals()
-
-        _all_params = [
-            'language',
-            'game',
-            'sort_level',
-            'filter_type_name',
-            'filter_min_level',
-            'filter_max_level',
-            'accept_encoding'
-        ]
-        _all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout',
-                '_request_auth',
-                '_content_type',
-                '_headers'
+    @validate_call
+    def get_all_items_quest_list(
+        self,
+        language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
+        game: StrictStr,
+        sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
+        filter_type_name: Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None,
+        filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
+        filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
+        accept_encoding: Annotated[Optional[StrictStr], Field(description="optional compression for saving bandwidth")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
             ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ItemsListPaged:
+        """List All Quest Items
+
+        Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
+
+        :param language: a valid language code (required)
+        :type language: str
+        :param game: (required)
+        :type game: str
+        :param sort_level: sort the resulting list by level, default unsorted
+        :type sort_level: str
+        :param filter_type_name: only results with the translated type name
+        :type filter_type_name: str
+        :param filter_min_level: only results which level is equal or above this value
+        :type filter_min_level: int
+        :param filter_max_level: only results which level is equal or below this value
+        :type filter_max_level: int
+        :param accept_encoding: optional compression for saving bandwidth
+        :type accept_encoding: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._get_all_items_quest_list_serialize(
+            language=language,
+            game=game,
+            sort_level=sort_level,
+            filter_type_name=filter_type_name,
+            filter_min_level=filter_min_level,
+            filter_max_level=filter_max_level,
+            accept_encoding=accept_encoding,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
         )
 
-        # validate the arguments
-        for _key, _val in _params['kwargs'].items():
-            if _key not in _all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_all_items_quest_list" % _key
-                )
-            _params[_key] = _val
-        del _params['kwargs']
-
-        _collection_formats = {}
-
-        # process the path parameters
-        _path_params = {}
-        if _params['language']:
-            _path_params['language'] = _params['language']
-
-        if _params['game']:
-            _path_params['game'] = _params['game']
-
-
-        # process the query parameters
-        _query_params = []
-        if _params.get('sort_level') is not None:  # noqa: E501
-            _query_params.append(('sort[level]', _params['sort_level']))
-
-        if _params.get('filter_type_name') is not None:  # noqa: E501
-            _query_params.append(('filter[type_name]', _params['filter_type_name']))
-
-        if _params.get('filter_min_level') is not None:  # noqa: E501
-            _query_params.append(('filter[min_level]', _params['filter_min_level']))
-
-        if _params.get('filter_max_level') is not None:  # noqa: E501
-            _query_params.append(('filter[max_level]', _params['filter_max_level']))
-
-        # process the header parameters
-        _header_params = dict(_params.get('_headers', {}))
-        if _params['accept_encoding']:
-            _header_params['Accept-Encoding'] = _params['accept_encoding']
-
-        # process the form parameters
-        _form_params = []
-        _files = {}
-        # process the body parameter
-        _body_params = None
-        # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # authentication setting
-        _auth_settings = []  # noqa: E501
-
-        _response_types_map = {
+        _response_types_map: Dict[str, Optional[str]] = {
             '200': "ItemsListPaged",
             '400': None,
             '404': None,
         }
-
-        return self.api_client.call_api(
-            '/{game}/{language}/items/quest/all', 'GET',
-            _path_params,
-            _query_params,
-            _header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
             response_types_map=_response_types_map,
-            auth_settings=_auth_settings,
-            async_req=_params.get('async_req'),
-            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=_params.get('_preload_content', True),
-            _request_timeout=_params.get('_request_timeout'),
-            collection_formats=_collection_formats,
-            _request_auth=_params.get('_request_auth'))
+        ).data
 
-    @validate_arguments
-    def get_item_quest_single(self, language : Annotated[constr(strict=True, max_length=2, min_length=2), Field(..., description="a valid language code")], ankama_id : Annotated[StrictInt, Field(..., description="identifier")], game : StrictStr, **kwargs) -> Resource:  # noqa: E501
-        """Single Quest Items  # noqa: E501
 
-        Retrieve a specific quest item with id.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
+    @validate_call
+    def get_all_items_quest_list_with_http_info(
+        self,
+        language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
+        game: StrictStr,
+        sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
+        filter_type_name: Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None,
+        filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
+        filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
+        accept_encoding: Annotated[Optional[StrictStr], Field(description="optional compression for saving bandwidth")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[ItemsListPaged]:
+        """List All Quest Items
 
-        >>> thread = api.get_item_quest_single(language, ankama_id, game, async_req=True)
-        >>> result = thread.get()
+        Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
 
         :param language: a valid language code (required)
         :type language: str
-        :param ankama_id: identifier (required)
-        :type ankama_id: int
         :param game: (required)
         :type game: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param sort_level: sort the resulting list by level, default unsorted
+        :type sort_level: str
+        :param filter_type_name: only results with the translated type name
+        :type filter_type_name: str
+        :param filter_min_level: only results which level is equal or above this value
+        :type filter_min_level: int
+        :param filter_max_level: only results which level is equal or below this value
+        :type filter_max_level: int
+        :param accept_encoding: optional compression for saving bandwidth
+        :type accept_encoding: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: Resource
-        """
-        kwargs['_return_http_data_only'] = True
-        if '_preload_content' in kwargs:
-            raise ValueError("Error! Please call the get_item_quest_single_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data")
-        return self.get_item_quest_single_with_http_info(language, ankama_id, game, **kwargs)  # noqa: E501
-
-    @validate_arguments
-    def get_item_quest_single_with_http_info(self, language : Annotated[constr(strict=True, max_length=2, min_length=2), Field(..., description="a valid language code")], ankama_id : Annotated[StrictInt, Field(..., description="identifier")], game : StrictStr, **kwargs) -> ApiResponse:  # noqa: E501
-        """Single Quest Items  # noqa: E501
-
-        Retrieve a specific quest item with id.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.get_item_quest_single_with_http_info(language, ankama_id, game, async_req=True)
-        >>> result = thread.get()
-
-        :param language: a valid language code (required)
-        :type language: str
-        :param ankama_id: identifier (required)
-        :type ankama_id: int
-        :param game: (required)
-        :type game: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
-        :param _preload_content: if False, the ApiResponse.data will
-                                 be set to none and raw_data will store the 
-                                 HTTP response body without reading/decoding.
-                                 Default is True.
-        :type _preload_content: bool, optional
-        :param _return_http_data_only: response data instead of ApiResponse
-                                       object with status code, headers, etc
-        :type _return_http_data_only: bool, optional
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
         :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
         :type _request_auth: dict, optional
-        :type _content_type: string, optional: force content-type for the request
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
         :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: tuple(Resource, status_code(int), headers(HTTPHeaderDict))
-        """
+        """ # noqa: E501
 
-        _params = locals()
+        _param = self._get_all_items_quest_list_serialize(
+            language=language,
+            game=game,
+            sort_level=sort_level,
+            filter_type_name=filter_type_name,
+            filter_min_level=filter_min_level,
+            filter_max_level=filter_max_level,
+            accept_encoding=accept_encoding,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
 
-        _all_params = [
-            'language',
-            'ankama_id',
-            'game'
-        ]
-        _all_params.extend(
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ItemsListPaged",
+            '400': None,
+            '404': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    def get_all_items_quest_list_without_preload_content(
+        self,
+        language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
+        game: StrictStr,
+        sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
+        filter_type_name: Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None,
+        filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
+        filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
+        accept_encoding: Annotated[Optional[StrictStr], Field(description="optional compression for saving bandwidth")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """List All Quest Items
+
+        Retrieve all quest items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
+
+        :param language: a valid language code (required)
+        :type language: str
+        :param game: (required)
+        :type game: str
+        :param sort_level: sort the resulting list by level, default unsorted
+        :type sort_level: str
+        :param filter_type_name: only results with the translated type name
+        :type filter_type_name: str
+        :param filter_min_level: only results which level is equal or above this value
+        :type filter_min_level: int
+        :param filter_max_level: only results which level is equal or below this value
+        :type filter_max_level: int
+        :param accept_encoding: optional compression for saving bandwidth
+        :type accept_encoding: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._get_all_items_quest_list_serialize(
+            language=language,
+            game=game,
+            sort_level=sort_level,
+            filter_type_name=filter_type_name,
+            filter_min_level=filter_min_level,
+            filter_max_level=filter_max_level,
+            accept_encoding=accept_encoding,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ItemsListPaged",
+            '400': None,
+            '404': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _get_all_items_quest_list_serialize(
+        self,
+        language,
+        game,
+        sort_level,
+        filter_type_name,
+        filter_min_level,
+        filter_max_level,
+        accept_encoding,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[str, str] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if language is not None:
+            _path_params['language'] = language
+        if game is not None:
+            _path_params['game'] = game
+        # process the query parameters
+        if sort_level is not None:
+            
+            _query_params.append(('sort[level]', sort_level))
+            
+        if filter_type_name is not None:
+            
+            _query_params.append(('filter[type_name]', filter_type_name))
+            
+        if filter_min_level is not None:
+            
+            _query_params.append(('filter[min_level]', filter_min_level))
+            
+        if filter_max_level is not None:
+            
+            _query_params.append(('filter[max_level]', filter_max_level))
+            
+        # process the header parameters
+        if accept_encoding is not None:
+            _header_params['Accept-Encoding'] = accept_encoding
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
             [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout',
-                '_request_auth',
-                '_content_type',
-                '_headers'
+                'application/json'
             ]
         )
 
-        # validate the arguments
-        for _key, _val in _params['kwargs'].items():
-            if _key not in _all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_item_quest_single" % _key
-                )
-            _params[_key] = _val
-        del _params['kwargs']
-
-        _collection_formats = {}
-
-        # process the path parameters
-        _path_params = {}
-        if _params['language']:
-            _path_params['language'] = _params['language']
-
-        if _params['ankama_id']:
-            _path_params['ankama_id'] = _params['ankama_id']
-
-        if _params['game']:
-            _path_params['game'] = _params['game']
-
-
-        # process the query parameters
-        _query_params = []
-        # process the header parameters
-        _header_params = dict(_params.get('_headers', {}))
-        # process the form parameters
-        _form_params = []
-        _files = {}
-        # process the body parameter
-        _body_params = None
-        # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = []  # noqa: E501
+        _auth_settings: List[str] = [
+        ]
 
-        _response_types_map = {
+        return self.api_client.param_serialize(
+            method='GET',
+            resource_path='/{game}/{language}/items/quest/all',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    def get_item_quest_single(
+        self,
+        language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
+        ankama_id: Annotated[StrictInt, Field(description="identifier")],
+        game: StrictStr,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> Resource:
+        """Single Quest Items
+
+        Retrieve a specific quest item with id.
+
+        :param language: a valid language code (required)
+        :type language: str
+        :param ankama_id: identifier (required)
+        :type ankama_id: int
+        :param game: (required)
+        :type game: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._get_item_quest_single_serialize(
+            language=language,
+            ankama_id=ankama_id,
+            game=game,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
             '200': "Resource",
             '400': None,
             '404': None,
         }
-
-        return self.api_client.call_api(
-            '/{game}/{language}/items/quest/{ankama_id}', 'GET',
-            _path_params,
-            _query_params,
-            _header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
             response_types_map=_response_types_map,
-            auth_settings=_auth_settings,
-            async_req=_params.get('async_req'),
-            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=_params.get('_preload_content', True),
-            _request_timeout=_params.get('_request_timeout'),
-            collection_formats=_collection_formats,
-            _request_auth=_params.get('_request_auth'))
+        ).data
 
-    @validate_arguments
-    def get_items_quest_list(self, language : Annotated[constr(strict=True, max_length=2, min_length=2), Field(..., description="a valid language code")], game : StrictStr, sort_level : Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None, filter_type_name : Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None, filter_min_level : Annotated[Optional[conint(strict=True, le=200, ge=0)], Field(description="only results which level is equal or above this value")] = None, filter_max_level : Annotated[Optional[conint(strict=True, le=200, ge=0)], Field(description="only results which level is equal or below this value")] = None, page_size : Annotated[Optional[conint(strict=True, ge=-1)], Field(description="size of the results from the list. -1 disables pagination and gets all in one response.")] = None, page_number : Annotated[Optional[conint(strict=True, ge=0)], Field(description="page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.")] = None, fields_item : Annotated[Optional[conlist(StrictStr, unique_items=True)], Field(description="adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.")] = None, **kwargs) -> ItemsListPaged:  # noqa: E501
-        """List Quest Items  # noqa: E501
 
-        Retrieve a list of quest items.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
+    @validate_call
+    def get_item_quest_single_with_http_info(
+        self,
+        language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
+        ankama_id: Annotated[StrictInt, Field(description="identifier")],
+        game: StrictStr,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[Resource]:
+        """Single Quest Items
 
-        >>> thread = api.get_items_quest_list(language, game, sort_level, filter_type_name, filter_min_level, filter_max_level, page_size, page_number, fields_item, async_req=True)
-        >>> result = thread.get()
+        Retrieve a specific quest item with id.
 
         :param language: a valid language code (required)
         :type language: str
+        :param ankama_id: identifier (required)
+        :type ankama_id: int
         :param game: (required)
         :type game: str
-        :param sort_level: sort the resulting list by level, default unsorted
-        :type sort_level: str
-        :param filter_type_name: only results with the translated type name
-        :type filter_type_name: str
-        :param filter_min_level: only results which level is equal or above this value
-        :type filter_min_level: int
-        :param filter_max_level: only results which level is equal or below this value
-        :type filter_max_level: int
-        :param page_size: size of the results from the list. -1 disables pagination and gets all in one response.
-        :type page_size: int
-        :param page_number: page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-        :type page_number: int
-        :param fields_item: adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
-        :type fields_item: List[str]
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: ItemsListPaged
-        """
-        kwargs['_return_http_data_only'] = True
-        if '_preload_content' in kwargs:
-            raise ValueError("Error! Please call the get_items_quest_list_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data")
-        return self.get_items_quest_list_with_http_info(language, game, sort_level, filter_type_name, filter_min_level, filter_max_level, page_size, page_number, fields_item, **kwargs)  # noqa: E501
-
-    @validate_arguments
-    def get_items_quest_list_with_http_info(self, language : Annotated[constr(strict=True, max_length=2, min_length=2), Field(..., description="a valid language code")], game : StrictStr, sort_level : Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None, filter_type_name : Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None, filter_min_level : Annotated[Optional[conint(strict=True, le=200, ge=0)], Field(description="only results which level is equal or above this value")] = None, filter_max_level : Annotated[Optional[conint(strict=True, le=200, ge=0)], Field(description="only results which level is equal or below this value")] = None, page_size : Annotated[Optional[conint(strict=True, ge=-1)], Field(description="size of the results from the list. -1 disables pagination and gets all in one response.")] = None, page_number : Annotated[Optional[conint(strict=True, ge=0)], Field(description="page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.")] = None, fields_item : Annotated[Optional[conlist(StrictStr, unique_items=True)], Field(description="adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.")] = None, **kwargs) -> ApiResponse:  # noqa: E501
-        """List Quest Items  # noqa: E501
-
-        Retrieve a list of quest items.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.get_items_quest_list_with_http_info(language, game, sort_level, filter_type_name, filter_min_level, filter_max_level, page_size, page_number, fields_item, async_req=True)
-        >>> result = thread.get()
-
-        :param language: a valid language code (required)
-        :type language: str
-        :param game: (required)
-        :type game: str
-        :param sort_level: sort the resulting list by level, default unsorted
-        :type sort_level: str
-        :param filter_type_name: only results with the translated type name
-        :type filter_type_name: str
-        :param filter_min_level: only results which level is equal or above this value
-        :type filter_min_level: int
-        :param filter_max_level: only results which level is equal or below this value
-        :type filter_max_level: int
-        :param page_size: size of the results from the list. -1 disables pagination and gets all in one response.
-        :type page_size: int
-        :param page_number: page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
-        :type page_number: int
-        :param fields_item: adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
-        :type fields_item: List[str]
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
-        :param _preload_content: if False, the ApiResponse.data will
-                                 be set to none and raw_data will store the 
-                                 HTTP response body without reading/decoding.
-                                 Default is True.
-        :type _preload_content: bool, optional
-        :param _return_http_data_only: response data instead of ApiResponse
-                                       object with status code, headers, etc
-        :type _return_http_data_only: bool, optional
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
         :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
         :type _request_auth: dict, optional
-        :type _content_type: string, optional: force content-type for the request
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
         :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: tuple(ItemsListPaged, status_code(int), headers(HTTPHeaderDict))
-        """
+        """ # noqa: E501
 
-        _params = locals()
+        _param = self._get_item_quest_single_serialize(
+            language=language,
+            ankama_id=ankama_id,
+            game=game,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
 
-        _all_params = [
-            'language',
-            'game',
-            'sort_level',
-            'filter_type_name',
-            'filter_min_level',
-            'filter_max_level',
-            'page_size',
-            'page_number',
-            'fields_item'
-        ]
-        _all_params.extend(
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "Resource",
+            '400': None,
+            '404': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    def get_item_quest_single_without_preload_content(
+        self,
+        language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
+        ankama_id: Annotated[StrictInt, Field(description="identifier")],
+        game: StrictStr,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Single Quest Items
+
+        Retrieve a specific quest item with id.
+
+        :param language: a valid language code (required)
+        :type language: str
+        :param ankama_id: identifier (required)
+        :type ankama_id: int
+        :param game: (required)
+        :type game: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._get_item_quest_single_serialize(
+            language=language,
+            ankama_id=ankama_id,
+            game=game,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "Resource",
+            '400': None,
+            '404': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _get_item_quest_single_serialize(
+        self,
+        language,
+        ankama_id,
+        game,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[str, str] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if language is not None:
+            _path_params['language'] = language
+        if ankama_id is not None:
+            _path_params['ankama_id'] = ankama_id
+        if game is not None:
+            _path_params['game'] = game
+        # process the query parameters
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
             [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout',
-                '_request_auth',
-                '_content_type',
-                '_headers'
+                'application/json'
             ]
         )
 
-        # validate the arguments
-        for _key, _val in _params['kwargs'].items():
-            if _key not in _all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_items_quest_list" % _key
-                )
-            _params[_key] = _val
-        del _params['kwargs']
-
-        _collection_formats = {}
-
-        # process the path parameters
-        _path_params = {}
-        if _params['language']:
-            _path_params['language'] = _params['language']
-
-        if _params['game']:
-            _path_params['game'] = _params['game']
-
-
-        # process the query parameters
-        _query_params = []
-        if _params.get('sort_level') is not None:  # noqa: E501
-            _query_params.append(('sort[level]', _params['sort_level']))
-
-        if _params.get('filter_type_name') is not None:  # noqa: E501
-            _query_params.append(('filter[type_name]', _params['filter_type_name']))
-
-        if _params.get('filter_min_level') is not None:  # noqa: E501
-            _query_params.append(('filter[min_level]', _params['filter_min_level']))
-
-        if _params.get('filter_max_level') is not None:  # noqa: E501
-            _query_params.append(('filter[max_level]', _params['filter_max_level']))
-
-        if _params.get('page_size') is not None:  # noqa: E501
-            _query_params.append(('page[size]', _params['page_size']))
-
-        if _params.get('page_number') is not None:  # noqa: E501
-            _query_params.append(('page[number]', _params['page_number']))
-
-        if _params.get('fields_item') is not None:  # noqa: E501
-            _query_params.append(('fields[item]', _params['fields_item']))
-            _collection_formats['fields[item]'] = 'csv'
-
-        # process the header parameters
-        _header_params = dict(_params.get('_headers', {}))
-        # process the form parameters
-        _form_params = []
-        _files = {}
-        # process the body parameter
-        _body_params = None
-        # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = []  # noqa: E501
+        _auth_settings: List[str] = [
+        ]
 
-        _response_types_map = {
+        return self.api_client.param_serialize(
+            method='GET',
+            resource_path='/{game}/{language}/items/quest/{ankama_id}',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    def get_items_quest_list(
+        self,
+        language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
+        game: StrictStr,
+        sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
+        filter_type_name: Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None,
+        filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
+        filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
+        page_size: Annotated[Optional[Annotated[int, Field(strict=True, ge=-1)]], Field(description="size of the results from the list. -1 disables pagination and gets all in one response.")] = None,
+        page_number: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.")] = None,
+        fields_item: Annotated[Optional[List[StrictStr]], Field(description="adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ItemsListPaged:
+        """List Quest Items
+
+        Retrieve a list of quest items.
+
+        :param language: a valid language code (required)
+        :type language: str
+        :param game: (required)
+        :type game: str
+        :param sort_level: sort the resulting list by level, default unsorted
+        :type sort_level: str
+        :param filter_type_name: only results with the translated type name
+        :type filter_type_name: str
+        :param filter_min_level: only results which level is equal or above this value
+        :type filter_min_level: int
+        :param filter_max_level: only results which level is equal or below this value
+        :type filter_max_level: int
+        :param page_size: size of the results from the list. -1 disables pagination and gets all in one response.
+        :type page_size: int
+        :param page_number: page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
+        :type page_number: int
+        :param fields_item: adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+        :type fields_item: List[str]
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._get_items_quest_list_serialize(
+            language=language,
+            game=game,
+            sort_level=sort_level,
+            filter_type_name=filter_type_name,
+            filter_min_level=filter_min_level,
+            filter_max_level=filter_max_level,
+            page_size=page_size,
+            page_number=page_number,
+            fields_item=fields_item,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
             '200': "ItemsListPaged",
             '400': None,
             '404': None,
         }
-
-        return self.api_client.call_api(
-            '/{game}/{language}/items/quest', 'GET',
-            _path_params,
-            _query_params,
-            _header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
             response_types_map=_response_types_map,
-            auth_settings=_auth_settings,
-            async_req=_params.get('async_req'),
-            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=_params.get('_preload_content', True),
-            _request_timeout=_params.get('_request_timeout'),
-            collection_formats=_collection_formats,
-            _request_auth=_params.get('_request_auth'))
+        ).data
 
-    @validate_arguments
-    def get_items_quest_search(self, language : Annotated[constr(strict=True, max_length=2, min_length=2), Field(..., description="a valid language code")], game : StrictStr, query : Annotated[StrictStr, Field(..., description="case sensitive search query")], filter_type_name : Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None, filter_min_level : Annotated[Optional[conint(strict=True, le=200, ge=0)], Field(description="only results which level is equal or above this value")] = None, filter_max_level : Annotated[Optional[conint(strict=True, le=200, ge=0)], Field(description="only results which level is equal or below this value")] = None, limit : Annotated[Optional[conint(strict=True, le=100, ge=1)], Field(description="maximum number of returned results")] = None, **kwargs) -> List[ItemListEntry]:  # noqa: E501
-        """Search Quest Items  # noqa: E501
 
-        Search in all names and descriptions of quest items with a query.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
+    @validate_call
+    def get_items_quest_list_with_http_info(
+        self,
+        language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
+        game: StrictStr,
+        sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
+        filter_type_name: Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None,
+        filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
+        filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
+        page_size: Annotated[Optional[Annotated[int, Field(strict=True, ge=-1)]], Field(description="size of the results from the list. -1 disables pagination and gets all in one response.")] = None,
+        page_number: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.")] = None,
+        fields_item: Annotated[Optional[List[StrictStr]], Field(description="adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[ItemsListPaged]:
+        """List Quest Items
 
-        >>> thread = api.get_items_quest_search(language, game, query, filter_type_name, filter_min_level, filter_max_level, limit, async_req=True)
-        >>> result = thread.get()
+        Retrieve a list of quest items.
 
         :param language: a valid language code (required)
         :type language: str
         :param game: (required)
         :type game: str
-        :param query: case sensitive search query (required)
-        :type query: str
+        :param sort_level: sort the resulting list by level, default unsorted
+        :type sort_level: str
         :param filter_type_name: only results with the translated type name
         :type filter_type_name: str
         :param filter_min_level: only results which level is equal or above this value
         :type filter_min_level: int
         :param filter_max_level: only results which level is equal or below this value
         :type filter_max_level: int
-        :param limit: maximum number of returned results
-        :type limit: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param page_size: size of the results from the list. -1 disables pagination and gets all in one response.
+        :type page_size: int
+        :param page_number: page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
+        :type page_number: int
+        :param fields_item: adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+        :type fields_item: List[str]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: List[ItemListEntry]
-        """
-        kwargs['_return_http_data_only'] = True
-        if '_preload_content' in kwargs:
-            raise ValueError("Error! Please call the get_items_quest_search_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data")
-        return self.get_items_quest_search_with_http_info(language, game, query, filter_type_name, filter_min_level, filter_max_level, limit, **kwargs)  # noqa: E501
-
-    @validate_arguments
-    def get_items_quest_search_with_http_info(self, language : Annotated[constr(strict=True, max_length=2, min_length=2), Field(..., description="a valid language code")], game : StrictStr, query : Annotated[StrictStr, Field(..., description="case sensitive search query")], filter_type_name : Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None, filter_min_level : Annotated[Optional[conint(strict=True, le=200, ge=0)], Field(description="only results which level is equal or above this value")] = None, filter_max_level : Annotated[Optional[conint(strict=True, le=200, ge=0)], Field(description="only results which level is equal or below this value")] = None, limit : Annotated[Optional[conint(strict=True, le=100, ge=1)], Field(description="maximum number of returned results")] = None, **kwargs) -> ApiResponse:  # noqa: E501
-        """Search Quest Items  # noqa: E501
-
-        Search in all names and descriptions of quest items with a query.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.get_items_quest_search_with_http_info(language, game, query, filter_type_name, filter_min_level, filter_max_level, limit, async_req=True)
-        >>> result = thread.get()
-
-        :param language: a valid language code (required)
-        :type language: str
-        :param game: (required)
-        :type game: str
-        :param query: case sensitive search query (required)
-        :type query: str
-        :param filter_type_name: only results with the translated type name
-        :type filter_type_name: str
-        :param filter_min_level: only results which level is equal or above this value
-        :type filter_min_level: int
-        :param filter_max_level: only results which level is equal or below this value
-        :type filter_max_level: int
-        :param limit: maximum number of returned results
-        :type limit: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
-        :param _preload_content: if False, the ApiResponse.data will
-                                 be set to none and raw_data will store the 
-                                 HTTP response body without reading/decoding.
-                                 Default is True.
-        :type _preload_content: bool, optional
-        :param _return_http_data_only: response data instead of ApiResponse
-                                       object with status code, headers, etc
-        :type _return_http_data_only: bool, optional
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
         :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
         :type _request_auth: dict, optional
-        :type _content_type: string, optional: force content-type for the request
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
         :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: tuple(List[ItemListEntry], status_code(int), headers(HTTPHeaderDict))
-        """
+        """ # noqa: E501
 
-        _params = locals()
+        _param = self._get_items_quest_list_serialize(
+            language=language,
+            game=game,
+            sort_level=sort_level,
+            filter_type_name=filter_type_name,
+            filter_min_level=filter_min_level,
+            filter_max_level=filter_max_level,
+            page_size=page_size,
+            page_number=page_number,
+            fields_item=fields_item,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
 
-        _all_params = [
-            'language',
-            'game',
-            'query',
-            'filter_type_name',
-            'filter_min_level',
-            'filter_max_level',
-            'limit'
-        ]
-        _all_params.extend(
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ItemsListPaged",
+            '400': None,
+            '404': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    def get_items_quest_list_without_preload_content(
+        self,
+        language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
+        game: StrictStr,
+        sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
+        filter_type_name: Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None,
+        filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
+        filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
+        page_size: Annotated[Optional[Annotated[int, Field(strict=True, ge=-1)]], Field(description="size of the results from the list. -1 disables pagination and gets all in one response.")] = None,
+        page_number: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.")] = None,
+        fields_item: Annotated[Optional[List[StrictStr]], Field(description="adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """List Quest Items
+
+        Retrieve a list of quest items.
+
+        :param language: a valid language code (required)
+        :type language: str
+        :param game: (required)
+        :type game: str
+        :param sort_level: sort the resulting list by level, default unsorted
+        :type sort_level: str
+        :param filter_type_name: only results with the translated type name
+        :type filter_type_name: str
+        :param filter_min_level: only results which level is equal or above this value
+        :type filter_min_level: int
+        :param filter_max_level: only results which level is equal or below this value
+        :type filter_max_level: int
+        :param page_size: size of the results from the list. -1 disables pagination and gets all in one response.
+        :type page_size: int
+        :param page_number: page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.
+        :type page_number: int
+        :param fields_item: adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed.
+        :type fields_item: List[str]
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._get_items_quest_list_serialize(
+            language=language,
+            game=game,
+            sort_level=sort_level,
+            filter_type_name=filter_type_name,
+            filter_min_level=filter_min_level,
+            filter_max_level=filter_max_level,
+            page_size=page_size,
+            page_number=page_number,
+            fields_item=fields_item,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "ItemsListPaged",
+            '400': None,
+            '404': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _get_items_quest_list_serialize(
+        self,
+        language,
+        game,
+        sort_level,
+        filter_type_name,
+        filter_min_level,
+        filter_max_level,
+        page_size,
+        page_number,
+        fields_item,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+            'fields[item]': 'csv',
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[str, str] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if language is not None:
+            _path_params['language'] = language
+        if game is not None:
+            _path_params['game'] = game
+        # process the query parameters
+        if sort_level is not None:
+            
+            _query_params.append(('sort[level]', sort_level))
+            
+        if filter_type_name is not None:
+            
+            _query_params.append(('filter[type_name]', filter_type_name))
+            
+        if filter_min_level is not None:
+            
+            _query_params.append(('filter[min_level]', filter_min_level))
+            
+        if filter_max_level is not None:
+            
+            _query_params.append(('filter[max_level]', filter_max_level))
+            
+        if page_size is not None:
+            
+            _query_params.append(('page[size]', page_size))
+            
+        if page_number is not None:
+            
+            _query_params.append(('page[number]', page_number))
+            
+        if fields_item is not None:
+            
+            _query_params.append(('fields[item]', fields_item))
+            
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
             [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout',
-                '_request_auth',
-                '_content_type',
-                '_headers'
+                'application/json'
             ]
         )
 
-        # validate the arguments
-        for _key, _val in _params['kwargs'].items():
-            if _key not in _all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_items_quest_search" % _key
-                )
-            _params[_key] = _val
-        del _params['kwargs']
-
-        _collection_formats = {}
-
-        # process the path parameters
-        _path_params = {}
-        if _params['language']:
-            _path_params['language'] = _params['language']
-
-        if _params['game']:
-            _path_params['game'] = _params['game']
-
-
-        # process the query parameters
-        _query_params = []
-        if _params.get('query') is not None:  # noqa: E501
-            _query_params.append(('query', _params['query']))
-
-        if _params.get('filter_type_name') is not None:  # noqa: E501
-            _query_params.append(('filter[type_name]', _params['filter_type_name']))
-
-        if _params.get('filter_min_level') is not None:  # noqa: E501
-            _query_params.append(('filter[min_level]', _params['filter_min_level']))
-
-        if _params.get('filter_max_level') is not None:  # noqa: E501
-            _query_params.append(('filter[max_level]', _params['filter_max_level']))
-
-        if _params.get('limit') is not None:  # noqa: E501
-            _query_params.append(('limit', _params['limit']))
-
-        # process the header parameters
-        _header_params = dict(_params.get('_headers', {}))
-        # process the form parameters
-        _form_params = []
-        _files = {}
-        # process the body parameter
-        _body_params = None
-        # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = []  # noqa: E501
+        _auth_settings: List[str] = [
+        ]
 
-        _response_types_map = {
+        return self.api_client.param_serialize(
+            method='GET',
+            resource_path='/{game}/{language}/items/quest',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    def get_items_quest_search(
+        self,
+        language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
+        game: StrictStr,
+        query: Annotated[StrictStr, Field(description="case sensitive search query")],
+        filter_type_name: Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None,
+        filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
+        filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
+        limit: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="maximum number of returned results")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> List[ItemListEntry]:
+        """Search Quest Items
+
+        Search in all names and descriptions of quest items with a query.
+
+        :param language: a valid language code (required)
+        :type language: str
+        :param game: (required)
+        :type game: str
+        :param query: case sensitive search query (required)
+        :type query: str
+        :param filter_type_name: only results with the translated type name
+        :type filter_type_name: str
+        :param filter_min_level: only results which level is equal or above this value
+        :type filter_min_level: int
+        :param filter_max_level: only results which level is equal or below this value
+        :type filter_max_level: int
+        :param limit: maximum number of returned results
+        :type limit: int
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._get_items_quest_search_serialize(
+            language=language,
+            game=game,
+            query=query,
+            filter_type_name=filter_type_name,
+            filter_min_level=filter_min_level,
+            filter_max_level=filter_max_level,
+            limit=limit,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[ItemListEntry]",
             '400': None,
             '404': None,
         }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
 
-        return self.api_client.call_api(
-            '/{game}/{language}/items/quest/search', 'GET',
-            _path_params,
-            _query_params,
-            _header_params,
+
+    @validate_call
+    def get_items_quest_search_with_http_info(
+        self,
+        language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
+        game: StrictStr,
+        query: Annotated[StrictStr, Field(description="case sensitive search query")],
+        filter_type_name: Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None,
+        filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
+        filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
+        limit: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="maximum number of returned results")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[List[ItemListEntry]]:
+        """Search Quest Items
+
+        Search in all names and descriptions of quest items with a query.
+
+        :param language: a valid language code (required)
+        :type language: str
+        :param game: (required)
+        :type game: str
+        :param query: case sensitive search query (required)
+        :type query: str
+        :param filter_type_name: only results with the translated type name
+        :type filter_type_name: str
+        :param filter_min_level: only results which level is equal or above this value
+        :type filter_min_level: int
+        :param filter_max_level: only results which level is equal or below this value
+        :type filter_max_level: int
+        :param limit: maximum number of returned results
+        :type limit: int
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._get_items_quest_search_serialize(
+            language=language,
+            game=game,
+            query=query,
+            filter_type_name=filter_type_name,
+            filter_min_level=filter_min_level,
+            filter_max_level=filter_max_level,
+            limit=limit,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "List[ItemListEntry]",
+            '400': None,
+            '404': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    def get_items_quest_search_without_preload_content(
+        self,
+        language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
+        game: StrictStr,
+        query: Annotated[StrictStr, Field(description="case sensitive search query")],
+        filter_type_name: Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None,
+        filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
+        filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
+        limit: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="maximum number of returned results")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Search Quest Items
+
+        Search in all names and descriptions of quest items with a query.
+
+        :param language: a valid language code (required)
+        :type language: str
+        :param game: (required)
+        :type game: str
+        :param query: case sensitive search query (required)
+        :type query: str
+        :param filter_type_name: only results with the translated type name
+        :type filter_type_name: str
+        :param filter_min_level: only results which level is equal or above this value
+        :type filter_min_level: int
+        :param filter_max_level: only results which level is equal or below this value
+        :type filter_max_level: int
+        :param limit: maximum number of returned results
+        :type limit: int
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._get_items_quest_search_serialize(
+            language=language,
+            game=game,
+            query=query,
+            filter_type_name=filter_type_name,
+            filter_min_level=filter_min_level,
+            filter_max_level=filter_max_level,
+            limit=limit,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "List[ItemListEntry]",
+            '400': None,
+            '404': None,
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _get_items_quest_search_serialize(
+        self,
+        language,
+        game,
+        query,
+        filter_type_name,
+        filter_min_level,
+        filter_max_level,
+        limit,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[str, str] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if language is not None:
+            _path_params['language'] = language
+        if game is not None:
+            _path_params['game'] = game
+        # process the query parameters
+        if query is not None:
+            
+            _query_params.append(('query', query))
+            
+        if filter_type_name is not None:
+            
+            _query_params.append(('filter[type_name]', filter_type_name))
+            
+        if filter_min_level is not None:
+            
+            _query_params.append(('filter[min_level]', filter_min_level))
+            
+        if filter_max_level is not None:
+            
+            _query_params.append(('filter[max_level]', filter_max_level))
+            
+        if limit is not None:
+            
+            _query_params.append(('limit', limit))
+            
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            [
+                'application/json'
+            ]
+        )
+
+
+        # authentication setting
+        _auth_settings: List[str] = [
+        ]
+
+        return self.api_client.param_serialize(
+            method='GET',
+            resource_path='/{game}/{language}/items/quest/search',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
             body=_body_params,
             post_params=_form_params,
             files=_files,
-            response_types_map=_response_types_map,
             auth_settings=_auth_settings,
-            async_req=_params.get('async_req'),
-            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=_params.get('_preload_content', True),
-            _request_timeout=_params.get('_request_timeout'),
             collection_formats=_collection_formats,
-            _request_auth=_params.get('_request_auth'))
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+

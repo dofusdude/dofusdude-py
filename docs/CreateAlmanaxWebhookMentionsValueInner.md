@@ -3,6 +3,7 @@
 Mention
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **discord_id** | **int** | User or role ID directly from Discord. Activate developer mode and right click a user or role to get them. | [optional] 

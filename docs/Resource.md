@@ -1,7 +1,9 @@
 # Resource
 
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ankama_id** | **int** |  | [optional] 
@@ -13,6 +15,7 @@ Name | Type | Description | Notes
 **image_urls** | [**ImageUrls**](ImageUrls.md) |  | [optional] 
 **effects** | [**List[EffectsEntry]**](EffectsEntry.md) |  | [optional] 
 **conditions** | [**List[ConditionEntry]**](ConditionEntry.md) |  | [optional] 
+**condition_tree** | [**ConditionTreeNode**](ConditionTreeNode.md) |  | [optional] 
 **recipe** | [**List[RecipeEntry]**](RecipeEntry.md) |  | [optional] 
 
 ## Example

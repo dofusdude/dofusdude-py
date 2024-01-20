@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_game_search_types**](MetaApi.md#get_game_search_types) | **GET** /dofus2/meta/search/types | Available Game Search Types
 [**get_meta_almanax_bonuses**](MetaApi.md#get_meta_almanax_bonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses
+[**get_meta_almanax_bonuses_search**](MetaApi.md#get_meta_almanax_bonuses_search) | **GET** /dofus2/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses
 [**get_meta_elements**](MetaApi.md#get_meta_elements) | **GET** /dofus2/meta/elements | Effects and Condition Elements
 
 
@@ -18,9 +19,8 @@ Get all types for /{game}/{lang}/search available for filtering. All names are e
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.rest import ApiException
 from pprint import pprint
@@ -49,6 +49,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -65,6 +66,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -80,9 +82,8 @@ Get all the available bonuses and their id for filtering them in the range endpo
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.get_meta_almanax_bonuses200_response_inner import GetMetaAlmanaxBonuses200ResponseInner
 from dofusdude.rest import ApiException
@@ -114,6 +115,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**|  | 
@@ -132,6 +134,79 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_meta_almanax_bonuses_search**
+> List[GetMetaAlmanaxBonuses200ResponseInner] get_meta_almanax_bonuses_search(language, query, limit=limit)
+
+Search Available Almanax Bonuses
+
+Search all the available bonuses and their id for filtering them in the range endpoint.
+
+### Example
+
+
+```python
+import dofusdude
+from dofusdude.models.get_meta_almanax_bonuses200_response_inner import GetMetaAlmanaxBonuses200ResponseInner
+from dofusdude.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.dofusdu.de
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dofusdude.Configuration(
+    host = "https://api.dofusdu.de"
+)
+
+
+# Enter a context with an instance of the API client
+with dofusdude.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = dofusdude.MetaApi(api_client)
+    language = 'fr' # str | a valid language code
+    query = 'abond' # str | case sensitive search query
+    limit = 56 # int | maximum number of returned results (optional)
+
+    try:
+        # Search Available Almanax Bonuses
+        api_response = api_instance.get_meta_almanax_bonuses_search(language, query, limit=limit)
+        print("The response of MetaApi->get_meta_almanax_bonuses_search:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling MetaApi->get_meta_almanax_bonuses_search: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **language** | **str**| a valid language code | 
+ **query** | **str**| case sensitive search query | 
+ **limit** | **int**| maximum number of returned results | [optional] 
+
+### Return type
+
+[**List[GetMetaAlmanaxBonuses200ResponseInner]**](GetMetaAlmanaxBonuses200ResponseInner.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -147,9 +222,8 @@ Get the mappings for all specific elements that are linked in the dataset. All n
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.rest import ApiException
 from pprint import pprint
@@ -178,6 +252,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -194,6 +269,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

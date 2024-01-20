@@ -1,11 +1,11 @@
 # coding: utf-8
 
 """
-    Dofusdude
+    dofusdude
 
-    # A project for you - the developer. The free, always-up-to-date, low-latency, insert-buzzword-here Ankama API for your next cool project!  ## Client SDKs Don't write types or functions yourself - I already (kinda) did! 😉 - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude - [PHP](https://github.com/dofusdude/dofusdude-php)  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related Twitter, RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing by the powerful [Meilisearch](https://www.meilisearch.com) written in Rust.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering vector graphics into PNGs up to 800x800 px in the background.   ## Current state - Weapons ✅ - Equipment ✅ - Sets ✅ - Resources ✅ - Consumables ✅ - Pets ✅ - Mounts ✅ - Cosmetics/Ceremonial Items ✅ - Harnesses ✅ - Quest Items ✅ - Almanax ✅ - Monsters ❌ - Spells ❌  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility, so no field or parameter will be deleted.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Only the beginning... 🤯 I want this project to be useful and not just add plain GET-categories no one needs.  There is a long list of features I want to add (see the Roadmap on my [Discord](https://discord.gg/3EtHskZD8h)). But they are all focussed on you, the developers. So please let me know what you need. I will change the list based on demand.  # Get started! 🥳 Scroll down and try it for yourself!  Or see how these other awesome projects use it: - [KaellyBot](https://github.com/Kaysoro/KaellyBot) by Kaysoro - [Dofus Craftlist](https://dofuscraftlist-dev.netlify.app) by Lystina - [AlmanaxApp](https://almanaxapp.netlify.app) by Lystina - [DofuStuffSimulator](https://dofusstuffsimulator.netlify.app/)  I highly recommend using the SDKs for quick results. I use them myself for parts of the API.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply  donate, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude). 
+    # A project for you - the developer. The all-in-one toolbelt for your next Ankama related project.  ## Client SDKs - [Javascript](https://github.com/dofusdude/dofusdude-js) npm i dofusdude-js --save - [Typescript](https://github.com/dofusdude/dofusdude-ts) npm i dofusdude-ts --save - [Go](https://github.com/dofusdude/dodugo) go get -u github.com/dofusdude/dodugo - [Python](https://github.com/dofusdude/dofusdude-py) pip install dofusdude - [PHP](https://github.com/dofusdude/dofusdude-php)  Everything, including this site, is generated out of the [Docs Repo](https://github.com/dofusdude/api-docs). Consider it the Single Source of Truth. If there is a problem with the SDKs, create an issue there.  Your favorite language is missing? Please let me know!  # Main Features - 🥷 **Seamless Auto-Update** load data in the background when a new Dofus version is released and serving it within 2 minutes with atomic data source switching. No downtime and no effects for the user, just always up-to-date.  - ⚡ **Blazingly Fast** all data in-memory, aggressive caching over short time spans, HTTP/2 multiplexing, written in Go, optimized for low latency, hosted on bare metal in 🇩🇪.  - 📨 **Discord Integration** Ankama related RSS and Almanax feeds to post to Discord servers with advanced features like filters or mentions. Use the endpoints as a dev or the official [Web Client](https://discord.dofusdude.com) as a user.  - 🩸 **Dofus 2 Beta** from stable to bleeding edge by replacing /dofus2 with /dofus2beta.  - 🗣️ **Multilingual** supporting _en_, _fr_, _es_, _pt_ including the dropped languages from the Dofus website _de_ and _it_.  - 🧠 **Search by Relevance** allowing typos in name and description, handled by language specific text analysis and indexing.  - 🕵️ **Complete** actual data from the game including items invisible to the encyclopedia like quest items.  - 🖼️ **HD Images** rendering game assets to high-res images with up to 800x800 px.  ... and much more on the Roadmap on my Discord.   ## Deploy now. Use forever. Everything you see here on this site, you can use now and forever. Updates could introduce new fields, new paths or parameter but never break backwards compatibility.  There is one exception! **The API will _always_ choose being up-to-date over everything else**. So if Ankama decides to drop languages from the game like they did with their website, the API will loose support for them, too.  ## Thank you! I highly welcome everyone on my [Discord](https://discord.gg/3EtHskZD8h) to just talk about projects and use cases or give feedback of any kind.  The servers have a fixed monthly cost to provide very fast responses. If you want to help me keeping them running or simply donate to that cause, consider becoming a [GitHub Sponsor](https://github.com/sponsors/dofusdude).
 
-    The version of the OpenAPI document: 0.8.0
+    The version of the OpenAPI document: 0.8.1
     Contact: stelzo@steado.de
     Generated by OpenAPI Generator (https://openapi-generator.tech)
 
@@ -19,30 +19,32 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from typing import Dict, List, Optional
-from pydantic import BaseModel, Field, StrictBool, StrictStr, conlist, validator
+from pydantic import BaseModel, Field, StrictBool, StrictStr, field_validator
+from typing import Any, ClassVar, Dict, List, Optional
 from dofusdude.models.almanax_webhook_daily_settings import AlmanaxWebhookDailySettings
 from dofusdude.models.create_almanax_webhook_mentions_value_inner import CreateAlmanaxWebhookMentionsValueInner
+from typing import Optional, Set
+from typing_extensions import Self
 
 class AlmanaxWebhook(BaseModel):
     """
     
-    """
+    """ # noqa: E501
     id: Optional[StrictStr] = None
     daily_settings: Optional[AlmanaxWebhookDailySettings] = None
-    bonus_whitelist: Optional[conlist(StrictStr)] = Field(None, description="Only post when these bonuses come up. From all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses.")
-    bonus_blacklist: Optional[conlist(StrictStr)] = Field(None, description="Skip the day when these bonuses come up. From all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses")
-    subscriptions: Optional[conlist(StrictStr)] = Field(None, description="Get the available subscriptions with /meta/webhooks/almanax")
-    iso_date: Optional[StrictBool] = Field(False, description="If false, it will use common local time formats and weekday translations. If true, the format is YYYY-MM-DD.")
-    mentions: Optional[Dict[str, conlist(CreateAlmanaxWebhookMentionsValueInner)]] = Field(None, description="Almanax bonus ids mapped to array of mentions.")
-    intervals: Optional[conlist(StrictStr, unique_items=True)] = Field(None, description="- Daily posts each day, filtering with Black/Whitelist and mentions are applied daily. - Weekly posts the next 7 days (excluding the posting day) once per week at the specified time. With only weekly selected, of all mentions, only prior notices will come through daily. The 7 day preview gets filtered by the Black/Whitelist. - Monthly posts a preview of the next month from first to last date. The post will be on the last day of a month (ignoring day of the week) at the specified time. Mentions and filtering works like weekly. The biggest difference between daily and the other two is that daily always posts the current day while monthly and weekly only show future days. You can always combine the intervals by selecting multiple intervals for one hook or create multiple hooks for the same channel with different settings to get every highly specific combination you want.")
-    weekly_weekday: Optional[StrictStr] = Field(None, description="When to post the weekly preview at the specified time.")
+    bonus_whitelist: Optional[List[StrictStr]] = Field(default=None, description="Only post when these bonuses come up. From all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses.")
+    bonus_blacklist: Optional[List[StrictStr]] = Field(default=None, description="Skip the day when these bonuses come up. From all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses")
+    subscriptions: Optional[List[StrictStr]] = Field(default=None, description="Get the available subscriptions with /meta/webhooks/almanax")
+    iso_date: Optional[StrictBool] = Field(default=False, description="If false, it will use common local time formats and weekday translations. If true, the format is YYYY-MM-DD.")
+    mentions: Optional[Dict[str, List[CreateAlmanaxWebhookMentionsValueInner]]] = Field(default=None, description="Almanax bonus ids mapped to array of mentions.")
+    intervals: Optional[List[StrictStr]] = Field(default=None, description="- Daily posts each day, filtering with Black/Whitelist and mentions are applied daily. - Weekly posts the next 7 days (excluding the posting day) once per week at the specified time. With only weekly selected, of all mentions, only prior notices will come through daily. The 7 day preview gets filtered by the Black/Whitelist. - Monthly posts a preview of the next month from first to last date. The post will be on the last day of a month (ignoring day of the week) at the specified time. Mentions and filtering works like weekly. The biggest difference between daily and the other two is that daily always posts the current day while monthly and weekly only show future days. You can always combine the intervals by selecting multiple intervals for one hook or create multiple hooks for the same channel with different settings to get every highly specific combination you want.")
+    weekly_weekday: Optional[StrictStr] = Field(default=None, description="When to post the weekly preview at the specified time.")
     created_at: Optional[datetime] = None
     last_fired_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
-    __properties = ["id", "daily_settings", "bonus_whitelist", "bonus_blacklist", "subscriptions", "iso_date", "mentions", "intervals", "weekly_weekday", "created_at", "last_fired_at", "updated_at"]
+    __properties: ClassVar[List[str]] = ["id", "daily_settings", "bonus_whitelist", "bonus_blacklist", "subscriptions", "iso_date", "mentions", "intervals", "weekly_weekday", "created_at", "last_fired_at", "updated_at"]
 
-    @validator('intervals')
+    @field_validator('intervals')
     def intervals_validate_enum(cls, value):
         """Validates the enum"""
         if value is None:
@@ -53,7 +55,7 @@ class AlmanaxWebhook(BaseModel):
                 raise ValueError("each list item must be one of ('daily', 'weekly', 'monthly')")
         return value
 
-    @validator('weekly_weekday')
+    @field_validator('weekly_weekday')
     def weekly_weekday_validate_enum(cls, value):
         """Validates the enum"""
         if value is None:
@@ -63,30 +65,45 @@ class AlmanaxWebhook(BaseModel):
             raise ValueError("must be one of enum values ('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday')")
         return value
 
-    class Config:
-        """Pydantic configuration"""
-        allow_population_by_field_name = True
-        validate_assignment = True
+    model_config = {
+        "populate_by_name": True,
+        "validate_assignment": True,
+        "protected_namespaces": (),
+    }
+
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
-        return pprint.pformat(self.dict(by_alias=True))
+        return pprint.pformat(self.model_dump(by_alias=True))
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
+        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> AlmanaxWebhook:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of AlmanaxWebhook from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
-    def to_dict(self):
-        """Returns the dictionary representation of the model using alias"""
-        _dict = self.dict(by_alias=True,
-                          exclude={
-                          },
-                          exclude_none=True)
+    def to_dict(self) -> Dict[str, Any]:
+        """Return the dictionary representation of the model using alias.
+
+        This has the following differences from calling pydantic's
+        `self.model_dump(by_alias=True)`:
+
+        * `None` is only added to the output dict for nullable fields that
+          were set at model initialization. Other fields with value `None`
+          are ignored.
+        """
+        excluded_fields: Set[str] = set([
+        ])
+
+        _dict = self.model_dump(
+            by_alias=True,
+            exclude=excluded_fields,
+            exclude_none=True,
+        )
         # override the default output from pydantic by calling `to_dict()` of daily_settings
         if self.daily_settings:
             _dict['daily_settings'] = self.daily_settings.to_dict()
@@ -94,50 +111,50 @@ class AlmanaxWebhook(BaseModel):
         _field_dict_of_array = {}
         if self.mentions:
             for _key in self.mentions:
-                if self.mentions[_key]:
+                if self.mentions[_key] is not None:
                     _field_dict_of_array[_key] = [
                         _item.to_dict() for _item in self.mentions[_key]
                     ]
             _dict['mentions'] = _field_dict_of_array
         # set to None if bonus_whitelist (nullable) is None
-        # and __fields_set__ contains the field
-        if self.bonus_whitelist is None and "bonus_whitelist" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.bonus_whitelist is None and "bonus_whitelist" in self.model_fields_set:
             _dict['bonus_whitelist'] = None
 
         # set to None if bonus_blacklist (nullable) is None
-        # and __fields_set__ contains the field
-        if self.bonus_blacklist is None and "bonus_blacklist" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.bonus_blacklist is None and "bonus_blacklist" in self.model_fields_set:
             _dict['bonus_blacklist'] = None
 
         # set to None if mentions (nullable) is None
-        # and __fields_set__ contains the field
-        if self.mentions is None and "mentions" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.mentions is None and "mentions" in self.model_fields_set:
             _dict['mentions'] = None
 
         # set to None if weekly_weekday (nullable) is None
-        # and __fields_set__ contains the field
-        if self.weekly_weekday is None and "weekly_weekday" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.weekly_weekday is None and "weekly_weekday" in self.model_fields_set:
             _dict['weekly_weekday'] = None
 
         # set to None if last_fired_at (nullable) is None
-        # and __fields_set__ contains the field
-        if self.last_fired_at is None and "last_fired_at" in self.__fields_set__:
+        # and model_fields_set contains the field
+        if self.last_fired_at is None and "last_fired_at" in self.model_fields_set:
             _dict['last_fired_at'] = None
 
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> AlmanaxWebhook:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of AlmanaxWebhook from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return AlmanaxWebhook.parse_obj(obj)
+            return cls.model_validate(obj)
 
-        _obj = AlmanaxWebhook.parse_obj({
+        _obj = cls.model_validate({
             "id": obj.get("id"),
-            "daily_settings": AlmanaxWebhookDailySettings.from_dict(obj.get("daily_settings")) if obj.get("daily_settings") is not None else None,
+            "daily_settings": AlmanaxWebhookDailySettings.from_dict(obj["daily_settings"]) if obj.get("daily_settings") is not None else None,
             "bonus_whitelist": obj.get("bonus_whitelist"),
             "bonus_blacklist": obj.get("bonus_blacklist"),
             "subscriptions": obj.get("subscriptions"),
@@ -148,7 +165,7 @@ class AlmanaxWebhook(BaseModel):
                         if _v is not None
                         else None
                 )
-                for _k, _v in obj.get("mentions").items()
+                for _k, _v in obj.get("mentions", {}).items()
             ),
             "intervals": obj.get("intervals"),
             "weekly_weekday": obj.get("weekly_weekday"),

@@ -19,9 +19,8 @@ Retrieve all mounts with one request. This endpoint is just an alias for the a l
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.mounts_list_paged import MountsListPaged
 from dofusdude.rest import ApiException
@@ -56,6 +55,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -77,6 +77,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Mounts Found |  -  |
@@ -94,9 +95,8 @@ Retrieve a list of mounts.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.mounts_list_paged import MountsListPaged
 from dofusdude.rest import ApiException
@@ -133,6 +133,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -156,6 +157,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Mounts Found |  -  |
@@ -173,9 +175,8 @@ Search in all names and descriptions of mounts with a query.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.mount_list_entry import MountListEntry
 from dofusdude.rest import ApiException
@@ -211,6 +212,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -233,6 +235,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Mounts Found |  -  |
@@ -250,9 +253,8 @@ Retrieve a specific mount with id.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.mount import Mount
 from dofusdude.rest import ApiException
@@ -286,6 +288,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -306,6 +309,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Mount Found |  -  |

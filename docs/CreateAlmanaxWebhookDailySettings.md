@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **timezone** | **str** | Timezone of your community to determine midnight. | [optional] [default to 'Europe/Paris']

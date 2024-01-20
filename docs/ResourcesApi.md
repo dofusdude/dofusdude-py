@@ -19,9 +19,8 @@ Retrieve all resource items with one request. This endpoint is just an alias for
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.items_list_paged import ItemsListPaged
 from dofusdude.rest import ApiException
@@ -59,6 +58,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -83,6 +83,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Resources Found |  -  |
@@ -100,9 +101,8 @@ Search in all names and descriptions of resource items with a query.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.item_list_entry import ItemListEntry
 from dofusdude.rest import ApiException
@@ -140,6 +140,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -164,6 +165,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Resources Found |  -  |
@@ -181,9 +183,8 @@ Retrieve a list of resource items.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.items_list_paged import ItemsListPaged
 from dofusdude.rest import ApiException
@@ -223,6 +224,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -249,6 +251,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Resources Found |  -  |
@@ -266,9 +269,8 @@ Retrieve a specific resource item with id.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.resource import Resource
 from dofusdude.rest import ApiException
@@ -302,6 +304,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -322,6 +325,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Resource Found |  -  |

@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bonus** | [**AlmanaxEntryBonus**](AlmanaxEntryBonus.md) |  | [optional] 

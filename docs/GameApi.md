@@ -17,9 +17,8 @@ Search in all names and descriptions of all supported types in the game. For the
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.get_game_search200_response_inner import GetGameSearch200ResponseInner
 from dofusdude.rest import ApiException
@@ -56,6 +55,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -79,6 +79,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Game Search Result |  -  |
@@ -96,9 +97,8 @@ Search in all names and descriptions of Dofus items (including all subtypes) wit
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.items_list_entry_typed import ItemsListEntryTyped
 from dofusdude.rest import ApiException
@@ -136,6 +136,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -160,6 +161,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Items Found |  -  |

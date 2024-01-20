@@ -17,9 +17,8 @@ Get a single date. There are not more details in the returned object than the no
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.almanax_entry import AlmanaxEntry
 from dofusdude.rest import ApiException
@@ -52,6 +51,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| code | 
@@ -71,6 +71,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -86,9 +87,8 @@ Get a range of dates, defaults to today + 6 following days but can specified by 
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.almanax_entry import AlmanaxEntry
 from dofusdude.rest import ApiException
@@ -125,6 +125,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| code | 
@@ -148,6 +149,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

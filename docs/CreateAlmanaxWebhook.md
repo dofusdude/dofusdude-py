@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bonus_whitelist** | **List[str]** | from all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses | [optional] 

@@ -19,9 +19,8 @@ Retrieve all sets with one request. This endpoint is just an alias for the a lis
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.sets_list_paged import SetsListPaged
 from dofusdude.rest import ApiException
@@ -58,6 +57,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -81,6 +81,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Set Found |  -  |
@@ -98,9 +99,8 @@ Retrieve a list of sets.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.sets_list_paged import SetsListPaged
 from dofusdude.rest import ApiException
@@ -139,6 +139,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -164,6 +165,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Set Found |  -  |
@@ -181,9 +183,8 @@ Search in all names and descriptions of sets with a query.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.set_list_entry import SetListEntry
 from dofusdude.rest import ApiException
@@ -220,6 +221,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -243,6 +245,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Sets Found |  -  |
@@ -260,9 +263,8 @@ Retrieve a specific set with id.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.equipment_set import EquipmentSet
 from dofusdude.rest import ApiException
@@ -296,6 +298,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -316,6 +319,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Set Found |  -  |

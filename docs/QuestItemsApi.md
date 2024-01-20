@@ -19,9 +19,8 @@ Retrieve all quest items with one request. This endpoint is just an alias for th
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.items_list_paged import ItemsListPaged
 from dofusdude.rest import ApiException
@@ -59,6 +58,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -83,6 +83,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Quest Items Found |  -  |
@@ -100,9 +101,8 @@ Retrieve a specific quest item with id.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.resource import Resource
 from dofusdude.rest import ApiException
@@ -136,6 +136,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -156,6 +157,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Quest Item Found |  -  |
@@ -173,9 +175,8 @@ Retrieve a list of quest items.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.items_list_paged import ItemsListPaged
 from dofusdude.rest import ApiException
@@ -215,6 +216,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -241,6 +243,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Quest Items Found |  -  |
@@ -258,9 +261,8 @@ Search in all names and descriptions of quest items with a query.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.item_list_entry import ItemListEntry
 from dofusdude.rest import ApiException
@@ -298,6 +300,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -322,6 +325,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Quest Items Found |  -  |

@@ -30,9 +30,8 @@ Delete a Webhook from the service.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.rest import ApiException
 from pprint import pprint
@@ -61,6 +60,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
@@ -79,6 +79,7 @@ No authorization required
  - **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -94,9 +95,8 @@ Delete a Webhook from the service.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.rest import ApiException
 from pprint import pprint
@@ -125,6 +125,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
@@ -143,6 +144,7 @@ No authorization required
  - **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -158,9 +160,8 @@ Delete a Webhook from the service.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.rest import ApiException
 from pprint import pprint
@@ -189,6 +190,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
@@ -207,6 +209,7 @@ No authorization required
  - **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -222,9 +225,8 @@ Get a list of all available subscriptions.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.get_meta_webhooks_twitter200_response import GetMetaWebhooksTwitter200Response
 from dofusdude.rest import ApiException
@@ -254,6 +256,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -270,6 +273,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -285,9 +289,8 @@ Get a list of all available subscriptions.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.get_meta_webhooks_twitter200_response import GetMetaWebhooksTwitter200Response
 from dofusdude.rest import ApiException
@@ -317,6 +320,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -333,6 +337,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -348,9 +353,8 @@ Get a list of all available subscriptions.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.get_meta_webhooks_twitter200_response import GetMetaWebhooksTwitter200Response
 from dofusdude.rest import ApiException
@@ -380,6 +384,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -396,6 +401,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -411,9 +417,8 @@ Retrieve details about an existing Almanax Webhook with a given uuid.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.almanax_webhook import AlmanaxWebhook
 from dofusdude.rest import ApiException
@@ -445,6 +450,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
@@ -463,6 +469,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -478,9 +485,8 @@ Retrieve details about an existing RSS Webhook with a given uuid.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.rss_webhook import RssWebhook
 from dofusdude.rest import ApiException
@@ -512,6 +518,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
@@ -530,6 +537,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -545,9 +553,8 @@ Retrieve details about an existing Twitter Webhook with a given uuid.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.twitter_webhook import TwitterWebhook
 from dofusdude.rest import ApiException
@@ -579,6 +586,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
@@ -597,6 +605,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -612,9 +621,8 @@ Register a new Webhook to post Almanax updates.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.create_almanax_webhook import CreateAlmanaxWebhook
 from dofusdude.rest import ApiException
@@ -644,6 +652,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_almanax_webhook** | [**CreateAlmanaxWebhook**](CreateAlmanaxWebhook.md)|  | [optional] 
@@ -662,6 +671,7 @@ No authorization required
  - **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -677,9 +687,8 @@ Register a new Webhook to post RSS news as soon as they are posted.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.create_rss_webhook import CreateRSSWebhook
 from dofusdude.rest import ApiException
@@ -709,6 +718,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_rss_webhook** | [**CreateRSSWebhook**](CreateRSSWebhook.md)|  | [optional] 
@@ -727,6 +737,7 @@ No authorization required
  - **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -742,9 +753,8 @@ Register a new Webhook to post Twitter updates as soon as they are posted.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.create_twitter_webhook import CreateTwitterWebhook
 from dofusdude.rest import ApiException
@@ -774,6 +784,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_twitter_webhook** | [**CreateTwitterWebhook**](CreateTwitterWebhook.md)|  | [optional] 
@@ -792,6 +803,7 @@ No authorization required
  - **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -807,9 +819,8 @@ Update the details of an Almanax Webhook. All fields are optional and arrays wil
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.almanax_webhook import AlmanaxWebhook
 from dofusdude.models.put_almanax_webhook import PutAlmanaxWebhook
@@ -843,6 +854,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
@@ -862,6 +874,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -877,9 +890,8 @@ Update the details of a RSS Webhook. All fields are optional and arrays will be 
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.put_rss_webhook import PutRSSWebhook
 from dofusdude.models.rss_webhook import RssWebhook
@@ -913,6 +925,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
@@ -932,6 +945,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -947,9 +961,8 @@ Update the details of a Twitter Webhook. All fields are optional and arrays will
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.put_twitter_webhook import PutTwitterWebhook
 from dofusdude.models.twitter_webhook import TwitterWebhook
@@ -983,6 +996,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
@@ -1002,6 +1016,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

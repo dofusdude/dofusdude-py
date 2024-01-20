@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ankama_id** | **int** |  | [optional] 
@@ -14,6 +15,7 @@ Name | Type | Description | Notes
 **image_urls** | [**ImageUrls**](ImageUrls.md) |  | [optional] 
 **effects** | [**List[EffectsEntry]**](EffectsEntry.md) |  | [optional] 
 **conditions** | [**List[ConditionEntry]**](ConditionEntry.md) |  | [optional] 
+**condition_tree** | [**ConditionTreeNode**](ConditionTreeNode.md) |  | [optional] 
 **critical_hit_probability** | **int** |  | [optional] 
 **critical_hit_bonus** | **int** |  | [optional] 
 **is_two_handed** | **bool** |  | [optional] 

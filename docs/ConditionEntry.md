@@ -1,12 +1,14 @@
 # ConditionEntry
 
 
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **operator** | **str** |  | [optional] 
 **int_value** | **int** |  | [optional] 
-**element** | [**ConditionEntryElement**](ConditionEntryElement.md) |  | [optional] 
+**element** | [**ItemsListEntryTypedType**](ItemsListEntryTypedType.md) |  | [optional] 
 
 ## Example
 

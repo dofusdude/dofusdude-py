@@ -12,7 +12,9 @@ docs/AlmanaxEntryTributeItem.md
 docs/AlmanaxWebhook.md
 docs/AlmanaxWebhookDailySettings.md
 docs/ConditionEntry.md
-docs/ConditionEntryElement.md
+docs/ConditionTreeLeaf.md
+docs/ConditionTreeNode.md
+docs/ConditionTreeRelation.md
 docs/ConsumablesApi.md
 docs/Cosmetic.md
 docs/CosmeticType.md
@@ -83,7 +85,9 @@ dofusdude/models/almanax_entry_tribute_item.py
 dofusdude/models/almanax_webhook.py
 dofusdude/models/almanax_webhook_daily_settings.py
 dofusdude/models/condition_entry.py
-dofusdude/models/condition_entry_element.py
+dofusdude/models/condition_tree_leaf.py
+dofusdude/models/condition_tree_node.py
+dofusdude/models/condition_tree_relation.py
 dofusdude/models/cosmetic.py
 dofusdude/models/cosmetic_type.py
 dofusdude/models/create_almanax_webhook.py
@@ -136,7 +140,9 @@ test/test_almanax_entry_tribute_item.py
 test/test_almanax_webhook.py
 test/test_almanax_webhook_daily_settings.py
 test/test_condition_entry.py
-test/test_condition_entry_element.py
+test/test_condition_tree_leaf.py
+test/test_condition_tree_node.py
+test/test_condition_tree_relation.py
 test/test_consumables_api.py
 test/test_cosmetic.py
 test/test_cosmetic_type.py

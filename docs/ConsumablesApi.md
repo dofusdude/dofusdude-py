@@ -19,9 +19,8 @@ Retrieve all consumable items with one request. This endpoint is just an alias f
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.items_list_paged import ItemsListPaged
 from dofusdude.rest import ApiException
@@ -59,6 +58,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -83,6 +83,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Consumables Found |  -  |
@@ -100,9 +101,8 @@ Retrieve a list of consumable items.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.items_list_paged import ItemsListPaged
 from dofusdude.rest import ApiException
@@ -142,6 +142,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -168,6 +169,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Consumables Found |  -  |
@@ -185,9 +187,8 @@ Search in all names and descriptions of consumable items with a query.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.item_list_entry import ItemListEntry
 from dofusdude.rest import ApiException
@@ -225,6 +226,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -249,6 +251,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Consumables Found |  -  |
@@ -266,9 +269,8 @@ Retrieve a specific consumable item with id.
 
 ### Example
 
+
 ```python
-import time
-import os
 import dofusdude
 from dofusdude.models.resource import Resource
 from dofusdude.rest import ApiException
@@ -302,6 +304,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
@@ -322,6 +325,7 @@ No authorization required
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Consumable Found |  -  |
