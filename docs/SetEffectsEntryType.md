@@ -1,4 +1,4 @@
-# EffectsEntryType
+# SetEffectsEntryType
 
 
 ## Properties
@@ -13,19 +13,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from dofusdude.models.effects_entry_type import EffectsEntryType
+from dofusdude.models.set_effects_entry_type import SetEffectsEntryType
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of EffectsEntryType from a JSON string
-effects_entry_type_instance = EffectsEntryType.from_json(json)
+# create an instance of SetEffectsEntryType from a JSON string
+set_effects_entry_type_instance = SetEffectsEntryType.from_json(json)
 # print the JSON string representation of the object
-print EffectsEntryType.to_json()
+print(SetEffectsEntryType.to_json())
 
 # convert the object into a dict
-effects_entry_type_dict = effects_entry_type_instance.to_dict()
-# create an instance of EffectsEntryType from a dict
-effects_entry_type_form_dict = effects_entry_type.from_dict(effects_entry_type_dict)
+set_effects_entry_type_dict = set_effects_entry_type_instance.to_dict()
+# create an instance of SetEffectsEntryType from a dict
+set_effects_entry_type_form_dict = set_effects_entry_type.from_dict(set_effects_entry_type_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

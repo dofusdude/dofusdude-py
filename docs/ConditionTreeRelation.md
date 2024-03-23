@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of ConditionTreeRelation from a JSON string
 condition_tree_relation_instance = ConditionTreeRelation.from_json(json)
 # print the JSON string representation of the object
-print ConditionTreeRelation.to_json()
+print(ConditionTreeRelation.to_json())
 
 # convert the object into a dict
 condition_tree_relation_dict = condition_tree_relation_instance.to_dict()

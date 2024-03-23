@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **ankama_id** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
 **equipment_ids** | **List[int]** |  | [optional] 
-**effects** | **List[List[EffectsEntry]]** |  | [optional] 
+**effects** | **List[List[SetEffectsEntry]]** |  | [optional] 
 **highest_equipment_level** | **int** |  | [optional] 
 
 ## Example
@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of EquipmentSet from a JSON string
 equipment_set_instance = EquipmentSet.from_json(json)
 # print the JSON string representation of the object
-print EquipmentSet.to_json()
+print(EquipmentSet.to_json())
 
 # convert the object into a dict
 equipment_set_dict = equipment_set_instance.to_dict()

@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of LinksPaged from a JSON string
 links_paged_instance = LinksPaged.from_json(json)
 # print the JSON string representation of the object
-print LinksPaged.to_json()
+print(LinksPaged.to_json())
 
 # convert the object into a dict
 links_paged_dict = links_paged_instance.to_dict()

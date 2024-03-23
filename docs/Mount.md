@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of Mount from a JSON string
 mount_instance = Mount.from_json(json)
 # print the JSON string representation of the object
-print Mount.to_json()
+print(Mount.to_json())
 
 # convert the object into a dict
 mount_dict = mount_instance.to_dict()

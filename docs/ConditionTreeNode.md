@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of ConditionTreeNode from a JSON string
 condition_tree_node_instance = ConditionTreeNode.from_json(json)
 # print the JSON string representation of the object
-print ConditionTreeNode.to_json()
+print(ConditionTreeNode.to_json())
 
 # convert the object into a dict
 condition_tree_node_dict = condition_tree_node_instance.to_dict()

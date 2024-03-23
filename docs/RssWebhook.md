@@ -25,7 +25,7 @@ json = "{}"
 # create an instance of RssWebhook from a JSON string
 rss_webhook_instance = RssWebhook.from_json(json)
 # print the JSON string representation of the object
-print RssWebhook.to_json()
+print(RssWebhook.to_json())
 
 # convert the object into a dict
 rss_webhook_dict = rss_webhook_instance.to_dict()

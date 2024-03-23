@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of WeaponRange from a JSON string
 weapon_range_instance = WeaponRange.from_json(json)
 # print the JSON string representation of the object
-print WeaponRange.to_json()
+print(WeaponRange.to_json())
 
 # convert the object into a dict
 weapon_range_dict = weapon_range_instance.to_dict()

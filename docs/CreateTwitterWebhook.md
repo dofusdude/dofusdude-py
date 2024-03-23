@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of CreateTwitterWebhook from a JSON string
 create_twitter_webhook_instance = CreateTwitterWebhook.from_json(json)
 # print the JSON string representation of the object
-print CreateTwitterWebhook.to_json()
+print(CreateTwitterWebhook.to_json())
 
 # convert the object into a dict
 create_twitter_webhook_dict = create_twitter_webhook_instance.to_dict()

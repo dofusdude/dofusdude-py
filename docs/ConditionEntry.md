@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of ConditionEntry from a JSON string
 condition_entry_instance = ConditionEntry.from_json(json)
 # print the JSON string representation of the object
-print ConditionEntry.to_json()
+print(ConditionEntry.to_json())
 
 # convert the object into a dict
 condition_entry_dict = condition_entry_instance.to_dict()

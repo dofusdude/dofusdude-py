@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of ConditionTreeLeaf from a JSON string
 condition_tree_leaf_instance = ConditionTreeLeaf.from_json(json)
 # print the JSON string representation of the object
-print ConditionTreeLeaf.to_json()
+print(ConditionTreeLeaf.to_json())
 
 # convert the object into a dict
 condition_tree_leaf_dict = condition_tree_leaf_instance.to_dict()

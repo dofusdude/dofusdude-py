@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of ItemsListPaged from a JSON string
 items_list_paged_instance = ItemsListPaged.from_json(json)
 # print the JSON string representation of the object
-print ItemsListPaged.to_json()
+print(ItemsListPaged.to_json())
 
 # convert the object into a dict
 items_list_paged_dict = items_list_paged_instance.to_dict()

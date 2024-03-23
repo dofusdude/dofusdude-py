@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of AlmanaxEntryTribute from a JSON string
 almanax_entry_tribute_instance = AlmanaxEntryTribute.from_json(json)
 # print the JSON string representation of the object
-print AlmanaxEntryTribute.to_json()
+print(AlmanaxEntryTribute.to_json())
 
 # convert the object into a dict
 almanax_entry_tribute_dict = almanax_entry_tribute_instance.to_dict()

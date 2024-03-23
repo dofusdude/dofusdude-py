@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of GetMetaWebhooksTwitter200Response from a JSON string
 get_meta_webhooks_twitter200_response_instance = GetMetaWebhooksTwitter200Response.from_json(json)
 # print the JSON string representation of the object
-print GetMetaWebhooksTwitter200Response.to_json()
+print(GetMetaWebhooksTwitter200Response.to_json())
 
 # convert the object into a dict
 get_meta_webhooks_twitter200_response_dict = get_meta_webhooks_twitter200_response_instance.to_dict()

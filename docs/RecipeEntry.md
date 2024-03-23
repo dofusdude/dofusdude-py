@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of RecipeEntry from a JSON string
 recipe_entry_instance = RecipeEntry.from_json(json)
 # print the JSON string representation of the object
-print RecipeEntry.to_json()
+print(RecipeEntry.to_json())
 
 # convert the object into a dict
 recipe_entry_dict = recipe_entry_instance.to_dict()

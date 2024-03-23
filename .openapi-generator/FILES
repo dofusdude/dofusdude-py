@@ -25,10 +25,8 @@ docs/CreateAlmanaxWebhookMentionsValueInner.md
 docs/CreateRSSWebhook.md
 docs/CreateTwitterWebhook.md
 docs/EffectsEntry.md
-docs/EffectsEntryType.md
 docs/Equipment.md
 docs/EquipmentApi.md
-docs/EquipmentParentSet.md
 docs/EquipmentSet.md
 docs/GameApi.md
 docs/GetGameSearch200ResponseInner.md
@@ -36,6 +34,8 @@ docs/GetMetaAlmanaxBonuses200ResponseInner.md
 docs/GetMetaWebhooksTwitter200Response.md
 docs/ImageUrls.md
 docs/ItemListEntry.md
+docs/ItemListEntryParentSet.md
+docs/ItemListEntryRange.md
 docs/ItemsListEntryTyped.md
 docs/ItemsListEntryTypedType.md
 docs/ItemsListPaged.md
@@ -53,6 +53,8 @@ docs/RecipeEntry.md
 docs/Resource.md
 docs/ResourcesApi.md
 docs/RssWebhook.md
+docs/SetEffectsEntry.md
+docs/SetEffectsEntryType.md
 docs/SetListEntry.md
 docs/SetsApi.md
 docs/SetsListPaged.md
@@ -96,15 +98,15 @@ dofusdude/models/create_almanax_webhook_mentions_value_inner.py
 dofusdude/models/create_rss_webhook.py
 dofusdude/models/create_twitter_webhook.py
 dofusdude/models/effects_entry.py
-dofusdude/models/effects_entry_type.py
 dofusdude/models/equipment.py
-dofusdude/models/equipment_parent_set.py
 dofusdude/models/equipment_set.py
 dofusdude/models/get_game_search200_response_inner.py
 dofusdude/models/get_meta_almanax_bonuses200_response_inner.py
 dofusdude/models/get_meta_webhooks_twitter200_response.py
 dofusdude/models/image_urls.py
 dofusdude/models/item_list_entry.py
+dofusdude/models/item_list_entry_parent_set.py
+dofusdude/models/item_list_entry_range.py
 dofusdude/models/items_list_entry_typed.py
 dofusdude/models/items_list_entry_typed_type.py
 dofusdude/models/items_list_paged.py
@@ -118,6 +120,8 @@ dofusdude/models/put_twitter_webhook.py
 dofusdude/models/recipe_entry.py
 dofusdude/models/resource.py
 dofusdude/models/rss_webhook.py
+dofusdude/models/set_effects_entry.py
+dofusdude/models/set_effects_entry_type.py
 dofusdude/models/set_list_entry.py
 dofusdude/models/sets_list_paged.py
 dofusdude/models/twitter_webhook.py
@@ -153,10 +157,8 @@ test/test_create_almanax_webhook_mentions_value_inner.py
 test/test_create_rss_webhook.py
 test/test_create_twitter_webhook.py
 test/test_effects_entry.py
-test/test_effects_entry_type.py
 test/test_equipment.py
 test/test_equipment_api.py
-test/test_equipment_parent_set.py
 test/test_equipment_set.py
 test/test_game_api.py
 test/test_get_game_search200_response_inner.py
@@ -164,6 +166,8 @@ test/test_get_meta_almanax_bonuses200_response_inner.py
 test/test_get_meta_webhooks_twitter200_response.py
 test/test_image_urls.py
 test/test_item_list_entry.py
+test/test_item_list_entry_parent_set.py
+test/test_item_list_entry_range.py
 test/test_items_list_entry_typed.py
 test/test_items_list_entry_typed_type.py
 test/test_items_list_paged.py
@@ -181,6 +185,8 @@ test/test_recipe_entry.py
 test/test_resource.py
 test/test_resources_api.py
 test/test_rss_webhook.py
+test/test_set_effects_entry.py
+test/test_set_effects_entry_type.py
 test/test_set_list_entry.py
 test/test_sets_api.py
 test/test_sets_list_paged.py

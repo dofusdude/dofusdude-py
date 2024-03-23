@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **family_name** | **str** |  | [optional] 
 **image_urls** | [**ImageUrls**](ImageUrls.md) |  | [optional] 
+**effects** | [**List[EffectsEntry]**](EffectsEntry.md) |  | [optional] 
 
 ## Example
 
@@ -20,7 +21,7 @@ json = "{}"
 # create an instance of MountListEntry from a JSON string
 mount_list_entry_instance = MountListEntry.from_json(json)
 # print the JSON string representation of the object
-print MountListEntry.to_json()
+print(MountListEntry.to_json())
 
 # convert the object into a dict
 mount_list_entry_dict = mount_list_entry_instance.to_dict()

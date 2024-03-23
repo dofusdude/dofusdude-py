@@ -27,7 +27,7 @@ json = "{}"
 # create an instance of Cosmetic from a JSON string
 cosmetic_instance = Cosmetic.from_json(json)
 # print the JSON string representation of the object
-print Cosmetic.to_json()
+print(Cosmetic.to_json())
 
 # convert the object into a dict
 cosmetic_dict = cosmetic_instance.to_dict()

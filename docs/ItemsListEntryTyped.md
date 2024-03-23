@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of ItemsListEntryTyped from a JSON string
 items_list_entry_typed_instance = ItemsListEntryTyped.from_json(json)
 # print the JSON string representation of the object
-print ItemsListEntryTyped.to_json()
+print(ItemsListEntryTyped.to_json())
 
 # convert the object into a dict
 items_list_entry_typed_dict = items_list_entry_typed_instance.to_dict()

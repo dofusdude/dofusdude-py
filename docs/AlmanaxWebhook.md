@@ -29,7 +29,7 @@ json = "{}"
 # create an instance of AlmanaxWebhook from a JSON string
 almanax_webhook_instance = AlmanaxWebhook.from_json(json)
 # print the JSON string representation of the object
-print AlmanaxWebhook.to_json()
+print(AlmanaxWebhook.to_json())
 
 # convert the object into a dict
 almanax_webhook_dict = almanax_webhook_instance.to_dict()

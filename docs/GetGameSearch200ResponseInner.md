@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of GetGameSearch200ResponseInner from a JSON string
 get_game_search200_response_inner_instance = GetGameSearch200ResponseInner.from_json(json)
 # print the JSON string representation of the object
-print GetGameSearch200ResponseInner.to_json()
+print(GetGameSearch200ResponseInner.to_json())
 
 # convert the object into a dict
 get_game_search200_response_inner_dict = get_game_search200_response_inner_instance.to_dict()

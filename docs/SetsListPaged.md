@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of SetsListPaged from a JSON string
 sets_list_paged_instance = SetsListPaged.from_json(json)
 # print the JSON string representation of the object
-print SetsListPaged.to_json()
+print(SetsListPaged.to_json())
 
 # convert the object into a dict
 sets_list_paged_dict = sets_list_paged_instance.to_dict()

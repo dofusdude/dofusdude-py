@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **ap_cost** | **int** |  | [optional] 
 **range** | [**WeaponRange**](WeaponRange.md) |  | [optional] 
 **recipe** | [**List[RecipeEntry]**](RecipeEntry.md) |  | [optional] 
-**parent_set** | [**EquipmentParentSet**](EquipmentParentSet.md) |  | [optional] 
+**parent_set** | [**ItemListEntryParentSet**](ItemListEntryParentSet.md) |  | [optional] 
 
 ## Example
 
@@ -35,7 +35,7 @@ json = "{}"
 # create an instance of Weapon from a JSON string
 weapon_instance = Weapon.from_json(json)
 # print the JSON string representation of the object
-print Weapon.to_json()
+print(Weapon.to_json())
 
 # convert the object into a dict
 weapon_dict = weapon_instance.to_dict()

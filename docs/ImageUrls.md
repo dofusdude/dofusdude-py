@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of ImageUrls from a JSON string
 image_urls_instance = ImageUrls.from_json(json)
 # print the JSON string representation of the object
-print ImageUrls.to_json()
+print(ImageUrls.to_json())
 
 # convert the object into a dict
 image_urls_dict = image_urls_instance.to_dict()

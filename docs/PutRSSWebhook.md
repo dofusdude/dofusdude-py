@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of PutRSSWebhook from a JSON string
 put_rss_webhook_instance = PutRSSWebhook.from_json(json)
 # print the JSON string representation of the object
-print PutRSSWebhook.to_json()
+print(PutRSSWebhook.to_json())
 
 # convert the object into a dict
 put_rss_webhook_dict = put_rss_webhook_instance.to_dict()

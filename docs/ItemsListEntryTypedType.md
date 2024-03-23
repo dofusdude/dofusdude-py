@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of ItemsListEntryTypedType from a JSON string
 items_list_entry_typed_type_instance = ItemsListEntryTypedType.from_json(json)
 # print the JSON string representation of the object
-print ItemsListEntryTypedType.to_json()
+print(ItemsListEntryTypedType.to_json())
 
 # convert the object into a dict
 items_list_entry_typed_type_dict = items_list_entry_typed_type_instance.to_dict()

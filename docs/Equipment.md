@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **conditions** | [**List[ConditionEntry]**](ConditionEntry.md) |  | [optional] 
 **condition_tree** | [**ConditionTreeNode**](ConditionTreeNode.md) |  | [optional] 
 **recipe** | [**List[RecipeEntry]**](RecipeEntry.md) |  | [optional] 
-**parent_set** | [**EquipmentParentSet**](EquipmentParentSet.md) |  | [optional] 
+**parent_set** | [**ItemListEntryParentSet**](ItemListEntryParentSet.md) |  | [optional] 
 
 ## Example
 
@@ -29,7 +29,7 @@ json = "{}"
 # create an instance of Equipment from a JSON string
 equipment_instance = Equipment.from_json(json)
 # print the JSON string representation of the object
-print Equipment.to_json()
+print(Equipment.to_json())
 
 # convert the object into a dict
 equipment_dict = equipment_instance.to_dict()

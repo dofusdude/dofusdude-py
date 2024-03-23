@@ -24,7 +24,7 @@ json = "{}"
 # create an instance of PutAlmanaxWebhook from a JSON string
 put_almanax_webhook_instance = PutAlmanaxWebhook.from_json(json)
 # print the JSON string representation of the object
-print PutAlmanaxWebhook.to_json()
+print(PutAlmanaxWebhook.to_json())
 
 # convert the object into a dict
 put_almanax_webhook_dict = put_almanax_webhook_instance.to_dict()

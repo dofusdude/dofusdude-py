@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of CreateAlmanaxWebhookMentionsValueInner from a JSON string
 create_almanax_webhook_mentions_value_inner_instance = CreateAlmanaxWebhookMentionsValueInner.from_json(json)
 # print the JSON string representation of the object
-print CreateAlmanaxWebhookMentionsValueInner.to_json()
+print(CreateAlmanaxWebhookMentionsValueInner.to_json())
 
 # convert the object into a dict
 create_almanax_webhook_mentions_value_inner_dict = create_almanax_webhook_mentions_value_inner_instance.to_dict()

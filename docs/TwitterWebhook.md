@@ -25,7 +25,7 @@ json = "{}"
 # create an instance of TwitterWebhook from a JSON string
 twitter_webhook_instance = TwitterWebhook.from_json(json)
 # print the JSON string representation of the object
-print TwitterWebhook.to_json()
+print(TwitterWebhook.to_json())
 
 # convert the object into a dict
 twitter_webhook_dict = twitter_webhook_instance.to_dict()

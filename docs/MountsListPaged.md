@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of MountsListPaged from a JSON string
 mounts_list_paged_instance = MountsListPaged.from_json(json)
 # print the JSON string representation of the object
-print MountsListPaged.to_json()
+print(MountsListPaged.to_json())
 
 # convert the object into a dict
 mounts_list_paged_dict = mounts_list_paged_instance.to_dict()

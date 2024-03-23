@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **items** | **int** | amount | [optional] 
 **level** | **int** |  | [optional] 
+**effects** | **List[List[SetEffectsEntry]]** |  | [optional] 
+**equipment_ids** | **List[int]** |  | [optional] 
 
 ## Example
 
@@ -20,7 +22,7 @@ json = "{}"
 # create an instance of SetListEntry from a JSON string
 set_list_entry_instance = SetListEntry.from_json(json)
 # print the JSON string representation of the object
-print SetListEntry.to_json()
+print(SetListEntry.to_json())
 
 # convert the object into a dict
 set_list_entry_dict = set_list_entry_instance.to_dict()
