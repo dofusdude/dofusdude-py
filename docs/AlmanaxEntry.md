@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **bonus** | [**AlmanaxEntryBonus**](AlmanaxEntryBonus.md) |  | [optional] 
 **var_date** | **str** |  | [optional] 
 **tribute** | [**AlmanaxEntryTribute**](AlmanaxEntryTribute.md) |  | [optional] 
+**reward_kamas** | **int** | Amount of Kamas you get as reward for finishing this Almanax quest. | [optional] 
 
 ## Example
 
