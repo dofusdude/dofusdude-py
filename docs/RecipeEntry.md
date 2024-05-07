@@ -24,7 +24,7 @@ print(RecipeEntry.to_json())
 # convert the object into a dict
 recipe_entry_dict = recipe_entry_instance.to_dict()
 # create an instance of RecipeEntry from a dict
-recipe_entry_form_dict = recipe_entry.from_dict(recipe_entry_dict)
+recipe_entry_from_dict = RecipeEntry.from_dict(recipe_entry_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

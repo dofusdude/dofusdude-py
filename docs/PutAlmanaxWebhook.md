@@ -29,7 +29,7 @@ print(PutAlmanaxWebhook.to_json())
 # convert the object into a dict
 put_almanax_webhook_dict = put_almanax_webhook_instance.to_dict()
 # create an instance of PutAlmanaxWebhook from a dict
-put_almanax_webhook_form_dict = put_almanax_webhook.from_dict(put_almanax_webhook_dict)
+put_almanax_webhook_from_dict = PutAlmanaxWebhook.from_dict(put_almanax_webhook_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

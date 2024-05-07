@@ -23,7 +23,7 @@ print(WeaponRange.to_json())
 # convert the object into a dict
 weapon_range_dict = weapon_range_instance.to_dict()
 # create an instance of WeaponRange from a dict
-weapon_range_form_dict = weapon_range.from_dict(weapon_range_dict)
+weapon_range_from_dict = WeaponRange.from_dict(weapon_range_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

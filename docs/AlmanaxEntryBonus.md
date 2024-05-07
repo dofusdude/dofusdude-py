@@ -23,7 +23,7 @@ print(AlmanaxEntryBonus.to_json())
 # convert the object into a dict
 almanax_entry_bonus_dict = almanax_entry_bonus_instance.to_dict()
 # create an instance of AlmanaxEntryBonus from a dict
-almanax_entry_bonus_form_dict = almanax_entry_bonus.from_dict(almanax_entry_bonus_dict)
+almanax_entry_bonus_from_dict = AlmanaxEntryBonus.from_dict(almanax_entry_bonus_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -27,7 +27,7 @@ print(EffectsEntry.to_json())
 # convert the object into a dict
 effects_entry_dict = effects_entry_instance.to_dict()
 # create an instance of EffectsEntry from a dict
-effects_entry_form_dict = effects_entry.from_dict(effects_entry_dict)
+effects_entry_from_dict = EffectsEntry.from_dict(effects_entry_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

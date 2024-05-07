@@ -23,7 +23,7 @@ print(AlmanaxWebhookDailySettings.to_json())
 # convert the object into a dict
 almanax_webhook_daily_settings_dict = almanax_webhook_daily_settings_instance.to_dict()
 # create an instance of AlmanaxWebhookDailySettings from a dict
-almanax_webhook_daily_settings_form_dict = almanax_webhook_daily_settings.from_dict(almanax_webhook_daily_settings_dict)
+almanax_webhook_daily_settings_from_dict = AlmanaxWebhookDailySettings.from_dict(almanax_webhook_daily_settings_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

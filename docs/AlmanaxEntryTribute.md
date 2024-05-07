@@ -23,7 +23,7 @@ print(AlmanaxEntryTribute.to_json())
 # convert the object into a dict
 almanax_entry_tribute_dict = almanax_entry_tribute_instance.to_dict()
 # create an instance of AlmanaxEntryTribute from a dict
-almanax_entry_tribute_form_dict = almanax_entry_tribute.from_dict(almanax_entry_tribute_dict)
+almanax_entry_tribute_from_dict = AlmanaxEntryTribute.from_dict(almanax_entry_tribute_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -34,7 +34,7 @@ print(Equipment.to_json())
 # convert the object into a dict
 equipment_dict = equipment_instance.to_dict()
 # create an instance of Equipment from a dict
-equipment_form_dict = equipment.from_dict(equipment_dict)
+equipment_from_dict = Equipment.from_dict(equipment_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

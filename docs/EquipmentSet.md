@@ -26,7 +26,7 @@ print(EquipmentSet.to_json())
 # convert the object into a dict
 equipment_set_dict = equipment_set_instance.to_dict()
 # create an instance of EquipmentSet from a dict
-equipment_set_form_dict = equipment_set.from_dict(equipment_set_dict)
+equipment_set_from_dict = EquipmentSet.from_dict(equipment_set_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

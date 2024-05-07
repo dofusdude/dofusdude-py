@@ -32,7 +32,7 @@ print(Cosmetic.to_json())
 # convert the object into a dict
 cosmetic_dict = cosmetic_instance.to_dict()
 # create an instance of Cosmetic from a dict
-cosmetic_form_dict = cosmetic.from_dict(cosmetic_dict)
+cosmetic_from_dict = Cosmetic.from_dict(cosmetic_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

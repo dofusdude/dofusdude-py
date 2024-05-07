@@ -25,7 +25,7 @@ print(ConditionEntry.to_json())
 # convert the object into a dict
 condition_entry_dict = condition_entry_instance.to_dict()
 # create an instance of ConditionEntry from a dict
-condition_entry_form_dict = condition_entry.from_dict(condition_entry_dict)
+condition_entry_from_dict = ConditionEntry.from_dict(condition_entry_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

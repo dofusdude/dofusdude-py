@@ -28,7 +28,7 @@ print(CreateRSSWebhook.to_json())
 # convert the object into a dict
 create_rss_webhook_dict = create_rss_webhook_instance.to_dict()
 # create an instance of CreateRSSWebhook from a dict
-create_rss_webhook_form_dict = create_rss_webhook.from_dict(create_rss_webhook_dict)
+create_rss_webhook_from_dict = CreateRSSWebhook.from_dict(create_rss_webhook_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,7 +25,7 @@ print(ConditionTreeNode.to_json())
 # convert the object into a dict
 condition_tree_node_dict = condition_tree_node_instance.to_dict()
 # create an instance of ConditionTreeNode from a dict
-condition_tree_node_form_dict = condition_tree_node.from_dict(condition_tree_node_dict)
+condition_tree_node_from_dict = ConditionTreeNode.from_dict(condition_tree_node_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

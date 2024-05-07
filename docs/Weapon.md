@@ -40,7 +40,7 @@ print(Weapon.to_json())
 # convert the object into a dict
 weapon_dict = weapon_instance.to_dict()
 # create an instance of Weapon from a dict
-weapon_form_dict = weapon.from_dict(weapon_dict)
+weapon_from_dict = Weapon.from_dict(weapon_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

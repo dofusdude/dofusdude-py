@@ -23,7 +23,7 @@ print(SetsListPaged.to_json())
 # convert the object into a dict
 sets_list_paged_dict = sets_list_paged_instance.to_dict()
 # create an instance of SetsListPaged from a dict
-sets_list_paged_form_dict = sets_list_paged.from_dict(sets_list_paged_dict)
+sets_list_paged_from_dict = SetsListPaged.from_dict(sets_list_paged_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

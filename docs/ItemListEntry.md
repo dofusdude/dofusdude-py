@@ -40,7 +40,7 @@ print(ItemListEntry.to_json())
 # convert the object into a dict
 item_list_entry_dict = item_list_entry_instance.to_dict()
 # create an instance of ItemListEntry from a dict
-item_list_entry_form_dict = item_list_entry.from_dict(item_list_entry_dict)
+item_list_entry_from_dict = ItemListEntry.from_dict(item_list_entry_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

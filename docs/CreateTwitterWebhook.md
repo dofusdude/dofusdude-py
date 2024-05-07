@@ -28,7 +28,7 @@ print(CreateTwitterWebhook.to_json())
 # convert the object into a dict
 create_twitter_webhook_dict = create_twitter_webhook_instance.to_dict()
 # create an instance of CreateTwitterWebhook from a dict
-create_twitter_webhook_form_dict = create_twitter_webhook.from_dict(create_twitter_webhook_dict)
+create_twitter_webhook_from_dict = CreateTwitterWebhook.from_dict(create_twitter_webhook_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

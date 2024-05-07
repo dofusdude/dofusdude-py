@@ -22,7 +22,7 @@ print(GetMetaWebhooksTwitter200Response.to_json())
 # convert the object into a dict
 get_meta_webhooks_twitter200_response_dict = get_meta_webhooks_twitter200_response_instance.to_dict()
 # create an instance of GetMetaWebhooksTwitter200Response from a dict
-get_meta_webhooks_twitter200_response_form_dict = get_meta_webhooks_twitter200_response.from_dict(get_meta_webhooks_twitter200_response_dict)
+get_meta_webhooks_twitter200_response_from_dict = GetMetaWebhooksTwitter200Response.from_dict(get_meta_webhooks_twitter200_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,7 +25,7 @@ print(SetEffectsEntryType.to_json())
 # convert the object into a dict
 set_effects_entry_type_dict = set_effects_entry_type_instance.to_dict()
 # create an instance of SetEffectsEntryType from a dict
-set_effects_entry_type_form_dict = set_effects_entry_type.from_dict(set_effects_entry_type_dict)
+set_effects_entry_type_from_dict = SetEffectsEntryType.from_dict(set_effects_entry_type_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

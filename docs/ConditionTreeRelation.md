@@ -24,7 +24,7 @@ print(ConditionTreeRelation.to_json())
 # convert the object into a dict
 condition_tree_relation_dict = condition_tree_relation_instance.to_dict()
 # create an instance of ConditionTreeRelation from a dict
-condition_tree_relation_form_dict = condition_tree_relation.from_dict(condition_tree_relation_dict)
+condition_tree_relation_from_dict = ConditionTreeRelation.from_dict(condition_tree_relation_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

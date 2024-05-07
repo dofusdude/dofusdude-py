@@ -34,7 +34,7 @@ print(AlmanaxWebhook.to_json())
 # convert the object into a dict
 almanax_webhook_dict = almanax_webhook_instance.to_dict()
 # create an instance of AlmanaxWebhook from a dict
-almanax_webhook_form_dict = almanax_webhook.from_dict(almanax_webhook_dict)
+almanax_webhook_from_dict = AlmanaxWebhook.from_dict(almanax_webhook_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

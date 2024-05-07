@@ -26,7 +26,7 @@ print(Mount.to_json())
 # convert the object into a dict
 mount_dict = mount_instance.to_dict()
 # create an instance of Mount from a dict
-mount_form_dict = mount.from_dict(mount_dict)
+mount_from_dict = Mount.from_dict(mount_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

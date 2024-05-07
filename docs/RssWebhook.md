@@ -30,7 +30,7 @@ print(RssWebhook.to_json())
 # convert the object into a dict
 rss_webhook_dict = rss_webhook_instance.to_dict()
 # create an instance of RssWebhook from a dict
-rss_webhook_form_dict = rss_webhook.from_dict(rss_webhook_dict)
+rss_webhook_from_dict = RssWebhook.from_dict(rss_webhook_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

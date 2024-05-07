@@ -25,7 +25,7 @@ print(CreateAlmanaxWebhookMentionsValueInner.to_json())
 # convert the object into a dict
 create_almanax_webhook_mentions_value_inner_dict = create_almanax_webhook_mentions_value_inner_instance.to_dict()
 # create an instance of CreateAlmanaxWebhookMentionsValueInner from a dict
-create_almanax_webhook_mentions_value_inner_form_dict = create_almanax_webhook_mentions_value_inner.from_dict(create_almanax_webhook_mentions_value_inner_dict)
+create_almanax_webhook_mentions_value_inner_from_dict = CreateAlmanaxWebhookMentionsValueInner.from_dict(create_almanax_webhook_mentions_value_inner_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -27,7 +27,7 @@ print(ItemsListEntryTyped.to_json())
 # convert the object into a dict
 items_list_entry_typed_dict = items_list_entry_typed_instance.to_dict()
 # create an instance of ItemsListEntryTyped from a dict
-items_list_entry_typed_form_dict = items_list_entry_typed.from_dict(items_list_entry_typed_dict)
+items_list_entry_typed_from_dict = ItemsListEntryTyped.from_dict(items_list_entry_typed_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

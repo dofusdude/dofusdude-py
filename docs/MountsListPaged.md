@@ -23,7 +23,7 @@ print(MountsListPaged.to_json())
 # convert the object into a dict
 mounts_list_paged_dict = mounts_list_paged_instance.to_dict()
 # create an instance of MountsListPaged from a dict
-mounts_list_paged_form_dict = mounts_list_paged.from_dict(mounts_list_paged_dict)
+mounts_list_paged_from_dict = MountsListPaged.from_dict(mounts_list_paged_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

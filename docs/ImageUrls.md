@@ -26,7 +26,7 @@ print(ImageUrls.to_json())
 # convert the object into a dict
 image_urls_dict = image_urls_instance.to_dict()
 # create an instance of ImageUrls from a dict
-image_urls_form_dict = image_urls.from_dict(image_urls_dict)
+image_urls_from_dict = ImageUrls.from_dict(image_urls_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
