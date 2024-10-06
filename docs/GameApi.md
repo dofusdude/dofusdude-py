@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_game_search**
-> List[GetGameSearch200ResponseInner] get_game_search(language, game, query, filter_type=filter_type, limit=limit, fields_item=fields_item)
+> List[GetGameSearch200ResponseInner] get_game_search(language, game, query, filter_type=filter_type, limit=limit, fields_item=fields_item, filter_type_enum=filter_type_enum)
 
 Game Search
 
@@ -41,10 +41,11 @@ with dofusdude.ApiClient(configuration) as api_client:
     filter_type = ['[\"items-equipment\"]'] # List[str] | only results with all specific type (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)
     fields_item = ['[\"level\"]'] # List[str] | adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed. (optional)
+    filter_type_enum = ['[\"boots\"]'] # List[str] | multi-filter results with the english item type name, including \"mount\" and \"set\" from filter[type]. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # Game Search
-        api_response = api_instance.get_game_search(language, game, query, filter_type=filter_type, limit=limit, fields_item=fields_item)
+        api_response = api_instance.get_game_search(language, game, query, filter_type=filter_type, limit=limit, fields_item=fields_item, filter_type_enum=filter_type_enum)
         print("The response of GameApi->get_game_search:\n")
         pprint(api_response)
     except Exception as e:
@@ -64,6 +65,7 @@ Name | Type | Description  | Notes
  **filter_type** | [**List[str]**](str.md)| only results with all specific type | [optional] 
  **limit** | **int**| maximum number of returned results | [optional] [default to 8]
  **fields_item** | [**List[str]**](str.md)| adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed. | [optional] 
+ **filter_type_enum** | [**List[str]**](str.md)| multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[type]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
@@ -89,7 +91,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_items_all_search**
-> List[ItemsListEntryTyped] get_items_all_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit)
+> List[ItemsListEntryTyped] get_items_all_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit, filter_type_enum=filter_type_enum)
 
 Search All Items
 
@@ -122,10 +124,11 @@ with dofusdude.ApiClient(configuration) as api_client:
     filter_min_level = 190 # int | only results which level is equal or above this value (optional)
     filter_max_level = 200 # int | only results which level is equal or below this value (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)
+    filter_type_enum = ['[\"boots\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # Search All Items
-        api_response = api_instance.get_items_all_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit)
+        api_response = api_instance.get_items_all_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit, filter_type_enum=filter_type_enum)
         print("The response of GameApi->get_items_all_search:\n")
         pprint(api_response)
     except Exception as e:
@@ -146,6 +149,7 @@ Name | Type | Description  | Notes
  **filter_min_level** | **int**| only results which level is equal or above this value | [optional] 
  **filter_max_level** | **int**| only results which level is equal or below this value | [optional] 
  **limit** | **int**| maximum number of returned results | [optional] [default to 8]
+ **filter_type_enum** | [**List[str]**](str.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 

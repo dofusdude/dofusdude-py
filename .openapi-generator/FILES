@@ -31,6 +31,7 @@ docs/EquipmentSet.md
 docs/GameApi.md
 docs/GetGameSearch200ResponseInner.md
 docs/GetMetaAlmanaxBonuses200ResponseInner.md
+docs/GetMetaVersion200Response.md
 docs/GetMetaWebhooksTwitter200Response.md
 docs/ImageUrls.md
 docs/ItemListEntry.md
@@ -102,6 +103,7 @@ dofusdude/models/equipment.py
 dofusdude/models/equipment_set.py
 dofusdude/models/get_game_search200_response_inner.py
 dofusdude/models/get_meta_almanax_bonuses200_response_inner.py
+dofusdude/models/get_meta_version200_response.py
 dofusdude/models/get_meta_webhooks_twitter200_response.py
 dofusdude/models/image_urls.py
 dofusdude/models/item_list_entry.py
@@ -163,6 +165,7 @@ test/test_equipment_set.py
 test/test_game_api.py
 test/test_get_game_search200_response_inner.py
 test/test_get_meta_almanax_bonuses200_response_inner.py
+test/test_get_meta_version200_response.py
 test/test_get_meta_webhooks_twitter200_response.py
 test/test_image_urls.py
 test/test_item_list_entry.py

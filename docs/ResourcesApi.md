@@ -93,7 +93,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_items_resource_search**
-> List[ItemListEntry] get_items_resource_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit)
+> List[ItemListEntry] get_items_resource_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit, filter_type_enum=filter_type_enum)
 
 Search Resources
 
@@ -126,10 +126,11 @@ with dofusdude.ApiClient(configuration) as api_client:
     filter_min_level = 150 # int | only results which level is equal or above this value (optional)
     filter_max_level = 200 # int | only results which level is equal or below this value (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)
+    filter_type_enum = ['[\"plant\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # Search Resources
-        api_response = api_instance.get_items_resource_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit)
+        api_response = api_instance.get_items_resource_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit, filter_type_enum=filter_type_enum)
         print("The response of ResourcesApi->get_items_resource_search:\n")
         pprint(api_response)
     except Exception as e:
@@ -150,6 +151,7 @@ Name | Type | Description  | Notes
  **filter_min_level** | **int**| only results which level is equal or above this value | [optional] 
  **filter_max_level** | **int**| only results which level is equal or below this value | [optional] 
  **limit** | **int**| maximum number of returned results | [optional] [default to 8]
+ **filter_type_enum** | [**List[str]**](str.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
@@ -175,7 +177,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_items_resources_list**
-> ItemsListPaged get_items_resources_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, page_size=page_size, page_number=page_number, fields_item=fields_item)
+> ItemsListPaged get_items_resources_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, page_size=page_size, page_number=page_number, fields_item=fields_item, filter_type_enum=filter_type_enum)
 
 List Resources
 
@@ -210,10 +212,11 @@ with dofusdude.ApiClient(configuration) as api_client:
     page_size = 10 # int | size of the results from the list. -1 disables pagination and gets all in one response. (optional)
     page_number = 1 # int | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. (optional)
     fields_item = ['[\"recipe\"]'] # List[str] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. (optional)
+    filter_type_enum = ['[\"wood\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # List Resources
-        api_response = api_instance.get_items_resources_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, page_size=page_size, page_number=page_number, fields_item=fields_item)
+        api_response = api_instance.get_items_resources_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, page_size=page_size, page_number=page_number, fields_item=fields_item, filter_type_enum=filter_type_enum)
         print("The response of ResourcesApi->get_items_resources_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -236,6 +239,7 @@ Name | Type | Description  | Notes
  **page_size** | **int**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] 
  **page_number** | **int**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] 
  **fields_item** | [**List[str]**](str.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] 
+ **filter_type_enum** | [**List[str]**](str.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
