@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **links** | [**LinksPaged**](LinksPaged.md) |  | [optional] 
-**items** | [**List[SetListEntry]**](SetListEntry.md) |  | [optional] 
+**sets** | [**List[SetListEntry]**](SetListEntry.md) |  | [optional] 
 
 ## Example
 
