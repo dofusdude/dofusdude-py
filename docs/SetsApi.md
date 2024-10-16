@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **get_all_sets_list**
-> SetsListPaged get_all_sets_list(language, game, sort_level=sort_level, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, accept_encoding=accept_encoding)
+> SetsListPaged get_all_sets_list(language, game, sort_level=sort_level, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, accept_encoding=accept_encoding, filter_is_cosmetic=filter_is_cosmetic)
 
 List All Sets
 
@@ -43,10 +43,11 @@ with dofusdude.ApiClient(configuration) as api_client:
     filter_min_highest_equipment_level = 190 # int | only results where the equipment with the highest level is above or equal to this value (optional)
     filter_max_highest_equipment_level = 200 # int | only results where the equipment with the highest level is below or equal to this value (optional)
     accept_encoding = 'accept_encoding_example' # str | optional compression for saving bandwidth (optional)
+    filter_is_cosmetic = True # bool | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. (optional)
 
     try:
         # List All Sets
-        api_response = api_instance.get_all_sets_list(language, game, sort_level=sort_level, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, accept_encoding=accept_encoding)
+        api_response = api_instance.get_all_sets_list(language, game, sort_level=sort_level, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, accept_encoding=accept_encoding, filter_is_cosmetic=filter_is_cosmetic)
         print("The response of SetsApi->get_all_sets_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -66,6 +67,7 @@ Name | Type | Description  | Notes
  **filter_min_highest_equipment_level** | **int**| only results where the equipment with the highest level is above or equal to this value | [optional] 
  **filter_max_highest_equipment_level** | **int**| only results where the equipment with the highest level is below or equal to this value | [optional] 
  **accept_encoding** | **str**| optional compression for saving bandwidth | [optional] 
+ **filter_is_cosmetic** | **bool**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] 
 
 ### Return type
 
@@ -91,7 +93,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_sets_list**
-> SetsListPaged get_sets_list(language, game, sort_level=sort_level, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, page_size=page_size, page_number=page_number, fields_set=fields_set)
+> SetsListPaged get_sets_list(language, game, sort_level=sort_level, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, page_size=page_size, page_number=page_number, fields_set=fields_set, filter_is_cosmetic=filter_is_cosmetic)
 
 List Sets
 
@@ -125,10 +127,11 @@ with dofusdude.ApiClient(configuration) as api_client:
     page_size = 20 # int | size of the results from the list. -1 disables pagination and gets all in one response. (optional)
     page_number = 1 # int | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. (optional)
     fields_set = ['[\"equipment_ids\"]'] # List[str] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. (optional)
+    filter_is_cosmetic = True # bool | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. (optional)
 
     try:
         # List Sets
-        api_response = api_instance.get_sets_list(language, game, sort_level=sort_level, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, page_size=page_size, page_number=page_number, fields_set=fields_set)
+        api_response = api_instance.get_sets_list(language, game, sort_level=sort_level, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, page_size=page_size, page_number=page_number, fields_set=fields_set, filter_is_cosmetic=filter_is_cosmetic)
         print("The response of SetsApi->get_sets_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -150,6 +153,7 @@ Name | Type | Description  | Notes
  **page_size** | **int**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] 
  **page_number** | **int**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] 
  **fields_set** | [**List[str]**](str.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] 
+ **filter_is_cosmetic** | **bool**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] 
 
 ### Return type
 
@@ -175,7 +179,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_sets_search**
-> List[SetListEntry] get_sets_search(language, game, query, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, limit=limit)
+> List[SetListEntry] get_sets_search(language, game, query, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, limit=limit, filter_is_cosmetic=filter_is_cosmetic)
 
 Search Sets
 
@@ -207,10 +211,11 @@ with dofusdude.ApiClient(configuration) as api_client:
     filter_min_highest_equipment_level = 195 # int | only results where the equipment with the highest level is above or equal to this value (optional)
     filter_max_highest_equipment_level = 200 # int | only results where the equipment with the highest level is below or equal to this value (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)
+    filter_is_cosmetic = True # bool | filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. (optional)
 
     try:
         # Search Sets
-        api_response = api_instance.get_sets_search(language, game, query, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, limit=limit)
+        api_response = api_instance.get_sets_search(language, game, query, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, limit=limit, filter_is_cosmetic=filter_is_cosmetic)
         print("The response of SetsApi->get_sets_search:\n")
         pprint(api_response)
     except Exception as e:
@@ -230,6 +235,7 @@ Name | Type | Description  | Notes
  **filter_min_highest_equipment_level** | **int**| only results where the equipment with the highest level is above or equal to this value | [optional] 
  **filter_max_highest_equipment_level** | **int**| only results where the equipment with the highest level is below or equal to this value | [optional] 
  **limit** | **int**| maximum number of returned results | [optional] [default to 8]
+ **filter_is_cosmetic** | **bool**| filter sets based on if they only got cosmetic items in it. If true, the item ids are for the cosmetic endpoints instead of equipment. | [optional] 
 
 ### Return type
 

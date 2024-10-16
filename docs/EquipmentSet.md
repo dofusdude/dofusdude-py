@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **equipment_ids** | **List[int]** |  | [optional] 
 **effects** | **List[List[SetEffectsEntry]]** |  | [optional] 
 **highest_equipment_level** | **int** |  | [optional] 
+**is_cosmetic** | **bool** |  | [optional] 
 
 ## Example
 

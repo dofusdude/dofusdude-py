@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **get_all_items_consumables_list**
-> ItemsListPaged get_all_items_consumables_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, accept_encoding=accept_encoding)
+> ItemsListPaged get_all_items_consumables_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, accept_encoding=accept_encoding, filter_type_enum=filter_type_enum)
 
 List All Consumables
 
@@ -44,10 +44,11 @@ with dofusdude.ApiClient(configuration) as api_client:
     filter_min_level = 150 # int | only results which level is equal or above this value (optional)
     filter_max_level = 180 # int | only results which level is equal or below this value (optional)
     accept_encoding = 'accept_encoding_example' # str | optional compression for saving bandwidth (optional)
+    filter_type_enum = ['[\"boots\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # List All Consumables
-        api_response = api_instance.get_all_items_consumables_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, accept_encoding=accept_encoding)
+        api_response = api_instance.get_all_items_consumables_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, accept_encoding=accept_encoding, filter_type_enum=filter_type_enum)
         print("The response of ConsumablesApi->get_all_items_consumables_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -68,6 +69,7 @@ Name | Type | Description  | Notes
  **filter_min_level** | **int**| only results which level is equal or above this value | [optional] 
  **filter_max_level** | **int**| only results which level is equal or below this value | [optional] 
  **accept_encoding** | **str**| optional compression for saving bandwidth | [optional] 
+ **filter_type_enum** | [**List[str]**](str.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 

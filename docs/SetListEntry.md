@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **level** | **int** |  | [optional] 
 **effects** | **List[List[SetEffectsEntry]]** |  | [optional] 
 **equipment_ids** | **List[int]** |  | [optional] 
+**is_cosmetic** | **bool** |  | [optional] 
 
 ## Example
 
