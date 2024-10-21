@@ -130,7 +130,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     page_size = 5 # int | size of the results from the list. -1 disables pagination and gets all in one response. (optional)
     page_number = 1 # int | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. (optional)
     fields_item = ['[\"recipe\"]'] # List[str] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. (optional)
-    filter_type_enum = ['[\"ceremonial-hat\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
+    filter_type_enum = ['filter_type_enum_example'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # List Cosmetics
@@ -267,7 +267,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_cosmetics_single**
-> Cosmetic get_cosmetics_single(language, ankama_id, game)
+> Equipment get_cosmetics_single(language, ankama_id, game)
 
 Single Cosmetics
 
@@ -278,7 +278,7 @@ Retrieve a specific cosmetic item with id.
 
 ```python
 import dofusdude
-from dofusdude.models.cosmetic import Cosmetic
+from dofusdude.models.equipment import Equipment
 from dofusdude.rest import ApiException
 from pprint import pprint
 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Cosmetic**](Cosmetic.md)
+[**Equipment**](Equipment.md)
 
 ### Authorization
 

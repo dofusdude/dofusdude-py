@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **ankama_id** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
-**type** | [**CosmeticType**](CosmeticType.md) |  | [optional] 
+**type** | [**ResourceType**](ResourceType.md) |  | [optional] 
 **level** | **int** |  | [optional] 
 **pods** | **int** |  | [optional] 
 **image_urls** | [**ImageUrls**](ImageUrls.md) |  | [optional] 

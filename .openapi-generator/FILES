@@ -16,8 +16,6 @@ docs/ConditionTreeLeaf.md
 docs/ConditionTreeNode.md
 docs/ConditionTreeRelation.md
 docs/ConsumablesApi.md
-docs/Cosmetic.md
-docs/CosmeticType.md
 docs/CosmeticsApi.md
 docs/CreateAlmanaxWebhook.md
 docs/CreateAlmanaxWebhookDailySettings.md
@@ -52,6 +50,7 @@ docs/PutTwitterWebhook.md
 docs/QuestItemsApi.md
 docs/RecipeEntry.md
 docs/Resource.md
+docs/ResourceType.md
 docs/ResourcesApi.md
 docs/RssWebhook.md
 docs/SetEffectsEntry.md
@@ -91,8 +90,6 @@ dofusdude/models/condition_entry.py
 dofusdude/models/condition_tree_leaf.py
 dofusdude/models/condition_tree_node.py
 dofusdude/models/condition_tree_relation.py
-dofusdude/models/cosmetic.py
-dofusdude/models/cosmetic_type.py
 dofusdude/models/create_almanax_webhook.py
 dofusdude/models/create_almanax_webhook_daily_settings.py
 dofusdude/models/create_almanax_webhook_mentions_value_inner.py
@@ -121,6 +118,7 @@ dofusdude/models/put_rss_webhook.py
 dofusdude/models/put_twitter_webhook.py
 dofusdude/models/recipe_entry.py
 dofusdude/models/resource.py
+dofusdude/models/resource_type.py
 dofusdude/models/rss_webhook.py
 dofusdude/models/set_effects_entry.py
 dofusdude/models/set_effects_entry_type.py
@@ -150,8 +148,6 @@ test/test_condition_tree_leaf.py
 test/test_condition_tree_node.py
 test/test_condition_tree_relation.py
 test/test_consumables_api.py
-test/test_cosmetic.py
-test/test_cosmetic_type.py
 test/test_cosmetics_api.py
 test/test_create_almanax_webhook.py
 test/test_create_almanax_webhook_daily_settings.py
@@ -186,6 +182,7 @@ test/test_put_twitter_webhook.py
 test/test_quest_items_api.py
 test/test_recipe_entry.py
 test/test_resource.py
+test/test_resource_type.py
 test/test_resources_api.py
 test/test_rss_webhook.py
 test/test_set_effects_entry.py
