@@ -15,10 +15,10 @@
 
 import unittest
 
-from dofusdude.models.set import Set
+from dofusdude.models.list_equipment_set import ListEquipmentSet
 
-class TestSet(unittest.TestCase):
-    """Set unit test stubs"""
+class TestListEquipmentSet(unittest.TestCase):
+    """ListEquipmentSet unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,21 +26,20 @@ class TestSet(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> Set:
-        """Test Set
+    def make_instance(self, include_optional) -> ListEquipmentSet:
+        """Test ListEquipmentSet
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `Set`
+        # uncomment below to create an instance of `ListEquipmentSet`
         """
-        model = Set()
+        model = ListEquipmentSet()
         if include_optional:
-            return Set(
+            return ListEquipmentSet(
                 ankama_id = 56,
                 name = '',
-                equipment_ids = [
-                    56
-                    ],
+                items = 56,
+                level = 56,
                 effects = {
                     'key' : [
                         dofusdude.models.effect.Effect(
@@ -56,16 +55,18 @@ class TestSet(unittest.TestCase):
                             formatted = '', )
                         ]
                     },
-                highest_equipment_level = 56,
+                equipment_ids = [
+                    56
+                    ],
                 is_cosmetic = True
             )
         else:
-            return Set(
+            return ListEquipmentSet(
         )
         """
 
-    def testSet(self):
-        """Test Set"""
+    def testListEquipmentSet(self):
+        """Test ListEquipmentSet"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

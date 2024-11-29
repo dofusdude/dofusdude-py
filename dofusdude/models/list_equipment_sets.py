@@ -18,25 +18,20 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from typing_extensions import Annotated
-from dofusdude.models.effect import Effect
+from dofusdude.models.list_equipment_set import ListEquipmentSet
+from dofusdude.models.paged_links import PagedLinks
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ListSet(BaseModel):
+class ListEquipmentSets(BaseModel):
     """
-    ListSet
+    ListEquipmentSets
     """ # noqa: E501
-    ankama_id: Optional[StrictInt] = None
-    name: Optional[StrictStr] = None
-    items: Optional[StrictInt] = Field(default=None, description="amount")
-    level: Optional[StrictInt] = None
-    effects: Optional[Dict[str, Annotated[List[Effect], Field(min_length=0)]]] = None
-    equipment_ids: Optional[List[StrictInt]] = None
-    is_cosmetic: Optional[StrictBool] = None
-    __properties: ClassVar[List[str]] = ["ankama_id", "name", "items", "level", "effects", "equipment_ids", "is_cosmetic"]
+    links: Optional[PagedLinks] = Field(default=None, alias="_links")
+    sets: Optional[List[ListEquipmentSet]] = None
+    __properties: ClassVar[List[str]] = ["_links", "sets"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -56,7 +51,7 @@ class ListSet(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ListSet from a JSON string"""
+        """Create an instance of ListEquipmentSets from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -77,25 +72,21 @@ class ListSet(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each value in effects (dict of array)
-        _field_dict_of_array = {}
-        if self.effects:
-            for _key_effects in self.effects:
-                if self.effects[_key_effects] is not None:
-                    _field_dict_of_array[_key_effects] = [
-                        _item.to_dict() for _item in self.effects[_key_effects]
-                    ]
-            _dict['effects'] = _field_dict_of_array
-        # set to None if equipment_ids (nullable) is None
-        # and model_fields_set contains the field
-        if self.equipment_ids is None and "equipment_ids" in self.model_fields_set:
-            _dict['equipment_ids'] = None
-
+        # override the default output from pydantic by calling `to_dict()` of links
+        if self.links:
+            _dict['_links'] = self.links.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in sets (list)
+        _items = []
+        if self.sets:
+            for _item_sets in self.sets:
+                if _item_sets:
+                    _items.append(_item_sets.to_dict())
+            _dict['sets'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ListSet from a dict"""
+        """Create an instance of ListEquipmentSets from a dict"""
         if obj is None:
             return None
 
@@ -103,20 +94,8 @@ class ListSet(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "ankama_id": obj.get("ankama_id"),
-            "name": obj.get("name"),
-            "items": obj.get("items"),
-            "level": obj.get("level"),
-            "effects": dict(
-                (_k,
-                        [Effect.from_dict(_item) for _item in _v]
-                        if _v is not None
-                        else None
-                )
-                for _k, _v in obj.get("effects", {}).items()
-            ),
-            "equipment_ids": obj.get("equipment_ids"),
-            "is_cosmetic": obj.get("is_cosmetic")
+            "_links": PagedLinks.from_dict(obj["_links"]) if obj.get("_links") is not None else None,
+            "sets": [ListEquipmentSet.from_dict(_item) for _item in obj["sets"]] if obj.get("sets") is not None else None
         })
         return _obj
 

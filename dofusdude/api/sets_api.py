@@ -20,9 +20,9 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import List, Optional
 from typing_extensions import Annotated
-from dofusdude.models.list_set import ListSet
-from dofusdude.models.list_sets import ListSets
-from dofusdude.models.set import Set
+from dofusdude.models.equipment_set import EquipmentSet
+from dofusdude.models.list_equipment_set import ListEquipmentSet
+from dofusdude.models.list_equipment_sets import ListEquipmentSets
 
 from dofusdude.api_client import ApiClient, RequestSerialized
 from dofusdude.api_response import ApiResponse
@@ -65,7 +65,7 @@ class SetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ListSets:
+    ) -> ListEquipmentSets:
         """List All Sets
 
         Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
@@ -124,7 +124,7 @@ class SetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ListSets",
+            '200': "ListEquipmentSets",
             '400': "Error",
             '404': "Error",
         }
@@ -162,7 +162,7 @@ class SetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ListSets]:
+    ) -> ApiResponse[ListEquipmentSets]:
         """List All Sets
 
         Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
@@ -221,7 +221,7 @@ class SetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ListSets",
+            '200': "ListEquipmentSets",
             '400': "Error",
             '404': "Error",
         }
@@ -318,7 +318,7 @@ class SetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ListSets",
+            '200': "ListEquipmentSets",
             '400': "Error",
             '404': "Error",
         }
@@ -448,7 +448,7 @@ class SetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ListSets:
+    ) -> ListEquipmentSet:
         """List Sets
 
         Retrieve a list of sets.
@@ -513,7 +513,7 @@ class SetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ListSets",
+            '200': "ListEquipmentSet",
             '400': "Error",
             '404': "Error",
         }
@@ -553,7 +553,7 @@ class SetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[ListSets]:
+    ) -> ApiResponse[ListEquipmentSet]:
         """List Sets
 
         Retrieve a list of sets.
@@ -618,7 +618,7 @@ class SetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ListSets",
+            '200': "ListEquipmentSet",
             '400': "Error",
             '404': "Error",
         }
@@ -723,7 +723,7 @@ class SetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ListSets",
+            '200': "ListEquipmentSet",
             '400': "Error",
             '404': "Error",
         }
@@ -863,7 +863,7 @@ class SetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> List[ListSet]:
+    ) -> List[ListEquipmentSet]:
         """Search Sets
 
         Search in all names and descriptions of sets with a query.
@@ -919,7 +919,7 @@ class SetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[ListSet]",
+            '200': "List[ListEquipmentSet]",
             '400': "Error",
             '404': "Error",
         }
@@ -956,7 +956,7 @@ class SetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[List[ListSet]]:
+    ) -> ApiResponse[List[ListEquipmentSet]]:
         """Search Sets
 
         Search in all names and descriptions of sets with a query.
@@ -1012,7 +1012,7 @@ class SetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[ListSet]",
+            '200': "List[ListEquipmentSet]",
             '400': "Error",
             '404': "Error",
         }
@@ -1105,7 +1105,7 @@ class SetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[ListSet]",
+            '200': "List[ListEquipmentSet]",
             '400': "Error",
             '404': "Error",
         }
@@ -1225,7 +1225,7 @@ class SetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Set:
+    ) -> EquipmentSet:
         """Single Sets
 
         Retrieve a specific set with id.
@@ -1269,7 +1269,7 @@ class SetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Set",
+            '200': "EquipmentSet",
             '400': "Error",
             '404': "Error",
         }
@@ -1302,7 +1302,7 @@ class SetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Set]:
+    ) -> ApiResponse[EquipmentSet]:
         """Single Sets
 
         Retrieve a specific set with id.
@@ -1346,7 +1346,7 @@ class SetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Set",
+            '200': "EquipmentSet",
             '400': "Error",
             '404': "Error",
         }
@@ -1423,7 +1423,7 @@ class SetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Set",
+            '200': "EquipmentSet",
             '400': "Error",
             '404': "Error",
         }

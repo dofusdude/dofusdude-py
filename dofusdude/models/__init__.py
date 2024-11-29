@@ -33,6 +33,7 @@ from dofusdude.models.create_twitter_webhook import CreateTwitterWebhook
 from dofusdude.models.effect import Effect
 from dofusdude.models.effect_type import EffectType
 from dofusdude.models.equipment import Equipment
+from dofusdude.models.equipment_set import EquipmentSet
 from dofusdude.models.error import Error
 from dofusdude.models.game_search import GameSearch
 from dofusdude.models.game_search_item import GameSearchItem
@@ -41,12 +42,12 @@ from dofusdude.models.get_meta_almanax_bonuses200_response_inner import GetMetaA
 from dofusdude.models.get_meta_webhooks_twitter200_response import GetMetaWebhooksTwitter200Response
 from dofusdude.models.images import Images
 from dofusdude.models.item_subtype import ItemSubtype
+from dofusdude.models.list_equipment_set import ListEquipmentSet
+from dofusdude.models.list_equipment_sets import ListEquipmentSets
 from dofusdude.models.list_item import ListItem
 from dofusdude.models.list_item_general import ListItemGeneral
 from dofusdude.models.list_items import ListItems
 from dofusdude.models.list_mounts import ListMounts
-from dofusdude.models.list_set import ListSet
-from dofusdude.models.list_sets import ListSets
 from dofusdude.models.mount import Mount
 from dofusdude.models.mount_family import MountFamily
 from dofusdude.models.paged_links import PagedLinks
@@ -57,7 +58,6 @@ from dofusdude.models.range import Range
 from dofusdude.models.recipe import Recipe
 from dofusdude.models.resource import Resource
 from dofusdude.models.rss_webhook import RssWebhook
-from dofusdude.models.set import Set
 from dofusdude.models.translated_id import TranslatedId
 from dofusdude.models.twitter_webhook import TwitterWebhook
 from dofusdude.models.version import Version
