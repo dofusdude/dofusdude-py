@@ -46,7 +46,7 @@ class QuestItemsApi:
     def get_all_items_quest_list(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
         filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
         filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
@@ -71,7 +71,7 @@ class QuestItemsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param sort_level: sort the resulting list by level, default unsorted
         :type sort_level: str
@@ -139,7 +139,7 @@ class QuestItemsApi:
     def get_all_items_quest_list_with_http_info(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
         filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
         filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
@@ -164,7 +164,7 @@ class QuestItemsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param sort_level: sort the resulting list by level, default unsorted
         :type sort_level: str
@@ -232,7 +232,7 @@ class QuestItemsApi:
     def get_all_items_quest_list_without_preload_content(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
         filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
         filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
@@ -257,7 +257,7 @@ class QuestItemsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param sort_level: sort the resulting list by level, default unsorted
         :type sort_level: str
@@ -412,7 +412,7 @@ class QuestItemsApi:
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
         ankama_id: Annotated[StrictInt, Field(description="identifier")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -434,7 +434,7 @@ class QuestItemsApi:
         :type language: str
         :param ankama_id: identifier (required)
         :type ankama_id: int
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -489,7 +489,7 @@ class QuestItemsApi:
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
         ankama_id: Annotated[StrictInt, Field(description="identifier")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -511,7 +511,7 @@ class QuestItemsApi:
         :type language: str
         :param ankama_id: identifier (required)
         :type ankama_id: int
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -566,7 +566,7 @@ class QuestItemsApi:
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
         ankama_id: Annotated[StrictInt, Field(description="identifier")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -588,7 +588,7 @@ class QuestItemsApi:
         :type language: str
         :param ankama_id: identifier (required)
         :type ankama_id: int
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -707,7 +707,7 @@ class QuestItemsApi:
     def get_items_quest_list(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
         filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
         filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
@@ -734,7 +734,7 @@ class QuestItemsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param sort_level: sort the resulting list by level, default unsorted
         :type sort_level: str
@@ -808,7 +808,7 @@ class QuestItemsApi:
     def get_items_quest_list_with_http_info(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
         filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
         filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
@@ -835,7 +835,7 @@ class QuestItemsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param sort_level: sort the resulting list by level, default unsorted
         :type sort_level: str
@@ -909,7 +909,7 @@ class QuestItemsApi:
     def get_items_quest_list_without_preload_content(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
         filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
         filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
@@ -936,7 +936,7 @@ class QuestItemsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param sort_level: sort the resulting list by level, default unsorted
         :type sort_level: str
@@ -1109,7 +1109,7 @@ class QuestItemsApi:
     def get_items_quest_search(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="case sensitive search query")],
         filter_type_name: Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None,
         filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
@@ -1135,7 +1135,7 @@ class QuestItemsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: case sensitive search query (required)
         :type query: str
@@ -1206,7 +1206,7 @@ class QuestItemsApi:
     def get_items_quest_search_with_http_info(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="case sensitive search query")],
         filter_type_name: Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None,
         filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
@@ -1232,7 +1232,7 @@ class QuestItemsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: case sensitive search query (required)
         :type query: str
@@ -1303,7 +1303,7 @@ class QuestItemsApi:
     def get_items_quest_search_without_preload_content(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="case sensitive search query")],
         filter_type_name: Annotated[Optional[StrictStr], Field(description="only results with the translated type name")] = None,
         filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
@@ -1329,7 +1329,7 @@ class QuestItemsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: case sensitive search query (required)
         :type query: str

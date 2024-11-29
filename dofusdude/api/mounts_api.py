@@ -45,7 +45,7 @@ class MountsApi:
     def get_all_mounts_list(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         filter_family_name: Annotated[Optional[StrictStr], Field(description="only results with the translated family name")] = None,
         accept_encoding: Annotated[Optional[StrictStr], Field(description="optional compression for saving bandwidth")] = None,
         filter_family_id: Annotated[Optional[StrictInt], Field(description="only results with the unique family id")] = None,
@@ -68,7 +68,7 @@ class MountsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param filter_family_name: only results with the translated family name
         :type filter_family_name: str
@@ -130,7 +130,7 @@ class MountsApi:
     def get_all_mounts_list_with_http_info(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         filter_family_name: Annotated[Optional[StrictStr], Field(description="only results with the translated family name")] = None,
         accept_encoding: Annotated[Optional[StrictStr], Field(description="optional compression for saving bandwidth")] = None,
         filter_family_id: Annotated[Optional[StrictInt], Field(description="only results with the unique family id")] = None,
@@ -153,7 +153,7 @@ class MountsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param filter_family_name: only results with the translated family name
         :type filter_family_name: str
@@ -215,7 +215,7 @@ class MountsApi:
     def get_all_mounts_list_without_preload_content(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         filter_family_name: Annotated[Optional[StrictStr], Field(description="only results with the translated family name")] = None,
         accept_encoding: Annotated[Optional[StrictStr], Field(description="optional compression for saving bandwidth")] = None,
         filter_family_id: Annotated[Optional[StrictInt], Field(description="only results with the unique family id")] = None,
@@ -238,7 +238,7 @@ class MountsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param filter_family_name: only results with the translated family name
         :type filter_family_name: str
@@ -375,7 +375,7 @@ class MountsApi:
     def get_mounts_list(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         filter_family_name: Annotated[Optional[StrictStr], Field(description="only results with the translated family name")] = None,
         page_size: Annotated[Optional[Annotated[int, Field(strict=True, ge=-1)]], Field(description="size of the results from the list. -1 disables pagination and gets all in one response.")] = None,
         page_number: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.")] = None,
@@ -400,7 +400,7 @@ class MountsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param filter_family_name: only results with the translated family name
         :type filter_family_name: str
@@ -468,7 +468,7 @@ class MountsApi:
     def get_mounts_list_with_http_info(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         filter_family_name: Annotated[Optional[StrictStr], Field(description="only results with the translated family name")] = None,
         page_size: Annotated[Optional[Annotated[int, Field(strict=True, ge=-1)]], Field(description="size of the results from the list. -1 disables pagination and gets all in one response.")] = None,
         page_number: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.")] = None,
@@ -493,7 +493,7 @@ class MountsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param filter_family_name: only results with the translated family name
         :type filter_family_name: str
@@ -561,7 +561,7 @@ class MountsApi:
     def get_mounts_list_without_preload_content(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         filter_family_name: Annotated[Optional[StrictStr], Field(description="only results with the translated family name")] = None,
         page_size: Annotated[Optional[Annotated[int, Field(strict=True, ge=-1)]], Field(description="size of the results from the list. -1 disables pagination and gets all in one response.")] = None,
         page_number: Annotated[Optional[Annotated[int, Field(strict=True, ge=0)]], Field(description="page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16.")] = None,
@@ -586,7 +586,7 @@ class MountsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param filter_family_name: only results with the translated family name
         :type filter_family_name: str
@@ -742,7 +742,7 @@ class MountsApi:
     def get_mounts_search(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="case sensitive search query")],
         filter_family_name: Annotated[Optional[StrictStr], Field(description="only results with the translated family name")] = None,
         limit: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="maximum number of returned results")] = None,
@@ -765,7 +765,7 @@ class MountsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: case sensitive search query (required)
         :type query: str
@@ -827,7 +827,7 @@ class MountsApi:
     def get_mounts_search_with_http_info(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="case sensitive search query")],
         filter_family_name: Annotated[Optional[StrictStr], Field(description="only results with the translated family name")] = None,
         limit: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="maximum number of returned results")] = None,
@@ -850,7 +850,7 @@ class MountsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: case sensitive search query (required)
         :type query: str
@@ -912,7 +912,7 @@ class MountsApi:
     def get_mounts_search_without_preload_content(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="case sensitive search query")],
         filter_family_name: Annotated[Optional[StrictStr], Field(description="only results with the translated family name")] = None,
         limit: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="maximum number of returned results")] = None,
@@ -935,7 +935,7 @@ class MountsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: case sensitive search query (required)
         :type query: str
@@ -1075,7 +1075,7 @@ class MountsApi:
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
         ankama_id: Annotated[StrictInt, Field(description="identifier")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1097,7 +1097,7 @@ class MountsApi:
         :type language: str
         :param ankama_id: identifier (required)
         :type ankama_id: int
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1152,7 +1152,7 @@ class MountsApi:
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
         ankama_id: Annotated[StrictInt, Field(description="identifier")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1174,7 +1174,7 @@ class MountsApi:
         :type language: str
         :param ankama_id: identifier (required)
         :type ankama_id: int
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1229,7 +1229,7 @@ class MountsApi:
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
         ankama_id: Annotated[StrictInt, Field(description="identifier")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1251,7 +1251,7 @@ class MountsApi:
         :type language: str
         :param ankama_id: identifier (required)
         :type ankama_id: int
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

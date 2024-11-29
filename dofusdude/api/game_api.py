@@ -45,7 +45,7 @@ class GameApi:
     def get_game_search(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="search query")],
         filter_search_index: Annotated[Optional[List[StrictStr]], Field(description="only results with all specific type")] = None,
         limit: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="maximum number of returned results")] = None,
@@ -70,7 +70,7 @@ class GameApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: search query (required)
         :type query: str
@@ -138,7 +138,7 @@ class GameApi:
     def get_game_search_with_http_info(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="search query")],
         filter_search_index: Annotated[Optional[List[StrictStr]], Field(description="only results with all specific type")] = None,
         limit: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="maximum number of returned results")] = None,
@@ -163,7 +163,7 @@ class GameApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: search query (required)
         :type query: str
@@ -231,7 +231,7 @@ class GameApi:
     def get_game_search_without_preload_content(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="search query")],
         filter_search_index: Annotated[Optional[List[StrictStr]], Field(description="only results with all specific type")] = None,
         limit: Annotated[Optional[Annotated[int, Field(le=100, strict=True, ge=1)]], Field(description="maximum number of returned results")] = None,
@@ -256,7 +256,7 @@ class GameApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: search query (required)
         :type query: str
@@ -414,7 +414,7 @@ class GameApi:
     def get_items_all_search(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="case sensitive search query")],
         filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
         filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
@@ -439,7 +439,7 @@ class GameApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: case sensitive search query (required)
         :type query: str
@@ -507,7 +507,7 @@ class GameApi:
     def get_items_all_search_with_http_info(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="case sensitive search query")],
         filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
         filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
@@ -532,7 +532,7 @@ class GameApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: case sensitive search query (required)
         :type query: str
@@ -600,7 +600,7 @@ class GameApi:
     def get_items_all_search_without_preload_content(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="case sensitive search query")],
         filter_min_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or above this value")] = None,
         filter_max_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=0)]], Field(description="only results which level is equal or below this value")] = None,
@@ -625,7 +625,7 @@ class GameApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: case sensitive search query (required)
         :type query: str

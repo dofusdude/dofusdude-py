@@ -46,7 +46,7 @@ class SetsApi:
     def get_all_sets_list(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
         filter_min_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is above or equal to this value")] = None,
         filter_max_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is below or equal to this value")] = None,
@@ -72,7 +72,7 @@ class SetsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param sort_level: sort the resulting list by level, default unsorted
         :type sort_level: str
@@ -143,7 +143,7 @@ class SetsApi:
     def get_all_sets_list_with_http_info(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
         filter_min_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is above or equal to this value")] = None,
         filter_max_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is below or equal to this value")] = None,
@@ -169,7 +169,7 @@ class SetsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param sort_level: sort the resulting list by level, default unsorted
         :type sort_level: str
@@ -240,7 +240,7 @@ class SetsApi:
     def get_all_sets_list_without_preload_content(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
         filter_min_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is above or equal to this value")] = None,
         filter_max_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is below or equal to this value")] = None,
@@ -266,7 +266,7 @@ class SetsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param sort_level: sort the resulting list by level, default unsorted
         :type sort_level: str
@@ -427,7 +427,7 @@ class SetsApi:
     def get_sets_list(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
         filter_min_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is above or equal to this value")] = None,
         filter_max_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is below or equal to this value")] = None,
@@ -455,7 +455,7 @@ class SetsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param sort_level: sort the resulting list by level, default unsorted
         :type sort_level: str
@@ -532,7 +532,7 @@ class SetsApi:
     def get_sets_list_with_http_info(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
         filter_min_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is above or equal to this value")] = None,
         filter_max_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is below or equal to this value")] = None,
@@ -560,7 +560,7 @@ class SetsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param sort_level: sort the resulting list by level, default unsorted
         :type sort_level: str
@@ -637,7 +637,7 @@ class SetsApi:
     def get_sets_list_without_preload_content(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         sort_level: Annotated[Optional[StrictStr], Field(description="sort the resulting list by level, default unsorted")] = None,
         filter_min_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is above or equal to this value")] = None,
         filter_max_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is below or equal to this value")] = None,
@@ -665,7 +665,7 @@ class SetsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param sort_level: sort the resulting list by level, default unsorted
         :type sort_level: str
@@ -845,7 +845,7 @@ class SetsApi:
     def get_sets_search(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="case sensitive search query")],
         filter_min_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is above or equal to this value")] = None,
         filter_max_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is below or equal to this value")] = None,
@@ -870,7 +870,7 @@ class SetsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: case sensitive search query (required)
         :type query: str
@@ -938,7 +938,7 @@ class SetsApi:
     def get_sets_search_with_http_info(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="case sensitive search query")],
         filter_min_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is above or equal to this value")] = None,
         filter_max_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is below or equal to this value")] = None,
@@ -963,7 +963,7 @@ class SetsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: case sensitive search query (required)
         :type query: str
@@ -1031,7 +1031,7 @@ class SetsApi:
     def get_sets_search_without_preload_content(
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         query: Annotated[StrictStr, Field(description="case sensitive search query")],
         filter_min_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is above or equal to this value")] = None,
         filter_max_highest_equipment_level: Annotated[Optional[Annotated[int, Field(le=200, strict=True, ge=1)]], Field(description="only results where the equipment with the highest level is below or equal to this value")] = None,
@@ -1056,7 +1056,7 @@ class SetsApi:
 
         :param language: a valid language code (required)
         :type language: str
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param query: case sensitive search query (required)
         :type query: str
@@ -1212,7 +1212,7 @@ class SetsApi:
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
         ankama_id: Annotated[StrictInt, Field(description="identifier")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1234,7 +1234,7 @@ class SetsApi:
         :type language: str
         :param ankama_id: identifier (required)
         :type ankama_id: int
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1289,7 +1289,7 @@ class SetsApi:
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
         ankama_id: Annotated[StrictInt, Field(description="identifier")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1311,7 +1311,7 @@ class SetsApi:
         :type language: str
         :param ankama_id: identifier (required)
         :type ankama_id: int
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1366,7 +1366,7 @@ class SetsApi:
         self,
         language: Annotated[str, Field(min_length=2, strict=True, max_length=2, description="a valid language code")],
         ankama_id: Annotated[StrictInt, Field(description="identifier")],
-        game: Annotated[StrictStr, Field(description="dofus3 | dofus3beta")],
+        game: Annotated[StrictStr, Field(description="game main 'dofus3' or beta channel 'dofus3beta'")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1388,7 +1388,7 @@ class SetsApi:
         :type language: str
         :param ankama_id: identifier (required)
         :type ankama_id: int
-        :param game: dofus3 | dofus3beta (required)
+        :param game: game main 'dofus3' or beta channel 'dofus3beta' (required)
         :type game: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

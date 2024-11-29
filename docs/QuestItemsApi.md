@@ -38,7 +38,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.QuestItemsApi(api_client)
     language = 'fr' # str | a valid language code
-    game = 'dofus3' # str | dofus3 | dofus3beta
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
     sort_level = 'desc' # str | sort the resulting list by level, default unsorted (optional)
     filter_min_level = 1 # int | only results which level is equal or above this value (optional)
     filter_max_level = 50 # int | only results which level is equal or below this value (optional)
@@ -62,7 +62,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
- **game** | **str**| dofus3 | dofus3beta | 
+ **game** | **str**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **sort_level** | **str**| sort the resulting list by level, default unsorted | [optional] 
  **filter_min_level** | **int**| only results which level is equal or above this value | [optional] 
  **filter_max_level** | **int**| only results which level is equal or below this value | [optional] 
@@ -121,7 +121,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.QuestItemsApi(api_client)
     language = 'language_example' # str | a valid language code
     ankama_id = 25256 # int | identifier
-    game = 'dofus3' # str | dofus3 | dofus3beta
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
 
     try:
         # Single Quest Items
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
  **ankama_id** | **int**| identifier | 
- **game** | **str**| dofus3 | dofus3beta | 
+ **game** | **str**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
 
 ### Return type
 
@@ -194,7 +194,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.QuestItemsApi(api_client)
     language = 'fr' # str | a valid language code
-    game = 'dofus3' # str | dofus3 | dofus3beta
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
     sort_level = 'desc' # str | sort the resulting list by level, default unsorted (optional)
     filter_min_level = 1 # int | only results which level is equal or above this value (optional)
     filter_max_level = 50 # int | only results which level is equal or below this value (optional)
@@ -220,7 +220,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
- **game** | **str**| dofus3 | dofus3beta | 
+ **game** | **str**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **sort_level** | **str**| sort the resulting list by level, default unsorted | [optional] 
  **filter_min_level** | **int**| only results which level is equal or above this value | [optional] 
  **filter_max_level** | **int**| only results which level is equal or below this value | [optional] 
@@ -280,7 +280,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.QuestItemsApi(api_client)
     language = 'es' # str | a valid language code
-    game = 'dofus3' # str | dofus3 | dofus3beta
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
     query = 'Ficha' # str | case sensitive search query
     filter_type_name = 'Justicieros' # str | only results with the translated type name (optional)
     filter_min_level = 60 # int | only results which level is equal or above this value (optional)
@@ -305,7 +305,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
- **game** | **str**| dofus3 | dofus3beta | 
+ **game** | **str**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **query** | **str**| case sensitive search query | 
  **filter_type_name** | **str**| only results with the translated type name | [optional] 
  **filter_min_level** | **int**| only results which level is equal or above this value | [optional] 

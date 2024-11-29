@@ -36,7 +36,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.GameApi(api_client)
     language = 'language_example' # str | a valid language code
-    game = 'dofus3' # str | dofus3 | dofus3beta
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
     query = 'paztek' # str | search query
     filter_search_index = ['[\"items-equipment\"]'] # List[str] | only results with all specific type (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)
@@ -60,7 +60,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
- **game** | **str**| dofus3 | dofus3beta | 
+ **game** | **str**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **query** | **str**| search query | 
  **filter_search_index** | [**List[str]**](str.md)| only results with all specific type | [optional] 
  **limit** | **int**| maximum number of returned results | [optional] [default to 8]
@@ -118,7 +118,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.GameApi(api_client)
     language = 'fr' # str | a valid language code
-    game = 'dofus3' # str | dofus3 | dofus3beta
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
     query = 'atcham' # str | case sensitive search query
     filter_min_level = 190 # int | only results which level is equal or above this value (optional)
     filter_max_level = 200 # int | only results which level is equal or below this value (optional)
@@ -142,7 +142,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
- **game** | **str**| dofus3 | dofus3beta | 
+ **game** | **str**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **query** | **str**| case sensitive search query | 
  **filter_min_level** | **int**| only results which level is equal or above this value | [optional] 
  **filter_max_level** | **int**| only results which level is equal or below this value | [optional] 
