@@ -4,12 +4,12 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_game_search_types**](MetaApi.md#get_game_search_types) | **GET** /dofus2/meta/search/types | Available Game Search Types
-[**get_item_types**](MetaApi.md#get_item_types) | **GET** /dofus2/meta/items/types | Available Item Types
-[**get_meta_almanax_bonuses**](MetaApi.md#get_meta_almanax_bonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses
-[**get_meta_almanax_bonuses_search**](MetaApi.md#get_meta_almanax_bonuses_search) | **GET** /dofus2/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses
-[**get_meta_elements**](MetaApi.md#get_meta_elements) | **GET** /dofus2/meta/elements | Effects and Condition Elements
-[**get_meta_version**](MetaApi.md#get_meta_version) | **GET** /dofus2/meta/version | Game Version
+[**get_game_search_types**](MetaApi.md#get_game_search_types) | **GET** /dofus3/meta/search/types | Available Game Search Types
+[**get_item_types**](MetaApi.md#get_item_types) | **GET** /dofus3/meta/items/types | Available Item Types
+[**get_meta_almanax_bonuses**](MetaApi.md#get_meta_almanax_bonuses) | **GET** /dofus3/meta/{language}/almanax/bonuses | Available Almanax Bonuses
+[**get_meta_almanax_bonuses_search**](MetaApi.md#get_meta_almanax_bonuses_search) | **GET** /dofus3/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses
+[**get_meta_elements**](MetaApi.md#get_meta_elements) | **GET** /dofus3/meta/elements | Effects and Condition Elements
+[**get_meta_version**](MetaApi.md#get_meta_version) | **GET** /dofus3/meta/version | Game Version
 
 
 # **get_game_search_types**
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Available Game Search Types
 
-Get all types for /{game}/{lang}/search available for filtering. All names are english for comparing them inside applications. Order is fixed so you can compare indices instead of strings.
+Get all types for /{game}/v1/{lang}/search available for filtering. All names are english for comparing them inside applications. Order is fixed so you can compare indices instead of strings.
 
 ### Example
 
@@ -165,7 +165,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.MetaApi(api_client)
-    language = 'fr' # str | 
+    language = 'fr' # str | a valid language code
 
     try:
         # Available Almanax Bonuses
@@ -183,7 +183,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **language** | **str**|  | 
+ **language** | **str**| a valid language code | 
 
 ### Return type
 
@@ -342,7 +342,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_meta_version**
-> GetMetaVersion200Response get_meta_version()
+> Version get_meta_version()
 
 Game Version
 
@@ -353,7 +353,7 @@ The current game version of the hosted data.
 
 ```python
 import dofusdude
-from dofusdude.models.get_meta_version200_response import GetMetaVersion200Response
+from dofusdude.models.version import Version
 from dofusdude.rest import ApiException
 from pprint import pprint
 
@@ -386,7 +386,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**GetMetaVersion200Response**](GetMetaVersion200Response.md)
+[**Version**](Version.md)
 
 ### Authorization
 
@@ -401,7 +401,7 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+**200** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

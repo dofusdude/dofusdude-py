@@ -47,7 +47,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.WebhooksApi(api_client)
-    id = 'id_example' # str | 
+    id = 'id_example' # str | the ID returned from the API when creating the webhook
 
     try:
         # Unregister Almanax Hook
@@ -63,7 +63,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **str**| the ID returned from the API when creating the webhook | 
 
 ### Return type
 
@@ -112,7 +112,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.WebhooksApi(api_client)
-    id = 'id_example' # str | 
+    id = 'id_example' # str | the ID returned from the API when creating the webhook
 
     try:
         # Unregister RSS Hook
@@ -128,7 +128,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **str**| the ID returned from the API when creating the webhook | 
 
 ### Return type
 
@@ -177,7 +177,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.WebhooksApi(api_client)
-    id = 'id_example' # str | 
+    id = 'id_example' # str | the ID returned from the API when creating the webhook
 
     try:
         # Unregister Twitter Hook
@@ -193,7 +193,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **str**| the ID returned from the API when creating the webhook | 
 
 ### Return type
 
@@ -435,7 +435,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.WebhooksApi(api_client)
-    id = 'id_example' # str | 
+    id = 'id_example' # str | the ID returned from the API when creating the webhook
 
     try:
         # Get Almanax Hook
@@ -453,7 +453,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **str**| the ID returned from the API when creating the webhook | 
 
 ### Return type
 
@@ -503,7 +503,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.WebhooksApi(api_client)
-    id = 'id_example' # str | 
+    id = 'id_example' # str | the ID returned from the API when creating the webhook
 
     try:
         # Get RSS Hook
@@ -521,7 +521,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **str**| the ID returned from the API when creating the webhook | 
 
 ### Return type
 
@@ -571,7 +571,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.WebhooksApi(api_client)
-    id = 'id_example' # str | 
+    id = 'id_example' # str | the ID returned from the API when creating the webhook
 
     try:
         # Get Twitter Hook
@@ -589,7 +589,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **str**| the ID returned from the API when creating the webhook | 
 
 ### Return type
 
@@ -639,7 +639,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.WebhooksApi(api_client)
-    create_almanax_webhook = {"bonus_whitelist":null,"bonus_blacklist":null,"subscriptions":["dofus2_fr"],"format":"discord","callback":"https://discord.com/api/webhooks/XYZ","daily_settings":{"timezone":"Europe/Paris","midnight_offset":0},"iso_date":false,"mentions":{"kolossium-experience":[{"discord_id":1234,"is_role":true,"ping_days_before":null}]},"intervals":["daily"],"weekly_weekday":"sunday"} # CreateAlmanaxWebhook |  (optional)
+    create_almanax_webhook = {"bonus_whitelist":null,"bonus_blacklist":null,"subscriptions":["dofus3_fr"],"format":"discord","callback":"https://discord.com/api/webhooks/XYZ","daily_settings":{"timezone":"Europe/Paris","midnight_offset":0},"iso_date":false,"mentions":{"kolossium-experience":[{"discord_id":1234,"is_role":true,"ping_days_before":null}]},"intervals":["daily"],"weekly_weekday":"sunday"} # CreateAlmanaxWebhook |  (optional)
 
     try:
         # Register Almanax Hook
@@ -705,7 +705,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.WebhooksApi(api_client)
-    create_rss_webhook = {"whitelist":["retro"],"blacklist":null,"subscriptions":["dofus2-en-official-news"],"format":"discord","preview_length":2000,"callback":"https://discord.com/api/webhooks/XYZ"} # CreateRSSWebhook |  (optional)
+    create_rss_webhook = {"whitelist":["retro"],"blacklist":null,"subscriptions":["dofus3-en-official-news"],"format":"discord","preview_length":2000,"callback":"https://discord.com/api/webhooks/XYZ"} # CreateRSSWebhook |  (optional)
 
     try:
         # Register RSS Hook
@@ -838,7 +838,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.WebhooksApi(api_client)
-    id = 'id_example' # str | 
+    id = 'id_example' # str | the ID returned from the API when creating the webhook
     put_almanax_webhook = {"bonus_whitelist":[],"bonus_blacklist":null,"subscriptions":null,"daily_settings":{"timezone":"Europe/Paris","midnight_offset":0},"iso_date":false,"mentions":{"kolossium-experience":[{"discord_id":1234,"is_role":true,"ping_days_before":null}]},"intervals":["daily"],"weekly_weekday":"sunday"} # PutAlmanaxWebhook |  (optional)
 
     try:
@@ -857,7 +857,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **str**| the ID returned from the API when creating the webhook | 
  **put_almanax_webhook** | [**PutAlmanaxWebhook**](PutAlmanaxWebhook.md)|  | [optional] 
 
 ### Return type
@@ -909,7 +909,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.WebhooksApi(api_client)
-    id = 'id_example' # str | 
+    id = 'id_example' # str | the ID returned from the API when creating the webhook
     put_rss_webhook = {"whitelist":null,"blacklist":null,"subscriptions":null,"preview_length":60} # PutRSSWebhook |  (optional)
 
     try:
@@ -928,7 +928,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **str**| the ID returned from the API when creating the webhook | 
  **put_rss_webhook** | [**PutRSSWebhook**](PutRSSWebhook.md)|  | [optional] 
 
 ### Return type
@@ -980,8 +980,8 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.WebhooksApi(api_client)
-    id = 'id_example' # str | 
-    put_twitter_webhook = {"whitelist":["retro"],"blacklist":null,"subscriptions":["dofus2-en-official-changelog"],"preview_length":null} # PutTwitterWebhook |  (optional)
+    id = 'id_example' # str | the ID returned from the API when creating the webhook
+    put_twitter_webhook = {"whitelist":["retro"],"blacklist":null,"subscriptions":["dofus3-en-official-changelog"],"preview_length":null} # PutTwitterWebhook |  (optional)
 
     try:
         # Update Twitter Hook
@@ -999,7 +999,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **str**| the ID returned from the API when creating the webhook | 
  **put_twitter_webhook** | [**PutTwitterWebhook**](PutTwitterWebhook.md)|  | [optional] 
 
 ### Return type

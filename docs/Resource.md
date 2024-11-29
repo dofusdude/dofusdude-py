@@ -1,7 +1,6 @@
 # Resource
 
 
-
 ## Properties
 
 Name | Type | Description | Notes
@@ -9,14 +8,13 @@ Name | Type | Description | Notes
 **ankama_id** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
-**type** | [**ResourceType**](ResourceType.md) |  | [optional] 
+**type** | [**TranslatedId**](TranslatedId.md) |  | [optional] 
 **level** | **int** |  | [optional] 
 **pods** | **int** |  | [optional] 
-**image_urls** | [**ImageUrls**](ImageUrls.md) |  | [optional] 
-**effects** | [**List[EffectsEntry]**](EffectsEntry.md) |  | [optional] 
-**conditions** | [**List[ConditionEntry]**](ConditionEntry.md) |  | [optional] 
-**condition_tree** | [**ConditionTreeNode**](ConditionTreeNode.md) |  | [optional] 
-**recipe** | [**List[RecipeEntry]**](RecipeEntry.md) |  | [optional] 
+**image_urls** | [**Images**](Images.md) |  | [optional] 
+**effects** | [**List[Effect]**](Effect.md) |  | [optional] 
+**conditions** | [**ConditionNode**](ConditionNode.md) |  | [optional] 
+**recipe** | [**List[Recipe]**](Recipe.md) |  | [optional] 
 
 ## Example
 

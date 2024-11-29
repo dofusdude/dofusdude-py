@@ -4,12 +4,12 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_almanax_date**](AlmanaxApi.md#get_almanax_date) | **GET** /dofus2/{language}/almanax/{date} | Single Almanax Date
-[**get_almanax_range**](AlmanaxApi.md#get_almanax_range) | **GET** /dofus2/{language}/almanax | Almanax Range
+[**get_almanax_date**](AlmanaxApi.md#get_almanax_date) | **GET** /dofus3/{language}/almanax/{date} | Single Almanax Date
+[**get_almanax_range**](AlmanaxApi.md#get_almanax_range) | **GET** /dofus3/{language}/almanax | Almanax Range
 
 
 # **get_almanax_date**
-> AlmanaxEntry get_almanax_date(language, var_date)
+> Almanax get_almanax_date(language, var_date)
 
 Single Almanax Date
 
@@ -20,7 +20,7 @@ Get a single date. There are not more details in the returned object than the no
 
 ```python
 import dofusdude
-from dofusdude.models.almanax_entry import AlmanaxEntry
+from dofusdude.models.almanax import Almanax
 from dofusdude.rest import ApiException
 from pprint import pprint
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AlmanaxEntry**](AlmanaxEntry.md)
+[**Almanax**](Almanax.md)
 
 ### Authorization
 
@@ -74,12 +74,12 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+**200** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_almanax_range**
-> List[AlmanaxEntry] get_almanax_range(language, filter_bonus_type=filter_bonus_type, range_from=range_from, range_to=range_to, range_size=range_size, timezone=timezone)
+> List[Almanax] get_almanax_range(language, filter_bonus_type=filter_bonus_type, range_from=range_from, range_to=range_to, range_size=range_size, timezone=timezone)
 
 Almanax Range
 
@@ -90,7 +90,7 @@ Get a range of dates, defaults to today + 6 following days but can specified by 
 
 ```python
 import dofusdude
-from dofusdude.models.almanax_entry import AlmanaxEntry
+from dofusdude.models.almanax import Almanax
 from dofusdude.rest import ApiException
 from pprint import pprint
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[AlmanaxEntry]**](AlmanaxEntry.md)
+[**List[Almanax]**](Almanax.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+**200** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

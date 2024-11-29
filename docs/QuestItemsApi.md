@@ -4,14 +4,14 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_all_items_quest_list**](QuestItemsApi.md#get_all_items_quest_list) | **GET** /{game}/{language}/items/quest/all | List All Quest Items
-[**get_item_quest_single**](QuestItemsApi.md#get_item_quest_single) | **GET** /{game}/{language}/items/quest/{ankama_id} | Single Quest Items
-[**get_items_quest_list**](QuestItemsApi.md#get_items_quest_list) | **GET** /{game}/{language}/items/quest | List Quest Items
-[**get_items_quest_search**](QuestItemsApi.md#get_items_quest_search) | **GET** /{game}/{language}/items/quest/search | Search Quest Items
+[**get_all_items_quest_list**](QuestItemsApi.md#get_all_items_quest_list) | **GET** /{game}/v1/{language}/items/quest/all | List All Quest Items
+[**get_item_quest_single**](QuestItemsApi.md#get_item_quest_single) | **GET** /{game}/v1/{language}/items/quest/{ankama_id} | Single Quest Items
+[**get_items_quest_list**](QuestItemsApi.md#get_items_quest_list) | **GET** /{game}/v1/{language}/items/quest | List Quest Items
+[**get_items_quest_search**](QuestItemsApi.md#get_items_quest_search) | **GET** /{game}/v1/{language}/items/quest/search | Search Quest Items
 
 
 # **get_all_items_quest_list**
-> ItemsListPaged get_all_items_quest_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, accept_encoding=accept_encoding, filter_type_enum=filter_type_enum)
+> ListItems get_all_items_quest_list(language, game, sort_level=sort_level, filter_min_level=filter_min_level, filter_max_level=filter_max_level, accept_encoding=accept_encoding, filter_type_name_id=filter_type_name_id)
 
 List All Quest Items
 
@@ -22,7 +22,7 @@ Retrieve all quest items with one request. This endpoint is just an alias for th
 
 ```python
 import dofusdude
-from dofusdude.models.items_list_paged import ItemsListPaged
+from dofusdude.models.list_items import ListItems
 from dofusdude.rest import ApiException
 from pprint import pprint
 
@@ -38,17 +38,16 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.QuestItemsApi(api_client)
     language = 'fr' # str | a valid language code
-    game = 'dofus2' # str | 
+    game = 'dofus3' # str | dofus3 | dofus3beta
     sort_level = 'desc' # str | sort the resulting list by level, default unsorted (optional)
-    filter_type_name = 'Sufokia' # str | only results with the translated type name (optional)
     filter_min_level = 1 # int | only results which level is equal or above this value (optional)
     filter_max_level = 50 # int | only results which level is equal or below this value (optional)
     accept_encoding = 'accept_encoding_example' # str | optional compression for saving bandwidth (optional)
-    filter_type_enum = ['[\"boots\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
+    filter_type_name_id = ['[\"boots\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # List All Quest Items
-        api_response = api_instance.get_all_items_quest_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, accept_encoding=accept_encoding, filter_type_enum=filter_type_enum)
+        api_response = api_instance.get_all_items_quest_list(language, game, sort_level=sort_level, filter_min_level=filter_min_level, filter_max_level=filter_max_level, accept_encoding=accept_encoding, filter_type_name_id=filter_type_name_id)
         print("The response of QuestItemsApi->get_all_items_quest_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -63,17 +62,16 @@ with dofusdude.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
- **game** | **str**|  | 
+ **game** | **str**| dofus3 | dofus3beta | 
  **sort_level** | **str**| sort the resulting list by level, default unsorted | [optional] 
- **filter_type_name** | **str**| only results with the translated type name | [optional] 
  **filter_min_level** | **int**| only results which level is equal or above this value | [optional] 
  **filter_max_level** | **int**| only results which level is equal or below this value | [optional] 
  **accept_encoding** | **str**| optional compression for saving bandwidth | [optional] 
- **filter_type_enum** | [**List[str]**](str.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **filter_type_name_id** | [**List[str]**](str.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
-[**ItemsListPaged**](ItemsListPaged.md)
+[**ListItems**](ListItems.md)
 
 ### Authorization
 
@@ -88,9 +86,9 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Quest Items Found |  -  |
-**400** | Bad Request  |  -  |
-**404** | Not Found |  -  |
+**200** |  |  -  |
+**400** |  |  -  |
+**404** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -123,7 +121,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.QuestItemsApi(api_client)
     language = 'language_example' # str | a valid language code
     ankama_id = 25256 # int | identifier
-    game = 'dofus2' # str | 
+    game = 'dofus3' # str | dofus3 | dofus3beta
 
     try:
         # Single Quest Items
@@ -143,7 +141,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
  **ankama_id** | **int**| identifier | 
- **game** | **str**|  | 
+ **game** | **str**| dofus3 | dofus3beta | 
 
 ### Return type
 
@@ -162,14 +160,14 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Quest Item Found |  -  |
-**400** | Bad Request  Possibilities: - invalid ankama id format  |  -  |
-**404** | Not Found  Possibilities: - nothing found for this ankama_id |  -  |
+**200** |  |  -  |
+**400** |  |  -  |
+**404** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_items_quest_list**
-> ItemsListPaged get_items_quest_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, page_size=page_size, page_number=page_number, fields_item=fields_item, filter_type_enum=filter_type_enum)
+> ListItems get_items_quest_list(language, game, sort_level=sort_level, filter_min_level=filter_min_level, filter_max_level=filter_max_level, page_size=page_size, page_number=page_number, fields_item=fields_item, filter_type_name_id=filter_type_name_id)
 
 List Quest Items
 
@@ -180,7 +178,7 @@ Retrieve a list of quest items.
 
 ```python
 import dofusdude
-from dofusdude.models.items_list_paged import ItemsListPaged
+from dofusdude.models.list_items import ListItems
 from dofusdude.rest import ApiException
 from pprint import pprint
 
@@ -196,19 +194,18 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.QuestItemsApi(api_client)
     language = 'fr' # str | a valid language code
-    game = 'dofus2' # str | 
+    game = 'dofus3' # str | dofus3 | dofus3beta
     sort_level = 'desc' # str | sort the resulting list by level, default unsorted (optional)
-    filter_type_name = 'Sufokia' # str | only results with the translated type name (optional)
     filter_min_level = 1 # int | only results which level is equal or above this value (optional)
     filter_max_level = 50 # int | only results which level is equal or below this value (optional)
     page_size = 5 # int | size of the results from the list. -1 disables pagination and gets all in one response. (optional)
     page_number = 1 # int | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. (optional)
     fields_item = ['[\"recipe\"]'] # List[str] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. (optional)
-    filter_type_enum = ['[\"sufokia\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
+    filter_type_name_id = ['[\"sufokia\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # List Quest Items
-        api_response = api_instance.get_items_quest_list(language, game, sort_level=sort_level, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, page_size=page_size, page_number=page_number, fields_item=fields_item, filter_type_enum=filter_type_enum)
+        api_response = api_instance.get_items_quest_list(language, game, sort_level=sort_level, filter_min_level=filter_min_level, filter_max_level=filter_max_level, page_size=page_size, page_number=page_number, fields_item=fields_item, filter_type_name_id=filter_type_name_id)
         print("The response of QuestItemsApi->get_items_quest_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -223,19 +220,18 @@ with dofusdude.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
- **game** | **str**|  | 
+ **game** | **str**| dofus3 | dofus3beta | 
  **sort_level** | **str**| sort the resulting list by level, default unsorted | [optional] 
- **filter_type_name** | **str**| only results with the translated type name | [optional] 
  **filter_min_level** | **int**| only results which level is equal or above this value | [optional] 
  **filter_max_level** | **int**| only results which level is equal or below this value | [optional] 
  **page_size** | **int**| size of the results from the list. -1 disables pagination and gets all in one response. | [optional] 
  **page_number** | **int**| page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. | [optional] 
  **fields_item** | [**List[str]**](str.md)| adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. | [optional] 
- **filter_type_enum** | [**List[str]**](str.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **filter_type_name_id** | [**List[str]**](str.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
-[**ItemsListPaged**](ItemsListPaged.md)
+[**ListItems**](ListItems.md)
 
 ### Authorization
 
@@ -250,14 +246,14 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Quest Items Found |  -  |
-**400** | Bad Request  |  -  |
-**404** | Not Found |  -  |
+**200** |  |  -  |
+**400** |  |  -  |
+**404** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_items_quest_search**
-> List[ItemListEntry] get_items_quest_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit, filter_type_enum=filter_type_enum)
+> List[ListItem] get_items_quest_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit, filter_type_enum=filter_type_enum)
 
 Search Quest Items
 
@@ -268,7 +264,7 @@ Search in all names and descriptions of quest items with a query.
 
 ```python
 import dofusdude
-from dofusdude.models.item_list_entry import ItemListEntry
+from dofusdude.models.list_item import ListItem
 from dofusdude.rest import ApiException
 from pprint import pprint
 
@@ -284,7 +280,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.QuestItemsApi(api_client)
     language = 'es' # str | a valid language code
-    game = 'dofus2' # str | 
+    game = 'dofus3' # str | dofus3 | dofus3beta
     query = 'Ficha' # str | case sensitive search query
     filter_type_name = 'Justicieros' # str | only results with the translated type name (optional)
     filter_min_level = 60 # int | only results which level is equal or above this value (optional)
@@ -309,7 +305,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| a valid language code | 
- **game** | **str**|  | 
+ **game** | **str**| dofus3 | dofus3beta | 
  **query** | **str**| case sensitive search query | 
  **filter_type_name** | **str**| only results with the translated type name | [optional] 
  **filter_min_level** | **int**| only results which level is equal or above this value | [optional] 
@@ -319,7 +315,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[ItemListEntry]**](ItemListEntry.md)
+[**List[ListItem]**](ListItem.md)
 
 ### Authorization
 
@@ -335,8 +331,8 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Quest Items Found |  -  |
-**400** | Bad Request  Possibilities: - empty or no query  |  -  |
-**404** | Not Found  Possibilities: - no hits for query |  -  |
+**400** |  |  -  |
+**404** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

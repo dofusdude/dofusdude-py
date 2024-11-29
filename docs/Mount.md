@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ankama_id** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
-**family_name** | **str** |  | [optional] 
-**image_urls** | [**ImageUrls**](ImageUrls.md) |  | [optional] 
-**effects** | [**List[EffectsEntry]**](EffectsEntry.md) |  | [optional] 
+**family** | [**MountFamily**](MountFamily.md) |  | [optional] 
+**image_urls** | [**Images**](Images.md) |  | [optional] 
+**effects** | [**List[Effect]**](Effect.md) |  | [optional] 
 
 ## Example
 

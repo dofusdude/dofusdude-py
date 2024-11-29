@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
 **daily_settings** | [**AlmanaxWebhookDailySettings**](AlmanaxWebhookDailySettings.md) |  | [optional] 
-**bonus_whitelist** | **List[str]** | Only post when these bonuses come up. From all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses. | [optional] 
-**bonus_blacklist** | **List[str]** | Skip the day when these bonuses come up. From all available bonuses (ids) from /dofus2/meta/{language}/almanax/bonuses | [optional] 
+**bonus_whitelist** | **List[str]** | Only post when these bonuses come up. From all available bonuses (ids) from /dofus3/meta/{language}/almanax/bonuses. | [optional] 
+**bonus_blacklist** | **List[str]** | Skip the day when these bonuses come up. From all available bonuses (ids) from /dofus3/meta/{language}/almanax/bonuses | [optional] 
 **subscriptions** | **List[str]** | Get the available subscriptions with /meta/webhooks/almanax | [optional] 
 **iso_date** | **bool** | If false, it will use common local time formats and weekday translations. If true, the format is YYYY-MM-DD. | [optional] [default to False]
 **mentions** | **Dict[str, List[CreateAlmanaxWebhookMentionsValueInner]]** | Almanax bonus ids mapped to array of mentions. | [optional] 
