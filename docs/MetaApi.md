@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**get_meta_almanax_bonuses**](MetaApi.md#get_meta_almanax_bonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses
 [**get_meta_almanax_bonuses_search**](MetaApi.md#get_meta_almanax_bonuses_search) | **GET** /dofus2/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses
 [**get_meta_elements**](MetaApi.md#get_meta_elements) | **GET** /dofus3beta/v1/meta/elements | Effects and Condition Elements
-[**get_meta_version**](MetaApi.md#get_meta_version) | **GET** /dofus3beta/v1/meta/version | Game Version
+[**get_meta_version**](MetaApi.md#get_meta_version) | **GET** /{game}/v1/meta/version | Game Version
 
 
 # **get_game_search_types**
@@ -342,7 +342,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_meta_version**
-> Version get_meta_version()
+> Version get_meta_version(game)
 
 Game Version
 
@@ -368,10 +368,11 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.MetaApi(api_client)
+    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
 
     try:
         # Game Version
-        api_response = api_instance.get_meta_version()
+        api_response = api_instance.get_meta_version(game)
         print("The response of MetaApi->get_meta_version:\n")
         pprint(api_response)
     except Exception as e:
@@ -382,7 +383,10 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **game** | **str**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
 
 ### Return type
 
