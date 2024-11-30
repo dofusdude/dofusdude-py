@@ -10,7 +10,8 @@ Name | Type | Description | Notes
 **equipment_ids** | **List[int]** |  | [optional] 
 **effects** | **Dict[str, List[Effect]]** |  | [optional] 
 **highest_equipment_level** | **int** |  | [optional] 
-**is_cosmetic** | **bool** |  | [optional] 
+**contains_cosmetics** | **bool** |  | [optional] 
+**contains_cosmetics_only** | **bool** |  | [optional] 
 
 ## Example
 

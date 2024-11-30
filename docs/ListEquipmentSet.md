@@ -11,7 +11,8 @@ Name | Type | Description | Notes
 **level** | **int** |  | [optional] 
 **effects** | **Dict[str, List[Effect]]** |  | [optional] 
 **equipment_ids** | **List[int]** |  | [optional] 
-**is_cosmetic** | **bool** |  | [optional] 
+**contains_cosmetics** | **bool** |  | [optional] 
+**contains_cosmetics_only** | **bool** |  | [optional] 
 
 ## Example
 
