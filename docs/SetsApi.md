@@ -38,7 +38,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.SetsApi(api_client)
     language = 'language_example' # str | a valid language code
-    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
     sort_level = 'asc' # str | sort the resulting list by level, default unsorted (optional)
     filter_min_highest_equipment_level = 190 # int | only results where the equipment with the highest level is above or equal to this value (optional)
     filter_max_highest_equipment_level = 200 # int | only results where the equipment with the highest level is below or equal to this value (optional)
@@ -122,7 +122,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.SetsApi(api_client)
     language = 'language_example' # str | a valid language code
-    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
     sort_level = 'asc' # str | sort the resulting list by level, default unsorted (optional)
     filter_min_highest_equipment_level = 190 # int | only results where the equipment with the highest level is above or equal to this value (optional)
     filter_max_highest_equipment_level = 200 # int | only results where the equipment with the highest level is below or equal to this value (optional)
@@ -210,7 +210,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.SetsApi(api_client)
     language = 'language_example' # str | a valid language code
-    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
     query = 'Des' # str | case sensitive search query
     filter_min_highest_equipment_level = 195 # int | only results where the equipment with the highest level is above or equal to this value (optional)
     filter_max_highest_equipment_level = 200 # int | only results where the equipment with the highest level is below or equal to this value (optional)
@@ -293,7 +293,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.SetsApi(api_client)
     language = 'language_example' # str | a valid language code
     ankama_id = 499 # int | identifier
-    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
 
     try:
         # Single Sets

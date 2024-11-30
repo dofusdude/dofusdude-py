@@ -38,7 +38,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.MountsApi(api_client)
     language = 'language_example' # str | a valid language code
-    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
     filter_family_name = 'Dragoturkey' # str | only results with the translated family name (optional)
     accept_encoding = 'accept_encoding_example' # str | optional compression for saving bandwidth (optional)
     filter_family_id = 56 # int | only results with the unique family id (optional)
@@ -116,7 +116,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.MountsApi(api_client)
     language = 'language_example' # str | a valid language code
-    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
     filter_family_name = 'Dragoturkey' # str | only results with the translated family name (optional)
     page_size = 10 # int | size of the results from the list. -1 disables pagination and gets all in one response. (optional)
     page_number = 1 # int | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. (optional)
@@ -198,7 +198,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.MountsApi(api_client)
     language = 'fr' # str | a valid language code
-    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
     query = 'Dorée' # str | case sensitive search query
     filter_family_name = 'Dragodinde' # str | only results with the translated family name (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)
@@ -277,7 +277,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.MountsApi(api_client)
     language = 'language_example' # str | a valid language code
     ankama_id = 180 # int | identifier
-    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
 
     try:
         # Single Mounts

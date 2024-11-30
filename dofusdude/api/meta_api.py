@@ -270,7 +270,7 @@ class MetaApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/dofus3/meta/search/types',
+            resource_path='/dofus3beta/v1/meta/search/types',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -515,7 +515,7 @@ class MetaApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/dofus3/meta/items/types',
+            resource_path='/dofus3beta/v1/meta/items/types',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -775,7 +775,7 @@ class MetaApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/dofus3/meta/{language}/almanax/bonuses',
+            resource_path='/dofus2/meta/{language}/almanax/bonuses',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1069,7 +1069,7 @@ class MetaApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/dofus3/meta/{language}/almanax/bonuses/search',
+            resource_path='/dofus2/meta/{language}/almanax/bonuses/search',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1314,7 +1314,7 @@ class MetaApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/dofus3/meta/elements',
+            resource_path='/dofus3beta/v1/meta/elements',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1559,7 +1559,7 @@ class MetaApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/dofus3/meta/version',
+            resource_path='/dofus3beta/v1/meta/version',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

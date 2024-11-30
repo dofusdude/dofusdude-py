@@ -4,12 +4,12 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_game_search_types**](MetaApi.md#get_game_search_types) | **GET** /dofus3/meta/search/types | Available Game Search Types
-[**get_item_types**](MetaApi.md#get_item_types) | **GET** /dofus3/meta/items/types | Available Item Types
-[**get_meta_almanax_bonuses**](MetaApi.md#get_meta_almanax_bonuses) | **GET** /dofus3/meta/{language}/almanax/bonuses | Available Almanax Bonuses
-[**get_meta_almanax_bonuses_search**](MetaApi.md#get_meta_almanax_bonuses_search) | **GET** /dofus3/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses
-[**get_meta_elements**](MetaApi.md#get_meta_elements) | **GET** /dofus3/meta/elements | Effects and Condition Elements
-[**get_meta_version**](MetaApi.md#get_meta_version) | **GET** /dofus3/meta/version | Game Version
+[**get_game_search_types**](MetaApi.md#get_game_search_types) | **GET** /dofus3beta/v1/meta/search/types | Available Game Search Types
+[**get_item_types**](MetaApi.md#get_item_types) | **GET** /dofus3beta/v1/meta/items/types | Available Item Types
+[**get_meta_almanax_bonuses**](MetaApi.md#get_meta_almanax_bonuses) | **GET** /dofus2/meta/{language}/almanax/bonuses | Available Almanax Bonuses
+[**get_meta_almanax_bonuses_search**](MetaApi.md#get_meta_almanax_bonuses_search) | **GET** /dofus2/meta/{language}/almanax/bonuses/search | Search Available Almanax Bonuses
+[**get_meta_elements**](MetaApi.md#get_meta_elements) | **GET** /dofus3beta/v1/meta/elements | Effects and Condition Elements
+[**get_meta_version**](MetaApi.md#get_meta_version) | **GET** /dofus3beta/v1/meta/version | Game Version
 
 
 # **get_game_search_types**

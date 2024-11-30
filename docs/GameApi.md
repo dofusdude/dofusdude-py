@@ -36,7 +36,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.GameApi(api_client)
     language = 'language_example' # str | a valid language code
-    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
     query = 'paztek' # str | search query
     filter_search_index = ['[\"items-equipment\"]'] # List[str] | only results with all specific type (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)
@@ -118,7 +118,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.GameApi(api_client)
     language = 'fr' # str | a valid language code
-    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
     query = 'atcham' # str | case sensitive search query
     filter_min_level = 190 # int | only results which level is equal or above this value (optional)
     filter_max_level = 200 # int | only results which level is equal or below this value (optional)

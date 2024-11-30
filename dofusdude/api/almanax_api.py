@@ -300,7 +300,7 @@ class AlmanaxApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/dofus3/{language}/almanax/{date}',
+            resource_path='/dofus2/{language}/almanax/{date}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -663,7 +663,7 @@ class AlmanaxApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/dofus3/{language}/almanax',
+            resource_path='/dofus2/{language}/almanax',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
