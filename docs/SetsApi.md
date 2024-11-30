@@ -95,7 +95,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_sets_list**
-> ListEquipmentSet get_sets_list(language, game, sort_level=sort_level, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, page_size=page_size, page_number=page_number, fields_set=fields_set, filter_contains_cosmetics_only=filter_contains_cosmetics_only, filter_contains_cosmetics=filter_contains_cosmetics)
+> ListEquipmentSets get_sets_list(language, game, sort_level=sort_level, filter_min_highest_equipment_level=filter_min_highest_equipment_level, filter_max_highest_equipment_level=filter_max_highest_equipment_level, page_size=page_size, page_number=page_number, fields_set=fields_set, filter_contains_cosmetics_only=filter_contains_cosmetics_only, filter_contains_cosmetics=filter_contains_cosmetics)
 
 List Sets
 
@@ -106,7 +106,7 @@ Retrieve a list of sets.
 
 ```python
 import dofusdude
-from dofusdude.models.list_equipment_set import ListEquipmentSet
+from dofusdude.models.list_equipment_sets import ListEquipmentSets
 from dofusdude.rest import ApiException
 from pprint import pprint
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListEquipmentSet**](ListEquipmentSet.md)
+[**ListEquipmentSets**](ListEquipmentSets.md)
 
 ### Authorization
 
