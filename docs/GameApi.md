@@ -40,8 +40,8 @@ with dofusdude.ApiClient(configuration) as api_client:
     query = 'paztek' # str | search query
     filter_search_index = ['[\"items-equipment\"]'] # List[str] | only results with all specific type (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)
-    fields_item = ['[\"level\"]'] # List[str] | adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed. (optional)
-    filter_type_name_id = ['[\"boots\"]'] # List[str] | multi-filter results with the english item type name, including \"mount\" and \"set\" from filter[type]. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
+    fields_item = ['[\"level\"]'] # List[str] | adds fields from the item search to the list entries if the hit is an item. Multiple comma separated values allowed. (optional)
+    filter_type_name_id = ['[\"boots\"]'] # List[str] | multi-filter results with the english item type name, including \"mount\" and \"set\" from filter[search_index]. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # Game Search
@@ -64,8 +64,8 @@ Name | Type | Description  | Notes
  **query** | **str**| search query | 
  **filter_search_index** | [**List[str]**](str.md)| only results with all specific type | [optional] 
  **limit** | **int**| maximum number of returned results | [optional] [default to 8]
- **fields_item** | [**List[str]**](str.md)| adds fields from the item search to the list entries if the hit is a item. Multiple comma separated values allowed. | [optional] 
- **filter_type_name_id** | [**List[str]**](str.md)| multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[type]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **fields_item** | [**List[str]**](str.md)| adds fields from the item search to the list entries if the hit is an item. Multiple comma separated values allowed. | [optional] 
+ **filter_type_name_id** | [**List[str]**](str.md)| multi-filter results with the english item type name, including \&quot;mount\&quot; and \&quot;set\&quot; from filter[search_index]. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 
