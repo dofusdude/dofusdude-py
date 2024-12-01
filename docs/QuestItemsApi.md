@@ -253,7 +253,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_items_quest_search**
-> List[ListItem] get_items_quest_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit, filter_type_enum=filter_type_enum)
+> List[ListItem] get_items_quest_search(language, game, query, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit, filter_type_name_id=filter_type_name_id)
 
 Search Quest Items
 
@@ -282,15 +282,14 @@ with dofusdude.ApiClient(configuration) as api_client:
     language = 'es' # str | a valid language code
     game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
     query = 'Ficha' # str | case sensitive search query
-    filter_type_name = 'Justicieros' # str | only results with the translated type name (optional)
     filter_min_level = 60 # int | only results which level is equal or above this value (optional)
     filter_max_level = 70 # int | only results which level is equal or below this value (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)
-    filter_type_enum = ['[\"vigilantes\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
+    filter_type_name_id = ['[\"vigilantes\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # Search Quest Items
-        api_response = api_instance.get_items_quest_search(language, game, query, filter_type_name=filter_type_name, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit, filter_type_enum=filter_type_enum)
+        api_response = api_instance.get_items_quest_search(language, game, query, filter_min_level=filter_min_level, filter_max_level=filter_max_level, limit=limit, filter_type_name_id=filter_type_name_id)
         print("The response of QuestItemsApi->get_items_quest_search:\n")
         pprint(api_response)
     except Exception as e:
@@ -307,11 +306,10 @@ Name | Type | Description  | Notes
  **language** | **str**| a valid language code | 
  **game** | **str**| game main &#39;dofus3&#39; or beta channel &#39;dofus3beta&#39; | 
  **query** | **str**| case sensitive search query | 
- **filter_type_name** | **str**| only results with the translated type name | [optional] 
  **filter_min_level** | **int**| only results which level is equal or above this value | [optional] 
  **filter_max_level** | **int**| only results which level is equal or below this value | [optional] 
  **limit** | **int**| maximum number of returned results | [optional] [default to 8]
- **filter_type_enum** | [**List[str]**](str.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
+ **filter_type_name_id** | [**List[str]**](str.md)| multi-filter results with the english type name. Add with \&quot;wood\&quot; or \&quot;+wood\&quot; and exclude with \&quot;-wood\&quot;. | [optional] 
 
 ### Return type
 

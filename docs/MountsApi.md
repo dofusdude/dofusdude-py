@@ -171,7 +171,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_mounts_search**
-> List[Mount] get_mounts_search(language, game, query, filter_family_name=filter_family_name, limit=limit)
+> List[Mount] get_mounts_search(language, game, query, filter_family_name=filter_family_name, limit=limit, filter_family_id=filter_family_id)
 
 Search Mounts
 
@@ -202,10 +202,11 @@ with dofusdude.ApiClient(configuration) as api_client:
     query = 'Dorée' # str | case sensitive search query
     filter_family_name = 'Dragodinde' # str | only results with the translated family name (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)
+    filter_family_id = 56 # int | only results with the unique family id (optional)
 
     try:
         # Search Mounts
-        api_response = api_instance.get_mounts_search(language, game, query, filter_family_name=filter_family_name, limit=limit)
+        api_response = api_instance.get_mounts_search(language, game, query, filter_family_name=filter_family_name, limit=limit, filter_family_id=filter_family_id)
         print("The response of MountsApi->get_mounts_search:\n")
         pprint(api_response)
     except Exception as e:
@@ -224,6 +225,7 @@ Name | Type | Description  | Notes
  **query** | **str**| case sensitive search query | 
  **filter_family_name** | **str**| only results with the translated family name | [optional] 
  **limit** | **int**| maximum number of returned results | [optional] [default to 8]
+ **filter_family_id** | **int**| only results with the unique family id | [optional] 
 
 ### Return type
 

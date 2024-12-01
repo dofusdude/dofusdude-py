@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dofusdude"
-version = "1.0.0-rc.5"
+version = "1.0.0-rc.6"
 description = "dofusdude"
 authors = ["Survival <stelzo@steado.de>"]
 license = "GPL-3.0"
