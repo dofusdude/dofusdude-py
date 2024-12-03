@@ -38,7 +38,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.MetaApi(api_client)
-    game = 'game_example' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
 
     try:
         # Available Game Search Types
@@ -105,7 +105,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.MetaApi(api_client)
-    game = 'game_example' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
 
     try:
         # Available Item Types
@@ -312,7 +312,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.MetaApi(api_client)
-    game = 'game_example' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
 
     try:
         # Effects and Condition Elements
@@ -380,7 +380,7 @@ configuration = dofusdude.Configuration(
 with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.MetaApi(api_client)
-    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
 
     try:
         # Game Version

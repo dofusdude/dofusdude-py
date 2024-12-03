@@ -38,7 +38,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.ResourcesApi(api_client)
     language = 'language_example' # str | a valid language code
-    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
     sort_level = 'desc' # str | sort the resulting list by level, default unsorted (optional)
     filter_min_level = 160 # int | only results which level is equal or above this value (optional)
     filter_max_level = 190 # int | only results which level is equal or below this value (optional)
@@ -120,7 +120,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.ResourcesApi(api_client)
     language = 'language_example' # str | a valid language code
-    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
     query = 'snowdew' # str | case sensitive search query
     filter_min_level = 150 # int | only results which level is equal or above this value (optional)
     filter_max_level = 200 # int | only results which level is equal or below this value (optional)
@@ -202,7 +202,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.ResourcesApi(api_client)
     language = 'language_example' # str | a valid language code
-    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
     sort_level = 'desc' # str | sort the resulting list by level, default unsorted (optional)
     filter_min_level = 160 # int | only results which level is equal or above this value (optional)
     filter_max_level = 190 # int | only results which level is equal or below this value (optional)
@@ -289,7 +289,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.ResourcesApi(api_client)
     language = 'language_example' # str | a valid language code
     ankama_id = 7295 # int | identifier
-    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
 
     try:
         # Single Resources

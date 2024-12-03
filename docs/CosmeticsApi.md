@@ -38,7 +38,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.CosmeticsApi(api_client)
     language = 'fr' # str | a valid language code
-    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
     sort_level = 'asc' # str | sort the resulting list by level, default unsorted (optional)
     filter_min_level = 1 # int | only results which level is equal or above this value (optional)
     filter_max_level = 5 # int | only results which level is equal or below this value (optional)
@@ -120,7 +120,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.CosmeticsApi(api_client)
     language = 'fr' # str | a valid language code
-    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
     sort_level = 'asc' # str | sort the resulting list by level, default unsorted (optional)
     filter_min_level = 1 # int | only results which level is equal or above this value (optional)
     filter_max_level = 5 # int | only results which level is equal or below this value (optional)
@@ -206,7 +206,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.CosmeticsApi(api_client)
     language = 'language_example' # str | a valid language code
-    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
     query = 'nedora' # str | case sensitive search query
     filter_min_level = 1 # int | only results which level is equal or above this value (optional)
     filter_max_level = 2 # int | only results which level is equal or below this value (optional)
@@ -289,7 +289,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.CosmeticsApi(api_client)
     language = 'language_example' # str | a valid language code
     ankama_id = 24132 # int | identifier
-    game = 'dofus3beta' # str | game main 'dofus3' or beta channel 'dofus3beta'
+    game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
 
     try:
         # Single Cosmetics
