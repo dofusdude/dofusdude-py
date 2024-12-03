@@ -107,8 +107,8 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.AlmanaxApi(api_client)
     language = 'fr' # str | code
     filter_bonus_type = 'experience-points' # str | ids from meta/{language}/almanax/bonuses (optional)
-    range_from = 'Thu Sep 15 00:00:00 UTC 2016' # date | yyyy-mm-dd (optional)
-    range_to = 'Wed Sep 28 00:00:00 UTC 2016' # date | yyyy-mm-dd (optional)
+    range_from = '2013-10-20' # date | yyyy-mm-dd (optional)
+    range_to = '2013-10-20' # date | yyyy-mm-dd (optional)
     range_size = -1 # int | size of the returned range (optional)
     timezone = 'Europe/Paris' # str | determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location. (optional) (default to 'Europe/Paris')
 
