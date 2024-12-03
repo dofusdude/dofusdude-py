@@ -4,8 +4,8 @@ All URIs are relative to *https://api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_almanax_date**](AlmanaxApi.md#get_almanax_date) | **GET** /dofus2/{language}/almanax/{date} | Single Almanax Date
-[**get_almanax_range**](AlmanaxApi.md#get_almanax_range) | **GET** /dofus2/{language}/almanax | Almanax Range
+[**get_almanax_date**](AlmanaxApi.md#get_almanax_date) | **GET** /dofus3/v1/{language}/almanax/{date} | Single Almanax Date
+[**get_almanax_range**](AlmanaxApi.md#get_almanax_range) | **GET** /dofus3/v1/{language}/almanax | Almanax Range
 
 
 # **get_almanax_date**
