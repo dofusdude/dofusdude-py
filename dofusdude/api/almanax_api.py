@@ -323,7 +323,7 @@ class AlmanaxApi:
         filter_bonus_type: Annotated[Optional[StrictStr], Field(description="ids from meta/{language}/almanax/bonuses")] = None,
         range_from: Annotated[Optional[date], Field(description="yyyy-mm-dd")] = None,
         range_to: Annotated[Optional[date], Field(description="yyyy-mm-dd")] = None,
-        range_size: Annotated[Optional[Annotated[int, Field(le=370, strict=True, ge=-1)]], Field(description="size of the returned range")] = None,
+        range_size: Annotated[Optional[Annotated[int, Field(le=370, strict=True)]], Field(description="Size of the returned range. Disable to fully use the range by setting size to -1.")] = None,
         timezone: Annotated[Optional[StrictStr], Field(description="determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.")] = None,
         _request_timeout: Union[
             None,
@@ -350,7 +350,7 @@ class AlmanaxApi:
         :type range_from: date
         :param range_to: yyyy-mm-dd
         :type range_to: date
-        :param range_size: size of the returned range
+        :param range_size: Size of the returned range. Disable to fully use the range by setting size to -1.
         :type range_size: int
         :param timezone: determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
         :type timezone: str
@@ -410,7 +410,7 @@ class AlmanaxApi:
         filter_bonus_type: Annotated[Optional[StrictStr], Field(description="ids from meta/{language}/almanax/bonuses")] = None,
         range_from: Annotated[Optional[date], Field(description="yyyy-mm-dd")] = None,
         range_to: Annotated[Optional[date], Field(description="yyyy-mm-dd")] = None,
-        range_size: Annotated[Optional[Annotated[int, Field(le=370, strict=True, ge=-1)]], Field(description="size of the returned range")] = None,
+        range_size: Annotated[Optional[Annotated[int, Field(le=370, strict=True)]], Field(description="Size of the returned range. Disable to fully use the range by setting size to -1.")] = None,
         timezone: Annotated[Optional[StrictStr], Field(description="determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.")] = None,
         _request_timeout: Union[
             None,
@@ -437,7 +437,7 @@ class AlmanaxApi:
         :type range_from: date
         :param range_to: yyyy-mm-dd
         :type range_to: date
-        :param range_size: size of the returned range
+        :param range_size: Size of the returned range. Disable to fully use the range by setting size to -1.
         :type range_size: int
         :param timezone: determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
         :type timezone: str
@@ -497,7 +497,7 @@ class AlmanaxApi:
         filter_bonus_type: Annotated[Optional[StrictStr], Field(description="ids from meta/{language}/almanax/bonuses")] = None,
         range_from: Annotated[Optional[date], Field(description="yyyy-mm-dd")] = None,
         range_to: Annotated[Optional[date], Field(description="yyyy-mm-dd")] = None,
-        range_size: Annotated[Optional[Annotated[int, Field(le=370, strict=True, ge=-1)]], Field(description="size of the returned range")] = None,
+        range_size: Annotated[Optional[Annotated[int, Field(le=370, strict=True)]], Field(description="Size of the returned range. Disable to fully use the range by setting size to -1.")] = None,
         timezone: Annotated[Optional[StrictStr], Field(description="determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.")] = None,
         _request_timeout: Union[
             None,
@@ -524,7 +524,7 @@ class AlmanaxApi:
         :type range_from: date
         :param range_to: yyyy-mm-dd
         :type range_to: date
-        :param range_size: size of the returned range
+        :param range_size: Size of the returned range. Disable to fully use the range by setting size to -1.
         :type range_size: int
         :param timezone: determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location.
         :type timezone: str

@@ -109,7 +109,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     filter_bonus_type = 'experience-points' # str | ids from meta/{language}/almanax/bonuses (optional)
     range_from = '2013-10-20' # date | yyyy-mm-dd (optional)
     range_to = '2013-10-20' # date | yyyy-mm-dd (optional)
-    range_size = -1 # int | size of the returned range (optional)
+    range_size = -1 # int | Size of the returned range. Disable to fully use the range by setting size to -1. (optional)
     timezone = 'Europe/Paris' # str | determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location. (optional) (default to 'Europe/Paris')
 
     try:
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
  **filter_bonus_type** | **str**| ids from meta/{language}/almanax/bonuses | [optional] 
  **range_from** | **date**| yyyy-mm-dd | [optional] 
  **range_to** | **date**| yyyy-mm-dd | [optional] 
- **range_size** | **int**| size of the returned range | [optional] 
+ **range_size** | **int**| Size of the returned range. Disable to fully use the range by setting size to -1. | [optional] 
  **timezone** | **str**| determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location. | [optional] [default to &#39;Europe/Paris&#39;]
 
 ### Return type
