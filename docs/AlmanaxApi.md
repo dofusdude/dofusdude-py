@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_almanax_date**
-> Almanax get_almanax_date(language, var_date)
+> Almanax get_almanax_date(language, var_date, level=level)
 
 Single Almanax Date
 
@@ -37,10 +37,11 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.AlmanaxApi(api_client)
     language = 'fr' # str | code
     var_date = 'Tue Jul 14 00:00:00 UTC 2020' # date | yyyy-mm-dd
+    level = 56 # int | character level for the reward_xp field (optional)
 
     try:
         # Single Almanax Date
-        api_response = api_instance.get_almanax_date(language, var_date)
+        api_response = api_instance.get_almanax_date(language, var_date, level=level)
         print("The response of AlmanaxApi->get_almanax_date:\n")
         pprint(api_response)
     except Exception as e:
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| code | 
  **var_date** | **date**| yyyy-mm-dd | 
+ **level** | **int**| character level for the reward_xp field | [optional] 
 
 ### Return type
 
@@ -79,7 +81,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_almanax_range**
-> List[Almanax] get_almanax_range(language, filter_bonus_type=filter_bonus_type, range_from=range_from, range_to=range_to, range_size=range_size, timezone=timezone)
+> List[Almanax] get_almanax_range(language, filter_bonus_type=filter_bonus_type, range_from=range_from, range_to=range_to, range_size=range_size, timezone=timezone, level=level)
 
 Almanax Range
 
@@ -111,10 +113,11 @@ with dofusdude.ApiClient(configuration) as api_client:
     range_to = '2013-10-20' # date | yyyy-mm-dd (optional)
     range_size = -1 # int | Size of the returned range. Disable to fully use the range by setting size to -1. (optional)
     timezone = 'Europe/Paris' # str | determine what the current time is. If you live in Brazil, \"today\" will be hours apart from Paris. Use your timezone to get results relative to your location. (optional) (default to 'Europe/Paris')
+    level = 56 # int | character level for the reward_xp field (optional)
 
     try:
         # Almanax Range
-        api_response = api_instance.get_almanax_range(language, filter_bonus_type=filter_bonus_type, range_from=range_from, range_to=range_to, range_size=range_size, timezone=timezone)
+        api_response = api_instance.get_almanax_range(language, filter_bonus_type=filter_bonus_type, range_from=range_from, range_to=range_to, range_size=range_size, timezone=timezone, level=level)
         print("The response of AlmanaxApi->get_almanax_range:\n")
         pprint(api_response)
     except Exception as e:
@@ -134,6 +137,7 @@ Name | Type | Description  | Notes
  **range_to** | **date**| yyyy-mm-dd | [optional] 
  **range_size** | **int**| Size of the returned range. Disable to fully use the range by setting size to -1. | [optional] 
  **timezone** | **str**| determine what the current time is. If you live in Brazil, \&quot;today\&quot; will be hours apart from Paris. Use your timezone to get results relative to your location. | [optional] [default to &#39;Europe/Paris&#39;]
+ **level** | **int**| character level for the reward_xp field | [optional] 
 
 ### Return type
 

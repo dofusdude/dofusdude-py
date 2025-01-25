@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **var_date** | **str** |  | [optional] 
 **tribute** | [**AlmanaxTribute**](AlmanaxTribute.md) |  | [optional] 
 **reward_kamas** | **int** | Amount of Kamas you get as reward for finishing this Almanax quest. | [optional] 
+**reward_xp** | **int** | Optional field that shows when a level is given in the request. Shows the experience points you get this day for finishing this Almanax quest. | [optional] 
 
 ## Example
 
