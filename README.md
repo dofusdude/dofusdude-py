@@ -104,7 +104,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.AlmanaxApi(api_client)
     language = 'fr' # str | code
-    var_date = 'Tue Jul 14 00:00:00 UTC 2020' # date | yyyy-mm-dd
+    var_date = 'Sat Jan 25 00:00:00 UTC 2025' # date | yyyy-mm-dd
     level = 56 # int | character level for the reward_xp field (optional)
 
     try:
