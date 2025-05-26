@@ -15,7 +15,17 @@ Method | HTTP request | Description
 
 List All Equipment
 
-Retrieve all equipment items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
+Retrieve all equipment items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.
+
+If you want everything unfiltered, delete the other query parameters.
+
+Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!
+
+Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end.
+Example with cURL:
+```
+curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip -
+```
 
 ### Example
 
@@ -288,7 +298,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.EquipmentApi(api_client)
     language = 'language_example' # str | a valid language code
-    ankama_id = 26009 # int | identifier
+    ankama_id = 13971 # int | identifier
     game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
 
     try:

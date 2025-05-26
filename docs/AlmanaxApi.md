@@ -85,7 +85,19 @@ No authorization required
 
 Almanax Range
 
-Get a range of dates, defaults to today + 6 following days but can specified by the query parameters.   filter[bonus_type] can be used seperately and does not have an effect on the other parameters.  range[from] changes the start date, everything else defaults to 6 following dates from this start date.  range[to] when used without anything else, it will use today as start date and this parameter as end. All ranges are inclusive.  range[from] + range[to] = inclusive range over the specified dates, should never be farther apart than 35 days.  range[from|to] + range[size] no need to specify the date, just following days with [from] (0 is today) or go backwards in time with only [to] and [size].  Not all combinations are listed but this should give you an idea how to they could work.
+Get a range of dates, defaults to today + 6 following days but can specified by the query parameters. 
+
+filter[bonus_type] can be used seperately and does not have an effect on the other parameters.
+
+range[from] changes the start date, everything else defaults to 6 following dates from this start date.
+
+range[to] when used without anything else, it will use today as start date and this parameter as end. All ranges are inclusive.
+
+range[from] + range[to] = inclusive range over the specified dates, should never be farther apart than 35 days.
+
+range[from|to] + range[size] no need to specify the date, just following days with [from] (0 is today) or go backwards in time with only [to] and [size].
+
+Not all combinations are listed but this should give you an idea how to they could work.
 
 ### Example
 

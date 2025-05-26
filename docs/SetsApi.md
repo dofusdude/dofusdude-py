@@ -15,7 +15,17 @@ Method | HTTP request | Description
 
 List All Sets
 
-Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
+Retrieve all sets with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.
+
+If you want everything unfiltered, delete the other query parameters.
+
+Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!
+
+Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end.
+Example with cURL:
+```
+curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip -
+```
 
 ### Example
 

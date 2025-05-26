@@ -84,7 +84,9 @@ No authorization required
 
 Available Item Types
 
-Get all types of all items. Primarily used for filtering more detailed types in listings or search endpoints. All names are english for comparing them inside applications. Ordering is not guaranteed to persist with game updates.
+Get all types of all items. Primarily used for filtering more detailed types in listings or search endpoints.
+All names are english for comparing them inside applications.
+Ordering is not guaranteed to persist with game updates.
 
 ### Example
 

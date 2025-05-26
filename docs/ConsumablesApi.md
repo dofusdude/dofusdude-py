@@ -15,7 +15,17 @@ Method | HTTP request | Description
 
 List All Consumables
 
-Retrieve all consumable items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
+Retrieve all consumable items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.
+
+If you want everything unfiltered, delete the other query parameters.
+
+Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!
+
+Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end.
+Example with cURL:
+```
+curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip -
+```
 
 ### Example
 
@@ -43,7 +53,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     filter_min_level = 150 # int | only results which level is equal or above this value (optional)
     filter_max_level = 180 # int | only results which level is equal or below this value (optional)
     accept_encoding = 'accept_encoding_example' # str | optional compression for saving bandwidth (optional)
-    filter_type_name_id = ['[\"boots\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
+    filter_type_name_id = ['[\"chest\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # List All Consumables

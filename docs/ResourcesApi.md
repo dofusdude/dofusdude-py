@@ -15,7 +15,17 @@ Method | HTTP request | Description
 
 List All Resources
 
-Retrieve all resource items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.  If you want everything unfiltered, delete the other query parameters.  Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!  Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end. Example with cURL: ``` curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip - ```
+Retrieve all resource items with one request. This endpoint is just an alias for the a list with disabled pagination (page[size]=-1) and all fields[type] set.
+
+If you want everything unfiltered, delete the other query parameters.
+
+Be careful with testing or (god forbid) using /all in your browser, the returned json is huge and will slow down the browser!
+
+Tip: set the HTTP Header 'Accept-Encoding: gzip' for saving bandwidth. You will need to uncompress it on your end.
+Example with cURL:
+```
+curl -sH 'Accept-Encoding: gzip' <api-endpoint> | gunzip -
+```
 
 ### Example
 
@@ -43,7 +53,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     filter_min_level = 160 # int | only results which level is equal or above this value (optional)
     filter_max_level = 190 # int | only results which level is equal or below this value (optional)
     accept_encoding = 'accept_encoding_example' # str | optional compression for saving bandwidth (optional)
-    filter_type_name_id = ['[\"boots\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
+    filter_type_name_id = ['[\"garment\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # List All Resources
@@ -209,7 +219,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     page_size = 10 # int | size of the results from the list. -1 disables pagination and gets all in one response. (optional)
     page_number = 1 # int | page number based on the current page[size]. So you could get page 1 with 8 entrys and page 2 would have entries 8 to 16. (optional)
     fields_item = ['[\"recipe\"]'] # List[str] | adds fields from their detail endpoint to the item list entries. Multiple comma separated values allowed. (optional)
-    filter_type_name_id = ['[\"wood\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
+    filter_type_name_id = ['[\"key\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # List Resources

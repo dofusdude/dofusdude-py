@@ -17,75 +17,146 @@
 
 __version__ = "1.0.0"
 
+# Define package exports
+__all__ = [
+    "AlmanaxApi",
+    "ConsumablesApi",
+    "CosmeticsApi",
+    "EquipmentApi",
+    "GameApi",
+    "MetaApi",
+    "MountsApi",
+    "QuestItemsApi",
+    "ResourcesApi",
+    "SetsApi",
+    "WebhooksApi",
+    "ApiResponse",
+    "ApiClient",
+    "Configuration",
+    "OpenApiException",
+    "ApiTypeError",
+    "ApiValueError",
+    "ApiKeyError",
+    "ApiAttributeError",
+    "ApiException",
+    "Almanax",
+    "AlmanaxBonus",
+    "AlmanaxTribute",
+    "AlmanaxTributeItem",
+    "AlmanaxWebhook",
+    "AlmanaxWebhookDailySettings",
+    "Condition",
+    "ConditionLeaf",
+    "ConditionNode",
+    "ConditionRelation",
+    "CreateAlmanaxWebhook",
+    "CreateAlmanaxWebhookDailySettings",
+    "CreateAlmanaxWebhookMentionsValueInner",
+    "CreateRSSWebhook",
+    "CreateTwitterWebhook",
+    "Effect",
+    "EffectType",
+    "Equipment",
+    "EquipmentSet",
+    "Error",
+    "GameSearch",
+    "GameSearchItem",
+    "GameSearchType",
+    "GetMetaAlmanaxBonuses200ResponseInner",
+    "GetMetaWebhooksTwitter200Response",
+    "Images",
+    "ItemSubtype",
+    "ListEquipmentSet",
+    "ListEquipmentSets",
+    "ListItem",
+    "ListItemGeneral",
+    "ListItems",
+    "ListMounts",
+    "Mount",
+    "MountFamily",
+    "PagedLinks",
+    "PutAlmanaxWebhook",
+    "PutRSSWebhook",
+    "PutTwitterWebhook",
+    "Range",
+    "Recipe",
+    "Resource",
+    "RssWebhook",
+    "TranslatedId",
+    "TwitterWebhook",
+    "Version",
+    "Weapon",
+]
+
 # import apis into sdk package
-from dofusdude.api.almanax_api import AlmanaxApi
-from dofusdude.api.consumables_api import ConsumablesApi
-from dofusdude.api.cosmetics_api import CosmeticsApi
-from dofusdude.api.equipment_api import EquipmentApi
-from dofusdude.api.game_api import GameApi
-from dofusdude.api.meta_api import MetaApi
-from dofusdude.api.mounts_api import MountsApi
-from dofusdude.api.quest_items_api import QuestItemsApi
-from dofusdude.api.resources_api import ResourcesApi
-from dofusdude.api.sets_api import SetsApi
-from dofusdude.api.webhooks_api import WebhooksApi
+from dofusdude.api.almanax_api import AlmanaxApi as AlmanaxApi
+from dofusdude.api.consumables_api import ConsumablesApi as ConsumablesApi
+from dofusdude.api.cosmetics_api import CosmeticsApi as CosmeticsApi
+from dofusdude.api.equipment_api import EquipmentApi as EquipmentApi
+from dofusdude.api.game_api import GameApi as GameApi
+from dofusdude.api.meta_api import MetaApi as MetaApi
+from dofusdude.api.mounts_api import MountsApi as MountsApi
+from dofusdude.api.quest_items_api import QuestItemsApi as QuestItemsApi
+from dofusdude.api.resources_api import ResourcesApi as ResourcesApi
+from dofusdude.api.sets_api import SetsApi as SetsApi
+from dofusdude.api.webhooks_api import WebhooksApi as WebhooksApi
 
 # import ApiClient
-from dofusdude.api_response import ApiResponse
-from dofusdude.api_client import ApiClient
-from dofusdude.configuration import Configuration
-from dofusdude.exceptions import OpenApiException
-from dofusdude.exceptions import ApiTypeError
-from dofusdude.exceptions import ApiValueError
-from dofusdude.exceptions import ApiKeyError
-from dofusdude.exceptions import ApiAttributeError
-from dofusdude.exceptions import ApiException
+from dofusdude.api_response import ApiResponse as ApiResponse
+from dofusdude.api_client import ApiClient as ApiClient
+from dofusdude.configuration import Configuration as Configuration
+from dofusdude.exceptions import OpenApiException as OpenApiException
+from dofusdude.exceptions import ApiTypeError as ApiTypeError
+from dofusdude.exceptions import ApiValueError as ApiValueError
+from dofusdude.exceptions import ApiKeyError as ApiKeyError
+from dofusdude.exceptions import ApiAttributeError as ApiAttributeError
+from dofusdude.exceptions import ApiException as ApiException
 
 # import models into sdk package
-from dofusdude.models.almanax import Almanax
-from dofusdude.models.almanax_bonus import AlmanaxBonus
-from dofusdude.models.almanax_tribute import AlmanaxTribute
-from dofusdude.models.almanax_tribute_item import AlmanaxTributeItem
-from dofusdude.models.almanax_webhook import AlmanaxWebhook
-from dofusdude.models.almanax_webhook_daily_settings import AlmanaxWebhookDailySettings
-from dofusdude.models.condition import Condition
-from dofusdude.models.condition_leaf import ConditionLeaf
-from dofusdude.models.condition_node import ConditionNode
-from dofusdude.models.condition_relation import ConditionRelation
-from dofusdude.models.create_almanax_webhook import CreateAlmanaxWebhook
-from dofusdude.models.create_almanax_webhook_daily_settings import CreateAlmanaxWebhookDailySettings
-from dofusdude.models.create_almanax_webhook_mentions_value_inner import CreateAlmanaxWebhookMentionsValueInner
-from dofusdude.models.create_rss_webhook import CreateRSSWebhook
-from dofusdude.models.create_twitter_webhook import CreateTwitterWebhook
-from dofusdude.models.effect import Effect
-from dofusdude.models.effect_type import EffectType
-from dofusdude.models.equipment import Equipment
-from dofusdude.models.equipment_set import EquipmentSet
-from dofusdude.models.error import Error
-from dofusdude.models.game_search import GameSearch
-from dofusdude.models.game_search_item import GameSearchItem
-from dofusdude.models.game_search_type import GameSearchType
-from dofusdude.models.get_meta_almanax_bonuses200_response_inner import GetMetaAlmanaxBonuses200ResponseInner
-from dofusdude.models.get_meta_webhooks_twitter200_response import GetMetaWebhooksTwitter200Response
-from dofusdude.models.images import Images
-from dofusdude.models.item_subtype import ItemSubtype
-from dofusdude.models.list_equipment_set import ListEquipmentSet
-from dofusdude.models.list_equipment_sets import ListEquipmentSets
-from dofusdude.models.list_item import ListItem
-from dofusdude.models.list_item_general import ListItemGeneral
-from dofusdude.models.list_items import ListItems
-from dofusdude.models.list_mounts import ListMounts
-from dofusdude.models.mount import Mount
-from dofusdude.models.mount_family import MountFamily
-from dofusdude.models.paged_links import PagedLinks
-from dofusdude.models.put_almanax_webhook import PutAlmanaxWebhook
-from dofusdude.models.put_rss_webhook import PutRSSWebhook
-from dofusdude.models.put_twitter_webhook import PutTwitterWebhook
-from dofusdude.models.range import Range
-from dofusdude.models.recipe import Recipe
-from dofusdude.models.resource import Resource
-from dofusdude.models.rss_webhook import RssWebhook
-from dofusdude.models.translated_id import TranslatedId
-from dofusdude.models.twitter_webhook import TwitterWebhook
-from dofusdude.models.version import Version
-from dofusdude.models.weapon import Weapon
+from dofusdude.models.almanax import Almanax as Almanax
+from dofusdude.models.almanax_bonus import AlmanaxBonus as AlmanaxBonus
+from dofusdude.models.almanax_tribute import AlmanaxTribute as AlmanaxTribute
+from dofusdude.models.almanax_tribute_item import AlmanaxTributeItem as AlmanaxTributeItem
+from dofusdude.models.almanax_webhook import AlmanaxWebhook as AlmanaxWebhook
+from dofusdude.models.almanax_webhook_daily_settings import AlmanaxWebhookDailySettings as AlmanaxWebhookDailySettings
+from dofusdude.models.condition import Condition as Condition
+from dofusdude.models.condition_leaf import ConditionLeaf as ConditionLeaf
+from dofusdude.models.condition_node import ConditionNode as ConditionNode
+from dofusdude.models.condition_relation import ConditionRelation as ConditionRelation
+from dofusdude.models.create_almanax_webhook import CreateAlmanaxWebhook as CreateAlmanaxWebhook
+from dofusdude.models.create_almanax_webhook_daily_settings import CreateAlmanaxWebhookDailySettings as CreateAlmanaxWebhookDailySettings
+from dofusdude.models.create_almanax_webhook_mentions_value_inner import CreateAlmanaxWebhookMentionsValueInner as CreateAlmanaxWebhookMentionsValueInner
+from dofusdude.models.create_rss_webhook import CreateRSSWebhook as CreateRSSWebhook
+from dofusdude.models.create_twitter_webhook import CreateTwitterWebhook as CreateTwitterWebhook
+from dofusdude.models.effect import Effect as Effect
+from dofusdude.models.effect_type import EffectType as EffectType
+from dofusdude.models.equipment import Equipment as Equipment
+from dofusdude.models.equipment_set import EquipmentSet as EquipmentSet
+from dofusdude.models.error import Error as Error
+from dofusdude.models.game_search import GameSearch as GameSearch
+from dofusdude.models.game_search_item import GameSearchItem as GameSearchItem
+from dofusdude.models.game_search_type import GameSearchType as GameSearchType
+from dofusdude.models.get_meta_almanax_bonuses200_response_inner import GetMetaAlmanaxBonuses200ResponseInner as GetMetaAlmanaxBonuses200ResponseInner
+from dofusdude.models.get_meta_webhooks_twitter200_response import GetMetaWebhooksTwitter200Response as GetMetaWebhooksTwitter200Response
+from dofusdude.models.images import Images as Images
+from dofusdude.models.item_subtype import ItemSubtype as ItemSubtype
+from dofusdude.models.list_equipment_set import ListEquipmentSet as ListEquipmentSet
+from dofusdude.models.list_equipment_sets import ListEquipmentSets as ListEquipmentSets
+from dofusdude.models.list_item import ListItem as ListItem
+from dofusdude.models.list_item_general import ListItemGeneral as ListItemGeneral
+from dofusdude.models.list_items import ListItems as ListItems
+from dofusdude.models.list_mounts import ListMounts as ListMounts
+from dofusdude.models.mount import Mount as Mount
+from dofusdude.models.mount_family import MountFamily as MountFamily
+from dofusdude.models.paged_links import PagedLinks as PagedLinks
+from dofusdude.models.put_almanax_webhook import PutAlmanaxWebhook as PutAlmanaxWebhook
+from dofusdude.models.put_rss_webhook import PutRSSWebhook as PutRSSWebhook
+from dofusdude.models.put_twitter_webhook import PutTwitterWebhook as PutTwitterWebhook
+from dofusdude.models.range import Range as Range
+from dofusdude.models.recipe import Recipe as Recipe
+from dofusdude.models.resource import Resource as Resource
+from dofusdude.models.rss_webhook import RssWebhook as RssWebhook
+from dofusdude.models.translated_id import TranslatedId as TranslatedId
+from dofusdude.models.twitter_webhook import TwitterWebhook as TwitterWebhook
+from dofusdude.models.version import Version as Version
+from dofusdude.models.weapon import Weapon as Weapon
