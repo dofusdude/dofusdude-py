@@ -160,3 +160,4 @@ from dofusdude.models.translated_id import TranslatedId as TranslatedId
 from dofusdude.models.twitter_webhook import TwitterWebhook as TwitterWebhook
 from dofusdude.models.version import Version as Version
 from dofusdude.models.weapon import Weapon as Weapon
+

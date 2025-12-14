@@ -21,6 +21,7 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
+from uuid import UUID
 from dofusdude.models.almanax_webhook_daily_settings import AlmanaxWebhookDailySettings
 from dofusdude.models.create_almanax_webhook_mentions_value_inner import CreateAlmanaxWebhookMentionsValueInner
 from typing import Optional, Set
@@ -30,7 +31,7 @@ class AlmanaxWebhook(BaseModel):
     """
     
     """ # noqa: E501
-    id: Optional[StrictStr] = None
+    id: Optional[UUID] = None
     daily_settings: Optional[AlmanaxWebhookDailySettings] = None
     bonus_whitelist: Optional[List[StrictStr]] = Field(default=None, description="Only post when these bonuses come up. From all available bonuses (ids) from /dofus3/meta/{language}/almanax/bonuses.")
     bonus_blacklist: Optional[List[StrictStr]] = Field(default=None, description="Skip the day when these bonuses come up. From all available bonuses (ids) from /dofus3/meta/{language}/almanax/bonuses")

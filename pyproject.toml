@@ -5,16 +5,16 @@ description = "dofusdude"
 authors = [
   {name = "Survival",email = "stelzo@steado.de"},
 ]
-license = "GPL-3.0"
+license = { text = "GPL-3.0" }
 readme = "README.md"
 keywords = ["OpenAPI", "OpenAPI-Generator", "dofusdude"]
-requires-python = "^3.9"
+requires-python = ">=3.9"
 
 dependencies = [
   "urllib3 (>=2.1.0,<3.0.0)",
   "python-dateutil (>=2.8.2)",
   "pydantic (>=2)",
-  "typing-extensions (>=4.7.1)"
+  "typing-extensions (>=4.7.1)",
 ]
 
 [project.urls]

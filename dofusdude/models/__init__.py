@@ -13,7 +13,6 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
 # import models into model package
 from dofusdude.models.almanax import Almanax
 from dofusdude.models.almanax_bonus import AlmanaxBonus
@@ -62,3 +61,4 @@ from dofusdude.models.translated_id import TranslatedId
 from dofusdude.models.twitter_webhook import TwitterWebhook
 from dofusdude.models.version import Version
 from dofusdude.models.weapon import Weapon
+

@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | [optional] 
+**id** | **UUID** |  | [optional] 
 **whitelist** | **List[str]** |  | [optional] 
 **blacklist** | **List[str]** |  | [optional] 
 **subscriptions** | **List[str]** |  | [optional] 
