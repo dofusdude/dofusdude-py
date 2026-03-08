@@ -37,7 +37,8 @@ class Effect(BaseModel):
     __properties: ClassVar[List[str]] = ["int_minimum", "int_maximum", "type", "ignore_int_min", "ignore_int_max", "formatted"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )

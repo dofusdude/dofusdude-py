@@ -40,7 +40,8 @@ class ListEquipmentSet(BaseModel):
     __properties: ClassVar[List[str]] = ["ankama_id", "name", "items", "level", "effects", "equipment_ids", "contains_cosmetics", "contains_cosmetics_only"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )

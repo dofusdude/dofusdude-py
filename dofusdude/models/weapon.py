@@ -53,7 +53,8 @@ class Weapon(BaseModel):
     __properties: ClassVar[List[str]] = ["ankama_id", "name", "description", "type", "is_weapon", "level", "pods", "image_urls", "effects", "conditions", "critical_hit_probability", "critical_hit_bonus", "max_cast_per_turn", "ap_cost", "range", "recipe", "parent_set"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )

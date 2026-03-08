@@ -34,7 +34,8 @@ class CreateAlmanaxWebhookMentionsValueInner(BaseModel):
     __properties: ClassVar[List[str]] = ["discord_id", "is_role", "ping_days_before"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )

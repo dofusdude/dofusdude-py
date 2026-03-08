@@ -45,7 +45,8 @@ class Resource(BaseModel):
     __properties: ClassVar[List[str]] = ["ankama_id", "name", "description", "type", "level", "pods", "image_urls", "effects", "conditions", "recipe"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )

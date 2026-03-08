@@ -32,7 +32,8 @@ class ItemSubtype(BaseModel):
     __properties: ClassVar[List[str]] = ["ankama_id", "name_id"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
