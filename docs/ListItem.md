@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **max_cast_per_turn** | **int** |  | [optional] 
 **ap_cost** | **int** |  | [optional] 
 **range** | [**Range**](Range.md) |  | [optional] 
+**combat** | [**WeaponCombat**](WeaponCombat.md) |  | [optional] 
 
 ## Example
 

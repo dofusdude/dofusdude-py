@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **conditions** | [**ConditionNode**](ConditionNode.md) |  | [optional] 
 **recipe** | [**List[Recipe]**](Recipe.md) |  | [optional] 
 **parent_set** | [**TranslatedId**](TranslatedId.md) |  | [optional] 
+**combat** | [**WeaponCombat**](WeaponCombat.md) |  | [optional] 
 
 ## Example
 

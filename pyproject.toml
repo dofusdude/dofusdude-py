@@ -1,6 +1,6 @@
 [project]
 name = "dofusdude"
-version = "1.0.0"
+version = "1.1.0b1"
 description = "dofusdude"
 authors = [
   {name = "Survival",email = "stelzo@steado.de"},
@@ -8,10 +8,10 @@ authors = [
 license = { text = "GPL-3.0" }
 readme = "README.md"
 keywords = ["OpenAPI", "OpenAPI-Generator", "dofusdude"]
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 
 dependencies = [
-  "urllib3 (>=2.1.0,<3.0.0)",
+  "urllib3 (>=2.7.0,<3.0.0)",
   "python-dateutil (>=2.8.2)",
   "pydantic (>=2.11)",
   "typing-extensions (>=4.7.1)",
@@ -20,16 +20,15 @@ dependencies = [
 [project.urls]
 Repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
 
-[tool.poetry]
-requires-poetry = ">=2.0"
-
-[tool.poetry.group.dev.dependencies]
-pytest = ">= 7.2.1"
-pytest-cov = ">= 2.8.1"
-tox = ">= 3.9.0"
-flake8 = ">= 4.0.0"
-types-python-dateutil = ">= 2.8.19.14"
-mypy = ">= 1.5"
+[dependency-groups]
+dev = [
+  "pytest>=9.0.3",
+  "pytest-cov>=2.8.1",
+  "tox>=3.9.0",
+  "flake8>=4.0.0",
+  "types-python-dateutil>=2.8.19.14",
+  "mypy>=1.5",
+]
 
 
 [build-system]
