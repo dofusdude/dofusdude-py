@@ -1,6 +1,6 @@
 # dofusdude.MountsApi
 
-All URIs are relative to *https://api.dofusdu.de*
+All URIs are relative to *https://beta.api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -36,10 +36,10 @@ from dofusdude.models.list_mounts import ListMounts
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -114,10 +114,10 @@ from dofusdude.models.list_mounts import ListMounts
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -196,10 +196,10 @@ from dofusdude.models.mount import Mount
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -276,10 +276,10 @@ from dofusdude.models.mount import Mount
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 

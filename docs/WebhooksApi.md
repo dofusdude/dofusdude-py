@@ -1,6 +1,6 @@
 # dofusdude.WebhooksApi
 
-All URIs are relative to *https://api.dofusdu.de*
+All URIs are relative to *https://beta.api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -36,10 +36,10 @@ import dofusdude
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -101,10 +101,10 @@ import dofusdude
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -166,10 +166,10 @@ import dofusdude
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -232,10 +232,10 @@ from dofusdude.models.get_meta_webhooks_twitter200_response import GetMetaWebhoo
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -296,10 +296,10 @@ from dofusdude.models.get_meta_webhooks_twitter200_response import GetMetaWebhoo
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -360,10 +360,10 @@ from dofusdude.models.get_meta_webhooks_twitter200_response import GetMetaWebhoo
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -424,10 +424,10 @@ from dofusdude.models.almanax_webhook import AlmanaxWebhook
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -492,10 +492,10 @@ from dofusdude.models.rss_webhook import RssWebhook
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -560,10 +560,10 @@ from dofusdude.models.twitter_webhook import TwitterWebhook
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -628,10 +628,10 @@ from dofusdude.models.create_almanax_webhook import CreateAlmanaxWebhook
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -694,10 +694,10 @@ from dofusdude.models.create_rss_webhook import CreateRSSWebhook
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -760,10 +760,10 @@ from dofusdude.models.create_twitter_webhook import CreateTwitterWebhook
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -827,10 +827,10 @@ from dofusdude.models.put_almanax_webhook import PutAlmanaxWebhook
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -898,10 +898,10 @@ from dofusdude.models.rss_webhook import RssWebhook
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -969,10 +969,10 @@ from dofusdude.models.twitter_webhook import TwitterWebhook
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 

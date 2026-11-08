@@ -1,6 +1,6 @@
 # dofusdude.GameDataApi
 
-All URIs are relative to *https://api.dofusdu.de*
+All URIs are relative to *https://beta.api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -44,10 +44,10 @@ from dofusdude.models.mapped_entity_collection import MappedEntityCollection
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -112,10 +112,10 @@ from dofusdude.models.mapped_entity_collection import MappedEntityCollection
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -180,10 +180,10 @@ from dofusdude.models.mapped_entity_collection import MappedEntityCollection
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -250,10 +250,10 @@ from dofusdude.models.mapped_entity_collection import MappedEntityCollection
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -318,10 +318,10 @@ from dofusdude.models.mapped_entity_collection import MappedEntityCollection
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -386,10 +386,10 @@ from dofusdude.models.mapped_entity_collection import MappedEntityCollection
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -454,10 +454,10 @@ from dofusdude.models.world_area import WorldArea
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -525,10 +525,10 @@ from dofusdude.models.mapped_entity_collection import MappedEntityCollection
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -600,10 +600,10 @@ from dofusdude.models.model_class import ModelClass
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -671,10 +671,10 @@ from dofusdude.models.mapped_entity_collection import MappedEntityCollection
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -746,10 +746,10 @@ from dofusdude.models.monster import Monster
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -819,10 +819,10 @@ from dofusdude.models.mapped_entity_collection import MappedEntityCollection
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -896,10 +896,10 @@ from dofusdude.models.spell import Spell
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -969,10 +969,10 @@ from dofusdude.models.mapped_entity_collection import MappedEntityCollection
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -1044,10 +1044,10 @@ from dofusdude.models.world_area import WorldArea
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -1115,10 +1115,10 @@ from dofusdude.models.mapped_entity_collection import MappedEntityCollection
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -1190,10 +1190,10 @@ from dofusdude.models.world_area import WorldArea
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -1261,10 +1261,10 @@ from dofusdude.models.mapped_entity_collection import MappedEntityCollection
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -1336,10 +1336,10 @@ from dofusdude.models.mapped_entity_list_entry import MappedEntityListEntry
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -1409,10 +1409,10 @@ from dofusdude.models.mapped_entity_list_entry import MappedEntityListEntry
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -1482,10 +1482,10 @@ from dofusdude.models.mapped_entity_list_entry import MappedEntityListEntry
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -1555,10 +1555,10 @@ from dofusdude.models.mapped_entity_list_entry import MappedEntityListEntry
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -1628,10 +1628,10 @@ from dofusdude.models.mapped_entity_list_entry import MappedEntityListEntry
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -1701,10 +1701,10 @@ from dofusdude.models.mapped_entity_list_entry import MappedEntityListEntry
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 

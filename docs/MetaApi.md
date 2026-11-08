@@ -1,6 +1,6 @@
 # dofusdude.MetaApi
 
-All URIs are relative to *https://api.dofusdu.de*
+All URIs are relative to *https://beta.api.dofusdu.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,10 +27,10 @@ import dofusdude
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -96,10 +96,10 @@ import dofusdude
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -164,10 +164,10 @@ from dofusdude.models.get_meta_almanax_bonuses200_response_inner import GetMetaA
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -232,10 +232,10 @@ from dofusdude.models.get_meta_almanax_bonuses200_response_inner import GetMetaA
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -303,10 +303,10 @@ import dofusdude
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -371,10 +371,10 @@ from dofusdude.models.version import Version
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 

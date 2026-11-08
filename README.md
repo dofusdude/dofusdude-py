@@ -98,10 +98,10 @@ import dofusdude
 from dofusdude.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.dofusdu.de
+# Defining the host is optional and defaults to https://beta.api.dofusdu.de
 # See configuration.py for a list of all supported configuration parameters.
 configuration = dofusdude.Configuration(
-    host = "https://api.dofusdu.de"
+    host = "https://beta.api.dofusdu.de"
 )
 
 
@@ -126,7 +126,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.dofusdu.de*
+All URIs are relative to *https://beta.api.dofusdu.de*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
