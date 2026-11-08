@@ -209,8 +209,8 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.MountsApi(api_client)
     language = 'fr' # str | a valid language code
     game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
-    query = 'Dorée' # str | case sensitive search query
-    filter_family_name = 'Dragodinde' # str | only results with the translated family name (optional)
+    query = 'almond' # str | case sensitive search query
+    filter_family_name = 'Dragoturkey' # str | only results with the translated family name (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)
     filter_family_id = 56 # int | only results with the unique family id (optional)
 

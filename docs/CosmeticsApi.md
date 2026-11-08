@@ -53,7 +53,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     filter_min_level = 1 # int | only results which level is equal or above this value (optional)
     filter_max_level = 5 # int | only results which level is equal or below this value (optional)
     accept_encoding = 'accept_encoding_example' # str | optional compression for saving bandwidth (optional)
-    filter_type_name_id = ['[\"ceremonial-wings\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
+    filter_type_name_id = ['[\"ceremonial-hat\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # List All Cosmetics
@@ -217,11 +217,11 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.CosmeticsApi(api_client)
     language = 'language_example' # str | a valid language code
     game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
-    query = 'nedora' # str | case sensitive search query
+    query = 'astrowig' # str | case sensitive search query
     filter_min_level = 1 # int | only results which level is equal or above this value (optional)
     filter_max_level = 2 # int | only results which level is equal or below this value (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)
-    filter_type_name_id = ['[\"ceremonial-wings\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
+    filter_type_name_id = ['[\"ceremonial-hat\"]'] # List[str] | multi-filter results with the english type name. Add with \"wood\" or \"+wood\" and exclude with \"-wood\". (optional)
 
     try:
         # Search Cosmetics

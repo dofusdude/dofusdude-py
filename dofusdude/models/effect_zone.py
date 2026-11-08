@@ -31,7 +31,7 @@ class EffectZone(BaseModel):
     """ # noqa: E501
     raw: Optional[StrictStr] = Field(default=None, description="Original compact zone encoding when the source provides one.")
     shape: ZoneShape
-    size: Optional[StrictInt] = Field(default=None, description="Effective outer size of the area. A point has size 0; whole-map and custom-cell shapes omit it.")
+    size: Optional[StrictInt] = Field(default=None, description="Effective outer size of the area. A point has size 0. Whole-map and custom-cell shapes omit it.")
     min_size: Optional[StrictInt] = Field(default=None, description="Effective inner size for hollow or minimum-size shapes. Omitted when the shape has no inner boundary.")
     cell_ids: List[StrictInt]
     damage_decrease_step_percent: Optional[StrictInt] = None

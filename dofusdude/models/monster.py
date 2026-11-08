@@ -34,7 +34,7 @@ from pydantic_core import to_jsonable_python
 
 class Monster(BaseModel):
     """
-    Monster
+    A monster with its grades, family, spawn locations and drops. Spell expansion is optional.
     """ # noqa: E501
     ankama_id: StrictInt
     name: StrictStr

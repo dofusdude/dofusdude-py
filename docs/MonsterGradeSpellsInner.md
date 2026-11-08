@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **ankama_id** | **int** |  | 
 **name** | **str** |  | 
 **grade** | **int** | The spell grade assigned to this monster grade. | 
-**url** | **str** | Grade-specific spell URL; already includes the &#x60;grade&#x60; query parameter. | 
+**url** | **str** | URL for the assigned spell grade. Includes the &#x60;grade&#x60; query parameter. | 
 **image_urls** | [**Images**](Images.md) |  | [optional] 
 **description** | **str** |  | [optional] 
 **icon_id** | **int** |  | [optional] 

@@ -30,7 +30,7 @@ from pydantic_core import to_jsonable_python
 
 class Spell(BaseModel):
     """
-    Spell
+    A spell with its available grades, effects and casting rules.
     """ # noqa: E501
     ankama_id: StrictInt
     name: StrictStr

@@ -30,7 +30,7 @@ from pydantic_core import to_jsonable_python
 
 class ModelClass(BaseModel):
     """
-    ModelClass
+    A playable class with its characteristics, appearance and class spell assignments.
     """ # noqa: E501
     ankama_id: StrictInt
     name: StrictStr

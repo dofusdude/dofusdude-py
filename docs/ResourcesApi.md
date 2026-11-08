@@ -298,7 +298,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.ResourcesApi(api_client)
     language = 'language_example' # str | a valid language code
-    ankama_id = 7295 # int | identifier
+    ankama_id = 274 # int | identifier
     game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
 
     try:

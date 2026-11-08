@@ -291,7 +291,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.QuestItemsApi(api_client)
     language = 'es' # str | a valid language code
     game = 'dofus3' # str | game main 'dofus3' or beta channel 'dofus3beta'
-    query = 'Ficha' # str | case sensitive search query
+    query = 'training' # str | case sensitive search query
     filter_min_level = 60 # int | only results which level is equal or above this value (optional)
     filter_max_level = 70 # int | only results which level is equal or below this value (optional)
     limit = 8 # int | maximum number of returned results (optional) (default to 8)

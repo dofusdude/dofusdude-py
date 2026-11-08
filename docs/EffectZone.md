@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **raw** | **str** | Original compact zone encoding when the source provides one. | [optional] 
 **shape** | [**ZoneShape**](ZoneShape.md) |  | 
-**size** | **int** | Effective outer size of the area. A point has size 0; whole-map and custom-cell shapes omit it. | [optional] 
+**size** | **int** | Effective outer size of the area. A point has size 0. Whole-map and custom-cell shapes omit it. | [optional] 
 **min_size** | **int** | Effective inner size for hollow or minimum-size shapes. Omitted when the shape has no inner boundary. | [optional] 
 **cell_ids** | **List[int]** |  | 
 **damage_decrease_step_percent** | **int** |  | [optional] 

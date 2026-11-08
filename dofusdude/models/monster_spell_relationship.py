@@ -32,7 +32,7 @@ class MonsterSpellRelationship(BaseModel):
     ankama_id: StrictInt
     name: StrictStr
     grade: StrictInt = Field(description="The spell grade assigned to this monster grade.")
-    url: StrictStr = Field(description="Grade-specific spell URL; already includes the `grade` query parameter.")
+    url: StrictStr = Field(description="URL for the assigned spell grade. Includes the `grade` query parameter.")
     image_urls: Optional[Images] = None
     __properties: ClassVar[List[str]] = ["ankama_id", "name", "grade", "url", "image_urls"]
 

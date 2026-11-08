@@ -1,5 +1,6 @@
 # Monster
 
+A monster with its grades, family, spawn locations and drops. Spell expansion is optional.
 
 ## Properties
 

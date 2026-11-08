@@ -193,7 +193,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.GameDataApi(api_client)
     game = 'game_example' # str | 
     language = 'language_example' # str | 
-    include = 'include_example' # str | Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade. (optional)
+    include = 'include_example' # str | Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell. (optional)
 
     try:
         # Get all monsters
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **game** | **str**|  | 
  **language** | **str**|  | 
- **include** | **str**| Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade. | [optional] 
+ **include** | **str**| Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell. | [optional] 
 
 ### Return type
 
@@ -467,7 +467,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.GameDataApi(api_client)
     game = 'game_example' # str | 
     language = 'language_example' # str | 
-    ankama_id = 56 # int | 
+    ankama_id = 0 # int | 
 
     try:
         # Get one area
@@ -613,7 +613,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.GameDataApi(api_client)
     game = 'game_example' # str | 
     language = 'language_example' # str | 
-    ankama_id = 56 # int | 
+    ankama_id = 1 # int | 
 
     try:
         # Get one class
@@ -759,8 +759,8 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.GameDataApi(api_client)
     game = 'game_example' # str | 
     language = 'language_example' # str | 
-    ankama_id = 56 # int | 
-    include = 'include_example' # str | Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade. (optional)
+    ankama_id = 31 # int | 
+    include = 'include_example' # str | Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell. (optional)
 
     try:
         # Get one monster
@@ -781,7 +781,7 @@ Name | Type | Description  | Notes
  **game** | **str**|  | 
  **language** | **str**|  | 
  **ankama_id** | **int**|  | 
- **include** | **str**| Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade. | [optional] 
+ **include** | **str**| Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell. | [optional] 
 
 ### Return type
 
@@ -835,7 +835,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     page_number = 1 # int |  (optional) (default to 1)
     page_size = 20 # int |  (optional) (default to 20)
     fields_monsters = 'fields_monsters_example' # str |  (optional)
-    include = 'include_example' # str | Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade. (optional)
+    include = 'include_example' # str | Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell. (optional)
 
     try:
         # List monsters
@@ -858,7 +858,7 @@ Name | Type | Description  | Notes
  **page_number** | **int**|  | [optional] [default to 1]
  **page_size** | **int**|  | [optional] [default to 20]
  **fields_monsters** | **str**|  | [optional] 
- **include** | **str**| Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. &#x60;spells.grade&#x60; inlines that grade only; &#x60;spells&#x60; inlines the complete spell with every available grade. | [optional] 
+ **include** | **str**| Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use &#x60;spells.grade&#x60; to embed the assigned spell grade. Use &#x60;spells&#x60; to embed every available grade of each assigned spell. | [optional] 
 
 ### Return type
 
@@ -909,7 +909,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.GameDataApi(api_client)
     game = 'game_example' # str | 
     language = 'language_example' # str | 
-    ankama_id = 56 # int | 
+    ankama_id = 201 # int | 
     grade = 56 # int | Return only the requested mapped spell grade in `levels`. (optional)
 
     try:
@@ -1057,7 +1057,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.GameDataApi(api_client)
     game = 'game_example' # str | 
     language = 'language_example' # str | 
-    ankama_id = 56 # int | 
+    ankama_id = 1 # int | 
 
     try:
         # Get one subarea
@@ -1203,7 +1203,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     api_instance = dofusdude.GameDataApi(api_client)
     game = 'game_example' # str | 
     language = 'language_example' # str | 
-    ankama_id = 56 # int | 
+    ankama_id = 0 # int | 
 
     try:
         # Get one super-area

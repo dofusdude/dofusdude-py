@@ -593,7 +593,7 @@ class GameDataApi:
         self,
         game: StrictStr,
         language: StrictStr,
-        include: Annotated[Optional[StrictStr], Field(description="Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.")] = None,
+        include: Annotated[Optional[StrictStr], Field(description="Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -614,7 +614,7 @@ class GameDataApi:
         :type game: str
         :param language: (required)
         :type language: str
-        :param include: Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+        :param include: Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
         :type include: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -667,7 +667,7 @@ class GameDataApi:
         self,
         game: StrictStr,
         language: StrictStr,
-        include: Annotated[Optional[StrictStr], Field(description="Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.")] = None,
+        include: Annotated[Optional[StrictStr], Field(description="Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -688,7 +688,7 @@ class GameDataApi:
         :type game: str
         :param language: (required)
         :type language: str
-        :param include: Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+        :param include: Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
         :type include: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -741,7 +741,7 @@ class GameDataApi:
         self,
         game: StrictStr,
         language: StrictStr,
-        include: Annotated[Optional[StrictStr], Field(description="Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.")] = None,
+        include: Annotated[Optional[StrictStr], Field(description="Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -762,7 +762,7 @@ class GameDataApi:
         :type game: str
         :param language: (required)
         :type language: str
-        :param include: Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+        :param include: Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
         :type include: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2931,7 +2931,7 @@ class GameDataApi:
         game: StrictStr,
         language: StrictStr,
         ankama_id: StrictInt,
-        include: Annotated[Optional[StrictStr], Field(description="Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.")] = None,
+        include: Annotated[Optional[StrictStr], Field(description="Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2954,7 +2954,7 @@ class GameDataApi:
         :type language: str
         :param ankama_id: (required)
         :type ankama_id: int
-        :param include: Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+        :param include: Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
         :type include: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -3010,7 +3010,7 @@ class GameDataApi:
         game: StrictStr,
         language: StrictStr,
         ankama_id: StrictInt,
-        include: Annotated[Optional[StrictStr], Field(description="Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.")] = None,
+        include: Annotated[Optional[StrictStr], Field(description="Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3033,7 +3033,7 @@ class GameDataApi:
         :type language: str
         :param ankama_id: (required)
         :type ankama_id: int
-        :param include: Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+        :param include: Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
         :type include: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -3089,7 +3089,7 @@ class GameDataApi:
         game: StrictStr,
         language: StrictStr,
         ankama_id: StrictInt,
-        include: Annotated[Optional[StrictStr], Field(description="Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.")] = None,
+        include: Annotated[Optional[StrictStr], Field(description="Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3112,7 +3112,7 @@ class GameDataApi:
         :type language: str
         :param ankama_id: (required)
         :type ankama_id: int
-        :param include: Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+        :param include: Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
         :type include: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -3240,7 +3240,7 @@ class GameDataApi:
         page_number: Optional[Annotated[int, Field(strict=True, ge=1)]] = None,
         page_size: Optional[Annotated[int, Field(le=100, strict=True, ge=1)]] = None,
         fields_monsters: Optional[StrictStr] = None,
-        include: Annotated[Optional[StrictStr], Field(description="Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.")] = None,
+        include: Annotated[Optional[StrictStr], Field(description="Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3267,7 +3267,7 @@ class GameDataApi:
         :type page_size: int
         :param fields_monsters:
         :type fields_monsters: str
-        :param include: Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+        :param include: Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
         :type include: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -3327,7 +3327,7 @@ class GameDataApi:
         page_number: Optional[Annotated[int, Field(strict=True, ge=1)]] = None,
         page_size: Optional[Annotated[int, Field(le=100, strict=True, ge=1)]] = None,
         fields_monsters: Optional[StrictStr] = None,
-        include: Annotated[Optional[StrictStr], Field(description="Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.")] = None,
+        include: Annotated[Optional[StrictStr], Field(description="Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3354,7 +3354,7 @@ class GameDataApi:
         :type page_size: int
         :param fields_monsters:
         :type fields_monsters: str
-        :param include: Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+        :param include: Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
         :type include: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -3414,7 +3414,7 @@ class GameDataApi:
         page_number: Optional[Annotated[int, Field(strict=True, ge=1)]] = None,
         page_size: Optional[Annotated[int, Field(le=100, strict=True, ge=1)]] = None,
         fields_monsters: Optional[StrictStr] = None,
-        include: Annotated[Optional[StrictStr], Field(description="Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.")] = None,
+        include: Annotated[Optional[StrictStr], Field(description="Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3441,7 +3441,7 @@ class GameDataApi:
         :type page_size: int
         :param fields_monsters:
         :type fields_monsters: str
-        :param include: Controls monster spell relationships. By default each monster grade contains a compact relationship whose URL selects the assigned spell grade. `spells.grade` inlines that grade only; `spells` inlines the complete spell with every available grade.
+        :param include: Optional spell expansion for monster responses. Leave include unset to return spell URLs. Use `spells.grade` to embed the assigned spell grade. Use `spells` to embed every available grade of each assigned spell.
         :type include: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

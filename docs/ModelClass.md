@@ -1,5 +1,6 @@
 # ModelClass
 
+A playable class with its characteristics, appearance and class spell assignments.
 
 ## Properties
 

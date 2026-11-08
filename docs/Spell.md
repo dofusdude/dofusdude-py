@@ -1,5 +1,6 @@
 # Spell
 
+A spell with its available grades, effects and casting rules.
 
 ## Properties
 

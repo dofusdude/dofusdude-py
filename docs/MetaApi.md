@@ -244,7 +244,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.MetaApi(api_client)
     language = 'fr' # str | a valid language code
-    query = 'abond' # str | case sensitive search query
+    query = 'experience' # str | case sensitive search query
     limit = 56 # int | maximum number of returned results (optional)
 
     try:
