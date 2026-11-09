@@ -28,11 +28,11 @@ from pydantic_core import to_jsonable_python
 
 class MonsterDrop(BaseModel):
     """
-    MonsterDrop
+    A possible item drop with base rates indexed by monster grade. Final player-specific chances also depend on conditions and game modifiers.
     """ # noqa: E501
     item: CombatReference
-    rates_percent: List[MonsterDropRatesPercentInner] = Field(description="Base drop percentage for each monster grade.")
-    has_conditions: StrictBool
+    rates_percent: List[MonsterDropRatesPercentInner] = Field(description="Base drop percentages indexed by MonsterGrade.grade, not spell grade or array position. A value of 5 means 5 percent, not 0.05 percent. These are not spawn percentages.")
+    has_conditions: StrictBool = Field(description="The source reports restrictions. Can be true without a complete client-side condition tree because server-only predicates are not exposed.")
     drop_id: Optional[StrictInt] = None
     count: Optional[StrictInt] = None
     condition: Optional[Dict[str, Any]] = None

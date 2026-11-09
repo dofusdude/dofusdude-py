@@ -42,24 +42,6 @@ class TestEligibilityNode(unittest.TestCase):
                     dofusdude.models.eligibility_node.EligibilityNode(
                         is_operand = True, 
                         relation = 'and', 
-                        children = [
-                            dofusdude.models.eligibility_node.EligibilityNode(
-                                is_operand = True, 
-                                relation = 'and', 
-                                condition = dofusdude.models.eligibility_node_condition.EligibilityNodeCondition(
-                                    operator = '', 
-                                    int_value = 56, 
-                                    quantity = 56, 
-                                    kind = '', 
-                                    unit = '', 
-                                    string_value = '', 
-                                    value_label = '', 
-                                    element = dofusdude.models.eligibility_node_condition_element.EligibilityNodeConditionElement(
-                                        id = 56, 
-                                        name = '', ), 
-                                    reference = { }, 
-                                    secondary_reference = { }, ), )
-                            ], 
                         condition = dofusdude.models.eligibility_node_condition.EligibilityNodeCondition(
                             operator = '', 
                             int_value = 56, 

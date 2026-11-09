@@ -336,7 +336,7 @@ class AlmanaxApi:
     def get_almanax_range(
         self,
         language: Annotated[StrictStr, Field(description="code")],
-        filter_bonus_type: Annotated[Optional[StrictStr], Field(description="ids from meta/{language}/almanax/bonuses")] = None,
+        filter_bonus_type: Annotated[Optional[StrictStr], Field(description="Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range.")] = None,
         range_from: Annotated[Optional[date], Field(description="yyyy-mm-dd")] = None,
         range_to: Annotated[Optional[date], Field(description="yyyy-mm-dd")] = None,
         range_size: Annotated[Optional[Annotated[int, Field(le=370, strict=True)]], Field(description="Size of the returned range. Disable to fully use the range by setting size to -1.")] = None,
@@ -361,7 +361,7 @@ class AlmanaxApi:
 
         :param language: code (required)
         :type language: str
-        :param filter_bonus_type: ids from meta/{language}/almanax/bonuses
+        :param filter_bonus_type: Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range.
         :type filter_bonus_type: str
         :param range_from: yyyy-mm-dd
         :type range_from: date
@@ -427,7 +427,7 @@ class AlmanaxApi:
     def get_almanax_range_with_http_info(
         self,
         language: Annotated[StrictStr, Field(description="code")],
-        filter_bonus_type: Annotated[Optional[StrictStr], Field(description="ids from meta/{language}/almanax/bonuses")] = None,
+        filter_bonus_type: Annotated[Optional[StrictStr], Field(description="Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range.")] = None,
         range_from: Annotated[Optional[date], Field(description="yyyy-mm-dd")] = None,
         range_to: Annotated[Optional[date], Field(description="yyyy-mm-dd")] = None,
         range_size: Annotated[Optional[Annotated[int, Field(le=370, strict=True)]], Field(description="Size of the returned range. Disable to fully use the range by setting size to -1.")] = None,
@@ -452,7 +452,7 @@ class AlmanaxApi:
 
         :param language: code (required)
         :type language: str
-        :param filter_bonus_type: ids from meta/{language}/almanax/bonuses
+        :param filter_bonus_type: Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range.
         :type filter_bonus_type: str
         :param range_from: yyyy-mm-dd
         :type range_from: date
@@ -518,7 +518,7 @@ class AlmanaxApi:
     def get_almanax_range_without_preload_content(
         self,
         language: Annotated[StrictStr, Field(description="code")],
-        filter_bonus_type: Annotated[Optional[StrictStr], Field(description="ids from meta/{language}/almanax/bonuses")] = None,
+        filter_bonus_type: Annotated[Optional[StrictStr], Field(description="Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range.")] = None,
         range_from: Annotated[Optional[date], Field(description="yyyy-mm-dd")] = None,
         range_to: Annotated[Optional[date], Field(description="yyyy-mm-dd")] = None,
         range_size: Annotated[Optional[Annotated[int, Field(le=370, strict=True)]], Field(description="Size of the returned range. Disable to fully use the range by setting size to -1.")] = None,
@@ -543,7 +543,7 @@ class AlmanaxApi:
 
         :param language: code (required)
         :type language: str
-        :param filter_bonus_type: ids from meta/{language}/almanax/bonuses
+        :param filter_bonus_type: Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range.
         :type filter_bonus_type: str
         :param range_from: yyyy-mm-dd
         :type range_from: date

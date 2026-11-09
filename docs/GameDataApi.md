@@ -910,7 +910,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     game = 'game_example' # str | 
     language = 'language_example' # str | 
     ankama_id = 201 # int | 
-    grade = 56 # int | Return only the requested mapped spell grade in `levels`. (optional)
+    grade = 56 # int | Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404. (optional)
 
     try:
         # Get one spell
@@ -931,7 +931,7 @@ Name | Type | Description  | Notes
  **game** | **str**|  | 
  **language** | **str**|  | 
  **ankama_id** | **int**|  | 
- **grade** | **int**| Return only the requested mapped spell grade in &#x60;levels&#x60;. | [optional] 
+ **grade** | **int**| Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404. | [optional] 
 
 ### Return type
 

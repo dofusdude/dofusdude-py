@@ -5,9 +5,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**operator** | **str** |  | [optional] 
+**operator** | **str** | Comparison to apply to the interpreted requirement value. | [optional] 
 **int_value** | **int** |  | [optional] 
 **element** | [**TranslatedId**](TranslatedId.md) |  | [optional] 
+**kind** | **str** | Interpreted requirement category, such as profession_level or item_received_age. Use this with the operator, values and references rather than decoding original condition tokens. | [optional] 
+**unit** | **str** | Unit associated with the requirement value when the interpreted condition supplies one. | [optional] 
+**quantity** | **int** |  | [optional] 
+**string_value** | **str** |  | [optional] 
+**value_label** | **str** |  | [optional] 
+**reference** | [**CombatReference**](CombatReference.md) |  | [optional] 
+**secondary_reference** | [**CombatReference**](CombatReference.md) |  | [optional] 
 
 ## Example
 

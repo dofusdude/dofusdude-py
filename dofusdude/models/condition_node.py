@@ -27,7 +27,7 @@ CONDITIONNODE_ONE_OF_SCHEMAS = ["ConditionLeaf", "ConditionRelation"]
 
 class ConditionNode(BaseModel):
     """
-    ConditionNode
+    Client-side requirement tree. Leaf nodes contain one condition and relation nodes combine children with and or or. Preserves grouping. Not an authoritative server eligibility decision.
     """
     # data type: ConditionRelation
     oneof_schema_1_validator: Optional[ConditionRelation] = None

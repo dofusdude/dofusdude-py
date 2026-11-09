@@ -18,25 +18,31 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from dofusdude.models.combat_reference import CombatReference
+from dofusdude.models.world_map_reference import WorldMapReference
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
 
 class WorldArea(BaseModel):
     """
-    WorldArea
+    Geographic data from a super-area, area or subarea endpoint. The hierarchy is super-area to area to subarea to map. Field availability depends on the selected geographic resource. Unrelated to combat-cell effect zones.
     """ # noqa: E501
     ankama_id: StrictInt
     name: StrictStr
+    world_map_id: Optional[StrictInt] = Field(default=None, description="World-map context supplied on super-area records.")
+    areas: Optional[List[CombatReference]] = Field(default=None, description="Child area references supplied on super-area records.")
+    level: Optional[StrictInt] = Field(default=None, description="Suggested geographic difficulty level supplied on subarea records. Not a monster grade or the level of every monster there.")
+    dungeon_id: Optional[StrictInt] = Field(default=None, description="Dungeon association when supplied by the subarea data.")
+    maps: Optional[List[WorldMapReference]] = Field(default=None, description="Map membership supplied on subarea records. Does not imply a spawn on every map.")
     super_area: Optional[CombatReference] = None
     area: Optional[CombatReference] = None
     subareas: Optional[List[CombatReference]] = None
     monsters: Optional[List[CombatReference]] = None
     additional_properties: Dict[str, Any] = {}
-    __properties: ClassVar[List[str]] = ["ankama_id", "name", "super_area", "area", "subareas", "monsters"]
+    __properties: ClassVar[List[str]] = ["ankama_id", "name", "world_map_id", "areas", "level", "dungeon_id", "maps", "super_area", "area", "subareas", "monsters"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -79,6 +85,18 @@ class WorldArea(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in areas (list)
+        _items = []
+        if self.areas:
+            for _item_areas in self.areas:
+                _items.append(_item_areas.to_dict() if _item_areas is not None else None)
+            _dict['areas'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in maps (list)
+        _items = []
+        if self.maps:
+            for _item_maps in self.maps:
+                _items.append(_item_maps.to_dict() if _item_maps is not None else None)
+            _dict['maps'] = _items
         # override the default output from pydantic by calling `to_dict()` of super_area
         if self.super_area:
             _dict['super_area'] = self.super_area.to_dict()
@@ -116,6 +134,11 @@ class WorldArea(BaseModel):
         _obj = cls.model_validate({
             "ankama_id": obj.get("ankama_id"),
             "name": obj.get("name"),
+            "world_map_id": obj.get("world_map_id"),
+            "areas": [CombatReference.from_dict(_item) for _item in obj["areas"]] if obj.get("areas") is not None else None,
+            "level": obj.get("level"),
+            "dungeon_id": obj.get("dungeon_id"),
+            "maps": [WorldMapReference.from_dict(_item) for _item in obj["maps"]] if obj.get("maps") is not None else None,
             "super_area": CombatReference.from_dict(obj["super_area"]) if obj.get("super_area") is not None else None,
             "area": CombatReference.from_dict(obj["area"]) if obj.get("area") is not None else None,
             "subareas": [CombatReference.from_dict(_item) for _item in obj["subareas"]] if obj.get("subareas") is not None else None,

@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictBool, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from dofusdude.models.effect_zone import EffectZone
 from dofusdude.models.target_mask import TargetMask
@@ -44,7 +44,7 @@ class SpellScriptUsage(BaseModel):
     condition: Optional[Dict[str, Any]] = None
     targets_affected_concurrently: Optional[StrictBool] = None
     target_treated_as_caster: Optional[StrictBool] = None
-    spell_level_ids: Optional[List[StrictInt]] = None
+    spell_level_ids: Optional[List[StrictInt]] = Field(default=None, description="Spell-level definition IDs to which this script binding applies. Match SpellLevel.ankama_id, not Spell.ankama_id or SpellLevel.grade.")
     __properties: ClassVar[List[str]] = ["ankama_id", "script_id", "order", "random", "random_group", "sequence_group", "activation_mask", "caster_mask", "target_mask", "activation_zone", "target_zone", "condition", "targets_affected_concurrently", "target_treated_as_caster", "spell_level_ids"]
 
     model_config = ConfigDict(

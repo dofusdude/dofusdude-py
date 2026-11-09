@@ -39,6 +39,8 @@ class TestSpellLevel(unittest.TestCase):
                 ankama_id = 56,
                 grade = 56,
                 ap_cost = 56,
+                critical_hit_probability = 56,
+                min_player_level = 56,
                 min_range = 56,
                 max_range = 56,
                 max_cast_per_turn = 56,
@@ -50,6 +52,95 @@ class TestSpellLevel(unittest.TestCase):
                 global_cooldown = 56,
                 ignore_prison_glyph = True,
                 spell_breed = 56,
+                states_criterion = dofusdude.models.eligibility_node.EligibilityNode(
+                    is_operand = True, 
+                    relation = 'and', 
+                    children = [
+                        dofusdude.models.eligibility_node.EligibilityNode(
+                            is_operand = True, 
+                            relation = 'and', 
+                            condition = dofusdude.models.eligibility_node_condition.EligibilityNodeCondition(
+                                operator = '', 
+                                int_value = 56, 
+                                quantity = 56, 
+                                kind = '', 
+                                unit = '', 
+                                string_value = '', 
+                                value_label = '', 
+                                element = dofusdude.models.eligibility_node_condition_element.EligibilityNodeConditionElement(
+                                    id = 56, 
+                                    name = '', ), 
+                                reference = { }, 
+                                secondary_reference = { }, ), )
+                        ], 
+                    condition = dofusdude.models.eligibility_node_condition.EligibilityNodeCondition(
+                        operator = '', 
+                        int_value = 56, 
+                        quantity = 56, 
+                        kind = '', 
+                        unit = '', 
+                        string_value = '', 
+                        value_label = '', 
+                        element = dofusdude.models.eligibility_node_condition_element.EligibilityNodeConditionElement(
+                            id = 56, 
+                            name = '', ), 
+                        reference = { }, 
+                        secondary_reference = { }, ), ),
+                preview_zones = [
+                    dofusdude.models.spell_preview_zone.SpellPreviewZone(
+                        ankama_id = 56, 
+                        activation_mask = dofusdude.models.target_mask.TargetMask(
+                            raw = '', 
+                            logic = '', 
+                            conditions = [
+                                { }
+                                ], 
+                            selectors = [
+                                { }
+                                ], ), 
+                        caster_mask = dofusdude.models.target_mask.TargetMask(
+                            raw = '', 
+                            logic = '', 
+                            conditions = [
+                                { }
+                                ], 
+                            selectors = [
+                                { }
+                                ], ), 
+                        hidden = True, 
+                        activation_zone = dofusdude.models.effect_zone.EffectZone(
+                            raw = '', 
+                            shape = dofusdude.models.zone_shape.ZoneShape(
+                                code = '', 
+                                name = '', ), 
+                            size = 56, 
+                            min_size = 56, 
+                            cell_ids = [
+                                56
+                                ], 
+                            damage_decrease_step_percent = 56, 
+                            max_damage_decrease_apply_count = 56, 
+                            forced_direction = 56, 
+                            include_carried = True, 
+                            stop_at_target = True, 
+                            only_affect_in_sight_line = True, ), 
+                        display_zone = dofusdude.models.effect_zone.EffectZone(
+                            raw = '', 
+                            shape = dofusdude.models.zone_shape.ZoneShape(
+                                code = '', 
+                                name = '', ), 
+                            size = 56, 
+                            min_size = 56, 
+                            cell_ids = [
+                                56
+                                ], 
+                            damage_decrease_step_percent = 56, 
+                            max_damage_decrease_apply_count = 56, 
+                            forced_direction = 56, 
+                            include_carried = True, 
+                            stop_at_target = True, 
+                            only_affect_in_sight_line = True, ), )
+                    ],
                 effects = [
                     { }
                     ],

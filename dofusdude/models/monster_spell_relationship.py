@@ -27,11 +27,11 @@ from pydantic_core import to_jsonable_python
 
 class MonsterSpellRelationship(BaseModel):
     """
-    MonsterSpellRelationship
+    Compact spell assignment inside one monster grade. The assignment's grade identifies the spell variant, not the enclosing monster variant. Follow url unchanged to retrieve it or use an include option to embed it.
     """ # noqa: E501
     ankama_id: StrictInt
     name: StrictStr
-    grade: StrictInt = Field(description="The spell grade assigned to this monster grade.")
+    grade: StrictInt = Field(description="Grade of the assigned spell. It does not need to equal the enclosing MonsterGrade.grade.")
     url: StrictStr = Field(description="URL for the assigned spell grade. Includes the `grade` query parameter.")
     image_urls: Optional[Images] = None
     __properties: ClassVar[List[str]] = ["ankama_id", "name", "grade", "url", "image_urls"]

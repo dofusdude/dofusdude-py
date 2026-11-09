@@ -18,7 +18,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
@@ -31,7 +31,7 @@ class MonsterSpawnLocationSubareaMapsInner(BaseModel):
     ankama_id: StrictInt
     position_x: StrictInt
     position_y: StrictInt
-    world_map_id: StrictInt
+    world_map_id: StrictInt = Field(description="World-map context for these coordinates. Coordinates alone are not a globally unique map identifier.")
     __properties: ClassVar[List[str]] = ["ankama_id", "position_x", "position_y", "world_map_id"]
 
     model_config = ConfigDict(

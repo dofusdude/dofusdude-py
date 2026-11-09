@@ -27,10 +27,10 @@ from pydantic_core import to_jsonable_python
 
 class MonsterGrade(BaseModel):
     """
-    MonsterGrade
+    One variant of this monster, combining combat level, statistics and spell assignments. Match grade-specific drop rates using its grade value. Do not use it to infer a spell grade.
     """ # noqa: E501
-    grade: StrictInt
-    level: StrictInt
+    grade: StrictInt = Field(description="Number identifying this variant within the monster. Not the combat level, array position or grade of an assigned spell.")
+    level: StrictInt = Field(description="Combat level of this monster variant. Distinct from its grade number.")
     life_points: Optional[StrictInt] = None
     action_points: Optional[StrictInt] = None
     movement_points: Optional[StrictInt] = None

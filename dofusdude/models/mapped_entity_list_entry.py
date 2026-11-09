@@ -27,7 +27,7 @@ from pydantic_core import to_jsonable_python
 
 class MappedEntityListEntry(BaseModel):
     """
-    MappedEntityListEntry
+    Compact collection summary. A missing detail field here does not mean the resource lacks that data. Request the single-record endpoint or the collection's full fields to obtain details.
     """ # noqa: E501
     ankama_id: StrictInt
     name: StrictStr

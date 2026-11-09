@@ -27,7 +27,7 @@ from pydantic_core import to_jsonable_python
 
 class WeaponCombat(BaseModel):
     """
-    WeaponCombat
+    Weapon attack targeting and area geometry. Available for weapon equipment. This is separate from spell effect zones.
     """ # noqa: E501
     zone: EffectZone
     cast_in_line: StrictBool

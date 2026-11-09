@@ -88,9 +88,11 @@ docs/SetsApi.md
 docs/Spell.md
 docs/SpellEffect.md
 docs/SpellLevel.md
+docs/SpellPreviewZone.md
 docs/SpellScriptUsage.md
 docs/SpellTrigger.md
 docs/SpellTriggers.md
+docs/SpellType.md
 docs/TargetMask.md
 docs/TargetSelector.md
 docs/TranslatedId.md
@@ -100,6 +102,7 @@ docs/Weapon.md
 docs/WeaponCombat.md
 docs/WebhooksApi.md
 docs/WorldArea.md
+docs/WorldMapReference.md
 docs/ZoneShape.md
 dofusdude/__init__.py
 dofusdude/api/__init__.py
@@ -193,9 +196,11 @@ dofusdude/models/rss_webhook.py
 dofusdude/models/spell.py
 dofusdude/models/spell_effect.py
 dofusdude/models/spell_level.py
+dofusdude/models/spell_preview_zone.py
 dofusdude/models/spell_script_usage.py
 dofusdude/models/spell_trigger.py
 dofusdude/models/spell_triggers.py
+dofusdude/models/spell_type.py
 dofusdude/models/target_mask.py
 dofusdude/models/target_selector.py
 dofusdude/models/translated_id.py
@@ -204,6 +209,7 @@ dofusdude/models/version.py
 dofusdude/models/weapon.py
 dofusdude/models/weapon_combat.py
 dofusdude/models/world_area.py
+dofusdude/models/world_map_reference.py
 dofusdude/models/zone_shape.py
 dofusdude/py.typed
 dofusdude/rest.py
@@ -298,9 +304,11 @@ test/test_sets_api.py
 test/test_spell.py
 test/test_spell_effect.py
 test/test_spell_level.py
+test/test_spell_preview_zone.py
 test/test_spell_script_usage.py
 test/test_spell_trigger.py
 test/test_spell_triggers.py
+test/test_spell_type.py
 test/test_target_mask.py
 test/test_target_selector.py
 test/test_translated_id.py
@@ -310,5 +318,6 @@ test/test_weapon.py
 test/test_weapon_combat.py
 test/test_webhooks_api.py
 test/test_world_area.py
+test/test_world_map_reference.py
 test/test_zone_shape.py
 tox.ini

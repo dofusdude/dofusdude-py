@@ -47,7 +47,26 @@ class TestMappedEntityCollectionSpellsInner(unittest.TestCase):
                 icon_id = 56,
                 admin_name = '',
                 order = 56,
-                type = { },
+                type = dofusdude.models.spell_type.SpellType(
+                    ankama_id = 56, 
+                    short_name = '', 
+                    long_name = '', ),
+                base_preview_zone = dofusdude.models.effect_zone.EffectZone(
+                    raw = '', 
+                    shape = dofusdude.models.zone_shape.ZoneShape(
+                        code = '', 
+                        name = '', ), 
+                    size = 56, 
+                    min_size = 56, 
+                    cell_ids = [
+                        56
+                        ], 
+                    damage_decrease_step_percent = 56, 
+                    max_damage_decrease_apply_count = 56, 
+                    forced_direction = 56, 
+                    include_carried = True, 
+                    stop_at_target = True, 
+                    only_affect_in_sight_line = True, ),
                 classes = [
                     { }
                     ],

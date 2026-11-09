@@ -3581,7 +3581,7 @@ class GameDataApi:
         game: StrictStr,
         language: StrictStr,
         ankama_id: StrictInt,
-        grade: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Return only the requested mapped spell grade in `levels`.")] = None,
+        grade: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3604,7 +3604,7 @@ class GameDataApi:
         :type language: str
         :param ankama_id: (required)
         :type ankama_id: int
-        :param grade: Return only the requested mapped spell grade in `levels`.
+        :param grade: Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404.
         :type grade: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -3660,7 +3660,7 @@ class GameDataApi:
         game: StrictStr,
         language: StrictStr,
         ankama_id: StrictInt,
-        grade: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Return only the requested mapped spell grade in `levels`.")] = None,
+        grade: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3683,7 +3683,7 @@ class GameDataApi:
         :type language: str
         :param ankama_id: (required)
         :type ankama_id: int
-        :param grade: Return only the requested mapped spell grade in `levels`.
+        :param grade: Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404.
         :type grade: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -3739,7 +3739,7 @@ class GameDataApi:
         game: StrictStr,
         language: StrictStr,
         ankama_id: StrictInt,
-        grade: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Return only the requested mapped spell grade in `levels`.")] = None,
+        grade: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -3762,7 +3762,7 @@ class GameDataApi:
         :type language: str
         :param ankama_id: (required)
         :type ankama_id: int
-        :param grade: Return only the requested mapped spell grade in `levels`.
+        :param grade: Select the spell variant identified by its explicit grade number, not its spell-level record ID or a player level. Returns the spell object with only that grade in levels. An unavailable grade returns 404.
         :type grade: int
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

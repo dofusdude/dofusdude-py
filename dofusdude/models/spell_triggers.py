@@ -27,7 +27,7 @@ from pydantic_core import to_jsonable_python
 
 class SpellTriggers(BaseModel):
     """
-    SpellTriggers
+    Determines when an effect activates. Events are not additional effects to apply unconditionally. Use logic with the resolved event names and descriptions instead of parsing raw tokens.
     """ # noqa: E501
     raw: StrictStr = Field(description="Original trigger tokens retained for lossless debugging.")
     logic: Optional[StrictStr] = None

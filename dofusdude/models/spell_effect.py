@@ -18,9 +18,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
-from typing import Any, ClassVar, Dict, List, Optional
-from dofusdude.models.combat_reference import CombatReference
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional, Union
 from dofusdude.models.effect_zone import EffectZone
 from dofusdude.models.spell_triggers import SpellTriggers
 from dofusdude.models.target_mask import TargetMask
@@ -30,14 +29,14 @@ from pydantic_core import to_jsonable_python
 
 class SpellEffect(BaseModel):
     """
-    SpellEffect
+    One normal or critical effect of a particular spell grade. Its zone defines where it applies, target_mask defines eligible targets and triggers defines activation events. Templated text is for display, not a formula to parse.
     """ # noqa: E501
-    type: Optional[CombatReference] = None
+    type: Optional[StrictStr] = Field(default=None, description="Localized effect category, such as Air damage. This is not a spell ID or a structured game reference.")
     min: Optional[StrictInt] = None
     max: Optional[StrictInt] = None
-    duration: Optional[StrictInt] = None
-    delay: Optional[StrictInt] = None
-    random: Optional[StrictInt] = None
+    duration: Optional[StrictInt] = Field(default=None, description="Effect duration in fight turns as represented by the source. Not a real-time duration in seconds.")
+    delay: Optional[StrictInt] = Field(default=None, description="Delay before the effect in fight turns as represented by the source.")
+    random: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Source random-selection value. Do not interpret it as a percentage without the effect's selection rules.")
     group: Optional[StrictInt] = None
     dispellable: Optional[StrictInt] = None
     effect_uid: Optional[StrictInt] = Field(default=None, description="Stable identifier of this concrete effect instance.")
@@ -48,7 +47,7 @@ class SpellEffect(BaseModel):
     zone: Optional[EffectZone] = None
     target_mask: Optional[TargetMask] = None
     triggers: Optional[SpellTriggers] = None
-    templated: Optional[Dict[str, Any]] = None
+    templated: Optional[StrictStr] = Field(default=None, description="Localized effect text suitable for display. Numeric effect properties remain available separately.")
     additional_properties: Dict[str, Any] = {}
     __properties: ClassVar[List[str]] = ["type", "min", "max", "duration", "delay", "random", "group", "dispellable", "effect_uid", "target_id", "triggered_duration", "display_zero", "modifier", "zone", "target_mask", "triggers", "templated"]
 
@@ -93,9 +92,6 @@ class SpellEffect(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of type
-        if self.type:
-            _dict['type'] = self.type.to_dict()
         # override the default output from pydantic by calling `to_dict()` of zone
         if self.zone:
             _dict['zone'] = self.zone.to_dict()
@@ -122,7 +118,7 @@ class SpellEffect(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "type": CombatReference.from_dict(obj["type"]) if obj.get("type") is not None else None,
+            "type": obj.get("type"),
             "min": obj.get("min"),
             "max": obj.get("max"),
             "duration": obj.get("duration"),

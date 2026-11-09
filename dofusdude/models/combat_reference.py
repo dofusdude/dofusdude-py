@@ -26,7 +26,7 @@ from pydantic_core import to_jsonable_python
 
 class CombatReference(BaseModel):
     """
-    A resolved game reference used by selectors, conditions, and triggers.
+    A compact resolved reference, not a complete resource. Interpret the ID in the context of the containing field. IDs in different resource types can have the same numeric value without referring to the same entity.
     """ # noqa: E501
     ankama_id: Optional[StrictInt] = None
     name: Optional[StrictStr] = None

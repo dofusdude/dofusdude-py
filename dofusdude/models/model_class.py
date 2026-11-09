@@ -43,7 +43,7 @@ class ModelClass(BaseModel):
     characteristic_costs: Optional[Dict[str, List[ClassCharacteristicCostsValueInner]]] = Field(default=None, description="Characteristic point-cost tiers keyed by characteristic name.")
     image_urls: Optional[Images] = None
     looks: ClassLooks
-    spells: List[Spell] = Field(description="Fully mapped class spells, including levels, effects, targeting, and zones.")
+    spells: List[Spell] = Field(description="Full spell definitions assigned to this playable class, including their own grades, effects and targeting. A class has no monster-grade dimension. The same spells are independently available from the spells endpoint.")
     additional_properties: Dict[str, Any] = {}
     __properties: ClassVar[List[str]] = ["ankama_id", "name", "description", "gameplay_description", "complexity", "sort_index", "creature_bones_id", "roles", "characteristic_costs", "image_urls", "looks", "spells"]
 

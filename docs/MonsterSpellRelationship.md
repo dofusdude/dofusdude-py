@@ -1,5 +1,6 @@
 # MonsterSpellRelationship
 
+Compact spell assignment inside one monster grade. The assignment's grade identifies the spell variant, not the enclosing monster variant. Follow url unchanged to retrieve it or use an include option to embed it.
 
 ## Properties
 
@@ -7,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ankama_id** | **int** |  | 
 **name** | **str** |  | 
-**grade** | **int** | The spell grade assigned to this monster grade. | 
+**grade** | **int** | Grade of the assigned spell. It does not need to equal the enclosing MonsterGrade.grade. | 
 **url** | **str** | URL for the assigned spell grade. Includes the &#x60;grade&#x60; query parameter. | 
 **image_urls** | [**Images**](Images.md) |  | [optional] 
 

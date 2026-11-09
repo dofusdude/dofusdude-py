@@ -18,35 +18,41 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictBool, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
+from dofusdude.models.eligibility_node import EligibilityNode
 from dofusdude.models.spell_effect import SpellEffect
+from dofusdude.models.spell_preview_zone import SpellPreviewZone
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
 
 class SpellLevel(BaseModel):
     """
-    SpellLevel
+    One grade of a spell. The levels array contains these spell variants, not player levels. Grade numbers are local to the containing spell and are independent of monster grades.
     """ # noqa: E501
-    ankama_id: Optional[StrictInt] = None
-    grade: Optional[StrictInt] = None
-    ap_cost: Optional[StrictInt] = None
-    min_range: Optional[StrictInt] = None
-    max_range: Optional[StrictInt] = None
-    max_cast_per_turn: Optional[StrictInt] = None
+    ankama_id: Optional[StrictInt] = Field(default=None, description="ID of the spell-level definition. Different from the parent spell ID and from the grade number. Used by explicit spell-level references such as script spell_level_ids.")
+    grade: Optional[StrictInt] = Field(default=None, description="Number identifying this variant within its spell. Select by this value, not by the array position. Used by the spell detail endpoint's grade parameter.")
+    ap_cost: Optional[StrictInt] = Field(default=None, description="Action points required to cast this spell grade.")
+    critical_hit_probability: Optional[StrictInt] = Field(default=None, description="Base critical-hit percentage recorded for this spell grade, before fighter-specific modifiers.")
+    min_player_level: Optional[StrictInt] = Field(default=None, description="Player-level requirement recorded for this spell grade. This is not its grade number or a monster combat level.")
+    min_range: Optional[StrictInt] = Field(default=None, description="Minimum casting range in combat cells.")
+    max_range: Optional[StrictInt] = Field(default=None, description="Maximum casting range in combat cells as defined by this grade.")
+    max_cast_per_turn: Optional[StrictInt] = Field(default=None, description="Per-caster cast limit within a turn as recorded by the source.")
     max_cast_per_target: Optional[StrictInt] = None
     max_global_cast_per_turn: Optional[StrictInt] = None
     max_global_cast_per_target: Optional[StrictInt] = None
-    min_cast_interval: Optional[StrictInt] = None
-    initial_cooldown: Optional[StrictInt] = None
+    min_cast_interval: Optional[StrictInt] = Field(default=None, description="Minimum interval between casts, measured in fight turns.")
+    initial_cooldown: Optional[StrictInt] = Field(default=None, description="Initial wait before casting, measured in fight turns.")
     global_cooldown: Optional[StrictInt] = None
     ignore_prison_glyph: Optional[StrictBool] = None
     spell_breed: Optional[StrictInt] = None
-    effects: Optional[List[SpellEffect]] = None
-    critical_effects: Optional[List[SpellEffect]] = None
+    states_criterion: Optional[EligibilityNode] = Field(default=None, description="Available client-side state requirements for this spell grade. Null does not assert that the server imposes no restriction.")
+    preview_zones: Optional[List[SpellPreviewZone]] = Field(default=None, description="Client preview and activation geometry for this grade. Use each effect's zone for its actual effect-area definition.")
+    effects: Optional[List[SpellEffect]] = Field(default=None, description="Normal-cast effects for this grade. Each entry has independent targeting and area geometry.")
+    critical_effects: Optional[List[SpellEffect]] = Field(default=None, description="Critical-cast effects for this grade. Keep separate from normal effects rather than applying both arrays to every cast.")
     additional_properties: Dict[str, Any] = {}
-    __properties: ClassVar[List[str]] = ["ankama_id", "grade", "ap_cost", "min_range", "max_range", "max_cast_per_turn", "max_cast_per_target", "max_global_cast_per_turn", "max_global_cast_per_target", "min_cast_interval", "initial_cooldown", "global_cooldown", "ignore_prison_glyph", "spell_breed", "effects", "critical_effects"]
+    __properties: ClassVar[List[str]] = ["ankama_id", "grade", "ap_cost", "critical_hit_probability", "min_player_level", "min_range", "max_range", "max_cast_per_turn", "max_cast_per_target", "max_global_cast_per_turn", "max_global_cast_per_target", "min_cast_interval", "initial_cooldown", "global_cooldown", "ignore_prison_glyph", "spell_breed", "states_criterion", "preview_zones", "effects", "critical_effects"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -89,6 +95,15 @@ class SpellLevel(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of states_criterion
+        if self.states_criterion:
+            _dict['states_criterion'] = self.states_criterion.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in preview_zones (list)
+        _items = []
+        if self.preview_zones:
+            for _item_preview_zones in self.preview_zones:
+                _items.append(_item_preview_zones.to_dict() if _item_preview_zones is not None else None)
+            _dict['preview_zones'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in effects (list)
         _items = []
         if self.effects:
@@ -106,6 +121,11 @@ class SpellLevel(BaseModel):
             for _key, _value in self.additional_properties.items():
                 _dict[_key] = _value
 
+        # set to None if states_criterion (nullable) is None
+        # and model_fields_set contains the field
+        if self.states_criterion is None and "states_criterion" in self.model_fields_set:
+            _dict['states_criterion'] = None
+
         return _dict
 
     @classmethod
@@ -121,6 +141,8 @@ class SpellLevel(BaseModel):
             "ankama_id": obj.get("ankama_id"),
             "grade": obj.get("grade"),
             "ap_cost": obj.get("ap_cost"),
+            "critical_hit_probability": obj.get("critical_hit_probability"),
+            "min_player_level": obj.get("min_player_level"),
             "min_range": obj.get("min_range"),
             "max_range": obj.get("max_range"),
             "max_cast_per_turn": obj.get("max_cast_per_turn"),
@@ -132,6 +154,8 @@ class SpellLevel(BaseModel):
             "global_cooldown": obj.get("global_cooldown"),
             "ignore_prison_glyph": obj.get("ignore_prison_glyph"),
             "spell_breed": obj.get("spell_breed"),
+            "states_criterion": EligibilityNode.from_dict(obj["states_criterion"]) if obj.get("states_criterion") is not None else None,
+            "preview_zones": [SpellPreviewZone.from_dict(_item) for _item in obj["preview_zones"]] if obj.get("preview_zones") is not None else None,
             "effects": [SpellEffect.from_dict(_item) for _item in obj["effects"]] if obj.get("effects") is not None else None,
             "critical_effects": [SpellEffect.from_dict(_item) for _item in obj["critical_effects"]] if obj.get("critical_effects") is not None else None
         })

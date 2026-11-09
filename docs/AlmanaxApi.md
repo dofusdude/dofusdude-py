@@ -120,7 +120,7 @@ with dofusdude.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dofusdude.AlmanaxApi(api_client)
     language = 'fr' # str | code
-    filter_bonus_type = 'experience-points' # str | ids from meta/{language}/almanax/bonuses (optional)
+    filter_bonus_type = 'filter_bonus_type_example' # str | Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range. (optional)
     range_from = '2013-10-20' # date | yyyy-mm-dd (optional)
     range_to = '2013-10-20' # date | yyyy-mm-dd (optional)
     range_size = -1 # int | Size of the returned range. Disable to fully use the range by setting size to -1. (optional)
@@ -144,7 +144,7 @@ with dofusdude.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **language** | **str**| code | 
- **filter_bonus_type** | **str**| ids from meta/{language}/almanax/bonuses | [optional] 
+ **filter_bonus_type** | **str**| Optional bonus ID from meta/{language}/almanax/bonuses. Restricts the selected date range and can produce no results when that bonus does not occur in the range. | [optional] 
  **range_from** | **date**| yyyy-mm-dd | [optional] 
  **range_to** | **date**| yyyy-mm-dd | [optional] 
  **range_size** | **int**| Size of the returned range. Disable to fully use the range by setting size to -1. | [optional] 

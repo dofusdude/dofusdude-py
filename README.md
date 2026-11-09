@@ -284,9 +284,11 @@ Class | Method | HTTP request | Description
  - [Spell](docs/Spell.md)
  - [SpellEffect](docs/SpellEffect.md)
  - [SpellLevel](docs/SpellLevel.md)
+ - [SpellPreviewZone](docs/SpellPreviewZone.md)
  - [SpellScriptUsage](docs/SpellScriptUsage.md)
  - [SpellTrigger](docs/SpellTrigger.md)
  - [SpellTriggers](docs/SpellTriggers.md)
+ - [SpellType](docs/SpellType.md)
  - [TargetMask](docs/TargetMask.md)
  - [TargetSelector](docs/TargetSelector.md)
  - [TranslatedId](docs/TranslatedId.md)
@@ -295,6 +297,7 @@ Class | Method | HTTP request | Description
  - [Weapon](docs/Weapon.md)
  - [WeaponCombat](docs/WeaponCombat.md)
  - [WorldArea](docs/WorldArea.md)
+ - [WorldMapReference](docs/WorldMapReference.md)
  - [ZoneShape](docs/ZoneShape.md)
 
 

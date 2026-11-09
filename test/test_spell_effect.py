@@ -36,12 +36,12 @@ class TestSpellEffect(unittest.TestCase):
         model = SpellEffect()
         if include_optional:
             return SpellEffect(
-                type = { },
+                type = '',
                 min = 56,
                 max = 56,
                 duration = 56,
                 delay = 56,
-                random = 56,
+                random = 1.337,
                 group = 56,
                 dispellable = 56,
                 effect_uid = 56,
@@ -80,7 +80,7 @@ class TestSpellEffect(unittest.TestCase):
                     events = [
                         { }
                         ], ),
-                templated = { }
+                templated = ''
             )
         else:
             return SpellEffect(

@@ -18,8 +18,9 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from dofusdude.models.combat_reference import CombatReference
 from dofusdude.models.translated_id import TranslatedId
 from typing import Optional, Set
 from typing_extensions import Self
@@ -29,10 +30,17 @@ class Condition(BaseModel):
     """
     Condition
     """ # noqa: E501
-    operator: Optional[StrictStr] = None
+    operator: Optional[StrictStr] = Field(default=None, description="Comparison to apply to the interpreted requirement value.")
     int_value: Optional[StrictInt] = None
     element: Optional[TranslatedId] = None
-    __properties: ClassVar[List[str]] = ["operator", "int_value", "element"]
+    kind: Optional[StrictStr] = Field(default=None, description="Interpreted requirement category, such as profession_level or item_received_age. Use this with the operator, values and references rather than decoding original condition tokens.")
+    unit: Optional[StrictStr] = Field(default=None, description="Unit associated with the requirement value when the interpreted condition supplies one.")
+    quantity: Optional[StrictInt] = None
+    string_value: Optional[StrictStr] = None
+    value_label: Optional[StrictStr] = None
+    reference: Optional[CombatReference] = None
+    secondary_reference: Optional[CombatReference] = None
+    __properties: ClassVar[List[str]] = ["operator", "int_value", "element", "kind", "unit", "quantity", "string_value", "value_label", "reference", "secondary_reference"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -76,6 +84,12 @@ class Condition(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of element
         if self.element:
             _dict['element'] = self.element.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of reference
+        if self.reference:
+            _dict['reference'] = self.reference.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of secondary_reference
+        if self.secondary_reference:
+            _dict['secondary_reference'] = self.secondary_reference.to_dict()
         return _dict
 
     @classmethod
@@ -90,7 +104,14 @@ class Condition(BaseModel):
         _obj = cls.model_validate({
             "operator": obj.get("operator"),
             "int_value": obj.get("int_value"),
-            "element": TranslatedId.from_dict(obj["element"]) if obj.get("element") is not None else None
+            "element": TranslatedId.from_dict(obj["element"]) if obj.get("element") is not None else None,
+            "kind": obj.get("kind"),
+            "unit": obj.get("unit"),
+            "quantity": obj.get("quantity"),
+            "string_value": obj.get("string_value"),
+            "value_label": obj.get("value_label"),
+            "reference": CombatReference.from_dict(obj["reference"]) if obj.get("reference") is not None else None,
+            "secondary_reference": CombatReference.from_dict(obj["secondary_reference"]) if obj.get("secondary_reference") is not None else None
         })
         return _obj
 

@@ -1,13 +1,14 @@
 # MonsterDrop
 
+A possible item drop with base rates indexed by monster grade. Final player-specific chances also depend on conditions and game modifiers.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item** | [**CombatReference**](CombatReference.md) |  | 
-**rates_percent** | [**List[MonsterDropRatesPercentInner]**](MonsterDropRatesPercentInner.md) | Base drop percentage for each monster grade. | 
-**has_conditions** | **bool** |  | 
+**rates_percent** | [**List[MonsterDropRatesPercentInner]**](MonsterDropRatesPercentInner.md) | Base drop percentages indexed by MonsterGrade.grade, not spell grade or array position. A value of 5 means 5 percent, not 0.05 percent. These are not spawn percentages. | 
+**has_conditions** | **bool** | The source reports restrictions. Can be true without a complete client-side condition tree because server-only predicates are not exposed. | 
 **drop_id** | **int** |  | [optional] 
 **count** | **int** |  | [optional] 
 **condition** | **Dict[str, object]** |  | [optional] 

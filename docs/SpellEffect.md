@@ -1,16 +1,17 @@
 # SpellEffect
 
+One normal or critical effect of a particular spell grade. Its zone defines where it applies, target_mask defines eligible targets and triggers defines activation events. Templated text is for display, not a formula to parse.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**CombatReference**](CombatReference.md) |  | [optional] 
+**type** | **str** | Localized effect category, such as Air damage. This is not a spell ID or a structured game reference. | [optional] 
 **min** | **int** |  | [optional] 
 **max** | **int** |  | [optional] 
-**duration** | **int** |  | [optional] 
-**delay** | **int** |  | [optional] 
-**random** | **int** |  | [optional] 
+**duration** | **int** | Effect duration in fight turns as represented by the source. Not a real-time duration in seconds. | [optional] 
+**delay** | **int** | Delay before the effect in fight turns as represented by the source. | [optional] 
+**random** | **float** | Source random-selection value. Do not interpret it as a percentage without the effect&#39;s selection rules. | [optional] 
 **group** | **int** |  | [optional] 
 **dispellable** | **int** |  | [optional] 
 **effect_uid** | **int** | Stable identifier of this concrete effect instance. | [optional] 
@@ -21,7 +22,7 @@ Name | Type | Description | Notes
 **zone** | [**EffectZone**](EffectZone.md) |  | [optional] 
 **target_mask** | [**TargetMask**](TargetMask.md) |  | [optional] 
 **triggers** | [**SpellTriggers**](SpellTriggers.md) |  | [optional] 
-**templated** | **Dict[str, object]** |  | [optional] 
+**templated** | **str** | Localized effect text suitable for display. Numeric effect properties remain available separately. | [optional] 
 
 ## Example
 

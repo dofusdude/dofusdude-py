@@ -42,7 +42,14 @@ class TestConditionLeaf(unittest.TestCase):
                     int_value = 56, 
                     element = dofusdude.models.translated_id.TranslatedId(
                         id = 56, 
-                        name = '', ), )
+                        name = '', ), 
+                    kind = '', 
+                    unit = '', 
+                    quantity = 56, 
+                    string_value = '', 
+                    value_label = '', 
+                    reference = { }, 
+                    secondary_reference = { }, )
             )
         else:
             return ConditionLeaf(

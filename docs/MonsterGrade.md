@@ -1,12 +1,13 @@
 # MonsterGrade
 
+One variant of this monster, combining combat level, statistics and spell assignments. Match grade-specific drop rates using its grade value. Do not use it to infer a spell grade.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**grade** | **int** |  | 
-**level** | **int** |  | 
+**grade** | **int** | Number identifying this variant within the monster. Not the combat level, array position or grade of an assigned spell. | 
+**level** | **int** | Combat level of this monster variant. Distinct from its grade number. | 
 **life_points** | **int** |  | [optional] 
 **action_points** | **int** |  | [optional] 
 **movement_points** | **int** |  | [optional] 

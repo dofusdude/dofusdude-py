@@ -87,9 +87,11 @@ from dofusdude.models.rss_webhook import RssWebhook
 from dofusdude.models.spell import Spell
 from dofusdude.models.spell_effect import SpellEffect
 from dofusdude.models.spell_level import SpellLevel
+from dofusdude.models.spell_preview_zone import SpellPreviewZone
 from dofusdude.models.spell_script_usage import SpellScriptUsage
 from dofusdude.models.spell_trigger import SpellTrigger
 from dofusdude.models.spell_triggers import SpellTriggers
+from dofusdude.models.spell_type import SpellType
 from dofusdude.models.target_mask import TargetMask
 from dofusdude.models.target_selector import TargetSelector
 from dofusdude.models.translated_id import TranslatedId
@@ -98,5 +100,6 @@ from dofusdude.models.version import Version
 from dofusdude.models.weapon import Weapon
 from dofusdude.models.weapon_combat import WeaponCombat
 from dofusdude.models.world_area import WorldArea
+from dofusdude.models.world_map_reference import WorldMapReference
 from dofusdude.models.zone_shape import ZoneShape
 

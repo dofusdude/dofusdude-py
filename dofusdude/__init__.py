@@ -113,9 +113,11 @@ __all__ = [
     "Spell",
     "SpellEffect",
     "SpellLevel",
+    "SpellPreviewZone",
     "SpellScriptUsage",
     "SpellTrigger",
     "SpellTriggers",
+    "SpellType",
     "TargetMask",
     "TargetSelector",
     "TranslatedId",
@@ -124,6 +126,7 @@ __all__ = [
     "Weapon",
     "WeaponCombat",
     "WorldArea",
+    "WorldMapReference",
     "ZoneShape",
 ]
 
@@ -226,9 +229,11 @@ from dofusdude.models.rss_webhook import RssWebhook as RssWebhook
 from dofusdude.models.spell import Spell as Spell
 from dofusdude.models.spell_effect import SpellEffect as SpellEffect
 from dofusdude.models.spell_level import SpellLevel as SpellLevel
+from dofusdude.models.spell_preview_zone import SpellPreviewZone as SpellPreviewZone
 from dofusdude.models.spell_script_usage import SpellScriptUsage as SpellScriptUsage
 from dofusdude.models.spell_trigger import SpellTrigger as SpellTrigger
 from dofusdude.models.spell_triggers import SpellTriggers as SpellTriggers
+from dofusdude.models.spell_type import SpellType as SpellType
 from dofusdude.models.target_mask import TargetMask as TargetMask
 from dofusdude.models.target_selector import TargetSelector as TargetSelector
 from dofusdude.models.translated_id import TranslatedId as TranslatedId
@@ -237,5 +242,6 @@ from dofusdude.models.version import Version as Version
 from dofusdude.models.weapon import Weapon as Weapon
 from dofusdude.models.weapon_combat import WeaponCombat as WeaponCombat
 from dofusdude.models.world_area import WorldArea as WorldArea
+from dofusdude.models.world_map_reference import WorldMapReference as WorldMapReference
 from dofusdude.models.zone_shape import ZoneShape as ZoneShape
 

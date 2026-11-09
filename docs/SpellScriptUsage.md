@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **condition** | **Dict[str, object]** |  | [optional] 
 **targets_affected_concurrently** | **bool** |  | [optional] 
 **target_treated_as_caster** | **bool** |  | [optional] 
-**spell_level_ids** | **List[int]** |  | [optional] 
+**spell_level_ids** | **List[int]** | Spell-level definition IDs to which this script binding applies. Match SpellLevel.ankama_id, not Spell.ankama_id or SpellLevel.grade. | [optional] 
 
 ## Example
 

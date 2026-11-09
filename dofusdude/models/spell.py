@@ -18,12 +18,14 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from dofusdude.models.combat_reference import CombatReference
+from dofusdude.models.effect_zone import EffectZone
 from dofusdude.models.images import Images
 from dofusdude.models.spell_level import SpellLevel
 from dofusdude.models.spell_script_usage import SpellScriptUsage
+from dofusdude.models.spell_type import SpellType
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
@@ -39,14 +41,15 @@ class Spell(BaseModel):
     admin_name: Optional[StrictStr] = None
     order: Optional[StrictInt] = None
     image_urls: Optional[Images] = None
-    type: Optional[CombatReference] = None
-    classes: Optional[List[CombatReference]] = None
-    monsters: Optional[List[CombatReference]] = None
-    levels: List[SpellLevel]
+    type: Optional[SpellType] = None
+    base_preview_zone: Optional[EffectZone] = None
+    classes: Optional[List[CombatReference]] = Field(default=None, description="Reverse references to playable classes associated with this spell. These are compact references, not complete class documents.")
+    monsters: Optional[List[CombatReference]] = Field(default=None, description="Reverse references to monsters associated with this spell. Use a monster's grade-specific assignments to determine which spell grade it uses.")
+    levels: List[SpellLevel] = Field(description="Available spell grades. Despite the field name, entries are not player levels. A grade-filtered detail response contains only the requested entry while retaining the parent spell object.")
     scripts: Optional[List[SpellScriptUsage]] = None
     critical_scripts: Optional[List[SpellScriptUsage]] = None
     additional_properties: Dict[str, Any] = {}
-    __properties: ClassVar[List[str]] = ["ankama_id", "name", "description", "icon_id", "admin_name", "order", "image_urls", "type", "classes", "monsters", "levels", "scripts", "critical_scripts"]
+    __properties: ClassVar[List[str]] = ["ankama_id", "name", "description", "icon_id", "admin_name", "order", "image_urls", "type", "base_preview_zone", "classes", "monsters", "levels", "scripts", "critical_scripts"]
 
     model_config = ConfigDict(
         validate_by_name=True,
@@ -95,6 +98,9 @@ class Spell(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of type
         if self.type:
             _dict['type'] = self.type.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of base_preview_zone
+        if self.base_preview_zone:
+            _dict['base_preview_zone'] = self.base_preview_zone.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in classes (list)
         _items = []
         if self.classes:
@@ -149,7 +155,8 @@ class Spell(BaseModel):
             "admin_name": obj.get("admin_name"),
             "order": obj.get("order"),
             "image_urls": Images.from_dict(obj["image_urls"]) if obj.get("image_urls") is not None else None,
-            "type": CombatReference.from_dict(obj["type"]) if obj.get("type") is not None else None,
+            "type": SpellType.from_dict(obj["type"]) if obj.get("type") is not None else None,
+            "base_preview_zone": EffectZone.from_dict(obj["base_preview_zone"]) if obj.get("base_preview_zone") is not None else None,
             "classes": [CombatReference.from_dict(_item) for _item in obj["classes"]] if obj.get("classes") is not None else None,
             "monsters": [CombatReference.from_dict(_item) for _item in obj["monsters"]] if obj.get("monsters") is not None else None,
             "levels": [SpellLevel.from_dict(_item) for _item in obj["levels"]] if obj.get("levels") is not None else None,

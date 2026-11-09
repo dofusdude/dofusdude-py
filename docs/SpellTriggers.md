@@ -1,5 +1,6 @@
 # SpellTriggers
 
+Determines when an effect activates. Events are not additional effects to apply unconditionally. Use logic with the resolved event names and descriptions instead of parsing raw tokens.
 
 ## Properties
 

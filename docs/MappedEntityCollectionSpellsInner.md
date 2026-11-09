@@ -12,10 +12,11 @@ Name | Type | Description | Notes
 **icon_id** | **int** |  | [optional] 
 **admin_name** | **str** |  | [optional] 
 **order** | **int** |  | [optional] 
-**type** | [**CombatReference**](CombatReference.md) |  | [optional] 
-**classes** | [**List[CombatReference]**](CombatReference.md) |  | [optional] 
-**monsters** | [**List[CombatReference]**](CombatReference.md) |  | [optional] 
-**levels** | [**List[SpellLevel]**](SpellLevel.md) |  | 
+**type** | [**SpellType**](SpellType.md) |  | [optional] 
+**base_preview_zone** | [**EffectZone**](EffectZone.md) |  | [optional] 
+**classes** | [**List[CombatReference]**](CombatReference.md) | Reverse references to playable classes associated with this spell. These are compact references, not complete class documents. | [optional] 
+**monsters** | [**List[CombatReference]**](CombatReference.md) | Reverse references to monsters associated with this spell. Use a monster&#39;s grade-specific assignments to determine which spell grade it uses. | [optional] 
+**levels** | [**List[SpellLevel]**](SpellLevel.md) | Available spell grades. Despite the field name, entries are not player levels. A grade-filtered detail response contains only the requested entry while retaining the parent spell object. | 
 **scripts** | [**List[SpellScriptUsage]**](SpellScriptUsage.md) |  | [optional] 
 **critical_scripts** | [**List[SpellScriptUsage]**](SpellScriptUsage.md) |  | [optional] 
 

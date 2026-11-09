@@ -28,7 +28,7 @@ from pydantic_core import to_jsonable_python
 
 class TargetMask(BaseModel):
     """
-    TargetMask
+    Determines who an effect may affect. Combine the resolved selectors and conditions using logic. This is distinct from the zone geometry and from the event that triggers the effect.
     """ # noqa: E501
     raw: StrictStr = Field(description="Original game mask retained for lossless debugging.")
     logic: Optional[StrictStr] = None

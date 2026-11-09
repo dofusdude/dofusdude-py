@@ -27,7 +27,7 @@ from pydantic_core import to_jsonable_python
 
 class ClassAppearance(BaseModel):
     """
-    ClassAppearance
+    Structured client appearance data for an asset renderer. Bone and skin IDs are not image URLs. Use the parent record's image_urls for ready-to-display artwork.
     """ # noqa: E501
     bones_id: StrictInt
     skin_ids: List[StrictInt]

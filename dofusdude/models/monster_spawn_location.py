@@ -28,13 +28,13 @@ from pydantic_core import to_jsonable_python
 
 class MonsterSpawnLocation(BaseModel):
     """
-    MonsterSpawnLocation
+    Known spawn subarea with its parent area, super-area and map membership. Does not assert a spawn on each listed map and does not include spawn probabilities.
     """ # noqa: E501
     subarea: CombatReference
     area: CombatReference
     super_area: CombatReference
-    subarea_maps: List[MonsterSpawnLocationSubareaMapsInner]
-    preferred: StrictBool = Field(description="Whether the game marks this as the monster's preferred subarea.")
+    subarea_maps: List[MonsterSpawnLocationSubareaMapsInner] = Field(description="Maps belonging to the referenced subarea. Map membership alone is not proof that the monster spawns on a particular map.")
+    preferred: StrictBool = Field(description="Whether the source marks this as a preferred subarea. A preference flag, not a spawn percentage or guarantee of presence.")
     __properties: ClassVar[List[str]] = ["subarea", "area", "super_area", "subarea_maps", "preferred"]
 
     model_config = ConfigDict(

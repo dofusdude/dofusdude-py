@@ -27,13 +27,13 @@ from pydantic_core import to_jsonable_python
 
 class EffectZone(BaseModel):
     """
-    EffectZone
+    Combat-cell area for this effect or activation context, not a geographic world area. Shape, size and inner size describe geometry. Actual affected cells can depend on position, direction and fight state. Each spell effect can have a different zone.
     """ # noqa: E501
     raw: Optional[StrictStr] = Field(default=None, description="Original compact zone encoding when the source provides one.")
     shape: ZoneShape
     size: Optional[StrictInt] = Field(default=None, description="Effective outer size of the area. A point has size 0. Whole-map and custom-cell shapes omit it.")
     min_size: Optional[StrictInt] = Field(default=None, description="Effective inner size for hollow or minimum-size shapes. Omitted when the shape has no inner boundary.")
-    cell_ids: List[StrictInt]
+    cell_ids: List[StrictInt] = Field(description="Explicit cells for a custom-cell shape. An empty array is normal for geometric shapes such as circles and does not mean the zone affects no cells.")
     damage_decrease_step_percent: Optional[StrictInt] = None
     max_damage_decrease_apply_count: Optional[StrictInt] = None
     forced_direction: Optional[StrictInt] = None

@@ -7,17 +7,18 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ankama_id** | **int** |  | 
 **name** | **str** |  | 
-**grade** | **int** | The spell grade assigned to this monster grade. | 
+**grade** | **int** | Grade of the assigned spell. It does not need to equal the enclosing MonsterGrade.grade. | 
 **url** | **str** | URL for the assigned spell grade. Includes the &#x60;grade&#x60; query parameter. | 
 **image_urls** | [**Images**](Images.md) |  | [optional] 
 **description** | **str** |  | [optional] 
 **icon_id** | **int** |  | [optional] 
 **admin_name** | **str** |  | [optional] 
 **order** | **int** |  | [optional] 
-**type** | [**CombatReference**](CombatReference.md) |  | [optional] 
-**classes** | [**List[CombatReference]**](CombatReference.md) |  | [optional] 
-**monsters** | [**List[CombatReference]**](CombatReference.md) |  | [optional] 
-**levels** | [**List[SpellLevel]**](SpellLevel.md) |  | 
+**type** | [**SpellType**](SpellType.md) |  | [optional] 
+**base_preview_zone** | [**EffectZone**](EffectZone.md) |  | [optional] 
+**classes** | [**List[CombatReference]**](CombatReference.md) | Reverse references to playable classes associated with this spell. These are compact references, not complete class documents. | [optional] 
+**monsters** | [**List[CombatReference]**](CombatReference.md) | Reverse references to monsters associated with this spell. Use a monster&#39;s grade-specific assignments to determine which spell grade it uses. | [optional] 
+**levels** | [**List[SpellLevel]**](SpellLevel.md) | Available spell grades. Despite the field name, entries are not player levels. A grade-filtered detail response contains only the requested entry while retaining the parent spell object. | 
 **scripts** | [**List[SpellScriptUsage]**](SpellScriptUsage.md) |  | [optional] 
 **critical_scripts** | [**List[SpellScriptUsage]**](SpellScriptUsage.md) |  | [optional] 
 

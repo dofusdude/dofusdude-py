@@ -38,6 +38,19 @@ class TestWorldArea(unittest.TestCase):
             return WorldArea(
                 ankama_id = 56,
                 name = '',
+                world_map_id = 56,
+                areas = [
+                    { }
+                    ],
+                level = 56,
+                dungeon_id = 56,
+                maps = [
+                    dofusdude.models.world_map_reference.WorldMapReference(
+                        ankama_id = 56, 
+                        position_x = 56, 
+                        position_y = 56, 
+                        world_map_id = 56, )
+                    ],
                 super_area = { },
                 area = { },
                 subareas = [
