@@ -1,13 +1,13 @@
 [project]
 name = "dofusdude"
-version = "1.1.0b1"
-description = "DoduAPI software beta"
+version = "1.1.0b2"
+description = "doduapi beta"
 authors = [
   {name = "Survival",email = "stelzo@steado.de"},
 ]
 license = { text = "GPL-3.0" }
 readme = "README.md"
-keywords = ["OpenAPI", "OpenAPI-Generator", "DoduAPI software beta"]
+keywords = ["OpenAPI", "OpenAPI-Generator", "doduapi beta"]
 requires-python = ">=3.11"
 
 dependencies = [
